@@ -1,0 +1,239 @@
+body {
+    padding: 0;
+    margin: 0;
+    font-family: "open_sansregular";
+    background-color: rgb(235, 235, 235);
+    -webkit-user-select: none;
+}
+nav {
+    background: #c1261c;
+    height: 60px;
+    width: 100%;
+}
+nav #menuGeneralButton {
+    background: none;
+    border: none;
+    background: transparent url(../images/menu.svg) no-repeat center;
+    background-size: 30px 30px;
+    width: 60px;
+    height: 60px;
+    float: left;
+    outline: none;
+}
+nav .window-control {
+    float: right;
+    border: none;
+    width: 35px;
+    height: 20px;
+    padding: 0;
+    margin-left: 3px;
+    margin-top: 5px;
+    z-index: 9999999999;
+    transition: all 0.3s;
+    border-radius: 2px;
+}
+nav .window-control.close {
+    background: rgba(0, 0, 0, 0.2) url(../images/close.svg) center;
+    margin-right: 5px;
+    width: 45px;
+}
+nav .window-control.maximize {
+    background-image: url(../images/maximize.svg);
+}
+nav .window-control.minimize {
+    background: url(../images/minimize.svg);
+}
+nav .window-control.dev {
+    background: url(../images/developer.svg);
+}
+nav .window-control.reload {
+    background: url(../images/reload.svg);
+}
+nav .window-control.dev:hover {
+    background: rgba(0, 0, 0, 0.2) url(../images/developer.svg);
+}
+nav .window-control.reload:hover {
+    background: rgba(0, 0, 0, 0.2) url(../images/reload.svg);
+}
+nav .window-control.close:hover {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+nav .window-control.maximize:hover, nav .window-control.minimize:hover {
+    background-color: rgba(0, 0, 0, 0.2);
+}
+.dragBar {
+    position: absolute;
+    left: 60px;
+    right: 205px;
+    height: 60px;
+    z-index: 500000;
+    background: transparent url(../images/logoWhite.png) no-repeat center;
+    background-size: 55px;
+}
+#menuGeneral {
+    z-index: 1000;
+    position: absolute;
+    top: 60px;
+    left: -305px;
+    bottom: 0;
+    width: 300px;
+    background: rgb(200, 200, 200);
+    box-shadow: 1px 0px 3px rgb(12, 12, 12);
+    transition: all 0.2s;
+    z-index: -1;
+}
+#orderTicket {
+    position: absolute;
+    right: 10px;
+    top: 30px;
+    bottom: 10px;
+    width: 300px;
+    border-radius: 3px;
+    background: white;
+    box-shadow: 0px 0px 3px rgb(125, 125, 125);
+}
+#orderTicket h1 {
+    color: #333;
+    font-weight: normal;
+    font-family: "open_sanslight";
+    text-align: center;
+    padding: 0;
+    margin: 0;
+    margin-top: 10px;
+}
+#orderTicket button.orderValid {
+    position: absolute;
+    display: block;
+    bottom: 10px;
+    left: 0;
+    right: 0;
+    border: none;
+    background: #68c800;
+    height: 50px;
+    width: 95%;
+    margin: auto;
+    border-radius: 5px;
+    color: white;
+    font-family: "open_sansbold";
+    outline: none;
+}
+#orderTicket button.orderValid:hover {
+    background: #72dd00;
+}
+#orderTicket div.productListContener {
+    display: inline-block;
+    position: absolute;
+    top: 60px;
+    bottom: 120px;
+    overflow: auto;
+    width: 100%;
+}
+#orderTicket table.productList {
+    width: 100%;
+    border-collapse: collapse;
+}
+#orderTicket table.productList thead {
+    font-family: "open_sansbold"
+}
+#orderTicket table.productList tr td {
+    text-align: center;
+}
+#orderTicket table.productList tr td.miniature {
+    width: 40px;
+}
+#orderTicket table.productList .thumb {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: #333 url(../images/miniatures/Chrysanthemum.jpg) center;
+    background-size: 60px;
+    margin-left: 10px;
+}
+#orderTicket .totalAmount {
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    display: block;
+    left: 0;
+    right: 0;
+    width: 95%;
+    margin: auto;
+}
+#orderTicket .totalAmount span {
+    float: right;
+}
+#orderTicket .totalAmount.HT {
+    bottom: 90px;
+}
+#orderTicket .totalAmount.TTC {
+    bottom: 65px;
+}
+#productList {
+    position: absolute;
+    left: 10px;
+    top: 60px;
+    bottom: 0;
+    right: 310px;
+    overflow: auto;
+    z-index: -2;
+}
+#productList .item {
+    position: relative;
+    margin: 0;
+    padding: 0;
+    float: left;
+    border-radius: 3px;
+    background: white;
+    box-shadow: 0px 0px 3px rgb(125, 125, 125);
+    height: 250px;
+    width: 200px;
+    margin-right: 8px;
+    margin-top: 10px;
+    overflow: hidden;
+}
+#productList .item .miniatures {
+    width: 200px;
+    height: 200px;
+}
+#productList .item:hover .miniatures {
+    position: relative;
+    -webkit-filter: grayscale(1) blur(1.5px);
+    width: 200px;
+    height: 200px;
+}
+#productList .item:hover::after {
+    content: "";
+    background: url(../images/plusplus.png);
+    background-size: 70px;
+    position: absolute;
+    left: 65px;
+    top: 65px;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+}
+#productList .item legend {
+    position: absolute;
+    left: 0;
+    top: 200px;
+    width: 95%;
+    padding-left: 5%;
+    line-height: 50px;
+    background: white
+}
+#productList .item legend .name {
+    float: left;
+    padding: 0;
+    margin: 0;
+    width: 60%;
+    text-align: left;
+}
+#productList .item legend .price {
+    float: left;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+    width: 40%;
+    background-color: rgb(210, 210, 210);
+}
