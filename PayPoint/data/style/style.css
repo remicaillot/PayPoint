@@ -2,24 +2,29 @@ body {
     padding: 0;
     margin: 0;
     font-family: "open_sansregular";
-    background-color: rgb(235, 235, 235);
+    background-color: rgb(225, 225, 225);
     -webkit-user-select: none;
 }
+
 nav {
     background: #c1261c;
     height: 60px;
     width: 100%;
 }
-nav #menuGeneralButton {
+
+#menuGeneralButton {
+    position: absolute;
     background: none;
     border: none;
     background: transparent url(../images/menu.svg) no-repeat center;
-    background-size: 30px 30px;
-    width: 60px;
-    height: 60px;
+    background-size: 35px 35px;
+    width: 93px;
+    height: 93px;
     float: left;
     outline: none;
+    z-index: 999999999999;
 }
+
 nav .window-control {
     float: right;
     border: none;
@@ -32,35 +37,45 @@ nav .window-control {
     transition: all 0.3s;
     border-radius: 2px;
 }
+
 nav .window-control.close {
-    background: rgba(0, 0, 0, 0.2) url(../images/close.svg) center;
+    background: #aa0000 url(../images/close.svg) center;
     margin-right: 5px;
     width: 45px;
 }
+
 nav .window-control.maximize {
     background-image: url(../images/maximize.svg);
 }
+
 nav .window-control.minimize {
     background: url(../images/minimize.svg);
 }
+
 nav .window-control.dev {
     background: url(../images/developer.svg);
 }
+
 nav .window-control.reload {
     background: url(../images/reload.svg);
 }
+
 nav .window-control.dev:hover {
     background: rgba(0, 0, 0, 0.2) url(../images/developer.svg);
 }
+
 nav .window-control.reload:hover {
     background: rgba(0, 0, 0, 0.2) url(../images/reload.svg);
 }
+
 nav .window-control.close:hover {
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: #d40000;
 }
+
 nav .window-control.maximize:hover, nav .window-control.minimize:hover {
     background-color: rgba(0, 0, 0, 0.2);
 }
+
 .dragBar {
     position: absolute;
     left: 60px;
@@ -68,12 +83,13 @@ nav .window-control.maximize:hover, nav .window-control.minimize:hover {
     height: 60px;
     z-index: 500000;
     background: transparent url(../images/logoWhite.png) no-repeat center;
-    background-size: 55px;
+    background-size: 50px;
 }
+
 #menuGeneral {
     z-index: 1000;
     position: absolute;
-    top: 60px;
+    top: 93px;
     left: -305px;
     bottom: 0;
     width: 300px;
@@ -82,6 +98,7 @@ nav .window-control.maximize:hover, nav .window-control.minimize:hover {
     transition: all 0.2s;
     z-index: -1;
 }
+
 #orderTicket {
     position: absolute;
     right: 10px;
@@ -92,6 +109,7 @@ nav .window-control.maximize:hover, nav .window-control.minimize:hover {
     background: white;
     box-shadow: 0px 0px 3px rgb(125, 125, 125);
 }
+
 #orderTicket h1 {
     color: #333;
     font-weight: normal;
@@ -101,6 +119,7 @@ nav .window-control.maximize:hover, nav .window-control.minimize:hover {
     margin: 0;
     margin-top: 10px;
 }
+
 #orderTicket button.orderValid {
     position: absolute;
     display: block;
@@ -117,9 +136,11 @@ nav .window-control.maximize:hover, nav .window-control.minimize:hover {
     font-family: "open_sansbold";
     outline: none;
 }
-#orderTicket button.orderValid:hover {
+
+#orderTicket button.orderValid:active {
     background: #72dd00;
 }
+
 #orderTicket div.productListContener {
     display: inline-block;
     position: absolute;
@@ -128,19 +149,24 @@ nav .window-control.maximize:hover, nav .window-control.minimize:hover {
     overflow: auto;
     width: 100%;
 }
+
 #orderTicket table.productList {
     width: 100%;
     border-collapse: collapse;
 }
+
 #orderTicket table.productList thead {
     font-family: "open_sansbold"
 }
+
 #orderTicket table.productList tr td {
     text-align: center;
 }
+
 #orderTicket table.productList tr td.miniature {
     width: 40px;
 }
+
 #orderTicket table.productList .thumb {
     display: inline-block;
     width: 40px;
@@ -150,6 +176,7 @@ nav .window-control.maximize:hover, nav .window-control.minimize:hover {
     background-size: 60px;
     margin-left: 10px;
 }
+
 #orderTicket .totalAmount {
     margin: 0;
     padding: 0;
@@ -160,24 +187,29 @@ nav .window-control.maximize:hover, nav .window-control.minimize:hover {
     width: 95%;
     margin: auto;
 }
+
 #orderTicket .totalAmount span {
     float: right;
 }
+
 #orderTicket .totalAmount.HT {
     bottom: 90px;
 }
+
 #orderTicket .totalAmount.TTC {
     bottom: 65px;
 }
+
 #productList {
     position: absolute;
     left: 10px;
-    top: 60px;
-    bottom: 0;
+    top: 93px;
+    bottom: 10px;
     right: 310px;
     overflow: auto;
     z-index: -2;
 }
+
 #productList .item {
     position: relative;
     margin: 0;
@@ -192,16 +224,19 @@ nav .window-control.maximize:hover, nav .window-control.minimize:hover {
     margin-top: 10px;
     overflow: hidden;
 }
+
 #productList .item .miniatures {
     width: 200px;
     height: 200px;
 }
+
 #productList .item:hover .miniatures {
     position: relative;
     -webkit-filter: grayscale(1) blur(1.5px);
     width: 200px;
     height: 200px;
 }
+
 #productList .item:hover::after {
     content: "";
     background: url(../images/plusplus.png);
@@ -213,6 +248,7 @@ nav .window-control.maximize:hover, nav .window-control.minimize:hover {
     height: 70px;
     border-radius: 50%;
 }
+
 #productList .item legend {
     position: absolute;
     left: 0;
@@ -222,6 +258,7 @@ nav .window-control.maximize:hover, nav .window-control.minimize:hover {
     line-height: 50px;
     background: white
 }
+
 #productList .item legend .name {
     float: left;
     padding: 0;
@@ -229,6 +266,7 @@ nav .window-control.maximize:hover, nav .window-control.minimize:hover {
     width: 60%;
     text-align: left;
 }
+
 #productList .item legend .price {
     float: left;
     padding: 0;
@@ -236,4 +274,69 @@ nav .window-control.maximize:hover, nav .window-control.minimize:hover {
     text-align: center;
     width: 40%;
     background-color: rgb(210, 210, 210);
+}
+
+.nav_productList {
+    position: relative;
+    width: 100%;
+    height: 33px;
+    background-color: #c1261c;
+}
+.nav_productList .navContainer{
+    position: absolute;
+    left: 10px;
+    right: 320px;
+}
+.nav_productList .navCarret {
+    display: table;
+    position: static;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
+.nav_productList .navitem {
+    color: #eee;
+    height: 30px;
+    float: left;
+    text-align: center;
+    margin-left: 5px;
+    margin-right: 5px;
+    padding-left: 12px;
+    padding-right: 10px;
+    line-height: 30px;
+    font-size: 13px;
+    font-family: 'open_sanslight';
+    transition-property: border;
+    transition-duration: 0.1s;
+    border-bottom: 3px solid transparent;
+}
+
+.nav_productList a .navitem.selected {
+    border-bottom: 3px solid #fff;
+    color: white;
+    font-family: 'open_sansbold';
+}
+
+.nav_productList .separator {
+    width: 0px;
+    height: 20px;
+    border-left: 1px solid #999;
+    float: left;
+    margin-top: 5px;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+
+#productList_wrapper {
+    position: relative;
+}
+
+#productList_wrapper .tab {
+    display: none;
+}
+
+#productList_wrapper .tab.products {
+    display: block;
 }
