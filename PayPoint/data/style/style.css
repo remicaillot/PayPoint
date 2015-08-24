@@ -232,7 +232,7 @@ nav .window-control.maximize:hover, nav .window-control.minimize:hover {
 
 #productList .item:hover .miniatures {
     position: relative;
-    -webkit-filter: grayscale(1) blur(1.5px);
+    -webkit-filter: grayscale(1) blur(1px);
     width: 200px;
     height: 200px;
 }
@@ -263,7 +263,7 @@ nav .window-control.maximize:hover, nav .window-control.minimize:hover {
     float: left;
     padding: 0;
     margin: 0;
-    width: 60%;
+    width: 100%;
     text-align: left;
 }
 
@@ -339,4 +339,63 @@ nav .window-control.maximize:hover, nav .window-control.minimize:hover {
 
 #productList_wrapper .tab.products {
     display: block;
+}
+.numericpad{
+    position: relative;
+    width: 400px;
+    height: 400px;
+    background: #333;
+    border-radius: 10px;
+}
+.numericpad .number{
+    position: absolute;
+    left: 0;
+    right: 0;
+    width: 90%;
+    margin: auto;
+    margin-top: 10px;
+    height: 40px;
+    font-size: 20px;
+    padding: 3px 3px 3px 8px;
+    text-align: right;
+    border:none;
+    background: white;
+    border-radius: 10px;
+    font-family: "open_sansbold";
+    line-height: 40px;
+}
+.numericpad .pad{
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 60px;
+    margin: auto;
+    width: 90%;
+}
+.numericpad .pad button{
+    width: calc(100%/3 - 3 * 5px);
+    height: calc(100%/4 - 4 * 5px);
+    margin-top: 10px;
+    margin-left: 10px;
+    float: left;
+    border: none;
+    background: #ccc;
+    border-radius: 5px;
+    color: #333;
+    font-family: "open_sansbold";
+    font-size: 30px;
+    outline: none;
+
+    transition: background 1s ease-in-out;
+}
+.numericpad .pad button:active{
+      transition: none;
+    background: #fff;
+}
+.numericpad .pad button.double{
+    width: calc((100%/3 - 3 * 3.2px) * 2);
+}
+.numericpad.manualAmount{
+    margin-top: 25px;
 }

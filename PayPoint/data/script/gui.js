@@ -81,11 +81,14 @@ if (localStorage.getItem("isMaximized") == "true") {
         $(".nav_productList a .navitem").attr("class", "navitem");
         $(".nav_productList a[target='" + target + "'] .navitem").attr("class", "navitem selected");
         for (var i = 0; i < 3; i++) {
-            $("#productList_wrapper ." + page[i]).fadeOut("fast", function() {
+            $("#productList_wrapper .tab." + page[i]).fadeOut("fast", function() {
                 if (i == 3) {
                     $("#productList_wrapper ." + page[target]).fadeIn("fast");
                 }
             });
         }
+    });
+    $("#productList_wrapper .item").click(function(event) {
+        event.preventDefault();
     });
 })(jQuery);
