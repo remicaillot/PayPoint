@@ -1,0 +1,11 @@
+{
+  "name": "StudioID_server",
+  "description": "account management server",
+  "version": "0.0.1",
+  "private": true,
+  "dependencies": {
+    "socket.io": "*",
+    "MD5": "*",
+    "delivery": "*"
+  }
+}

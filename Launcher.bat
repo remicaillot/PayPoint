@@ -1,1 +1,3 @@
-start nw\nw.exe "./PayPoint"
+setlocal
+cd /d %~dp0
+start nw\nw.exe "./app"

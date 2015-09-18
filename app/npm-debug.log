@@ -1,0 +1,2637 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'C:\\Program Files\\nodejs\\\\node.exe',
+1 verbose cli   'C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js',
+1 verbose cli   'install',
+1 verbose cli   'node-thermal-printer' ]
+2 info using npm@2.11.2
+3 info using node@v0.12.5
+4 verbose install initial load of E:\Documents\GitHub\PayPoint\app\package.json
+5 warn package.json PayPoint@1.0.0 No repository field.
+6 warn package.json PayPoint@1.0.0 No README data
+7 warn package.json PayPoint@1.0.0 No license field.
+8 verbose installManyTop reading scoped package data from E:\Documents\GitHub\PayPoint\app\node_modules\to-csv\package.json
+9 verbose readDependencies loading dependencies from E:\Documents\GitHub\PayPoint\app\package.json
+10 silly cache add args [ 'node-thermal-printer', null ]
+11 verbose cache add spec node-thermal-printer
+12 silly cache add parsed spec { raw: 'node-thermal-printer',
+12 silly cache add   scope: null,
+12 silly cache add   name: 'node-thermal-printer',
+12 silly cache add   rawSpec: '',
+12 silly cache add   spec: '*',
+12 silly cache add   type: 'range' }
+13 silly addNamed node-thermal-printer@*
+14 verbose addNamed "*" is a valid semver range for node-thermal-printer
+15 silly addNameRange { name: 'node-thermal-printer', range: '*', hasData: false }
+16 silly mapToRegistry name node-thermal-printer
+17 silly mapToRegistry using default registry
+18 silly mapToRegistry registry https://registry.npmjs.org/
+19 silly mapToRegistry uri https://registry.npmjs.org/node-thermal-printer
+20 verbose addNameRange registry:https://registry.npmjs.org/node-thermal-printer not in flight; fetching
+21 verbose request uri https://registry.npmjs.org/node-thermal-printer
+22 verbose request no auth needed
+23 info attempt registry request try #1 at 20:27:10
+24 verbose request id acc15d237524ba0a
+25 verbose etag "2GJ0S6GYDKI9V1J5NN5H0132G"
+26 http request GET https://registry.npmjs.org/node-thermal-printer
+27 http 304 https://registry.npmjs.org/node-thermal-printer
+28 silly get cb [ 304,
+28 silly get   { date: 'Mon, 13 Jul 2015 18:27:24 GMT',
+28 silly get     via: '1.1 varnish',
+28 silly get     'cache-control': 'max-age=60',
+28 silly get     etag: '"2GJ0S6GYDKI9V1J5NN5H0132G"',
+28 silly get     age: '0',
+28 silly get     connection: 'keep-alive',
+28 silly get     'x-served-by': 'cache-ams4144-AMS',
+28 silly get     'x-cache': 'MISS',
+28 silly get     'x-cache-hits': '0',
+28 silly get     'x-timer': 'S1436812044.269881,VS0,VE100',
+28 silly get     vary: 'Accept' } ]
+29 verbose etag https://registry.npmjs.org/node-thermal-printer from cache
+30 verbose get saving node-thermal-printer to C:\Users\caillot\AppData\Roaming\npm-cache\registry.npmjs.org\node-thermal-printer\.cache.json
+31 silly addNameRange number 2 { name: 'node-thermal-printer', range: '*', hasData: true }
+32 silly addNameRange versions [ 'node-thermal-printer', [ '0.0.1', '0.0.2', '0.0.3' ] ]
+33 silly addNamed node-thermal-printer@0.0.3
+34 verbose addNamed "0.0.3" is a plain semver version for node-thermal-printer
+35 silly cache afterAdd node-thermal-printer@0.0.3
+36 verbose afterAdd C:\Users\caillot\AppData\Roaming\npm-cache\node-thermal-printer\0.0.3\package\package.json not in flight; writing
+37 verbose afterAdd C:\Users\caillot\AppData\Roaming\npm-cache\node-thermal-printer\0.0.3\package\package.json written
+38 silly install resolved [ { name: 'node-thermal-printer',
+38 silly install resolved     version: '0.0.3',
+38 silly install resolved     description: 'Made to work with Epson thermal printers',
+38 silly install resolved     main: 'printer.js',
+38 silly install resolved     scripts: { test: 'echo "Error: no test specified" && exit 1' },
+38 silly install resolved     repository:
+38 silly install resolved      { type: 'git',
+38 silly install resolved        url: 'git+https://github.com/Klemen1337/node-thermal-printer.git' },
+38 silly install resolved     keywords: [ 'thermal', 'printer', 'epson' ],
+38 silly install resolved     author:
+38 silly install resolved      { name: 'Klemen Kastelic',
+38 silly install resolved        email: 'klemen.kast@gmail.com',
+38 silly install resolved        url: 'http://kastelic.net/' },
+38 silly install resolved     license: 'ISC',
+38 silly install resolved     bugs: { url: 'https://github.com/Klemen1337/node-thermal-printer/issues' },
+38 silly install resolved     homepage: 'https://github.com/Klemen1337/node-thermal-printer',
+38 silly install resolved     dependencies: { lwip: '0.0.6', 'write-file-queue': '0.0.1' },
+38 silly install resolved     _id: 'node-thermal-printer@0.0.3',
+38 silly install resolved     _shasum: '7943992884503cf6b707897bef1f490311850699',
+38 silly install resolved     _from: 'node-thermal-printer@*',
+38 silly install resolved     _npmVersion: '1.4.9',
+38 silly install resolved     _npmUser: { name: 'klemen1337', email: 'klemen.kast@gmail.com' },
+38 silly install resolved     maintainers: [ [Object] ],
+38 silly install resolved     dist:
+38 silly install resolved      { shasum: '7943992884503cf6b707897bef1f490311850699',
+38 silly install resolved        tarball: 'http://registry.npmjs.org/node-thermal-printer/-/node-thermal-printer-0.0.3.tgz' },
+38 silly install resolved     directories: {},
+38 silly install resolved     _resolved: 'https://registry.npmjs.org/node-thermal-printer/-/node-thermal-printer-0.0.3.tgz',
+38 silly install resolved     readme: 'ERROR: No README data found!' } ]
+39 info install node-thermal-printer@0.0.3 into E:\Documents\GitHub\PayPoint\app
+40 info installOne node-thermal-printer@0.0.3
+41 verbose installOne of node-thermal-printer to E:\Documents\GitHub\PayPoint\app not in flight; installing
+42 verbose lock using C:\Users\caillot\AppData\Roaming\npm-cache\_locks\node-thermal-printer-f73068fcb57e127e.lock for E:\Documents\GitHub\PayPoint\app\node_modules\node-thermal-printer
+43 silly install write writing node-thermal-printer 0.0.3 to E:\Documents\GitHub\PayPoint\app\node_modules\node-thermal-printer
+44 verbose unbuild node_modules\node-thermal-printer
+45 silly gentlyRm E:\Documents\GitHub\PayPoint\app\node_modules\node-thermal-printer is being purged from base E:\Documents\GitHub\PayPoint\app
+46 verbose gentlyRm don't care about contents; nuking E:\Documents\GitHub\PayPoint\app\node_modules\node-thermal-printer
+47 verbose tar unpack C:\Users\caillot\AppData\Roaming\npm-cache\node-thermal-printer\0.0.3\package.tgz
+48 verbose tar unpacking to E:\Documents\GitHub\PayPoint\app\node_modules\node-thermal-printer
+49 silly gentlyRm E:\Documents\GitHub\PayPoint\app\node_modules\node-thermal-printer is being purged
+50 verbose gentlyRm don't care about contents; nuking E:\Documents\GitHub\PayPoint\app\node_modules\node-thermal-printer
+51 silly gunzTarPerm modes [ '777', '666' ]
+52 silly gunzTarPerm extractEntry package.json
+53 silly gunzTarPerm modified mode [ 'package.json', 436, 438 ]
+54 silly gunzTarPerm extractEntry .npmignore
+55 silly gunzTarPerm modified mode [ '.npmignore', 436, 438 ]
+56 silly gunzTarPerm extractEntry README.md
+57 silly gunzTarPerm modified mode [ 'README.md', 436, 438 ]
+58 silly gunzTarPerm extractEntry example.js
+59 silly gunzTarPerm modified mode [ 'example.js', 436, 438 ]
+60 silly gunzTarPerm extractEntry printer.js
+61 verbose write writing to E:\Documents\GitHub\PayPoint\app\node_modules\node-thermal-printer\package.json
+62 info preinstall node-thermal-printer@0.0.3
+63 verbose readDependencies loading dependencies from E:\Documents\GitHub\PayPoint\app\node_modules\node-thermal-printer\package.json
+64 silly prepareForInstallMany adding lwip@0.0.6 from node-thermal-printer dependencies
+65 silly prepareForInstallMany adding write-file-queue@0.0.1 from node-thermal-printer dependencies
+66 verbose readDependencies loading dependencies from E:\Documents\GitHub\PayPoint\app\node_modules\node-thermal-printer\package.json
+67 silly cache add args [ 'lwip@0.0.6', null ]
+68 verbose cache add spec lwip@0.0.6
+69 silly cache add args [ 'write-file-queue@0.0.1', null ]
+70 verbose cache add spec write-file-queue@0.0.1
+71 silly cache add parsed spec { raw: 'lwip@0.0.6',
+71 silly cache add   scope: null,
+71 silly cache add   name: 'lwip',
+71 silly cache add   rawSpec: '0.0.6',
+71 silly cache add   spec: '0.0.6',
+71 silly cache add   type: 'version' }
+72 silly addNamed lwip@0.0.6
+73 verbose addNamed "0.0.6" is a plain semver version for lwip
+74 silly mapToRegistry name lwip
+75 silly mapToRegistry using default registry
+76 silly mapToRegistry registry https://registry.npmjs.org/
+77 silly mapToRegistry uri https://registry.npmjs.org/lwip
+78 verbose addNameVersion registry:https://registry.npmjs.org/lwip not in flight; fetching
+79 silly cache add parsed spec { raw: 'write-file-queue@0.0.1',
+79 silly cache add   scope: null,
+79 silly cache add   name: 'write-file-queue',
+79 silly cache add   rawSpec: '0.0.1',
+79 silly cache add   spec: '0.0.1',
+79 silly cache add   type: 'version' }
+80 silly addNamed write-file-queue@0.0.1
+81 verbose addNamed "0.0.1" is a plain semver version for write-file-queue
+82 silly mapToRegistry name write-file-queue
+83 silly mapToRegistry using default registry
+84 silly mapToRegistry registry https://registry.npmjs.org/
+85 silly mapToRegistry uri https://registry.npmjs.org/write-file-queue
+86 verbose addNameVersion registry:https://registry.npmjs.org/write-file-queue not in flight; fetching
+87 verbose request uri https://registry.npmjs.org/write-file-queue
+88 verbose request no auth needed
+89 info attempt registry request try #1 at 20:27:14
+90 verbose etag "9608Q93TUXYCVK1OLIS0P207T"
+91 http request GET https://registry.npmjs.org/write-file-queue
+92 verbose request uri https://registry.npmjs.org/lwip
+93 verbose request no auth needed
+94 info attempt registry request try #1 at 20:27:14
+95 verbose etag "6897HA2PN6JQUGZ4KURM43JIC"
+96 http request GET https://registry.npmjs.org/lwip
+97 http 304 https://registry.npmjs.org/write-file-queue
+98 silly get cb [ 304,
+98 silly get   { date: 'Mon, 13 Jul 2015 18:27:26 GMT',
+98 silly get     via: '1.1 varnish',
+98 silly get     'cache-control': 'max-age=60',
+98 silly get     etag: '"9608Q93TUXYCVK1OLIS0P207T"',
+98 silly get     age: '0',
+98 silly get     connection: 'keep-alive',
+98 silly get     'x-served-by': 'cache-ams4127-AMS',
+98 silly get     'x-cache': 'MISS',
+98 silly get     'x-cache-hits': '0',
+98 silly get     'x-timer': 'S1436812046.742200,VS0,VE107',
+98 silly get     vary: 'Accept' } ]
+99 verbose etag https://registry.npmjs.org/write-file-queue from cache
+100 verbose get saving write-file-queue to C:\Users\caillot\AppData\Roaming\npm-cache\registry.npmjs.org\write-file-queue\.cache.json
+101 silly cache afterAdd write-file-queue@0.0.1
+102 verbose afterAdd C:\Users\caillot\AppData\Roaming\npm-cache\write-file-queue\0.0.1\package\package.json not in flight; writing
+103 verbose afterAdd C:\Users\caillot\AppData\Roaming\npm-cache\write-file-queue\0.0.1\package\package.json written
+104 http 304 https://registry.npmjs.org/lwip
+105 silly get cb [ 304,
+105 silly get   { date: 'Mon, 13 Jul 2015 18:27:27 GMT',
+105 silly get     via: '1.1 varnish',
+105 silly get     'cache-control': 'max-age=60',
+105 silly get     etag: '"6897HA2PN6JQUGZ4KURM43JIC"',
+105 silly get     age: '0',
+105 silly get     connection: 'keep-alive',
+105 silly get     'x-served-by': 'cache-ams4148-AMS',
+105 silly get     'x-cache': 'MISS',
+105 silly get     'x-cache-hits': '0',
+105 silly get     'x-timer': 'S1436812047.545878,VS0,VE845',
+105 silly get     vary: 'Accept' } ]
+106 verbose etag https://registry.npmjs.org/lwip from cache
+107 verbose get saving lwip to C:\Users\caillot\AppData\Roaming\npm-cache\registry.npmjs.org\lwip\.cache.json
+108 silly cache afterAdd lwip@0.0.6
+109 verbose afterAdd C:\Users\caillot\AppData\Roaming\npm-cache\lwip\0.0.6\package\package.json not in flight; writing
+110 verbose afterAdd C:\Users\caillot\AppData\Roaming\npm-cache\lwip\0.0.6\package\package.json written
+111 silly install resolved [ { name: 'write-file-queue',
+111 silly install resolved     version: '0.0.1',
+111 silly install resolved     description: 'A writeFile queue which reattempts to write after errors occur',
+111 silly install resolved     main: 'index.js',
+111 silly install resolved     scripts: { test: 'echo "Error: no test specified" && exit 1' },
+111 silly install resolved     repository:
+111 silly install resolved      { type: 'git',
+111 silly install resolved        url: 'git+https://github.com/wankdanker/node-write-file-queue.git' },
+111 silly install resolved     keywords: [ 'write', 'file', 'queue', 'rewrite', 'reattempt', 'error' ],
+111 silly install resolved     author: { name: 'Dan VerWeire' },
+111 silly install resolved     license: 'MIT',
+111 silly install resolved     bugs: { url: 'https://github.com/wankdanker/node-write-file-queue/issues' },
+111 silly install resolved     homepage: 'https://github.com/wankdanker/node-write-file-queue',
+111 silly install resolved     dependencies: { 'dank-do-while': '^0.1.2' },
+111 silly install resolved     gitHead: '71aea141b9b9b3bc397e8e70f05b59fe383f7072',
+111 silly install resolved     _id: 'write-file-queue@0.0.1',
+111 silly install resolved     _shasum: '3764f614451806e9612c969b770d830a6a8115e9',
+111 silly install resolved     _from: 'write-file-queue@0.0.1',
+111 silly install resolved     _npmVersion: '1.4.14',
+111 silly install resolved     _npmUser: { name: 'wankdanker', email: 'dverweire@gmail.com' },
+111 silly install resolved     maintainers: [ [Object] ],
+111 silly install resolved     dist:
+111 silly install resolved      { shasum: '3764f614451806e9612c969b770d830a6a8115e9',
+111 silly install resolved        tarball: 'http://registry.npmjs.org/write-file-queue/-/write-file-queue-0.0.1.tgz' },
+111 silly install resolved     directories: {},
+111 silly install resolved     _resolved: 'https://registry.npmjs.org/write-file-queue/-/write-file-queue-0.0.1.tgz',
+111 silly install resolved     readme: 'ERROR: No README data found!' },
+111 silly install resolved   { name: 'lwip',
+111 silly install resolved     version: '0.0.6',
+111 silly install resolved     main: 'index.js',
+111 silly install resolved     dependencies: { async: '~0.9.0', decree: '0.0.6', nan: '~1.4.1' },
+111 silly install resolved     scripts:
+111 silly install resolved      { install: 'node-gyp rebuild',
+111 silly install resolved        test: 'mocha --opts tests/mocha.opts tests',
+111 silly install resolved        coverage: 'istanbul cover ./node_modules/mocha/bin/_mocha -- --opts tests/mocha.opts tests',
+111 silly install resolved        travis: 'istanbul cover --report lcovonly ./node_modules/.bin/_mocha -- --opts tests/mocha.opts --bail tests && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js' },
+111 silly install resolved     gypfile: true,
+111 silly install resolved     description: 'Comprehensive, fast, and simple image processing and manipulation',
+111 silly install resolved     directories: { example: 'examples' },
+111 silly install resolved     devDependencies:
+111 silly install resolved      { coveralls: '^2.11.2',
+111 silly install resolved        istanbul: '^0.3.5',
+111 silly install resolved        mkdirp: '^0.5.0',
+111 silly install resolved        mocha: '^2.1.0',
+111 silly install resolved        'mocha-lcov-reporter': '0.0.1',
+111 silly install resolved        should: '^4.4.1' },
+111 silly install resolved     repository: { type: 'git', url: 'git+https://github.com/EyalAr/lwip.git' },
+111 silly install resolved     keywords:
+111 silly install resolved      [ 'image',
+111 silly install resolved        'buffer',
+111 silly install resolved        'manipulate',
+111 silly install resolved        'process',
+111 silly install resolved        'resize',
+111 silly install resolved        'scale',
+111 silly install resolved        'rotate',
+111 silly install resolved        'jpeg',
+111 silly install resolved        'jpg',
+111 silly install resolved        'png',
+111 silly install resolved        'gif',
+111 silly install resolved        'crop',
+111 silly install resolved        'blur',
+111 silly install resolved        'sharpen',
+111 silly install resolved        'batch',
+111 silly install resolved        'flip',
+111 silly install resolved        'mirror',
+111 silly install resolved        'border',
+111 silly install resolved        'padding',
+111 silly install resolved        'hue',
+111 silly install resolved        'saturation',
+111 silly install resolved        'lightness',
+111 silly install resolved        'alpha',
+111 silly install resolved        'transparency',
+111 silly install resolved        'fade',
+111 silly install resolved        'opacity',
+111 silly install resolved        'contain',
+111 silly install resolved        'cover' ],
+111 silly install resolved     author: { name: 'Eyal Arubas', email: 'eyalarubas@gmail.com' },
+111 silly install resolved     license: 'MIT',
+111 silly install resolved     bugs: { url: 'https://github.com/EyalAr/lwip/issues' },
+111 silly install resolved     homepage: 'https://github.com/EyalAr/lwip',
+111 silly install resolved     _id: 'lwip@0.0.6',
+111 silly install resolved     _shasum: '99ca08156bcfefaba8b3ee8ae35d1be961a6d68b',
+111 silly install resolved     _from: 'lwip@0.0.6',
+111 silly install resolved     _npmVersion: '1.4.10',
+111 silly install resolved     _npmUser: { name: 'eyalar', email: 'eyalarubas@gmail.com' },
+111 silly install resolved     maintainers: [ [Object] ],
+111 silly install resolved     dist:
+111 silly install resolved      { shasum: '99ca08156bcfefaba8b3ee8ae35d1be961a6d68b',
+111 silly install resolved        tarball: 'http://registry.npmjs.org/lwip/-/lwip-0.0.6.tgz' },
+111 silly install resolved     _resolved: 'https://registry.npmjs.org/lwip/-/lwip-0.0.6.tgz',
+111 silly install resolved     readme: 'ERROR: No README data found!' } ]
+112 info install write-file-queue@0.0.1 into E:\Documents\GitHub\PayPoint\app\node_modules\node-thermal-printer
+113 info install lwip@0.0.6 into E:\Documents\GitHub\PayPoint\app\node_modules\node-thermal-printer
+114 info installOne write-file-queue@0.0.1
+115 verbose installOne of write-file-queue to E:\Documents\GitHub\PayPoint\app\node_modules\node-thermal-printer not in flight; installing
+116 info installOne lwip@0.0.6
+117 verbose installOne of lwip to E:\Documents\GitHub\PayPoint\app\node_modules\node-thermal-printer not in flight; installing
+118 verbose lock using C:\Users\caillot\AppData\Roaming\npm-cache\_locks\write-file-queue-ad2e2e66fbb24af6.lock for E:\Documents\GitHub\PayPoint\app\node_modules\node-thermal-printer\node_modules\write-file-queue
+119 verbose lock using C:\Users\caillot\AppData\Roaming\npm-cache\_locks\lwip-8fc7f3c1f77da911.lock for E:\Documents\GitHub\PayPoint\app\node_modules\node-thermal-printer\node_modules\lwip
+120 silly install write writing write-file-queue 0.0.1 to E:\Documents\GitHub\PayPoint\app\node_modules\node-thermal-printer\node_modules\write-file-queue
+121 silly install write writing lwip 0.0.6 to E:\Documents\GitHub\PayPoint\app\node_modules\node-thermal-printer\node_modules\lwip
+122 verbose unbuild node_modules\node-thermal-printer\node_modules\write-file-queue
+123 verbose unbuild node_modules\node-thermal-printer\node_modules\lwip
+124 silly gentlyRm E:\Documents\GitHub\PayPoint\app\node_modules\node-thermal-printer\node_modules\write-file-queue is being purged from base E:\Documents\GitHub\PayPoint\app
+125 verbose gentlyRm don't care about contents; nuking E:\Documents\GitHub\PayPoint\app\node_modules\node-thermal-printer\node_modules\write-file-queue
+126 verbose tar unpack C:\Users\caillot\AppData\Roaming\npm-cache\write-file-queue\0.0.1\package.tgz
+127 verbose tar unpacking to E:\Documents\GitHub\PayPoint\app\node_modules\node-thermal-printer\node_modules\write-file-queue
+128 silly gentlyRm E:\Documents\GitHub\PayPoint\app\node_modules\node-thermal-printer\node_modules\write-file-queue is being purged
+129 verbose gentlyRm don't care about contents; nuking E:\Documents\GitHub\PayPoint\app\node_modules\node-thermal-printer\node_modules\write-file-queue
+130 silly gentlyRm E:\Documents\GitHub\PayPoint\app\node_modules\node-thermal-printer\node_modules\lwip is being purged from base E:\Documents\GitHub\PayPoint\app
+131 verbose gentlyRm don't care about contents; nuking E:\Documents\GitHub\PayPoint\app\node_modules\node-thermal-printer\node_modules\lwip
+132 silly gunzTarPerm modes [ '777', '666' ]
+133 verbose tar unpack C:\Users\caillot\AppData\Roaming\npm-cache\lwip\0.0.6\package.tgz
+134 verbose tar unpacking to E:\Documents\GitHub\PayPoint\app\node_modules\node-thermal-printer\node_modules\lwip
+135 silly gentlyRm E:\Documents\GitHub\PayPoint\app\node_modules\node-thermal-printer\node_modules\lwip is being purged
+136 verbose gentlyRm don't care about contents; nuking E:\Documents\GitHub\PayPoint\app\node_modules\node-thermal-printer\node_modules\lwip
+137 silly gunzTarPerm modes [ '777', '666' ]
+138 silly gunzTarPerm extractEntry package.json
+139 silly gunzTarPerm modified mode [ 'package.json', 436, 438 ]
+140 silly gunzTarPerm extractEntry package.json
+141 silly gunzTarPerm modified mode [ 'package.json', 420, 438 ]
+142 silly gunzTarPerm extractEntry README.md
+143 silly gunzTarPerm modified mode [ 'README.md', 436, 438 ]
+144 silly gunzTarPerm extractEntry index.js
+145 silly gunzTarPerm modified mode [ 'index.js', 420, 438 ]
+146 silly gunzTarPerm extractEntry .npmignore
+147 silly gunzTarPerm modified mode [ '.npmignore', 420, 438 ]
+148 silly gunzTarPerm extractEntry README.md
+149 silly gunzTarPerm modified mode [ 'README.md', 420, 438 ]
+150 silly gunzTarPerm extractEntry LICENSE
+151 silly gunzTarPerm modified mode [ 'LICENSE', 420, 438 ]
+152 silly gunzTarPerm extractEntry index.js
+153 silly gunzTarPerm modified mode [ 'index.js', 420, 438 ]
+154 silly gunzTarPerm extractEntry CONTRIBUTING.md
+155 silly gunzTarPerm modified mode [ 'CONTRIBUTING.md', 420, 438 ]
+156 silly gunzTarPerm extractEntry appveyor.yml
+157 silly gunzTarPerm modified mode [ 'appveyor.yml', 420, 438 ]
+158 verbose write writing to E:\Documents\GitHub\PayPoint\app\node_modules\node-thermal-printer\node_modules\write-file-queue\package.json
+159 silly gunzTarPerm extractEntry .travis.yml
+160 silly gunzTarPerm modified mode [ '.travis.yml', 420, 438 ]
+161 info preinstall write-file-queue@0.0.1
+162 verbose readDependencies loading dependencies from E:\Documents\GitHub\PayPoint\app\node_modules\node-thermal-printer\node_modules\write-file-queue\package.json
+163 silly gunzTarPerm extractEntry examples/blur.js
+164 silly gunzTarPerm modified mode [ 'examples/blur.js', 420, 438 ]
+165 silly gunzTarPerm extractEntry examples/extract.js
+166 silly gunzTarPerm modified mode [ 'examples/extract.js', 420, 438 ]
+167 silly prepareForInstallMany adding dank-do-while@^0.1.2 from write-file-queue dependencies
+168 verbose readDependencies loading dependencies from E:\Documents\GitHub\PayPoint\app\node_modules\node-thermal-printer\node_modules\write-file-queue\package.json
+169 silly cache add args [ 'dank-do-while@^0.1.2', null ]
+170 verbose cache add spec dank-do-while@^0.1.2
+171 silly cache add parsed spec { raw: 'dank-do-while@^0.1.2',
+171 silly cache add   scope: null,
+171 silly cache add   name: 'dank-do-while',
+171 silly cache add   rawSpec: '^0.1.2',
+171 silly cache add   spec: '>=0.1.2 <0.2.0',
+171 silly cache add   type: 'range' }
+172 silly addNamed dank-do-while@>=0.1.2 <0.2.0
+173 verbose addNamed ">=0.1.2 <0.2.0" is a valid semver range for dank-do-while
+174 silly addNameRange { name: 'dank-do-while',
+174 silly addNameRange   range: '>=0.1.2 <0.2.0',
+174 silly addNameRange   hasData: false }
+175 silly mapToRegistry name dank-do-while
+176 silly mapToRegistry using default registry
+177 silly mapToRegistry registry https://registry.npmjs.org/
+178 silly mapToRegistry uri https://registry.npmjs.org/dank-do-while
+179 verbose addNameRange registry:https://registry.npmjs.org/dank-do-while not in flight; fetching
+180 silly gunzTarPerm extractEntry examples/fade.js
+181 silly gunzTarPerm modified mode [ 'examples/fade.js', 420, 438 ]
+182 silly gunzTarPerm extractEntry examples/gif_interlaced.js
+183 silly gunzTarPerm modified mode [ 'examples/gif_interlaced.js', 420, 438 ]
+184 verbose request uri https://registry.npmjs.org/dank-do-while
+185 verbose request no auth needed
+186 info attempt registry request try #1 at 20:27:18
+187 verbose etag "4HHIZIQO14KX53IERO34YGY90"
+188 http request GET https://registry.npmjs.org/dank-do-while
+189 silly gunzTarPerm extractEntry examples/hue.js
+190 silly gunzTarPerm modified mode [ 'examples/hue.js', 420, 438 ]
+191 silly gunzTarPerm extractEntry examples/crop.js
+192 silly gunzTarPerm modified mode [ 'examples/crop.js', 420, 438 ]
+193 silly gunzTarPerm extractEntry examples/border.js
+194 silly gunzTarPerm modified mode [ 'examples/border.js', 420, 438 ]
+195 silly gunzTarPerm extractEntry examples/saturate.js
+196 silly gunzTarPerm modified mode [ 'examples/saturate.js', 420, 438 ]
+197 silly gunzTarPerm extractEntry examples/lighten.js
+198 silly gunzTarPerm modified mode [ 'examples/lighten.js', 420, 438 ]
+199 silly gunzTarPerm extractEntry examples/mirror.js
+200 silly gunzTarPerm modified mode [ 'examples/mirror.js', 420, 438 ]
+201 silly gunzTarPerm extractEntry examples/open_pixelbuffer.js
+202 silly gunzTarPerm modified mode [ 'examples/open_pixelbuffer.js', 420, 438 ]
+203 silly gunzTarPerm extractEntry examples/cover.js
+204 silly gunzTarPerm modified mode [ 'examples/cover.js', 420, 438 ]
+205 silly gunzTarPerm extractEntry examples/pad.js
+206 silly gunzTarPerm modified mode [ 'examples/pad.js', 420, 438 ]
+207 silly gunzTarPerm extractEntry examples/convert_png_jpg.js
+208 silly gunzTarPerm modified mode [ 'examples/convert_png_jpg.js', 420, 438 ]
+209 silly gunzTarPerm extractEntry examples/paste_blend.js
+210 silly gunzTarPerm modified mode [ 'examples/paste_blend.js', 420, 438 ]
+211 silly gunzTarPerm extractEntry examples/convert_png_gif.js
+212 silly gunzTarPerm modified mode [ 'examples/convert_png_gif.js', 420, 438 ]
+213 silly gunzTarPerm extractEntry examples/paste_mosiac.js
+214 silly gunzTarPerm modified mode [ 'examples/paste_mosiac.js', 420, 438 ]
+215 silly gunzTarPerm extractEntry examples/convert_jpg_png.js
+216 silly gunzTarPerm modified mode [ 'examples/convert_jpg_png.js', 420, 438 ]
+217 silly gunzTarPerm extractEntry examples/png_interlaced.js
+218 silly gunzTarPerm modified mode [ 'examples/png_interlaced.js', 420, 438 ]
+219 silly gunzTarPerm extractEntry examples/convert_gif_png.js
+220 silly gunzTarPerm modified mode [ 'examples/convert_gif_png.js', 420, 438 ]
+221 silly gunzTarPerm extractEntry examples/reduce_quality.js
+222 silly gunzTarPerm modified mode [ 'examples/reduce_quality.js', 420, 438 ]
+223 silly gunzTarPerm extractEntry examples/contain.js
+224 silly gunzTarPerm modified mode [ 'examples/contain.js', 420, 438 ]
+225 silly gunzTarPerm extractEntry examples/rotate.js
+226 silly gunzTarPerm modified mode [ 'examples/rotate.js', 420, 438 ]
+227 silly gunzTarPerm extractEntry examples/clone.js
+228 silly gunzTarPerm modified mode [ 'examples/clone.js', 420, 438 ]
+229 silly gunzTarPerm extractEntry examples/rotate_scale_blur.js
+230 silly gunzTarPerm modified mode [ 'examples/rotate_scale_blur.js', 420, 438 ]
+231 silly gunzTarPerm extractEntry examples/set_pixel.js
+232 silly gunzTarPerm modified mode [ 'examples/set_pixel.js', 420, 438 ]
+233 silly gunzTarPerm extractEntry examples/sharpen.js
+234 silly gunzTarPerm modified mode [ 'examples/sharpen.js', 420, 438 ]
+235 silly gunzTarPerm extractEntry examples/lena.png
+236 silly gunzTarPerm modified mode [ 'examples/lena.png', 420, 438 ]
+237 silly gunzTarPerm extractEntry examples/lena.gif
+238 silly gunzTarPerm modified mode [ 'examples/lena.gif', 420, 438 ]
+239 silly gunzTarPerm extractEntry examples/lena.jpg
+240 silly gunzTarPerm modified mode [ 'examples/lena.jpg', 420, 438 ]
+241 silly gunzTarPerm extractEntry DEVELOPMENT.md
+242 silly gunzTarPerm modified mode [ 'DEVELOPMENT.md', 420, 438 ]
+243 silly gunzTarPerm extractEntry lib/Batch.js
+244 silly gunzTarPerm modified mode [ 'lib/Batch.js', 420, 438 ]
+245 silly gunzTarPerm extractEntry lib/BatchPrototypeInit.js
+246 silly gunzTarPerm modified mode [ 'lib/BatchPrototypeInit.js', 420, 438 ]
+247 silly gunzTarPerm extractEntry lib/Image.js
+248 silly gunzTarPerm modified mode [ 'lib/Image.js', 420, 438 ]
+249 silly gunzTarPerm extractEntry lib/ImagePrototypeInit.js
+250 silly gunzTarPerm modified mode [ 'lib/ImagePrototypeInit.js', 420, 438 ]
+251 silly gunzTarPerm extractEntry lib/defs.js
+252 silly gunzTarPerm modified mode [ 'lib/defs.js', 420, 438 ]
+253 silly gunzTarPerm extractEntry lib/obtain.js
+254 silly gunzTarPerm modified mode [ 'lib/obtain.js', 420, 438 ]
+255 silly gunzTarPerm extractEntry lib/util.js
+256 silly gunzTarPerm modified mode [ 'lib/util.js', 420, 438 ]
+257 silly gunzTarPerm extractEntry src/decoder/buffer_worker.cpp
+258 silly gunzTarPerm modified mode [ 'src/decoder/buffer_worker.cpp', 420, 438 ]
+259 silly gunzTarPerm extractEntry src/decoder/decoder.h
+260 silly gunzTarPerm modified mode [ 'src/decoder/decoder.h', 420, 438 ]
+261 silly gunzTarPerm extractEntry src/decoder/gif_decoder.cpp
+262 silly gunzTarPerm modified mode [ 'src/decoder/gif_decoder.cpp', 420, 438 ]
+263 silly gunzTarPerm extractEntry src/decoder/init.cpp
+264 silly gunzTarPerm modified mode [ 'src/decoder/init.cpp', 420, 438 ]
+265 silly gunzTarPerm extractEntry src/decoder/jpeg_decoder.cpp
+266 silly gunzTarPerm modified mode [ 'src/decoder/jpeg_decoder.cpp', 420, 438 ]
+267 silly gunzTarPerm extractEntry src/decoder/png_decoder.cpp
+268 silly gunzTarPerm modified mode [ 'src/decoder/png_decoder.cpp', 420, 438 ]
+269 silly gunzTarPerm extractEntry src/decoder/pnglibconf.h
+270 silly gunzTarPerm modified mode [ 'src/decoder/pnglibconf.h', 420, 438 ]
+271 silly gunzTarPerm extractEntry src/decoder/util.cpp
+272 silly gunzTarPerm modified mode [ 'src/decoder/util.cpp', 420, 438 ]
+273 silly gunzTarPerm extractEntry src/encoder/encoder.h
+274 silly gunzTarPerm modified mode [ 'src/encoder/encoder.h', 420, 438 ]
+275 silly gunzTarPerm extractEntry src/encoder/gif_worker.cpp
+276 silly gunzTarPerm modified mode [ 'src/encoder/gif_worker.cpp', 420, 438 ]
+277 silly gunzTarPerm extractEntry src/encoder/init.cpp
+278 silly gunzTarPerm modified mode [ 'src/encoder/init.cpp', 420, 438 ]
+279 silly gunzTarPerm extractEntry src/encoder/jpeg_worker.cpp
+280 silly gunzTarPerm modified mode [ 'src/encoder/jpeg_worker.cpp', 420, 438 ]
+281 silly gunzTarPerm extractEntry src/encoder/png_worker.cpp
+282 silly gunzTarPerm modified mode [ 'src/encoder/png_worker.cpp', 420, 438 ]
+283 silly gunzTarPerm extractEntry src/encoder/pnglibconf.h
+284 silly gunzTarPerm modified mode [ 'src/encoder/pnglibconf.h', 420, 438 ]
+285 silly gunzTarPerm extractEntry src/image/opacify_worker.cpp
+286 silly gunzTarPerm modified mode [ 'src/image/opacify_worker.cpp', 420, 438 ]
+287 silly gunzTarPerm extractEntry src/image/blur_worker.cpp
+288 silly gunzTarPerm modified mode [ 'src/image/blur_worker.cpp', 420, 438 ]
+289 silly gunzTarPerm extractEntry src/image/hsla_worker.cpp
+290 silly gunzTarPerm modified mode [ 'src/image/hsla_worker.cpp', 420, 438 ]
+291 silly gunzTarPerm extractEntry src/image/image.cpp
+292 silly gunzTarPerm modified mode [ 'src/image/image.cpp', 420, 438 ]
+293 silly gunzTarPerm extractEntry src/image/image.h
+294 silly gunzTarPerm modified mode [ 'src/image/image.h', 420, 438 ]
+295 silly gunzTarPerm extractEntry src/image/init.cpp
+296 silly gunzTarPerm modified mode [ 'src/image/init.cpp', 420, 438 ]
+297 silly gunzTarPerm extractEntry src/image/mirror_worker.cpp
+298 silly gunzTarPerm modified mode [ 'src/image/mirror_worker.cpp', 420, 438 ]
+299 silly gunzTarPerm extractEntry src/image/crop_worker.cpp
+300 silly gunzTarPerm modified mode [ 'src/image/crop_worker.cpp', 420, 438 ]
+301 silly gunzTarPerm extractEntry src/image/pad_worker.cpp
+302 silly gunzTarPerm modified mode [ 'src/image/pad_worker.cpp', 420, 438 ]
+303 silly gunzTarPerm extractEntry src/image/paste_worker.cpp
+304 silly gunzTarPerm modified mode [ 'src/image/paste_worker.cpp', 420, 438 ]
+305 silly gunzTarPerm extractEntry src/image/resize_worker.cpp
+306 silly gunzTarPerm modified mode [ 'src/image/resize_worker.cpp', 420, 438 ]
+307 silly gunzTarPerm extractEntry src/image/rotate_worker.cpp
+308 silly gunzTarPerm modified mode [ 'src/image/rotate_worker.cpp', 420, 438 ]
+309 silly gunzTarPerm extractEntry src/image/setpixel_worker.cpp
+310 silly gunzTarPerm modified mode [ 'src/image/setpixel_worker.cpp', 420, 438 ]
+311 silly gunzTarPerm extractEntry src/image/sharpen_worker.cpp
+312 silly gunzTarPerm modified mode [ 'src/image/sharpen_worker.cpp', 420, 438 ]
+313 silly gunzTarPerm extractEntry src/lib/cimg/CImg.h
+314 silly gunzTarPerm modified mode [ 'src/lib/cimg/CImg.h', 420, 438 ]
+315 silly gunzTarPerm extractEntry src/lib/cimg/Licence_CeCILL-C_V1-en.txt
+316 silly gunzTarPerm modified mode [ 'src/lib/cimg/Licence_CeCILL-C_V1-en.txt', 420, 438 ]
+317 silly gunzTarPerm extractEntry src/lib/cimg/Licence_CeCILL_V2-en.txt
+318 silly gunzTarPerm modified mode [ 'src/lib/cimg/Licence_CeCILL_V2-en.txt', 420, 438 ]
+319 silly gunzTarPerm extractEntry src/lib/cimg/README.txt
+320 silly gunzTarPerm modified mode [ 'src/lib/cimg/README.txt', 420, 438 ]
+321 silly gunzTarPerm extractEntry src/lib/gif/README
+322 silly gunzTarPerm modified mode [ 'src/lib/gif/README', 420, 438 ]
+323 silly gunzTarPerm extractEntry src/lib/gif/gif_font.c
+324 silly gunzTarPerm modified mode [ 'src/lib/gif/gif_font.c', 420, 438 ]
+325 silly gunzTarPerm extractEntry src/lib/gif/AUTHORS
+326 silly gunzTarPerm modified mode [ 'src/lib/gif/AUTHORS', 420, 438 ]
+327 silly gunzTarPerm extractEntry src/lib/gif/dgif_lib.c
+328 silly gunzTarPerm modified mode [ 'src/lib/gif/dgif_lib.c', 420, 438 ]
+329 silly gunzTarPerm extractEntry src/lib/gif/egif_lib.c
+330 silly gunzTarPerm modified mode [ 'src/lib/gif/egif_lib.c', 420, 438 ]
+331 silly gunzTarPerm extractEntry src/lib/gif/gif_err.c
+332 silly gunzTarPerm modified mode [ 'src/lib/gif/gif_err.c', 420, 438 ]
+333 silly gunzTarPerm extractEntry src/lib/gif/COPYING
+334 silly gunzTarPerm modified mode [ 'src/lib/gif/COPYING', 420, 438 ]
+335 silly gunzTarPerm extractEntry src/lib/gif/gif_hash.c
+336 silly gunzTarPerm modified mode [ 'src/lib/gif/gif_hash.c', 420, 438 ]
+337 silly gunzTarPerm extractEntry src/lib/gif/gif_hash.h
+338 silly gunzTarPerm modified mode [ 'src/lib/gif/gif_hash.h', 420, 438 ]
+339 silly gunzTarPerm extractEntry src/lib/gif/gif_lib.h
+340 silly gunzTarPerm modified mode [ 'src/lib/gif/gif_lib.h', 420, 438 ]
+341 silly gunzTarPerm extractEntry src/lib/gif/gif_lib_private.h
+342 silly gunzTarPerm modified mode [ 'src/lib/gif/gif_lib_private.h', 420, 438 ]
+343 silly gunzTarPerm extractEntry src/lib/gif/gifalloc.c
+344 silly gunzTarPerm modified mode [ 'src/lib/gif/gifalloc.c', 420, 438 ]
+345 silly gunzTarPerm extractEntry src/lib/gif/quantize.c
+346 silly gunzTarPerm modified mode [ 'src/lib/gif/quantize.c', 420, 438 ]
+347 silly gunzTarPerm extractEntry src/lib/jpeg/README
+348 silly gunzTarPerm modified mode [ 'src/lib/jpeg/README', 420, 438 ]
+349 silly gunzTarPerm extractEntry src/lib/jpeg/libjpeg.txt
+350 silly gunzTarPerm modified mode [ 'src/lib/jpeg/libjpeg.txt', 420, 438 ]
+351 silly gunzTarPerm extractEntry src/lib/jpeg/jcapimin.c
+352 silly gunzTarPerm modified mode [ 'src/lib/jpeg/jcapimin.c', 420, 438 ]
+353 silly gunzTarPerm extractEntry src/lib/jpeg/jcapistd.c
+354 silly gunzTarPerm modified mode [ 'src/lib/jpeg/jcapistd.c', 420, 438 ]
+355 silly gunzTarPerm extractEntry src/lib/jpeg/jcarith.c
+356 silly gunzTarPerm modified mode [ 'src/lib/jpeg/jcarith.c', 493, 511 ]
+357 silly gunzTarPerm extractEntry src/lib/jpeg/jccoefct.c
+358 silly gunzTarPerm modified mode [ 'src/lib/jpeg/jccoefct.c', 420, 438 ]
+359 silly gunzTarPerm extractEntry src/lib/jpeg/jccolor.c
+360 silly gunzTarPerm modified mode [ 'src/lib/jpeg/jccolor.c', 420, 438 ]
+361 silly gunzTarPerm extractEntry src/lib/jpeg/jcdctmgr.c
+362 silly gunzTarPerm modified mode [ 'src/lib/jpeg/jcdctmgr.c', 420, 438 ]
+363 silly gunzTarPerm extractEntry src/lib/jpeg/jchuff.c
+364 silly gunzTarPerm modified mode [ 'src/lib/jpeg/jchuff.c', 420, 438 ]
+365 silly gunzTarPerm extractEntry src/lib/jpeg/jcinit.c
+366 silly gunzTarPerm modified mode [ 'src/lib/jpeg/jcinit.c', 420, 438 ]
+367 silly gunzTarPerm extractEntry src/lib/jpeg/jcmainct.c
+368 silly gunzTarPerm modified mode [ 'src/lib/jpeg/jcmainct.c', 420, 438 ]
+369 silly gunzTarPerm extractEntry src/lib/jpeg/jcmarker.c
+370 silly gunzTarPerm modified mode [ 'src/lib/jpeg/jcmarker.c', 420, 438 ]
+371 silly gunzTarPerm extractEntry src/lib/jpeg/jcmaster.c
+372 silly gunzTarPerm modified mode [ 'src/lib/jpeg/jcmaster.c', 420, 438 ]
+373 silly gunzTarPerm extractEntry src/lib/jpeg/jcomapi.c
+374 silly gunzTarPerm modified mode [ 'src/lib/jpeg/jcomapi.c', 420, 438 ]
+375 silly gunzTarPerm extractEntry src/lib/jpeg/jconfig.h
+376 silly gunzTarPerm modified mode [ 'src/lib/jpeg/jconfig.h', 420, 438 ]
+377 silly gunzTarPerm extractEntry src/lib/jpeg/jcparam.c
+378 silly gunzTarPerm modified mode [ 'src/lib/jpeg/jcparam.c', 420, 438 ]
+379 silly gunzTarPerm extractEntry src/lib/jpeg/jcprepct.c
+380 silly gunzTarPerm modified mode [ 'src/lib/jpeg/jcprepct.c', 420, 438 ]
+381 silly gunzTarPerm extractEntry src/lib/jpeg/jcsample.c
+382 silly gunzTarPerm modified mode [ 'src/lib/jpeg/jcsample.c', 420, 438 ]
+383 silly gunzTarPerm extractEntry src/lib/jpeg/jdapimin.c
+384 silly gunzTarPerm modified mode [ 'src/lib/jpeg/jdapimin.c', 420, 438 ]
+385 silly gunzTarPerm extractEntry src/lib/jpeg/jdapistd.c
+386 silly gunzTarPerm modified mode [ 'src/lib/jpeg/jdapistd.c', 420, 438 ]
+387 silly gunzTarPerm extractEntry src/lib/jpeg/jdarith.c
+388 silly gunzTarPerm modified mode [ 'src/lib/jpeg/jdarith.c', 493, 511 ]
+389 silly gunzTarPerm extractEntry src/lib/jpeg/jdatadst.c
+390 silly gunzTarPerm modified mode [ 'src/lib/jpeg/jdatadst.c', 420, 438 ]
+391 silly gunzTarPerm extractEntry src/lib/jpeg/jdatasrc.c
+392 silly gunzTarPerm modified mode [ 'src/lib/jpeg/jdatasrc.c', 420, 438 ]
+393 silly gunzTarPerm extractEntry src/lib/jpeg/jdcoefct.c
+394 silly gunzTarPerm modified mode [ 'src/lib/jpeg/jdcoefct.c', 420, 438 ]
+395 silly gunzTarPerm extractEntry src/lib/jpeg/jdcolor.c
+396 silly gunzTarPerm modified mode [ 'src/lib/jpeg/jdcolor.c', 420, 438 ]
+397 silly gunzTarPerm extractEntry src/lib/jpeg/jdct.h
+398 silly gunzTarPerm modified mode [ 'src/lib/jpeg/jdct.h', 420, 438 ]
+399 silly gunzTarPerm extractEntry src/lib/jpeg/jddctmgr.c
+400 silly gunzTarPerm modified mode [ 'src/lib/jpeg/jddctmgr.c', 420, 438 ]
+401 silly gunzTarPerm extractEntry src/lib/jpeg/jaricom.c
+402 silly gunzTarPerm modified mode [ 'src/lib/jpeg/jaricom.c', 493, 511 ]
+403 silly gunzTarPerm extractEntry src/lib/jpeg/jdinput.c
+404 silly gunzTarPerm modified mode [ 'src/lib/jpeg/jdinput.c', 420, 438 ]
+405 silly gunzTarPerm extractEntry src/lib/jpeg/jdmainct.c
+406 silly gunzTarPerm modified mode [ 'src/lib/jpeg/jdmainct.c', 420, 438 ]
+407 silly gunzTarPerm extractEntry src/lib/jpeg/jdmarker.c
+408 silly gunzTarPerm modified mode [ 'src/lib/jpeg/jdmarker.c', 420, 438 ]
+409 silly gunzTarPerm extractEntry src/lib/jpeg/jdmaster.c
+410 silly gunzTarPerm modified mode [ 'src/lib/jpeg/jdmaster.c', 420, 438 ]
+411 silly gunzTarPerm extractEntry src/lib/jpeg/jdmerge.c
+412 silly gunzTarPerm modified mode [ 'src/lib/jpeg/jdmerge.c', 493, 511 ]
+413 silly gunzTarPerm extractEntry src/lib/jpeg/jdpostct.c
+414 silly gunzTarPerm modified mode [ 'src/lib/jpeg/jdpostct.c', 420, 438 ]
+415 silly gunzTarPerm extractEntry src/lib/jpeg/jdsample.c
+416 silly gunzTarPerm modified mode [ 'src/lib/jpeg/jdsample.c', 420, 438 ]
+417 silly gunzTarPerm extractEntry src/lib/jpeg/jerror.c
+418 silly gunzTarPerm modified mode [ 'src/lib/jpeg/jerror.c', 420, 438 ]
+419 silly gunzTarPerm extractEntry src/lib/jpeg/jerror.h
+420 silly gunzTarPerm modified mode [ 'src/lib/jpeg/jerror.h', 420, 438 ]
+421 silly gunzTarPerm extractEntry src/lib/jpeg/jfdctflt.c
+422 silly gunzTarPerm modified mode [ 'src/lib/jpeg/jfdctflt.c', 420, 438 ]
+423 silly gunzTarPerm extractEntry src/lib/jpeg/jfdctfst.c
+424 silly gunzTarPerm modified mode [ 'src/lib/jpeg/jfdctfst.c', 420, 438 ]
+425 silly gunzTarPerm extractEntry src/lib/jpeg/jfdctint.c
+426 silly gunzTarPerm modified mode [ 'src/lib/jpeg/jfdctint.c', 420, 438 ]
+427 silly gunzTarPerm extractEntry src/lib/jpeg/jidctflt.c
+428 silly gunzTarPerm modified mode [ 'src/lib/jpeg/jidctflt.c', 420, 438 ]
+429 silly gunzTarPerm extractEntry src/lib/jpeg/jidctfst.c
+430 silly gunzTarPerm modified mode [ 'src/lib/jpeg/jidctfst.c', 420, 438 ]
+431 silly gunzTarPerm extractEntry src/lib/jpeg/jidctint.c
+432 silly gunzTarPerm modified mode [ 'src/lib/jpeg/jidctint.c', 420, 438 ]
+433 silly gunzTarPerm extractEntry src/lib/jpeg/jinclude.h
+434 silly gunzTarPerm modified mode [ 'src/lib/jpeg/jinclude.h', 420, 438 ]
+435 silly gunzTarPerm extractEntry src/lib/jpeg/jmemmgr.c
+436 silly gunzTarPerm modified mode [ 'src/lib/jpeg/jmemmgr.c', 420, 438 ]
+437 silly gunzTarPerm extractEntry src/lib/jpeg/jmemnobs.c
+438 silly gunzTarPerm modified mode [ 'src/lib/jpeg/jmemnobs.c', 420, 438 ]
+439 silly gunzTarPerm extractEntry src/lib/jpeg/jmemsys.h
+440 silly gunzTarPerm modified mode [ 'src/lib/jpeg/jmemsys.h', 420, 438 ]
+441 silly gunzTarPerm extractEntry src/lib/jpeg/jmorecfg.h
+442 silly gunzTarPerm modified mode [ 'src/lib/jpeg/jmorecfg.h', 420, 438 ]
+443 silly gunzTarPerm extractEntry src/lib/jpeg/jpegint.h
+444 silly gunzTarPerm modified mode [ 'src/lib/jpeg/jpegint.h', 420, 438 ]
+445 silly gunzTarPerm extractEntry src/lib/jpeg/jpeglib.h
+446 silly gunzTarPerm modified mode [ 'src/lib/jpeg/jpeglib.h', 420, 438 ]
+447 silly gunzTarPerm extractEntry src/lib/jpeg/jquant1.c
+448 silly gunzTarPerm modified mode [ 'src/lib/jpeg/jquant1.c', 493, 511 ]
+449 silly gunzTarPerm extractEntry src/lib/jpeg/jquant2.c
+450 silly gunzTarPerm modified mode [ 'src/lib/jpeg/jquant2.c', 493, 511 ]
+451 silly gunzTarPerm extractEntry src/lib/jpeg/jutils.c
+452 silly gunzTarPerm modified mode [ 'src/lib/jpeg/jutils.c', 420, 438 ]
+453 silly gunzTarPerm extractEntry src/lib/jpeg/jversion.h
+454 silly gunzTarPerm modified mode [ 'src/lib/jpeg/jversion.h', 420, 438 ]
+455 silly gunzTarPerm extractEntry src/lib/jpeg/jdhuff.c
+456 silly gunzTarPerm modified mode [ 'src/lib/jpeg/jdhuff.c', 420, 438 ]
+457 silly gunzTarPerm extractEntry src/lib/png/README
+458 silly gunzTarPerm modified mode [ 'src/lib/png/README', 420, 438 ]
+459 silly gunzTarPerm extractEntry src/lib/png/LICENSE
+460 silly gunzTarPerm modified mode [ 'src/lib/png/LICENSE', 420, 438 ]
+461 silly gunzTarPerm extractEntry src/lib/png/png.c
+462 silly gunzTarPerm modified mode [ 'src/lib/png/png.c', 420, 438 ]
+463 silly gunzTarPerm extractEntry src/lib/png/png.h
+464 silly gunzTarPerm modified mode [ 'src/lib/png/png.h', 420, 438 ]
+465 silly gunzTarPerm extractEntry src/lib/png/pngconf.h
+466 silly gunzTarPerm modified mode [ 'src/lib/png/pngconf.h', 420, 438 ]
+467 silly gunzTarPerm extractEntry src/lib/png/pngdebug.h
+468 silly gunzTarPerm modified mode [ 'src/lib/png/pngdebug.h', 420, 438 ]
+469 silly gunzTarPerm extractEntry src/lib/png/pngerror.c
+470 silly gunzTarPerm modified mode [ 'src/lib/png/pngerror.c', 420, 438 ]
+471 silly gunzTarPerm extractEntry src/lib/png/pngget.c
+472 silly gunzTarPerm modified mode [ 'src/lib/png/pngget.c', 420, 438 ]
+473 silly gunzTarPerm extractEntry src/lib/png/pnginfo.h
+474 silly gunzTarPerm modified mode [ 'src/lib/png/pnginfo.h', 420, 438 ]
+475 silly gunzTarPerm extractEntry src/lib/png/pngmem.c
+476 silly gunzTarPerm modified mode [ 'src/lib/png/pngmem.c', 420, 438 ]
+477 silly gunzTarPerm extractEntry src/lib/png/pngpread.c
+478 silly gunzTarPerm modified mode [ 'src/lib/png/pngpread.c', 420, 438 ]
+479 silly gunzTarPerm extractEntry src/lib/png/pngwutil.c
+480 silly gunzTarPerm modified mode [ 'src/lib/png/pngwutil.c', 420, 438 ]
+481 silly gunzTarPerm extractEntry src/lib/png/pngread.c
+482 silly gunzTarPerm modified mode [ 'src/lib/png/pngread.c', 420, 438 ]
+483 silly gunzTarPerm extractEntry src/lib/png/pngrio.c
+484 silly gunzTarPerm modified mode [ 'src/lib/png/pngrio.c', 420, 438 ]
+485 silly gunzTarPerm extractEntry src/lib/png/pngrtran.c
+486 silly gunzTarPerm modified mode [ 'src/lib/png/pngrtran.c', 420, 438 ]
+487 silly gunzTarPerm extractEntry src/lib/png/pngrutil.c
+488 silly gunzTarPerm modified mode [ 'src/lib/png/pngrutil.c', 420, 438 ]
+489 silly gunzTarPerm extractEntry src/lib/png/pngset.c
+490 silly gunzTarPerm modified mode [ 'src/lib/png/pngset.c', 420, 438 ]
+491 silly gunzTarPerm extractEntry src/lib/png/pngstruct.h
+492 silly gunzTarPerm modified mode [ 'src/lib/png/pngstruct.h', 420, 438 ]
+493 silly gunzTarPerm extractEntry src/lib/png/pngtrans.c
+494 silly gunzTarPerm modified mode [ 'src/lib/png/pngtrans.c', 420, 438 ]
+495 silly gunzTarPerm extractEntry src/lib/png/pngwio.c
+496 silly gunzTarPerm modified mode [ 'src/lib/png/pngwio.c', 420, 438 ]
+497 silly gunzTarPerm extractEntry src/lib/png/pngwrite.c
+498 silly gunzTarPerm modified mode [ 'src/lib/png/pngwrite.c', 420, 438 ]
+499 silly gunzTarPerm extractEntry src/lib/png/pngwtran.c
+500 silly gunzTarPerm modified mode [ 'src/lib/png/pngwtran.c', 420, 438 ]
+501 silly gunzTarPerm extractEntry src/lib/png/pngpriv.h
+502 silly gunzTarPerm modified mode [ 'src/lib/png/pngpriv.h', 420, 438 ]
+503 silly gunzTarPerm extractEntry src/lib/zlib/README
+504 silly gunzTarPerm modified mode [ 'src/lib/zlib/README', 420, 438 ]
+505 silly gunzTarPerm extractEntry src/lib/zlib/zutil.h
+506 silly gunzTarPerm modified mode [ 'src/lib/zlib/zutil.h', 420, 438 ]
+507 silly gunzTarPerm extractEntry src/lib/zlib/compress.c
+508 silly gunzTarPerm modified mode [ 'src/lib/zlib/compress.c', 420, 438 ]
+509 silly gunzTarPerm extractEntry src/lib/zlib/crc32.c
+510 silly gunzTarPerm modified mode [ 'src/lib/zlib/crc32.c', 420, 438 ]
+511 silly gunzTarPerm extractEntry src/lib/zlib/crc32.h
+512 silly gunzTarPerm modified mode [ 'src/lib/zlib/crc32.h', 420, 438 ]
+513 silly gunzTarPerm extractEntry src/lib/zlib/deflate.c
+514 silly gunzTarPerm modified mode [ 'src/lib/zlib/deflate.c', 420, 438 ]
+515 silly gunzTarPerm extractEntry src/lib/zlib/deflate.h
+516 silly gunzTarPerm modified mode [ 'src/lib/zlib/deflate.h', 420, 438 ]
+517 silly gunzTarPerm extractEntry src/lib/zlib/gzclose.c
+518 silly gunzTarPerm modified mode [ 'src/lib/zlib/gzclose.c', 420, 438 ]
+519 silly gunzTarPerm extractEntry src/lib/zlib/gzguts.h
+520 silly gunzTarPerm modified mode [ 'src/lib/zlib/gzguts.h', 420, 438 ]
+521 silly gunzTarPerm extractEntry src/lib/zlib/gzlib.c
+522 silly gunzTarPerm modified mode [ 'src/lib/zlib/gzlib.c', 420, 438 ]
+523 silly gunzTarPerm extractEntry src/lib/zlib/gzread.c
+524 silly gunzTarPerm modified mode [ 'src/lib/zlib/gzread.c', 420, 438 ]
+525 silly gunzTarPerm extractEntry src/lib/zlib/gzwrite.c
+526 silly gunzTarPerm modified mode [ 'src/lib/zlib/gzwrite.c', 420, 438 ]
+527 silly gunzTarPerm extractEntry src/lib/zlib/infback.c
+528 silly gunzTarPerm modified mode [ 'src/lib/zlib/infback.c', 420, 438 ]
+529 silly gunzTarPerm extractEntry src/lib/zlib/adler32.c
+530 silly gunzTarPerm modified mode [ 'src/lib/zlib/adler32.c', 420, 438 ]
+531 silly gunzTarPerm extractEntry src/lib/zlib/inffast.h
+532 silly gunzTarPerm modified mode [ 'src/lib/zlib/inffast.h', 420, 438 ]
+533 silly gunzTarPerm extractEntry src/lib/zlib/inffixed.h
+534 silly gunzTarPerm modified mode [ 'src/lib/zlib/inffixed.h', 420, 438 ]
+535 silly gunzTarPerm extractEntry src/lib/zlib/inflate.c
+536 silly gunzTarPerm modified mode [ 'src/lib/zlib/inflate.c', 420, 438 ]
+537 silly gunzTarPerm extractEntry src/lib/zlib/inflate.h
+538 silly gunzTarPerm modified mode [ 'src/lib/zlib/inflate.h', 420, 438 ]
+539 silly gunzTarPerm extractEntry src/lib/zlib/inftrees.c
+540 silly gunzTarPerm modified mode [ 'src/lib/zlib/inftrees.c', 420, 438 ]
+541 silly gunzTarPerm extractEntry src/lib/zlib/inftrees.h
+542 silly gunzTarPerm modified mode [ 'src/lib/zlib/inftrees.h', 420, 438 ]
+543 silly gunzTarPerm extractEntry src/lib/zlib/trees.c
+544 silly gunzTarPerm modified mode [ 'src/lib/zlib/trees.c', 420, 438 ]
+545 silly gunzTarPerm extractEntry src/lib/zlib/trees.h
+546 silly gunzTarPerm modified mode [ 'src/lib/zlib/trees.h', 420, 438 ]
+547 silly gunzTarPerm extractEntry src/lib/zlib/uncompr.c
+548 silly gunzTarPerm modified mode [ 'src/lib/zlib/uncompr.c', 420, 438 ]
+549 silly gunzTarPerm extractEntry src/lib/zlib/zconf.h
+550 silly gunzTarPerm modified mode [ 'src/lib/zlib/zconf.h', 420, 438 ]
+551 silly gunzTarPerm extractEntry src/lib/zlib/zlib.h
+552 silly gunzTarPerm modified mode [ 'src/lib/zlib/zlib.h', 420, 438 ]
+553 silly gunzTarPerm extractEntry src/lib/zlib/zutil.c
+554 silly gunzTarPerm modified mode [ 'src/lib/zlib/zutil.c', 420, 438 ]
+555 silly gunzTarPerm extractEntry src/lib/zlib/inffast.c
+556 silly gunzTarPerm modified mode [ 'src/lib/zlib/inffast.c', 420, 438 ]
+557 silly gunzTarPerm extractEntry src/win/unistd.h
+558 silly gunzTarPerm modified mode [ 'src/win/unistd.h', 420, 438 ]
+559 silly gunzTarPerm extractEntry tests/utils.js
+560 silly gunzTarPerm modified mode [ 'tests/utils.js', 420, 438 ]
+561 silly gunzTarPerm extractEntry tests/imgs.js
+562 silly gunzTarPerm modified mode [ 'tests/imgs.js', 420, 438 ]
+563 silly gunzTarPerm extractEntry tests/02.operations/001.open.js
+564 silly gunzTarPerm modified mode [ 'tests/02.operations/001.open.js', 420, 438 ]
+565 silly gunzTarPerm extractEntry tests/02.operations/107.mirror.js
+566 silly gunzTarPerm modified mode [ 'tests/02.operations/107.mirror.js', 420, 438 ]
+567 silly gunzTarPerm extractEntry tests/02.operations/108.pad.js
+568 silly gunzTarPerm modified mode [ 'tests/02.operations/108.pad.js', 420, 438 ]
+569 silly gunzTarPerm extractEntry tests/02.operations/109.border.js
+570 silly gunzTarPerm modified mode [ 'tests/02.operations/109.border.js', 420, 438 ]
+571 silly gunzTarPerm extractEntry tests/02.operations/106.blur.js
+572 silly gunzTarPerm modified mode [ 'tests/02.operations/106.blur.js', 420, 438 ]
+573 silly gunzTarPerm extractEntry tests/02.operations/111.saturate.js
+574 silly gunzTarPerm modified mode [ 'tests/02.operations/111.saturate.js', 420, 438 ]
+575 silly gunzTarPerm extractEntry tests/02.operations/112.lighten.js
+576 silly gunzTarPerm modified mode [ 'tests/02.operations/112.lighten.js', 420, 438 ]
+577 silly gunzTarPerm extractEntry tests/02.operations/113.darken.js
+578 silly gunzTarPerm modified mode [ 'tests/02.operations/113.darken.js', 420, 438 ]
+579 silly gunzTarPerm extractEntry tests/02.operations/114.hue.js
+580 silly gunzTarPerm modified mode [ 'tests/02.operations/114.hue.js', 420, 438 ]
+581 silly gunzTarPerm extractEntry tests/02.operations/115.hslaAdjust.js
+582 silly gunzTarPerm modified mode [ 'tests/02.operations/115.hslaAdjust.js', 420, 438 ]
+583 silly gunzTarPerm extractEntry tests/02.operations/105.crop.js
+584 silly gunzTarPerm modified mode [ 'tests/02.operations/105.crop.js', 420, 438 ]
+585 silly gunzTarPerm extractEntry tests/02.operations/116.fade.js
+586 silly gunzTarPerm modified mode [ 'tests/02.operations/116.fade.js', 420, 438 ]
+587 silly gunzTarPerm extractEntry tests/02.operations/104.rotate.js
+588 silly gunzTarPerm modified mode [ 'tests/02.operations/104.rotate.js', 420, 438 ]
+589 silly gunzTarPerm extractEntry tests/02.operations/116.opacify.js
+590 silly gunzTarPerm modified mode [ 'tests/02.operations/116.opacify.js', 420, 438 ]
+591 silly gunzTarPerm extractEntry tests/02.operations/103.scale.js
+592 silly gunzTarPerm modified mode [ 'tests/02.operations/103.scale.js', 420, 438 ]
+593 silly gunzTarPerm extractEntry tests/02.operations/117.paste.js
+594 silly gunzTarPerm modified mode [ 'tests/02.operations/117.paste.js', 420, 438 ]
+595 silly gunzTarPerm extractEntry tests/02.operations/102.resize.js
+596 silly gunzTarPerm modified mode [ 'tests/02.operations/102.resize.js', 420, 438 ]
+597 silly gunzTarPerm extractEntry tests/02.operations/118.setPixel.js
+598 silly gunzTarPerm modified mode [ 'tests/02.operations/118.setPixel.js', 420, 438 ]
+599 silly gunzTarPerm extractEntry tests/02.operations/101.writeFile.js
+600 silly gunzTarPerm modified mode [ 'tests/02.operations/101.writeFile.js', 420, 438 ]
+601 silly gunzTarPerm extractEntry tests/02.operations/119.contain.js
+602 silly gunzTarPerm modified mode [ 'tests/02.operations/119.contain.js', 420, 438 ]
+603 silly gunzTarPerm extractEntry tests/02.operations/002.create.js
+604 silly gunzTarPerm modified mode [ 'tests/02.operations/002.create.js', 420, 438 ]
+605 silly gunzTarPerm extractEntry tests/02.operations/120.cover.js
+606 silly gunzTarPerm modified mode [ 'tests/02.operations/120.cover.js', 420, 438 ]
+607 silly gunzTarPerm extractEntry tests/02.operations/110.sharpen.js
+608 silly gunzTarPerm modified mode [ 'tests/02.operations/110.sharpen.js', 420, 438 ]
+609 silly gunzTarPerm extractEntry tests/03.safety/00.locks.js
+610 silly gunzTarPerm modified mode [ 'tests/03.safety/00.locks.js', 420, 438 ]
+611 silly gunzTarPerm extractEntry tests/03.safety/01.releases.js
+612 silly gunzTarPerm modified mode [ 'tests/03.safety/01.releases.js', 420, 438 ]
+613 silly gunzTarPerm extractEntry tests/03.safety/02.clone.js
+614 silly gunzTarPerm modified mode [ 'tests/03.safety/02.clone.js', 420, 438 ]
+615 silly gunzTarPerm extractEntry tests/03.safety/03.extract.js
+616 silly gunzTarPerm modified mode [ 'tests/03.safety/03.extract.js', 420, 438 ]
+617 silly gunzTarPerm extractEntry tests/04.batch/index.js
+618 silly gunzTarPerm modified mode [ 'tests/04.batch/index.js', 420, 438 ]
+619 silly gunzTarPerm extractEntry tests/01.getters/index.js
+620 silly gunzTarPerm modified mode [ 'tests/01.getters/index.js', 420, 438 ]
+621 silly gunzTarPerm extractEntry tests/NOTES.md
+622 silly gunzTarPerm modified mode [ 'tests/NOTES.md', 420, 438 ]
+623 silly gunzTarPerm extractEntry tests/images/rgb.jpg
+624 silly gunzTarPerm modified mode [ 'tests/images/rgb.jpg', 420, 438 ]
+625 silly gunzTarPerm extractEntry tests/images/gs.gif
+626 silly gunzTarPerm modified mode [ 'tests/images/gs.gif', 420, 438 ]
+627 silly gunzTarPerm extractEntry tests/images/gs.png
+628 silly gunzTarPerm modified mode [ 'tests/images/gs.png', 420, 438 ]
+629 silly gunzTarPerm extractEntry tests/images/invalid.gif
+630 silly gunzTarPerm modified mode [ 'tests/images/invalid.gif', 420, 438 ]
+631 silly gunzTarPerm extractEntry tests/images/invalid.jpg
+632 silly gunzTarPerm modified mode [ 'tests/images/invalid.jpg', 420, 438 ]
+633 silly gunzTarPerm extractEntry tests/images/invalid.png
+634 silly gunzTarPerm modified mode [ 'tests/images/invalid.png', 420, 438 ]
+635 silly gunzTarPerm extractEntry tests/images/rgb.gif
+636 silly gunzTarPerm modified mode [ 'tests/images/rgb.gif', 420, 438 ]
+637 silly gunzTarPerm extractEntry tests/images/gs.jpg
+638 silly gunzTarPerm modified mode [ 'tests/images/gs.jpg', 420, 438 ]
+639 silly gunzTarPerm extractEntry tests/images/rgb.png
+640 silly gunzTarPerm modified mode [ 'tests/images/rgb.png', 420, 438 ]
+641 silly gunzTarPerm extractEntry tests/images/rgbgif
+642 silly gunzTarPerm modified mode [ 'tests/images/rgbgif', 420, 438 ]
+643 silly gunzTarPerm extractEntry tests/images/rgbjpg
+644 silly gunzTarPerm modified mode [ 'tests/images/rgbjpg', 420, 438 ]
+645 silly gunzTarPerm extractEntry tests/images/rgbpng
+646 silly gunzTarPerm modified mode [ 'tests/images/rgbpng', 420, 438 ]
+647 silly gunzTarPerm extractEntry tests/images/trans.gif
+648 silly gunzTarPerm modified mode [ 'tests/images/trans.gif', 420, 438 ]
+649 silly gunzTarPerm extractEntry tests/images/trans.png
+650 silly gunzTarPerm modified mode [ 'tests/images/trans.png', 420, 438 ]
+651 silly gunzTarPerm extractEntry tests/00.argsValidation/001.open.js
+652 silly gunzTarPerm modified mode [ 'tests/00.argsValidation/001.open.js', 420, 438 ]
+653 silly gunzTarPerm extractEntry tests/00.argsValidation/107.image.pad.js
+654 silly gunzTarPerm modified mode [ 'tests/00.argsValidation/107.image.pad.js', 420, 438 ]
+655 silly gunzTarPerm extractEntry tests/00.argsValidation/108.image.border.js
+656 silly gunzTarPerm modified mode [ 'tests/00.argsValidation/108.image.border.js', 420, 438 ]
+657 silly gunzTarPerm extractEntry tests/00.argsValidation/109.image.paste.js
+658 silly gunzTarPerm modified mode [ 'tests/00.argsValidation/109.image.paste.js', 420, 438 ]
+659 silly gunzTarPerm extractEntry tests/00.argsValidation/106.image.mirror.js
+660 silly gunzTarPerm modified mode [ 'tests/00.argsValidation/106.image.mirror.js', 420, 438 ]
+661 silly gunzTarPerm extractEntry tests/00.argsValidation/110.image.setPixel.js
+662 silly gunzTarPerm modified mode [ 'tests/00.argsValidation/110.image.setPixel.js', 420, 438 ]
+663 silly gunzTarPerm extractEntry tests/00.argsValidation/201.batch.resize.js
+664 silly gunzTarPerm modified mode [ 'tests/00.argsValidation/201.batch.resize.js', 420, 438 ]
+665 silly gunzTarPerm extractEntry tests/00.argsValidation/202.batch.scale.js
+666 silly gunzTarPerm modified mode [ 'tests/00.argsValidation/202.batch.scale.js', 420, 438 ]
+667 silly gunzTarPerm extractEntry tests/00.argsValidation/203.batch.rotate.js
+668 silly gunzTarPerm modified mode [ 'tests/00.argsValidation/203.batch.rotate.js', 420, 438 ]
+669 silly gunzTarPerm extractEntry tests/00.argsValidation/204.batch.toBuffer.js
+670 silly gunzTarPerm modified mode [ 'tests/00.argsValidation/204.batch.toBuffer.js', 420, 438 ]
+671 silly gunzTarPerm extractEntry tests/00.argsValidation/105.image.writeFile.js
+672 silly gunzTarPerm modified mode [ 'tests/00.argsValidation/105.image.writeFile.js', 420, 438 ]
+673 silly gunzTarPerm extractEntry tests/00.argsValidation/205.batch.writeFile.js
+674 silly gunzTarPerm modified mode [ 'tests/00.argsValidation/205.batch.writeFile.js', 420, 438 ]
+675 silly gunzTarPerm extractEntry tests/00.argsValidation/104.image.toBuffer.js
+676 silly gunzTarPerm modified mode [ 'tests/00.argsValidation/104.image.toBuffer.js', 420, 438 ]
+677 silly gunzTarPerm extractEntry tests/00.argsValidation/206.batch.mirror.js
+678 silly gunzTarPerm modified mode [ 'tests/00.argsValidation/206.batch.mirror.js', 420, 438 ]
+679 silly gunzTarPerm extractEntry tests/00.argsValidation/103.image.rotate.js
+680 silly gunzTarPerm modified mode [ 'tests/00.argsValidation/103.image.rotate.js', 420, 438 ]
+681 silly gunzTarPerm extractEntry tests/00.argsValidation/207.batch.pad.js
+682 silly gunzTarPerm modified mode [ 'tests/00.argsValidation/207.batch.pad.js', 420, 438 ]
+683 silly gunzTarPerm extractEntry tests/00.argsValidation/102.image.scale.js
+684 silly gunzTarPerm modified mode [ 'tests/00.argsValidation/102.image.scale.js', 420, 438 ]
+685 silly gunzTarPerm extractEntry tests/00.argsValidation/208.batch.border.js
+686 silly gunzTarPerm modified mode [ 'tests/00.argsValidation/208.batch.border.js', 420, 438 ]
+687 silly gunzTarPerm extractEntry tests/00.argsValidation/101.image.resize.js
+688 silly gunzTarPerm modified mode [ 'tests/00.argsValidation/101.image.resize.js', 420, 438 ]
+689 silly gunzTarPerm extractEntry tests/00.argsValidation/209.batch.paste.js
+690 silly gunzTarPerm modified mode [ 'tests/00.argsValidation/209.batch.paste.js', 420, 438 ]
+691 silly gunzTarPerm extractEntry tests/00.argsValidation/002.create.js
+692 silly gunzTarPerm modified mode [ 'tests/00.argsValidation/002.create.js', 420, 438 ]
+693 silly gunzTarPerm extractEntry tests/00.argsValidation/210.batch.setPixel.js
+694 silly gunzTarPerm modified mode [ 'tests/00.argsValidation/210.batch.setPixel.js', 420, 438 ]
+695 silly gunzTarPerm extractEntry tests/00.argsValidation/110.image.getPixel.js
+696 silly gunzTarPerm modified mode [ 'tests/00.argsValidation/110.image.getPixel.js', 420, 438 ]
+697 silly gunzTarPerm extractEntry tests/mocha.opts
+698 silly gunzTarPerm modified mode [ 'tests/mocha.opts', 420, 438 ]
+699 silly gunzTarPerm extractEntry tests/05.stress/index.js
+700 silly gunzTarPerm modified mode [ 'tests/05.stress/index.js', 420, 438 ]
+701 silly gunzTarPerm extractEntry binding.gyp
+702 silly gunzTarPerm modified mode [ 'binding.gyp', 420, 438 ]
+703 verbose write writing to E:\Documents\GitHub\PayPoint\app\node_modules\node-thermal-printer\node_modules\lwip\package.json
+704 info preinstall lwip@0.0.6
+705 verbose readDependencies loading dependencies from E:\Documents\GitHub\PayPoint\app\node_modules\node-thermal-printer\node_modules\lwip\package.json
+706 silly prepareForInstallMany adding async@~0.9.0 from lwip dependencies
+707 silly prepareForInstallMany adding decree@0.0.6 from lwip dependencies
+708 silly prepareForInstallMany adding nan@~1.4.1 from lwip dependencies
+709 verbose readDependencies loading dependencies from E:\Documents\GitHub\PayPoint\app\node_modules\node-thermal-printer\node_modules\lwip\package.json
+710 silly cache add args [ 'async@~0.9.0', null ]
+711 verbose cache add spec async@~0.9.0
+712 silly cache add args [ 'decree@0.0.6', null ]
+713 verbose cache add spec decree@0.0.6
+714 silly cache add parsed spec { raw: 'async@~0.9.0',
+714 silly cache add   scope: null,
+714 silly cache add   name: 'async',
+714 silly cache add   rawSpec: '~0.9.0',
+714 silly cache add   spec: '>=0.9.0 <0.10.0',
+714 silly cache add   type: 'range' }
+715 silly addNamed async@>=0.9.0 <0.10.0
+716 verbose addNamed ">=0.9.0 <0.10.0" is a valid semver range for async
+717 silly addNameRange { name: 'async', range: '>=0.9.0 <0.10.0', hasData: false }
+718 silly mapToRegistry name async
+719 silly mapToRegistry using default registry
+720 silly mapToRegistry registry https://registry.npmjs.org/
+721 silly mapToRegistry uri https://registry.npmjs.org/async
+722 verbose addNameRange registry:https://registry.npmjs.org/async not in flight; fetching
+723 silly cache add parsed spec { raw: 'decree@0.0.6',
+723 silly cache add   scope: null,
+723 silly cache add   name: 'decree',
+723 silly cache add   rawSpec: '0.0.6',
+723 silly cache add   spec: '0.0.6',
+723 silly cache add   type: 'version' }
+724 silly addNamed decree@0.0.6
+725 verbose addNamed "0.0.6" is a plain semver version for decree
+726 silly mapToRegistry name decree
+727 silly mapToRegistry using default registry
+728 silly mapToRegistry registry https://registry.npmjs.org/
+729 silly mapToRegistry uri https://registry.npmjs.org/decree
+730 verbose addNameVersion registry:https://registry.npmjs.org/decree not in flight; fetching
+731 silly cache add args [ 'nan@~1.4.1', null ]
+732 verbose cache add spec nan@~1.4.1
+733 silly cache add parsed spec { raw: 'nan@~1.4.1',
+733 silly cache add   scope: null,
+733 silly cache add   name: 'nan',
+733 silly cache add   rawSpec: '~1.4.1',
+733 silly cache add   spec: '>=1.4.1 <1.5.0',
+733 silly cache add   type: 'range' }
+734 silly addNamed nan@>=1.4.1 <1.5.0
+735 verbose addNamed ">=1.4.1 <1.5.0" is a valid semver range for nan
+736 silly addNameRange { name: 'nan', range: '>=1.4.1 <1.5.0', hasData: false }
+737 silly mapToRegistry name nan
+738 silly mapToRegistry using default registry
+739 silly mapToRegistry registry https://registry.npmjs.org/
+740 silly mapToRegistry uri https://registry.npmjs.org/nan
+741 verbose addNameRange registry:https://registry.npmjs.org/nan not in flight; fetching
+742 verbose request uri https://registry.npmjs.org/decree
+743 verbose request no auth needed
+744 info attempt registry request try #1 at 20:27:19
+745 verbose etag "5OLQ6R3CF33L8ASY7LDDINQC"
+746 http request GET https://registry.npmjs.org/decree
+747 verbose request uri https://registry.npmjs.org/nan
+748 verbose request no auth needed
+749 info attempt registry request try #1 at 20:27:19
+750 verbose etag "CWMZR9BQ6YD6KL99MGG0CU5U5"
+751 http request GET https://registry.npmjs.org/nan
+752 verbose request uri https://registry.npmjs.org/async
+753 verbose request no auth needed
+754 info attempt registry request try #1 at 20:27:19
+755 verbose etag "BKCS6L29MPQRL48BV2POCGRS2"
+756 http request GET https://registry.npmjs.org/async
+757 http 304 https://registry.npmjs.org/dank-do-while
+758 silly get cb [ 304,
+758 silly get   { date: 'Mon, 13 Jul 2015 18:27:30 GMT',
+758 silly get     via: '1.1 varnish',
+758 silly get     'cache-control': 'max-age=60',
+758 silly get     etag: '"4HHIZIQO14KX53IERO34YGY90"',
+758 silly get     age: '0',
+758 silly get     connection: 'keep-alive',
+758 silly get     'x-served-by': 'cache-ams4141-AMS',
+758 silly get     'x-cache': 'MISS',
+758 silly get     'x-cache-hits': '0',
+758 silly get     'x-timer': 'S1436812050.108629,VS0,VE421',
+758 silly get     vary: 'Accept' } ]
+759 verbose etag https://registry.npmjs.org/dank-do-while from cache
+760 verbose get saving dank-do-while to C:\Users\caillot\AppData\Roaming\npm-cache\registry.npmjs.org\dank-do-while\.cache.json
+761 silly addNameRange number 2 { name: 'dank-do-while', range: '>=0.1.2 <0.2.0', hasData: true }
+762 silly addNameRange versions [ 'dank-do-while', [ '0.1.0', '0.1.1', '0.1.2' ] ]
+763 silly addNamed dank-do-while@0.1.2
+764 verbose addNamed "0.1.2" is a plain semver version for dank-do-while
+765 silly cache afterAdd dank-do-while@0.1.2
+766 verbose afterAdd C:\Users\caillot\AppData\Roaming\npm-cache\dank-do-while\0.1.2\package\package.json not in flight; writing
+767 verbose afterAdd C:\Users\caillot\AppData\Roaming\npm-cache\dank-do-while\0.1.2\package\package.json written
+768 silly install resolved [ { name: 'dank-do-while',
+768 silly install resolved     version: '0.1.2',
+768 silly install resolved     description: 'An asynchronous do-while-like function',
+768 silly install resolved     main: 'index.js',
+768 silly install resolved     scripts: { test: 'nodeunit test.js' },
+768 silly install resolved     repository:
+768 silly install resolved      { type: 'git',
+768 silly install resolved        url: 'git://github.com/wankdanker/node-dank-do-while.git' },
+768 silly install resolved     keywords: [ 'do', 'while', 'async' ],
+768 silly install resolved     author: { name: 'Dan VerWeire' },
+768 silly install resolved     license: 'MIT',
+768 silly install resolved     bugs: { url: 'https://github.com/wankdanker/node-dank-do-while/issues' },
+768 silly install resolved     homepage: 'https://github.com/wankdanker/node-dank-do-while',
+768 silly install resolved     _id: 'dank-do-while@0.1.2',
+768 silly install resolved     _shasum: '819b25937b9777657b56f5172ad856596fcd0c84',
+768 silly install resolved     _from: 'dank-do-while@>=0.1.2 <0.2.0',
+768 silly install resolved     _npmVersion: '1.4.9',
+768 silly install resolved     _npmUser: { name: 'wankdanker', email: 'dverweire@gmail.com' },
+768 silly install resolved     maintainers: [ [Object] ],
+768 silly install resolved     dist:
+768 silly install resolved      { shasum: '819b25937b9777657b56f5172ad856596fcd0c84',
+768 silly install resolved        tarball: 'http://registry.npmjs.org/dank-do-while/-/dank-do-while-0.1.2.tgz' },
+768 silly install resolved     directories: {},
+768 silly install resolved     _resolved: 'https://registry.npmjs.org/dank-do-while/-/dank-do-while-0.1.2.tgz',
+768 silly install resolved     readme: 'ERROR: No README data found!' } ]
+769 info install dank-do-while@0.1.2 into E:\Documents\GitHub\PayPoint\app\node_modules\node-thermal-printer\node_modules\write-file-queue
+770 info installOne dank-do-while@0.1.2
+771 verbose installOne of dank-do-while to E:\Documents\GitHub\PayPoint\app\node_modules\node-thermal-printer\node_modules\write-file-queue not in flight; installing
+772 verbose lock using C:\Users\caillot\AppData\Roaming\npm-cache\_locks\dank-do-while-d5db9e43f77eae89.lock for E:\Documents\GitHub\PayPoint\app\node_modules\node-thermal-printer\node_modules\write-file-queue\node_modules\dank-do-while
+773 silly install write writing dank-do-while 0.1.2 to E:\Documents\GitHub\PayPoint\app\node_modules\node-thermal-printer\node_modules\write-file-queue\node_modules\dank-do-while
+774 verbose unbuild node_modules\node-thermal-printer\node_modules\write-file-queue\node_modules\dank-do-while
+775 silly gentlyRm E:\Documents\GitHub\PayPoint\app\node_modules\node-thermal-printer\node_modules\write-file-queue\node_modules\dank-do-while is being purged from base E:\Documents\GitHub\PayPoint\app
+776 verbose gentlyRm don't care about contents; nuking E:\Documents\GitHub\PayPoint\app\node_modules\node-thermal-printer\node_modules\write-file-queue\node_modules\dank-do-while
+777 verbose tar unpack C:\Users\caillot\AppData\Roaming\npm-cache\dank-do-while\0.1.2\package.tgz
+778 verbose tar unpacking to E:\Documents\GitHub\PayPoint\app\node_modules\node-thermal-printer\node_modules\write-file-queue\node_modules\dank-do-while
+779 silly gentlyRm E:\Documents\GitHub\PayPoint\app\node_modules\node-thermal-printer\node_modules\write-file-queue\node_modules\dank-do-while is being purged
+780 verbose gentlyRm don't care about contents; nuking E:\Documents\GitHub\PayPoint\app\node_modules\node-thermal-printer\node_modules\write-file-queue\node_modules\dank-do-while
+781 silly gunzTarPerm modes [ '777', '666' ]
+782 silly gunzTarPerm extractEntry package.json
+783 silly gunzTarPerm modified mode [ 'package.json', 436, 438 ]
+784 silly gunzTarPerm extractEntry README.md
+785 silly gunzTarPerm modified mode [ 'README.md', 436, 438 ]
+786 silly gunzTarPerm extractEntry index.js
+787 silly gunzTarPerm modified mode [ 'index.js', 436, 438 ]
+788 silly gunzTarPerm extractEntry test.js
+789 silly gunzTarPerm modified mode [ 'test.js', 436, 438 ]
+790 verbose write writing to E:\Documents\GitHub\PayPoint\app\node_modules\node-thermal-printer\node_modules\write-file-queue\node_modules\dank-do-while\package.json
+791 info preinstall dank-do-while@0.1.2
+792 verbose readDependencies loading dependencies from E:\Documents\GitHub\PayPoint\app\node_modules\node-thermal-printer\node_modules\write-file-queue\node_modules\dank-do-while\package.json
+793 verbose readDependencies loading dependencies from E:\Documents\GitHub\PayPoint\app\node_modules\node-thermal-printer\node_modules\write-file-queue\node_modules\dank-do-while\package.json
+794 silly install resolved []
+795 verbose about to build E:\Documents\GitHub\PayPoint\app\node_modules\node-thermal-printer\node_modules\write-file-queue\node_modules\dank-do-while
+796 info build E:\Documents\GitHub\PayPoint\app\node_modules\node-thermal-printer\node_modules\write-file-queue\node_modules\dank-do-while
+797 info linkStuff dank-do-while@0.1.2
+798 silly linkStuff dank-do-while@0.1.2 has E:\Documents\GitHub\PayPoint\app\node_modules\node-thermal-printer\node_modules\write-file-queue\node_modules as its parent node_modules
+799 verbose linkBins dank-do-while@0.1.2
+800 verbose linkMans dank-do-while@0.1.2
+801 verbose rebuildBundles dank-do-while@0.1.2
+802 info install dank-do-while@0.1.2
+803 info postinstall dank-do-while@0.1.2
+804 verbose unlock done using C:\Users\caillot\AppData\Roaming\npm-cache\_locks\dank-do-while-d5db9e43f77eae89.lock for E:\Documents\GitHub\PayPoint\app\node_modules\node-thermal-printer\node_modules\write-file-queue\node_modules\dank-do-while
+805 verbose about to build E:\Documents\GitHub\PayPoint\app\node_modules\node-thermal-printer\node_modules\write-file-queue
+806 info build E:\Documents\GitHub\PayPoint\app\node_modules\node-thermal-printer\node_modules\write-file-queue
+807 info linkStuff write-file-queue@0.0.1
+808 silly linkStuff write-file-queue@0.0.1 has E:\Documents\GitHub\PayPoint\app\node_modules\node-thermal-printer\node_modules as its parent node_modules
+809 verbose linkBins write-file-queue@0.0.1
+810 verbose linkMans write-file-queue@0.0.1
+811 verbose rebuildBundles write-file-queue@0.0.1
+812 verbose rebuildBundles [ 'dank-do-while' ]
+813 info install write-file-queue@0.0.1
+814 info postinstall write-file-queue@0.0.1
+815 verbose unlock done using C:\Users\caillot\AppData\Roaming\npm-cache\_locks\write-file-queue-ad2e2e66fbb24af6.lock for E:\Documents\GitHub\PayPoint\app\node_modules\node-thermal-printer\node_modules\write-file-queue
+816 http 304 https://registry.npmjs.org/decree
+817 silly get cb [ 304,
+817 silly get   { date: 'Mon, 13 Jul 2015 18:27:31 GMT',
+817 silly get     via: '1.1 varnish',
+817 silly get     'cache-control': 'max-age=60',
+817 silly get     etag: '"5OLQ6R3CF33L8ASY7LDDINQC"',
+817 silly get     age: '0',
+817 silly get     connection: 'keep-alive',
+817 silly get     'x-served-by': 'cache-ams4138-AMS',
+817 silly get     'x-cache': 'MISS',
+817 silly get     'x-cache-hits': '0',
+817 silly get     'x-timer': 'S1436812051.129619,VS0,VE108',
+817 silly get     vary: 'Accept' } ]
+818 verbose etag https://registry.npmjs.org/decree from cache
+819 verbose get saving decree to C:\Users\caillot\AppData\Roaming\npm-cache\registry.npmjs.org\decree\.cache.json
+820 silly cache afterAdd decree@0.0.6
+821 verbose afterAdd C:\Users\caillot\AppData\Roaming\npm-cache\decree\0.0.6\package\package.json not in flight; writing
+822 verbose afterAdd C:\Users\caillot\AppData\Roaming\npm-cache\decree\0.0.6\package\package.json written
+823 http 304 https://registry.npmjs.org/nan
+824 silly get cb [ 304,
+824 silly get   { date: 'Mon, 13 Jul 2015 18:27:31 GMT',
+824 silly get     via: '1.1 varnish',
+824 silly get     'cache-control': 'max-age=60',
+824 silly get     etag: '"CWMZR9BQ6YD6KL99MGG0CU5U5"',
+824 silly get     age: '33',
+824 silly get     connection: 'keep-alive',
+824 silly get     'x-served-by': 'cache-ams4123-AMS',
+824 silly get     'x-cache': 'HIT',
+824 silly get     'x-cache-hits': '1',
+824 silly get     'x-timer': 'S1436812051.264736,VS0,VE1',
+824 silly get     vary: 'Accept' } ]
+825 verbose etag https://registry.npmjs.org/nan from cache
+826 verbose get saving nan to C:\Users\caillot\AppData\Roaming\npm-cache\registry.npmjs.org\nan\.cache.json
+827 silly addNameRange number 2 { name: 'nan', range: '>=1.4.1 <1.5.0', hasData: true }
+828 silly addNameRange versions [ 'nan',
+828 silly addNameRange   [ '0.3.0-wip',
+828 silly addNameRange     '0.3.0-wip2',
+828 silly addNameRange     '0.3.0',
+828 silly addNameRange     '0.3.1',
+828 silly addNameRange     '0.3.2',
+828 silly addNameRange     '0.4.0',
+828 silly addNameRange     '0.4.1',
+828 silly addNameRange     '0.4.2',
+828 silly addNameRange     '0.4.3',
+828 silly addNameRange     '0.4.4',
+828 silly addNameRange     '0.5.0',
+828 silly addNameRange     '0.5.1',
+828 silly addNameRange     '0.5.2',
+828 silly addNameRange     '0.6.0',
+828 silly addNameRange     '0.7.0',
+828 silly addNameRange     '0.7.1',
+828 silly addNameRange     '0.8.0',
+828 silly addNameRange     '1.0.0',
+828 silly addNameRange     '1.1.0',
+828 silly addNameRange     '1.1.1',
+828 silly addNameRange     '1.1.2',
+828 silly addNameRange     '1.2.0',
+828 silly addNameRange     '1.3.0',
+828 silly addNameRange     '1.4.0',
+828 silly addNameRange     '1.4.1',
+828 silly addNameRange     '1.5.0',
+828 silly addNameRange     '1.4.2',
+828 silly addNameRange     '1.4.3',
+828 silly addNameRange     '1.5.1',
+828 silly addNameRange     '1.5.2',
+828 silly addNameRange     '1.6.0',
+828 silly addNameRange     '1.5.3',
+828 silly addNameRange     '1.6.1',
+828 silly addNameRange     '1.6.2',
+828 silly addNameRange     '1.7.0',
+828 silly addNameRange     '1.8.0',
+828 silly addNameRange     '1.8.1',
+828 silly addNameRange     '1.8.2',
+828 silly addNameRange     '1.8.3',
+828 silly addNameRange     '1.8.4' ] ]
+829 silly addNamed nan@1.4.3
+830 verbose addNamed "1.4.3" is a plain semver version for nan
+831 silly cache afterAdd nan@1.4.3
+832 verbose afterAdd C:\Users\caillot\AppData\Roaming\npm-cache\nan\1.4.3\package\package.json not in flight; writing
+833 verbose afterAdd C:\Users\caillot\AppData\Roaming\npm-cache\nan\1.4.3\package\package.json written
+834 http 200 https://registry.npmjs.org/async
+835 silly get cb [ 200,
+835 silly get   { server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+835 silly get     etag: '"103XCI8JFLVCH6WX7I2NZR3KJ"',
+835 silly get     'content-type': 'application/json',
+835 silly get     'cache-control': 'max-age=60',
+835 silly get     'content-length': '125392',
+835 silly get     'accept-ranges': 'bytes',
+835 silly get     date: 'Mon, 13 Jul 2015 18:27:31 GMT',
+835 silly get     via: '1.1 varnish',
+835 silly get     age: '33',
+835 silly get     connection: 'keep-alive',
+835 silly get     'x-served-by': 'cache-ams4129-AMS',
+835 silly get     'x-cache': 'HIT',
+835 silly get     'x-cache-hits': '3',
+835 silly get     'x-timer': 'S1436812051.162620,VS0,VE0',
+835 silly get     vary: 'Accept' } ]
+836 verbose get saving async to C:\Users\caillot\AppData\Roaming\npm-cache\registry.npmjs.org\async\.cache.json
+837 silly addNameRange number 2 { name: 'async', range: '>=0.9.0 <0.10.0', hasData: true }
+838 silly addNameRange versions [ 'async',
+838 silly addNameRange   [ '0.1.0',
+838 silly addNameRange     '0.1.1',
+838 silly addNameRange     '0.1.2',
+838 silly addNameRange     '0.1.3',
+838 silly addNameRange     '0.1.4',
+838 silly addNameRange     '0.1.5',
+838 silly addNameRange     '0.1.6',
+838 silly addNameRange     '0.1.7',
+838 silly addNameRange     '0.1.8',
+838 silly addNameRange     '0.1.9',
+838 silly addNameRange     '0.1.10',
+838 silly addNameRange     '0.1.11',
+838 silly addNameRange     '0.1.12',
+838 silly addNameRange     '0.1.13',
+838 silly addNameRange     '0.1.14',
+838 silly addNameRange     '0.1.15',
+838 silly addNameRange     '0.1.16',
+838 silly addNameRange     '0.1.17',
+838 silly addNameRange     '0.1.18',
+838 silly addNameRange     '0.1.19',
+838 silly addNameRange     '0.1.20',
+838 silly addNameRange     '0.1.21',
+838 silly addNameRange     '0.1.22',
+838 silly addNameRange     '0.2.0',
+838 silly addNameRange     '0.2.1',
+838 silly addNameRange     '0.2.2',
+838 silly addNameRange     '0.2.3',
+838 silly addNameRange     '0.2.4',
+838 silly addNameRange     '0.2.5',
+838 silly addNameRange     '0.2.6',
+838 silly addNameRange     '0.2.7',
+838 silly addNameRange     '0.2.8',
+838 silly addNameRange     '0.2.9',
+838 silly addNameRange     '0.2.10',
+838 silly addNameRange     '0.3.0',
+838 silly addNameRange     '0.4.0',
+838 silly addNameRange     '0.4.1',
+838 silly addNameRange     '0.5.0',
+838 silly addNameRange     '0.6.0',
+838 silly addNameRange     '0.6.1',
+838 silly addNameRange     '0.6.2',
+838 silly addNameRange     '0.7.0',
+838 silly addNameRange     '0.8.0',
+838 silly addNameRange     '0.9.0',
+838 silly addNameRange     '0.9.2',
+838 silly addNameRange     '1.0.0',
+838 silly addNameRange     '1.1.0',
+838 silly addNameRange     '1.2.0',
+838 silly addNameRange     '1.1.1',
+838 silly addNameRange     '1.2.1',
+838 silly addNameRange     '1.3.0' ] ]
+839 silly addNamed async@0.9.2
+840 verbose addNamed "0.9.2" is a plain semver version for async
+841 silly cache afterAdd async@0.9.2
+842 verbose afterAdd C:\Users\caillot\AppData\Roaming\npm-cache\async\0.9.2\package\package.json not in flight; writing
+843 verbose afterAdd C:\Users\caillot\AppData\Roaming\npm-cache\async\0.9.2\package\package.json written
+844 silly install resolved [ { name: 'decree',
+844 silly install resolved     version: '0.0.6',
+844 silly install resolved     description: 'Declarative arguments-resolver',
+844 silly install resolved     main: 'decree.js',
+844 silly install resolved     scripts: { test: 'make test', prepublish: 'make dist' },
+844 silly install resolved     repository: { type: 'git', url: 'git+https://github.com/EyalAr/Decree.git' },
+844 silly install resolved     keywords: [ 'declarative', 'arguments', 'resolve', 'disambiguate', 'match' ],
+844 silly install resolved     author: { name: 'Eyal Arubas', email: 'eyalarubas@gmail.com' },
+844 silly install resolved     license: 'MIT',
+844 silly install resolved     bugs: { url: 'https://github.com/EyalAr/Decree/issues' },
+844 silly install resolved     homepage: 'https://github.com/EyalAr/Decree',
+844 silly install resolved     devDependencies:
+844 silly install resolved      { coveralls: '^2.11.1',
+844 silly install resolved        fume: '0.0.0',
+844 silly install resolved        istanbul: '^0.3.2',
+844 silly install resolved        mkdirp: '^0.5.0',
+844 silly install resolved        mocha: '^1.20.1',
+844 silly install resolved        'mocha-lcov-reporter': '0.0.1',
+844 silly install resolved        requirejs: '^2.1.15',
+844 silly install resolved        should: '^4.0.4' },
+844 silly install resolved     dependencies: { 'lodash-node': '^2.4.1' },
+844 silly install resolved     _id: 'decree@0.0.6',
+844 silly install resolved     _shasum: '47efef0ed600d726ea8640345dc4961d0fa54cdd',
+844 silly install resolved     _from: 'decree@0.0.6',
+844 silly install resolved     _npmVersion: '1.4.10',
+844 silly install resolved     _npmUser: { name: 'eyalar', email: 'eyalarubas@gmail.com' },
+844 silly install resolved     maintainers: [ [Object] ],
+844 silly install resolved     dist:
+844 silly install resolved      { shasum: '47efef0ed600d726ea8640345dc4961d0fa54cdd',
+844 silly install resolved        tarball: 'http://registry.npmjs.org/decree/-/decree-0.0.6.tgz' },
+844 silly install resolved     directories: {},
+844 silly install resolved     _resolved: 'https://registry.npmjs.org/decree/-/decree-0.0.6.tgz',
+844 silly install resolved     readme: 'ERROR: No README data found!' },
+844 silly install resolved   { name: 'nan',
+844 silly install resolved     version: '1.4.3',
+844 silly install resolved     description: 'Native Abstractions for Node.js: C++ header for Node 0.8->0.12 compatibility',
+844 silly install resolved     main: 'include_dirs.js',
+844 silly install resolved     repository: { type: 'git', url: 'git://github.com/rvagg/nan.git' },
+844 silly install resolved     scripts:
+844 silly install resolved      { test: 'tap --gc test/js/*-test.js',
+844 silly install resolved        'rebuild-tests': 'node-gyp rebuild --directory test' },
+844 silly install resolved     contributors: [ [Object], [Object], [Object], [Object], [Object], [Object] ],
+844 silly install resolved     devDependencies:
+844 silly install resolved      { bindings: '~1.2.1',
+844 silly install resolved        'node-gyp': '~1.0.2',
+844 silly install resolved        tap: '~0.4.13',
+844 silly install resolved        xtend: '~4.0.0' },
+844 silly install resolved     license: 'MIT',
+844 silly install resolved     gitHead: '75121a4413c4729170ec97c73c4826600f4a763e',
+844 silly install resolved     bugs: { url: 'https://github.com/rvagg/nan/issues' },
+844 silly install resolved     homepage: 'https://github.com/rvagg/nan',
+844 silly install resolved     _id: 'nan@1.4.3',
+844 silly install resolved     _shasum: 'c56b5404698063696f597435f9163c312aea5009',
+844 silly install resolved     _from: 'nan@>=1.4.1 <1.5.0',
+844 silly install resolved     _npmVersion: '2.1.6',
+844 silly install resolved     _nodeVersion: '0.10.33',
+844 silly install resolved     _npmUser: { name: 'rvagg', email: 'rod@vagg.org' },
+844 silly install resolved     maintainers: [ [Object], [Object] ],
+844 silly install resolved     dist:
+844 silly install resolved      { shasum: 'c56b5404698063696f597435f9163c312aea5009',
+844 silly install resolved        tarball: 'http://registry.npmjs.org/nan/-/nan-1.4.3.tgz' },
+844 silly install resolved     directories: {},
+844 silly install resolved     _resolved: 'https://registry.npmjs.org/nan/-/nan-1.4.3.tgz',
+844 silly install resolved     readme: 'ERROR: No README data found!' },
+844 silly install resolved   { name: 'async',
+844 silly install resolved     description: 'Higher-order functions and common patterns for asynchronous code',
+844 silly install resolved     main: 'lib/async.js',
+844 silly install resolved     author: { name: 'Caolan McMahon' },
+844 silly install resolved     version: '0.9.2',
+844 silly install resolved     keywords: [ 'async', 'callback', 'utility', 'module' ],
+844 silly install resolved     repository: { type: 'git', url: 'git+https://github.com/caolan/async.git' },
+844 silly install resolved     bugs: { url: 'https://github.com/caolan/async/issues' },
+844 silly install resolved     license: 'MIT',
+844 silly install resolved     devDependencies:
+844 silly install resolved      { nodeunit: '>0.0.0',
+844 silly install resolved        'uglify-js': '1.2.x',
+844 silly install resolved        nodelint: '>0.0.0',
+844 silly install resolved        lodash: '>=2.4.1' },
+844 silly install resolved     jam: { main: 'lib/async.js', include: [Object], categories: [Object] },
+844 silly install resolved     scripts: { test: 'nodeunit test/test-async.js' },
+844 silly install resolved     spm: { main: 'lib/async.js' },
+844 silly install resolved     volo: { main: 'lib/async.js', ignore: [Object] },
+844 silly install resolved     gitHead: 'de3a16091d5125384eff4a54deb3998b13c3814c',
+844 silly install resolved     homepage: 'https://github.com/caolan/async#readme',
+844 silly install resolved     _id: 'async@0.9.2',
+844 silly install resolved     _shasum: 'aea74d5e61c1f899613bf64bda66d4c78f2fd17d',
+844 silly install resolved     _from: 'async@>=0.9.0 <0.10.0',
+844 silly install resolved     _npmVersion: '2.9.0',
+844 silly install resolved     _nodeVersion: '2.0.1',
+844 silly install resolved     _npmUser: { name: 'beaugunderson', email: 'beau@beaugunderson.com' },
+844 silly install resolved     maintainers: [ [Object], [Object] ],
+844 silly install resolved     dist:
+844 silly install resolved      { shasum: 'aea74d5e61c1f899613bf64bda66d4c78f2fd17d',
+844 silly install resolved        tarball: 'http://registry.npmjs.org/async/-/async-0.9.2.tgz' },
+844 silly install resolved     directories: {},
+844 silly install resolved     _resolved: 'https://registry.npmjs.org/async/-/async-0.9.2.tgz',
+844 silly install resolved     readme: 'ERROR: No README data found!' } ]
+845 info install decree@0.0.6 into E:\Documents\GitHub\PayPoint\app\node_modules\node-thermal-printer\node_modules\lwip
+846 info install nan@1.4.3 into E:\Documents\GitHub\PayPoint\app\node_modules\node-thermal-printer\node_modules\lwip
+847 info install async@0.9.2 into E:\Documents\GitHub\PayPoint\app\node_modules\node-thermal-printer\node_modules\lwip
+848 info installOne decree@0.0.6
+849 verbose installOne of decree to E:\Documents\GitHub\PayPoint\app\node_modules\node-thermal-printer\node_modules\lwip not in flight; installing
+850 info installOne nan@1.4.3
+851 verbose installOne of nan to E:\Documents\GitHub\PayPoint\app\node_modules\node-thermal-printer\node_modules\lwip not in flight; installing
+852 info installOne async@0.9.2
+853 verbose installOne of async to E:\Documents\GitHub\PayPoint\app\node_modules\node-thermal-printer\node_modules\lwip not in flight; installing
+854 verbose lock using C:\Users\caillot\AppData\Roaming\npm-cache\_locks\decree-030481fb3ea1cfd4.lock for E:\Documents\GitHub\PayPoint\app\node_modules\node-thermal-printer\node_modules\lwip\node_modules\decree
+855 verbose lock using C:\Users\caillot\AppData\Roaming\npm-cache\_locks\nan-7d1d9d5ed545dd59.lock for E:\Documents\GitHub\PayPoint\app\node_modules\node-thermal-printer\node_modules\lwip\node_modules\nan
+856 verbose lock using C:\Users\caillot\AppData\Roaming\npm-cache\_locks\async-e67a223e846167dd.lock for E:\Documents\GitHub\PayPoint\app\node_modules\node-thermal-printer\node_modules\lwip\node_modules\async
+857 silly install write writing decree 0.0.6 to E:\Documents\GitHub\PayPoint\app\node_modules\node-thermal-printer\node_modules\lwip\node_modules\decree
+858 silly install write writing nan 1.4.3 to E:\Documents\GitHub\PayPoint\app\node_modules\node-thermal-printer\node_modules\lwip\node_modules\nan
+859 silly install write writing async 0.9.2 to E:\Documents\GitHub\PayPoint\app\node_modules\node-thermal-printer\node_modules\lwip\node_modules\async
+860 verbose unbuild node_modules\node-thermal-printer\node_modules\lwip\node_modules\decree
+861 verbose unbuild node_modules\node-thermal-printer\node_modules\lwip\node_modules\nan
+862 verbose unbuild node_modules\node-thermal-printer\node_modules\lwip\node_modules\async
+863 silly gentlyRm E:\Documents\GitHub\PayPoint\app\node_modules\node-thermal-printer\node_modules\lwip\node_modules\decree is being purged from base E:\Documents\GitHub\PayPoint\app
+864 verbose gentlyRm don't care about contents; nuking E:\Documents\GitHub\PayPoint\app\node_modules\node-thermal-printer\node_modules\lwip\node_modules\decree
+865 silly gentlyRm E:\Documents\GitHub\PayPoint\app\node_modules\node-thermal-printer\node_modules\lwip\node_modules\nan is being purged from base E:\Documents\GitHub\PayPoint\app
+866 verbose gentlyRm don't care about contents; nuking E:\Documents\GitHub\PayPoint\app\node_modules\node-thermal-printer\node_modules\lwip\node_modules\nan
+867 verbose tar unpack C:\Users\caillot\AppData\Roaming\npm-cache\decree\0.0.6\package.tgz
+868 verbose tar unpacking to E:\Documents\GitHub\PayPoint\app\node_modules\node-thermal-printer\node_modules\lwip\node_modules\decree
+869 silly gentlyRm E:\Documents\GitHub\PayPoint\app\node_modules\node-thermal-printer\node_modules\lwip\node_modules\decree is being purged
+870 verbose gentlyRm don't care about contents; nuking E:\Documents\GitHub\PayPoint\app\node_modules\node-thermal-printer\node_modules\lwip\node_modules\decree
+871 verbose tar unpack C:\Users\caillot\AppData\Roaming\npm-cache\nan\1.4.3\package.tgz
+872 verbose tar unpacking to E:\Documents\GitHub\PayPoint\app\node_modules\node-thermal-printer\node_modules\lwip\node_modules\nan
+873 silly gentlyRm E:\Documents\GitHub\PayPoint\app\node_modules\node-thermal-printer\node_modules\lwip\node_modules\nan is being purged
+874 verbose gentlyRm don't care about contents; nuking E:\Documents\GitHub\PayPoint\app\node_modules\node-thermal-printer\node_modules\lwip\node_modules\nan
+875 silly gentlyRm E:\Documents\GitHub\PayPoint\app\node_modules\node-thermal-printer\node_modules\lwip\node_modules\async is being purged from base E:\Documents\GitHub\PayPoint\app
+876 verbose gentlyRm don't care about contents; nuking E:\Documents\GitHub\PayPoint\app\node_modules\node-thermal-printer\node_modules\lwip\node_modules\async
+877 silly gunzTarPerm modes [ '777', '666' ]
+878 silly gunzTarPerm modes [ '777', '666' ]
+879 verbose tar unpack C:\Users\caillot\AppData\Roaming\npm-cache\async\0.9.2\package.tgz
+880 verbose tar unpacking to E:\Documents\GitHub\PayPoint\app\node_modules\node-thermal-printer\node_modules\lwip\node_modules\async
+881 silly gentlyRm E:\Documents\GitHub\PayPoint\app\node_modules\node-thermal-printer\node_modules\lwip\node_modules\async is being purged
+882 verbose gentlyRm don't care about contents; nuking E:\Documents\GitHub\PayPoint\app\node_modules\node-thermal-printer\node_modules\lwip\node_modules\async
+883 silly gunzTarPerm modes [ '777', '666' ]
+884 silly gunzTarPerm extractEntry package.json
+885 silly gunzTarPerm modified mode [ 'package.json', 420, 438 ]
+886 silly gunzTarPerm extractEntry package.json
+887 silly gunzTarPerm modified mode [ 'package.json', 420, 438 ]
+888 silly gunzTarPerm extractEntry .npmignore
+889 silly gunzTarPerm modified mode [ '.npmignore', 420, 438 ]
+890 silly gunzTarPerm extractEntry README.md
+891 silly gunzTarPerm modified mode [ 'README.md', 420, 438 ]
+892 silly gunzTarPerm extractEntry README.md
+893 silly gunzTarPerm modified mode [ 'README.md', 420, 438 ]
+894 silly gunzTarPerm extractEntry LICENSE
+895 silly gunzTarPerm modified mode [ 'LICENSE', 420, 438 ]
+896 silly gunzTarPerm extractEntry component.json
+897 silly gunzTarPerm modified mode [ 'component.json', 420, 438 ]
+898 silly gunzTarPerm extractEntry .travis.yml
+899 silly gunzTarPerm modified mode [ '.travis.yml', 420, 438 ]
+900 silly gunzTarPerm extractEntry bower.json
+901 silly gunzTarPerm modified mode [ 'bower.json', 420, 438 ]
+902 silly gunzTarPerm extractEntry lib/async.js
+903 silly gunzTarPerm modified mode [ 'lib/async.js', 420, 438 ]
+904 silly gunzTarPerm extractEntry support/sync-package-managers.js
+905 silly gunzTarPerm modified mode [ 'support/sync-package-managers.js', 493, 511 ]
+906 silly gunzTarPerm extractEntry LICENSE
+907 silly gunzTarPerm modified mode [ 'LICENSE', 420, 438 ]
+908 silly gunzTarPerm extractEntry decree.js
+909 silly gunzTarPerm modified mode [ 'decree.js', 420, 438 ]
+910 silly gunzTarPerm extractEntry bower.json
+911 silly gunzTarPerm modified mode [ 'bower.json', 420, 438 ]
+912 silly gunzTarPerm extractEntry .travis.yml
+913 silly gunzTarPerm modified mode [ '.travis.yml', 436, 438 ]
+914 silly gunzTarPerm extractEntry dist/amd/decree.js
+915 silly gunzTarPerm modified mode [ 'dist/amd/decree.js', 420, 438 ]
+916 silly gunzTarPerm extractEntry dist/amd/validators.js
+917 silly gunzTarPerm modified mode [ 'dist/amd/validators.js', 420, 438 ]
+918 silly gunzTarPerm extractEntry dist/cjs/decree.js
+919 silly gunzTarPerm modified mode [ 'dist/cjs/decree.js', 420, 438 ]
+920 silly gunzTarPerm extractEntry dist/cjs/validators.js
+921 silly gunzTarPerm modified mode [ 'dist/cjs/validators.js', 420, 438 ]
+922 silly gunzTarPerm extractEntry examples/decree_1.js
+923 silly gunzTarPerm modified mode [ 'examples/decree_1.js', 436, 438 ]
+924 silly gunzTarPerm extractEntry examples/decree_2.js
+925 silly gunzTarPerm modified mode [ 'examples/decree_2.js', 436, 438 ]
+926 silly gunzTarPerm extractEntry examples/decree_3.js
+927 silly gunzTarPerm modified mode [ 'examples/decree_3.js', 436, 438 ]
+928 silly gunzTarPerm extractEntry examples/amd/index.html
+929 silly gunzTarPerm modified mode [ 'examples/amd/index.html', 436, 438 ]
+930 silly gunzTarPerm extractEntry examples/amd/scripts/main.js
+931 silly gunzTarPerm modified mode [ 'examples/amd/scripts/main.js', 436, 438 ]
+932 silly gunzTarPerm extractEntry examples/amd/scripts/makeCoffee.js
+933 silly gunzTarPerm modified mode [ 'examples/amd/scripts/makeCoffee.js', 436, 438 ]
+934 silly gunzTarPerm extractEntry Makefile
+935 silly gunzTarPerm modified mode [ 'Makefile', 420, 438 ]
+936 silly gunzTarPerm extractEntry src/decree.js
+937 silly gunzTarPerm modified mode [ 'src/decree.js', 420, 438 ]
+938 silly gunzTarPerm extractEntry src/validators.js
+939 silly gunzTarPerm modified mode [ 'src/validators.js', 420, 438 ]
+940 silly gunzTarPerm extractEntry tests/01.test.js
+941 silly gunzTarPerm modified mode [ 'tests/01.test.js', 420, 438 ]
+942 silly gunzTarPerm extractEntry tests/02.built-in-validators.js
+943 silly gunzTarPerm modified mode [ 'tests/02.built-in-validators.js', 436, 438 ]
+944 silly gunzTarPerm extractEntry tests/03.custom-types.js
+945 silly gunzTarPerm modified mode [ 'tests/03.custom-types.js', 436, 438 ]
+946 silly gunzTarPerm extractEntry package.json
+947 silly gunzTarPerm modified mode [ 'package.json', 436, 438 ]
+948 silly gunzTarPerm extractEntry README.md
+949 silly gunzTarPerm modified mode [ 'README.md', 436, 438 ]
+950 silly gunzTarPerm extractEntry include_dirs.js
+951 silly gunzTarPerm modified mode [ 'include_dirs.js', 420, 438 ]
+952 verbose write writing to E:\Documents\GitHub\PayPoint\app\node_modules\node-thermal-printer\node_modules\lwip\node_modules\async\package.json
+953 silly gunzTarPerm extractEntry appveyor.yml
+954 silly gunzTarPerm modified mode [ 'appveyor.yml', 420, 438 ]
+955 silly gunzTarPerm extractEntry LICENSE.md
+956 silly gunzTarPerm modified mode [ 'LICENSE.md', 420, 438 ]
+957 silly gunzTarPerm extractEntry .dntrc
+958 silly gunzTarPerm modified mode [ '.dntrc', 420, 438 ]
+959 silly gunzTarPerm extractEntry nan.h
+960 silly gunzTarPerm modified mode [ 'nan.h', 436, 438 ]
+961 silly gunzTarPerm extractEntry CHANGELOG.md
+962 silly gunzTarPerm modified mode [ 'CHANGELOG.md', 436, 438 ]
+963 info preinstall async@0.9.2
+964 verbose readDependencies loading dependencies from E:\Documents\GitHub\PayPoint\app\node_modules\node-thermal-printer\node_modules\lwip\node_modules\async\package.json
+965 verbose readDependencies loading dependencies from E:\Documents\GitHub\PayPoint\app\node_modules\node-thermal-printer\node_modules\lwip\node_modules\async\package.json
+966 silly install resolved []
+967 verbose about to build E:\Documents\GitHub\PayPoint\app\node_modules\node-thermal-printer\node_modules\lwip\node_modules\async
+968 info build E:\Documents\GitHub\PayPoint\app\node_modules\node-thermal-printer\node_modules\lwip\node_modules\async
+969 info linkStuff async@0.9.2
+970 silly linkStuff async@0.9.2 has E:\Documents\GitHub\PayPoint\app\node_modules\node-thermal-printer\node_modules\lwip\node_modules as its parent node_modules
+971 verbose linkBins async@0.9.2
+972 verbose linkMans async@0.9.2
+973 verbose rebuildBundles async@0.9.2
+974 info install async@0.9.2
+975 info postinstall async@0.9.2
+976 verbose unlock done using C:\Users\caillot\AppData\Roaming\npm-cache\_locks\async-e67a223e846167dd.lock for E:\Documents\GitHub\PayPoint\app\node_modules\node-thermal-printer\node_modules\lwip\node_modules\async
+977 verbose write writing to E:\Documents\GitHub\PayPoint\app\node_modules\node-thermal-printer\node_modules\lwip\node_modules\nan\package.json
+978 info preinstall nan@1.4.3
+979 verbose readDependencies loading dependencies from E:\Documents\GitHub\PayPoint\app\node_modules\node-thermal-printer\node_modules\lwip\node_modules\nan\package.json
+980 verbose readDependencies loading dependencies from E:\Documents\GitHub\PayPoint\app\node_modules\node-thermal-printer\node_modules\lwip\node_modules\nan\package.json
+981 silly install resolved []
+982 verbose about to build E:\Documents\GitHub\PayPoint\app\node_modules\node-thermal-printer\node_modules\lwip\node_modules\nan
+983 info build E:\Documents\GitHub\PayPoint\app\node_modules\node-thermal-printer\node_modules\lwip\node_modules\nan
+984 info linkStuff nan@1.4.3
+985 silly linkStuff nan@1.4.3 has E:\Documents\GitHub\PayPoint\app\node_modules\node-thermal-printer\node_modules\lwip\node_modules as its parent node_modules
+986 verbose write writing to E:\Documents\GitHub\PayPoint\app\node_modules\node-thermal-printer\node_modules\lwip\node_modules\decree\package.json
+987 verbose linkBins nan@1.4.3
+988 verbose linkMans nan@1.4.3
+989 verbose rebuildBundles nan@1.4.3
+990 info install nan@1.4.3
+991 info postinstall nan@1.4.3
+992 info preinstall decree@0.0.6
+993 verbose unlock done using C:\Users\caillot\AppData\Roaming\npm-cache\_locks\nan-7d1d9d5ed545dd59.lock for E:\Documents\GitHub\PayPoint\app\node_modules\node-thermal-printer\node_modules\lwip\node_modules\nan
+994 verbose readDependencies loading dependencies from E:\Documents\GitHub\PayPoint\app\node_modules\node-thermal-printer\node_modules\lwip\node_modules\decree\package.json
+995 silly prepareForInstallMany adding lodash-node@^2.4.1 from decree dependencies
+996 verbose readDependencies loading dependencies from E:\Documents\GitHub\PayPoint\app\node_modules\node-thermal-printer\node_modules\lwip\node_modules\decree\package.json
+997 silly cache add args [ 'lodash-node@^2.4.1', null ]
+998 verbose cache add spec lodash-node@^2.4.1
+999 silly cache add parsed spec { raw: 'lodash-node@^2.4.1',
+999 silly cache add   scope: null,
+999 silly cache add   name: 'lodash-node',
+999 silly cache add   rawSpec: '^2.4.1',
+999 silly cache add   spec: '>=2.4.1 <3.0.0',
+999 silly cache add   type: 'range' }
+1000 silly addNamed lodash-node@>=2.4.1 <3.0.0
+1001 verbose addNamed ">=2.4.1 <3.0.0" is a valid semver range for lodash-node
+1002 silly addNameRange { name: 'lodash-node', range: '>=2.4.1 <3.0.0', hasData: false }
+1003 silly mapToRegistry name lodash-node
+1004 silly mapToRegistry using default registry
+1005 silly mapToRegistry registry https://registry.npmjs.org/
+1006 silly mapToRegistry uri https://registry.npmjs.org/lodash-node
+1007 verbose addNameRange registry:https://registry.npmjs.org/lodash-node not in flight; fetching
+1008 verbose request uri https://registry.npmjs.org/lodash-node
+1009 verbose request no auth needed
+1010 info attempt registry request try #1 at 20:27:38
+1011 verbose etag "F03ZOOFMKXVLB065XT739UJSE"
+1012 http request GET https://registry.npmjs.org/lodash-node
+1013 http 304 https://registry.npmjs.org/lodash-node
+1014 silly get cb [ 304,
+1014 silly get   { date: 'Mon, 13 Jul 2015 18:27:50 GMT',
+1014 silly get     via: '1.1 varnish',
+1014 silly get     'cache-control': 'max-age=60',
+1014 silly get     etag: '"F03ZOOFMKXVLB065XT739UJSE"',
+1014 silly get     age: '27',
+1014 silly get     connection: 'keep-alive',
+1014 silly get     'x-served-by': 'cache-ams4148-AMS',
+1014 silly get     'x-cache': 'HIT',
+1014 silly get     'x-cache-hits': '1',
+1014 silly get     'x-timer': 'S1436812070.992927,VS0,VE0',
+1014 silly get     vary: 'Accept' } ]
+1015 verbose etag https://registry.npmjs.org/lodash-node from cache
+1016 verbose get saving lodash-node to C:\Users\caillot\AppData\Roaming\npm-cache\registry.npmjs.org\lodash-node\.cache.json
+1017 silly addNameRange number 2 { name: 'lodash-node', range: '>=2.4.1 <3.0.0', hasData: true }
+1018 silly addNameRange versions [ 'lodash-node',
+1018 silly addNameRange   [ '2.0.0',
+1018 silly addNameRange     '2.1.0',
+1018 silly addNameRange     '2.2.0',
+1018 silly addNameRange     '2.2.1',
+1018 silly addNameRange     '2.3.0',
+1018 silly addNameRange     '2.4.0',
+1018 silly addNameRange     '2.4.1',
+1018 silly addNameRange     '3.0.0',
+1018 silly addNameRange     '3.0.1',
+1018 silly addNameRange     '3.1.0',
+1018 silly addNameRange     '3.2.0',
+1018 silly addNameRange     '3.3.0',
+1018 silly addNameRange     '3.3.1',
+1018 silly addNameRange     '3.4.0',
+1018 silly addNameRange     '3.5.0',
+1018 silly addNameRange     '3.6.0',
+1018 silly addNameRange     '3.7.0',
+1018 silly addNameRange     '3.8.0',
+1018 silly addNameRange     '3.9.0',
+1018 silly addNameRange     '3.9.1',
+1018 silly addNameRange     '3.9.2',
+1018 silly addNameRange     '3.9.3',
+1018 silly addNameRange     '3.10.0' ] ]
+1019 silly addNamed lodash-node@2.4.1
+1020 verbose addNamed "2.4.1" is a plain semver version for lodash-node
+1021 silly cache afterAdd lodash-node@2.4.1
+1022 verbose afterAdd C:\Users\caillot\AppData\Roaming\npm-cache\lodash-node\2.4.1\package\package.json not in flight; writing
+1023 verbose afterAdd C:\Users\caillot\AppData\Roaming\npm-cache\lodash-node\2.4.1\package\package.json written
+1024 silly install resolved [ { name: 'lodash-node',
+1024 silly install resolved     version: '2.4.1',
+1024 silly install resolved     description: 'A collection of Lo-Dash methods as Node.js modules generated by lodash-cli.',
+1024 silly install resolved     homepage: 'http://lodash.com/custom-builds',
+1024 silly install resolved     license: 'MIT',
+1024 silly install resolved     main: 'modern/index.js',
+1024 silly install resolved     keywords: [ 'customize', 'functional', 'lodash', 'modules', 'server', 'util' ],
+1024 silly install resolved     author:
+1024 silly install resolved      { name: 'John-David Dalton',
+1024 silly install resolved        email: 'john.david.dalton@gmail.com',
+1024 silly install resolved        url: 'http://allyoucanleet.com/' },
+1024 silly install resolved     contributors: [ [Object], [Object], [Object], [Object] ],
+1024 silly install resolved     bugs: { url: 'https://github.com/lodash/lodash-cli/issues' },
+1024 silly install resolved     repository:
+1024 silly install resolved      { type: 'git',
+1024 silly install resolved        url: 'git+https://github.com/lodash/lodash-node.git' },
+1024 silly install resolved     _id: 'lodash-node@2.4.1',
+1024 silly install resolved     dist:
+1024 silly install resolved      { shasum: 'ea82f7b100c733d1a42af76801e506105e2a80ec',
+1024 silly install resolved        tarball: 'http://registry.npmjs.org/lodash-node/-/lodash-node-2.4.1.tgz' },
+1024 silly install resolved     _from: 'lodash-node@>=2.4.1 <3.0.0',
+1024 silly install resolved     _npmVersion: '1.3.14',
+1024 silly install resolved     _npmUser: { name: 'jdalton', email: 'john.david.dalton@gmail.com' },
+1024 silly install resolved     maintainers: [ [Object], [Object], [Object], [Object] ],
+1024 silly install resolved     directories: {},
+1024 silly install resolved     _shasum: 'ea82f7b100c733d1a42af76801e506105e2a80ec',
+1024 silly install resolved     _resolved: 'https://registry.npmjs.org/lodash-node/-/lodash-node-2.4.1.tgz',
+1024 silly install resolved     readme: 'ERROR: No README data found!' } ]
+1025 info install lodash-node@2.4.1 into E:\Documents\GitHub\PayPoint\app\node_modules\node-thermal-printer\node_modules\lwip\node_modules\decree
+1026 info installOne lodash-node@2.4.1
+1027 verbose installOne of lodash-node to E:\Documents\GitHub\PayPoint\app\node_modules\node-thermal-printer\node_modules\lwip\node_modules\decree not in flight; installing
+1028 verbose lock using C:\Users\caillot\AppData\Roaming\npm-cache\_locks\lodash-node-f52deae85871b047.lock for E:\Documents\GitHub\PayPoint\app\node_modules\node-thermal-printer\node_modules\lwip\node_modules\decree\node_modules\lodash-node
+1029 silly install write writing lodash-node 2.4.1 to E:\Documents\GitHub\PayPoint\app\node_modules\node-thermal-printer\node_modules\lwip\node_modules\decree\node_modules\lodash-node
+1030 verbose unbuild node_modules\node-thermal-printer\node_modules\lwip\node_modules\decree\node_modules\lodash-node
+1031 silly gentlyRm E:\Documents\GitHub\PayPoint\app\node_modules\node-thermal-printer\node_modules\lwip\node_modules\decree\node_modules\lodash-node is being purged from base E:\Documents\GitHub\PayPoint\app
+1032 verbose gentlyRm don't care about contents; nuking E:\Documents\GitHub\PayPoint\app\node_modules\node-thermal-printer\node_modules\lwip\node_modules\decree\node_modules\lodash-node
+1033 verbose tar unpack C:\Users\caillot\AppData\Roaming\npm-cache\lodash-node\2.4.1\package.tgz
+1034 verbose tar unpacking to E:\Documents\GitHub\PayPoint\app\node_modules\node-thermal-printer\node_modules\lwip\node_modules\decree\node_modules\lodash-node
+1035 silly gentlyRm E:\Documents\GitHub\PayPoint\app\node_modules\node-thermal-printer\node_modules\lwip\node_modules\decree\node_modules\lodash-node is being purged
+1036 verbose gentlyRm don't care about contents; nuking E:\Documents\GitHub\PayPoint\app\node_modules\node-thermal-printer\node_modules\lwip\node_modules\decree\node_modules\lodash-node
+1037 silly gunzTarPerm modes [ '777', '666' ]
+1038 silly gunzTarPerm extractEntry package.json
+1039 silly gunzTarPerm modified mode [ 'package.json', 420, 438 ]
+1040 silly gunzTarPerm extractEntry README.md
+1041 silly gunzTarPerm modified mode [ 'README.md', 420, 438 ]
+1042 silly gunzTarPerm extractEntry LICENSE.txt
+1043 silly gunzTarPerm modified mode [ 'LICENSE.txt', 420, 438 ]
+1044 silly gunzTarPerm extractEntry compat/utilities.js
+1045 silly gunzTarPerm modified mode [ 'compat/utilities.js', 420, 438 ]
+1046 silly gunzTarPerm extractEntry compat/support.js
+1047 silly gunzTarPerm modified mode [ 'compat/support.js', 420, 438 ]
+1048 silly gunzTarPerm extractEntry compat/chaining.js
+1049 silly gunzTarPerm modified mode [ 'compat/chaining.js', 420, 438 ]
+1050 silly gunzTarPerm extractEntry compat/objects.js
+1051 silly gunzTarPerm modified mode [ 'compat/objects.js', 420, 438 ]
+1052 silly gunzTarPerm extractEntry compat/collections.js
+1053 silly gunzTarPerm modified mode [ 'compat/collections.js', 420, 438 ]
+1054 silly gunzTarPerm extractEntry compat/index.js
+1055 silly gunzTarPerm modified mode [ 'compat/index.js', 420, 438 ]
+1056 silly gunzTarPerm extractEntry compat/arrays.js
+1057 silly gunzTarPerm modified mode [ 'compat/arrays.js', 420, 438 ]
+1058 silly gunzTarPerm extractEntry compat/functions.js
+1059 silly gunzTarPerm modified mode [ 'compat/functions.js', 420, 438 ]
+1060 silly gunzTarPerm extractEntry compat/functions/after.js
+1061 silly gunzTarPerm modified mode [ 'compat/functions/after.js', 420, 438 ]
+1062 silly gunzTarPerm extractEntry compat/functions/compose.js
+1063 silly gunzTarPerm modified mode [ 'compat/functions/compose.js', 420, 438 ]
+1064 silly gunzTarPerm extractEntry compat/functions/createCallback.js
+1065 silly gunzTarPerm modified mode [ 'compat/functions/createCallback.js', 420, 438 ]
+1066 silly gunzTarPerm extractEntry compat/functions/curry.js
+1067 silly gunzTarPerm modified mode [ 'compat/functions/curry.js', 420, 438 ]
+1068 silly gunzTarPerm extractEntry compat/functions/debounce.js
+1069 silly gunzTarPerm modified mode [ 'compat/functions/debounce.js', 420, 438 ]
+1070 silly gunzTarPerm extractEntry compat/functions/bindKey.js
+1071 silly gunzTarPerm modified mode [ 'compat/functions/bindKey.js', 420, 438 ]
+1072 silly gunzTarPerm extractEntry compat/functions/delay.js
+1073 silly gunzTarPerm modified mode [ 'compat/functions/delay.js', 420, 438 ]
+1074 silly gunzTarPerm extractEntry compat/functions/memoize.js
+1075 silly gunzTarPerm modified mode [ 'compat/functions/memoize.js', 420, 438 ]
+1076 silly gunzTarPerm extractEntry compat/functions/once.js
+1077 silly gunzTarPerm modified mode [ 'compat/functions/once.js', 420, 438 ]
+1078 silly gunzTarPerm extractEntry compat/functions/partial.js
+1079 silly gunzTarPerm modified mode [ 'compat/functions/partial.js', 420, 438 ]
+1080 silly gunzTarPerm extractEntry compat/functions/partialRight.js
+1081 silly gunzTarPerm modified mode [ 'compat/functions/partialRight.js', 420, 438 ]
+1082 silly gunzTarPerm extractEntry compat/functions/bindAll.js
+1083 silly gunzTarPerm modified mode [ 'compat/functions/bindAll.js', 420, 438 ]
+1084 silly gunzTarPerm extractEntry compat/functions/throttle.js
+1085 silly gunzTarPerm modified mode [ 'compat/functions/throttle.js', 420, 438 ]
+1086 silly gunzTarPerm extractEntry compat/functions/bind.js
+1087 silly gunzTarPerm modified mode [ 'compat/functions/bind.js', 420, 438 ]
+1088 silly gunzTarPerm extractEntry compat/functions/wrap.js
+1089 silly gunzTarPerm modified mode [ 'compat/functions/wrap.js', 420, 438 ]
+1090 silly gunzTarPerm extractEntry compat/functions/defer.js
+1091 silly gunzTarPerm modified mode [ 'compat/functions/defer.js', 420, 438 ]
+1092 silly gunzTarPerm extractEntry compat/internals/arrayPool.js
+1093 silly gunzTarPerm modified mode [ 'compat/internals/arrayPool.js', 420, 438 ]
+1094 silly gunzTarPerm extractEntry compat/internals/defaultsIteratorOptions.js
+1095 silly gunzTarPerm modified mode [ 'compat/internals/defaultsIteratorOptions.js', 420, 438 ]
+1096 silly gunzTarPerm extractEntry compat/internals/eachIteratorOptions.js
+1097 silly gunzTarPerm modified mode [ 'compat/internals/eachIteratorOptions.js', 420, 438 ]
+1098 silly gunzTarPerm extractEntry compat/internals/escapeHtmlChar.js
+1099 silly gunzTarPerm modified mode [ 'compat/internals/escapeHtmlChar.js', 420, 438 ]
+1100 silly gunzTarPerm extractEntry compat/internals/createWrapper.js
+1101 silly gunzTarPerm modified mode [ 'compat/internals/createWrapper.js', 420, 438 ]
+1102 silly gunzTarPerm extractEntry compat/internals/forOwnIteratorOptions.js
+1103 silly gunzTarPerm modified mode [ 'compat/internals/forOwnIteratorOptions.js', 420, 438 ]
+1104 silly gunzTarPerm extractEntry compat/internals/getArray.js
+1105 silly gunzTarPerm modified mode [ 'compat/internals/getArray.js', 420, 438 ]
+1106 silly gunzTarPerm extractEntry compat/internals/getObject.js
+1107 silly gunzTarPerm modified mode [ 'compat/internals/getObject.js', 420, 438 ]
+1108 silly gunzTarPerm extractEntry compat/internals/htmlEscapes.js
+1109 silly gunzTarPerm modified mode [ 'compat/internals/htmlEscapes.js', 420, 438 ]
+1110 silly gunzTarPerm extractEntry compat/internals/htmlUnescapes.js
+1111 silly gunzTarPerm modified mode [ 'compat/internals/htmlUnescapes.js', 420, 438 ]
+1112 silly gunzTarPerm extractEntry compat/internals/createIterator.js
+1113 silly gunzTarPerm modified mode [ 'compat/internals/createIterator.js', 420, 438 ]
+1114 silly gunzTarPerm extractEntry compat/internals/indicatorObject.js
+1115 silly gunzTarPerm modified mode [ 'compat/internals/indicatorObject.js', 420, 438 ]
+1116 silly gunzTarPerm extractEntry compat/internals/createCache.js
+1117 silly gunzTarPerm modified mode [ 'compat/internals/createCache.js', 420, 438 ]
+1118 silly gunzTarPerm extractEntry compat/internals/isNative.js
+1119 silly gunzTarPerm modified mode [ 'compat/internals/isNative.js', 420, 438 ]
+1120 silly gunzTarPerm extractEntry compat/internals/createAggregator.js
+1121 silly gunzTarPerm modified mode [ 'compat/internals/createAggregator.js', 420, 438 ]
+1122 silly gunzTarPerm extractEntry compat/internals/isNode.js
+1123 silly gunzTarPerm modified mode [ 'compat/internals/isNode.js', 420, 438 ]
+1124 silly gunzTarPerm extractEntry compat/internals/compareAscending.js
+1125 silly gunzTarPerm modified mode [ 'compat/internals/compareAscending.js', 420, 438 ]
+1126 silly gunzTarPerm extractEntry compat/internals/iteratorTemplate.js
+1127 silly gunzTarPerm modified mode [ 'compat/internals/iteratorTemplate.js', 420, 438 ]
+1128 silly gunzTarPerm extractEntry compat/internals/charAtCallback.js
+1129 silly gunzTarPerm modified mode [ 'compat/internals/charAtCallback.js', 420, 438 ]
+1130 silly gunzTarPerm extractEntry compat/internals/keyPrefix.js
+1131 silly gunzTarPerm modified mode [ 'compat/internals/keyPrefix.js', 420, 438 ]
+1132 silly gunzTarPerm extractEntry compat/internals/cachePush.js
+1133 silly gunzTarPerm modified mode [ 'compat/internals/cachePush.js', 420, 438 ]
+1134 silly gunzTarPerm extractEntry compat/internals/largeArraySize.js
+1135 silly gunzTarPerm modified mode [ 'compat/internals/largeArraySize.js', 420, 438 ]
+1136 silly gunzTarPerm extractEntry compat/internals/cacheIndexOf.js
+1137 silly gunzTarPerm modified mode [ 'compat/internals/cacheIndexOf.js', 420, 438 ]
+1138 silly gunzTarPerm extractEntry compat/internals/lodashWrapper.js
+1139 silly gunzTarPerm modified mode [ 'compat/internals/lodashWrapper.js', 420, 438 ]
+1140 silly gunzTarPerm extractEntry compat/internals/baseUniq.js
+1141 silly gunzTarPerm modified mode [ 'compat/internals/baseUniq.js', 420, 438 ]
+1142 silly gunzTarPerm extractEntry compat/internals/maxPoolSize.js
+1143 silly gunzTarPerm modified mode [ 'compat/internals/maxPoolSize.js', 420, 438 ]
+1144 silly gunzTarPerm extractEntry compat/internals/baseRandom.js
+1145 silly gunzTarPerm modified mode [ 'compat/internals/baseRandom.js', 420, 438 ]
+1146 silly gunzTarPerm extractEntry compat/internals/objectPool.js
+1147 silly gunzTarPerm modified mode [ 'compat/internals/objectPool.js', 420, 438 ]
+1148 silly gunzTarPerm extractEntry compat/internals/baseMerge.js
+1149 silly gunzTarPerm modified mode [ 'compat/internals/baseMerge.js', 420, 438 ]
+1150 silly gunzTarPerm extractEntry compat/internals/objectTypes.js
+1151 silly gunzTarPerm modified mode [ 'compat/internals/objectTypes.js', 420, 438 ]
+1152 silly gunzTarPerm extractEntry compat/internals/baseIsEqual.js
+1153 silly gunzTarPerm modified mode [ 'compat/internals/baseIsEqual.js', 420, 438 ]
+1154 silly gunzTarPerm extractEntry compat/internals/reEscapedHtml.js
+1155 silly gunzTarPerm modified mode [ 'compat/internals/reEscapedHtml.js', 420, 438 ]
+1156 silly gunzTarPerm extractEntry compat/internals/baseIndexOf.js
+1157 silly gunzTarPerm modified mode [ 'compat/internals/baseIndexOf.js', 420, 438 ]
+1158 silly gunzTarPerm extractEntry compat/internals/reInterpolate.js
+1159 silly gunzTarPerm modified mode [ 'compat/internals/reInterpolate.js', 420, 438 ]
+1160 silly gunzTarPerm extractEntry compat/internals/baseFlatten.js
+1161 silly gunzTarPerm modified mode [ 'compat/internals/baseFlatten.js', 420, 438 ]
+1162 silly gunzTarPerm extractEntry compat/internals/reUnescapedHtml.js
+1163 silly gunzTarPerm modified mode [ 'compat/internals/reUnescapedHtml.js', 420, 438 ]
+1164 silly gunzTarPerm extractEntry compat/internals/baseEach.js
+1165 silly gunzTarPerm modified mode [ 'compat/internals/baseEach.js', 420, 438 ]
+1166 silly gunzTarPerm extractEntry compat/internals/releaseArray.js
+1167 silly gunzTarPerm modified mode [ 'compat/internals/releaseArray.js', 420, 438 ]
+1168 silly gunzTarPerm extractEntry compat/internals/baseDifference.js
+1169 silly gunzTarPerm modified mode [ 'compat/internals/baseDifference.js', 420, 438 ]
+1170 silly gunzTarPerm extractEntry compat/internals/releaseObject.js
+1171 silly gunzTarPerm modified mode [ 'compat/internals/releaseObject.js', 420, 438 ]
+1172 silly gunzTarPerm extractEntry compat/internals/baseCreateWrapper.js
+1173 silly gunzTarPerm modified mode [ 'compat/internals/baseCreateWrapper.js', 420, 438 ]
+1174 silly gunzTarPerm extractEntry compat/internals/setBindData.js
+1175 silly gunzTarPerm modified mode [ 'compat/internals/setBindData.js', 420, 438 ]
+1176 silly gunzTarPerm extractEntry compat/internals/baseCreateCallback.js
+1177 silly gunzTarPerm modified mode [ 'compat/internals/baseCreateCallback.js', 420, 438 ]
+1178 silly gunzTarPerm extractEntry compat/internals/shimIsPlainObject.js
+1179 silly gunzTarPerm modified mode [ 'compat/internals/shimIsPlainObject.js', 420, 438 ]
+1180 silly gunzTarPerm extractEntry compat/internals/baseCreate.js
+1181 silly gunzTarPerm modified mode [ 'compat/internals/baseCreate.js', 420, 438 ]
+1182 silly gunzTarPerm extractEntry compat/internals/shimKeys.js
+1183 silly gunzTarPerm modified mode [ 'compat/internals/shimKeys.js', 420, 438 ]
+1184 silly gunzTarPerm extractEntry compat/internals/baseClone.js
+1185 silly gunzTarPerm modified mode [ 'compat/internals/baseClone.js', 420, 438 ]
+1186 silly gunzTarPerm extractEntry compat/internals/slice.js
+1187 silly gunzTarPerm modified mode [ 'compat/internals/slice.js', 420, 438 ]
+1188 silly gunzTarPerm extractEntry compat/internals/baseBind.js
+1189 silly gunzTarPerm modified mode [ 'compat/internals/baseBind.js', 420, 438 ]
+1190 silly gunzTarPerm extractEntry compat/internals/unescapeHtmlChar.js
+1191 silly gunzTarPerm modified mode [ 'compat/internals/unescapeHtmlChar.js', 420, 438 ]
+1192 silly gunzTarPerm extractEntry compat/internals/escapeStringChar.js
+1193 silly gunzTarPerm modified mode [ 'compat/internals/escapeStringChar.js', 420, 438 ]
+1194 silly gunzTarPerm extractEntry compat/objects/assign.js
+1195 silly gunzTarPerm modified mode [ 'compat/objects/assign.js', 420, 438 ]
+1196 silly gunzTarPerm extractEntry compat/objects/isBoolean.js
+1197 silly gunzTarPerm modified mode [ 'compat/objects/isBoolean.js', 420, 438 ]
+1198 silly gunzTarPerm extractEntry compat/objects/isDate.js
+1199 silly gunzTarPerm modified mode [ 'compat/objects/isDate.js', 420, 438 ]
+1200 silly gunzTarPerm extractEntry compat/objects/isElement.js
+1201 silly gunzTarPerm modified mode [ 'compat/objects/isElement.js', 420, 438 ]
+1202 silly gunzTarPerm extractEntry compat/objects/isArray.js
+1203 silly gunzTarPerm modified mode [ 'compat/objects/isArray.js', 420, 438 ]
+1204 silly gunzTarPerm extractEntry compat/objects/isEqual.js
+1205 silly gunzTarPerm modified mode [ 'compat/objects/isEqual.js', 420, 438 ]
+1206 silly gunzTarPerm extractEntry compat/objects/isFinite.js
+1207 silly gunzTarPerm modified mode [ 'compat/objects/isFinite.js', 420, 438 ]
+1208 silly gunzTarPerm extractEntry compat/objects/isFunction.js
+1209 silly gunzTarPerm modified mode [ 'compat/objects/isFunction.js', 420, 438 ]
+1210 silly gunzTarPerm extractEntry compat/objects/isNaN.js
+1211 silly gunzTarPerm modified mode [ 'compat/objects/isNaN.js', 420, 438 ]
+1212 silly gunzTarPerm extractEntry compat/objects/isNull.js
+1213 silly gunzTarPerm modified mode [ 'compat/objects/isNull.js', 420, 438 ]
+1214 silly gunzTarPerm extractEntry compat/objects/isArguments.js
+1215 silly gunzTarPerm modified mode [ 'compat/objects/isArguments.js', 420, 438 ]
+1216 silly gunzTarPerm extractEntry compat/objects/isNumber.js
+1217 silly gunzTarPerm modified mode [ 'compat/objects/isNumber.js', 420, 438 ]
+1218 silly gunzTarPerm extractEntry compat/objects/invert.js
+1219 silly gunzTarPerm modified mode [ 'compat/objects/invert.js', 420, 438 ]
+1220 silly gunzTarPerm extractEntry compat/objects/isObject.js
+1221 silly gunzTarPerm modified mode [ 'compat/objects/isObject.js', 420, 438 ]
+1222 silly gunzTarPerm extractEntry compat/objects/has.js
+1223 silly gunzTarPerm modified mode [ 'compat/objects/has.js', 420, 438 ]
+1224 silly gunzTarPerm extractEntry compat/objects/isPlainObject.js
+1225 silly gunzTarPerm modified mode [ 'compat/objects/isPlainObject.js', 420, 438 ]
+1226 silly gunzTarPerm extractEntry compat/objects/functions.js
+1227 silly gunzTarPerm modified mode [ 'compat/objects/functions.js', 420, 438 ]
+1228 silly gunzTarPerm extractEntry compat/objects/isRegExp.js
+1229 silly gunzTarPerm modified mode [ 'compat/objects/isRegExp.js', 420, 438 ]
+1230 silly gunzTarPerm extractEntry compat/objects/forOwnRight.js
+1231 silly gunzTarPerm modified mode [ 'compat/objects/forOwnRight.js', 420, 438 ]
+1232 silly gunzTarPerm extractEntry compat/objects/isString.js
+1233 silly gunzTarPerm modified mode [ 'compat/objects/isString.js', 420, 438 ]
+1234 silly gunzTarPerm extractEntry compat/objects/forOwn.js
+1235 silly gunzTarPerm modified mode [ 'compat/objects/forOwn.js', 420, 438 ]
+1236 silly gunzTarPerm extractEntry compat/objects/isUndefined.js
+1237 silly gunzTarPerm modified mode [ 'compat/objects/isUndefined.js', 420, 438 ]
+1238 silly gunzTarPerm extractEntry compat/objects/forInRight.js
+1239 silly gunzTarPerm modified mode [ 'compat/objects/forInRight.js', 420, 438 ]
+1240 silly gunzTarPerm extractEntry compat/objects/keys.js
+1241 silly gunzTarPerm modified mode [ 'compat/objects/keys.js', 420, 438 ]
+1242 silly gunzTarPerm extractEntry compat/objects/forIn.js
+1243 silly gunzTarPerm modified mode [ 'compat/objects/forIn.js', 420, 438 ]
+1244 silly gunzTarPerm extractEntry compat/objects/mapValues.js
+1245 silly gunzTarPerm modified mode [ 'compat/objects/mapValues.js', 420, 438 ]
+1246 silly gunzTarPerm extractEntry compat/objects/findLastKey.js
+1247 silly gunzTarPerm modified mode [ 'compat/objects/findLastKey.js', 420, 438 ]
+1248 silly gunzTarPerm extractEntry compat/objects/merge.js
+1249 silly gunzTarPerm modified mode [ 'compat/objects/merge.js', 420, 438 ]
+1250 silly gunzTarPerm extractEntry compat/objects/findKey.js
+1251 silly gunzTarPerm modified mode [ 'compat/objects/findKey.js', 420, 438 ]
+1252 silly gunzTarPerm extractEntry compat/objects/omit.js
+1253 silly gunzTarPerm modified mode [ 'compat/objects/omit.js', 420, 438 ]
+1254 silly gunzTarPerm extractEntry compat/objects/defaults.js
+1255 silly gunzTarPerm modified mode [ 'compat/objects/defaults.js', 420, 438 ]
+1256 silly gunzTarPerm extractEntry compat/objects/pairs.js
+1257 silly gunzTarPerm modified mode [ 'compat/objects/pairs.js', 420, 438 ]
+1258 silly gunzTarPerm extractEntry compat/objects/create.js
+1259 silly gunzTarPerm modified mode [ 'compat/objects/create.js', 420, 438 ]
+1260 silly gunzTarPerm extractEntry compat/objects/pick.js
+1261 silly gunzTarPerm modified mode [ 'compat/objects/pick.js', 420, 438 ]
+1262 silly gunzTarPerm extractEntry compat/objects/cloneDeep.js
+1263 silly gunzTarPerm modified mode [ 'compat/objects/cloneDeep.js', 420, 438 ]
+1264 silly gunzTarPerm extractEntry compat/objects/transform.js
+1265 silly gunzTarPerm modified mode [ 'compat/objects/transform.js', 420, 438 ]
+1266 silly gunzTarPerm extractEntry compat/objects/clone.js
+1267 silly gunzTarPerm modified mode [ 'compat/objects/clone.js', 420, 438 ]
+1268 silly gunzTarPerm extractEntry compat/objects/values.js
+1269 silly gunzTarPerm modified mode [ 'compat/objects/values.js', 420, 438 ]
+1270 silly gunzTarPerm extractEntry compat/objects/isEmpty.js
+1271 silly gunzTarPerm modified mode [ 'compat/objects/isEmpty.js', 420, 438 ]
+1272 silly gunzTarPerm extractEntry compat/collections/at.js
+1273 silly gunzTarPerm modified mode [ 'compat/collections/at.js', 420, 438 ]
+1274 silly gunzTarPerm extractEntry compat/collections/groupBy.js
+1275 silly gunzTarPerm modified mode [ 'compat/collections/groupBy.js', 420, 438 ]
+1276 silly gunzTarPerm extractEntry compat/collections/indexBy.js
+1277 silly gunzTarPerm modified mode [ 'compat/collections/indexBy.js', 420, 438 ]
+1278 silly gunzTarPerm extractEntry compat/collections/invoke.js
+1279 silly gunzTarPerm modified mode [ 'compat/collections/invoke.js', 420, 438 ]
+1280 silly gunzTarPerm extractEntry compat/collections/map.js
+1281 silly gunzTarPerm modified mode [ 'compat/collections/map.js', 420, 438 ]
+1282 silly gunzTarPerm extractEntry compat/collections/forEachRight.js
+1283 silly gunzTarPerm modified mode [ 'compat/collections/forEachRight.js', 420, 438 ]
+1284 silly gunzTarPerm extractEntry compat/collections/min.js
+1285 silly gunzTarPerm modified mode [ 'compat/collections/min.js', 420, 438 ]
+1286 silly gunzTarPerm extractEntry compat/collections/pluck.js
+1287 silly gunzTarPerm modified mode [ 'compat/collections/pluck.js', 420, 438 ]
+1288 silly gunzTarPerm extractEntry compat/collections/reduce.js
+1289 silly gunzTarPerm modified mode [ 'compat/collections/reduce.js', 420, 438 ]
+1290 silly gunzTarPerm extractEntry compat/collections/reduceRight.js
+1291 silly gunzTarPerm modified mode [ 'compat/collections/reduceRight.js', 420, 438 ]
+1292 silly gunzTarPerm extractEntry compat/collections/reject.js
+1293 silly gunzTarPerm modified mode [ 'compat/collections/reject.js', 420, 438 ]
+1294 silly gunzTarPerm extractEntry compat/collections/forEach.js
+1295 silly gunzTarPerm modified mode [ 'compat/collections/forEach.js', 420, 438 ]
+1296 silly gunzTarPerm extractEntry compat/collections/sample.js
+1297 silly gunzTarPerm modified mode [ 'compat/collections/sample.js', 420, 438 ]
+1298 silly gunzTarPerm extractEntry compat/collections/findLast.js
+1299 silly gunzTarPerm modified mode [ 'compat/collections/findLast.js', 420, 438 ]
+1300 silly gunzTarPerm extractEntry compat/collections/shuffle.js
+1301 silly gunzTarPerm modified mode [ 'compat/collections/shuffle.js', 420, 438 ]
+1302 silly gunzTarPerm extractEntry compat/collections/find.js
+1303 silly gunzTarPerm modified mode [ 'compat/collections/find.js', 420, 438 ]
+1304 silly gunzTarPerm extractEntry compat/collections/size.js
+1305 silly gunzTarPerm modified mode [ 'compat/collections/size.js', 420, 438 ]
+1306 silly gunzTarPerm extractEntry compat/collections/filter.js
+1307 silly gunzTarPerm modified mode [ 'compat/collections/filter.js', 420, 438 ]
+1308 silly gunzTarPerm extractEntry compat/collections/some.js
+1309 silly gunzTarPerm modified mode [ 'compat/collections/some.js', 420, 438 ]
+1310 silly gunzTarPerm extractEntry compat/collections/every.js
+1311 silly gunzTarPerm modified mode [ 'compat/collections/every.js', 420, 438 ]
+1312 silly gunzTarPerm extractEntry compat/collections/sortBy.js
+1313 silly gunzTarPerm modified mode [ 'compat/collections/sortBy.js', 420, 438 ]
+1314 silly gunzTarPerm extractEntry compat/collections/countBy.js
+1315 silly gunzTarPerm modified mode [ 'compat/collections/countBy.js', 420, 438 ]
+1316 silly gunzTarPerm extractEntry compat/collections/toArray.js
+1317 silly gunzTarPerm modified mode [ 'compat/collections/toArray.js', 420, 438 ]
+1318 silly gunzTarPerm extractEntry compat/collections/contains.js
+1319 silly gunzTarPerm modified mode [ 'compat/collections/contains.js', 420, 438 ]
+1320 silly gunzTarPerm extractEntry compat/collections/where.js
+1321 silly gunzTarPerm modified mode [ 'compat/collections/where.js', 420, 438 ]
+1322 silly gunzTarPerm extractEntry compat/collections/max.js
+1323 silly gunzTarPerm modified mode [ 'compat/collections/max.js', 420, 438 ]
+1324 silly gunzTarPerm extractEntry compat/chaining/chain.js
+1325 silly gunzTarPerm modified mode [ 'compat/chaining/chain.js', 420, 438 ]
+1326 silly gunzTarPerm extractEntry compat/chaining/tap.js
+1327 silly gunzTarPerm modified mode [ 'compat/chaining/tap.js', 420, 438 ]
+1328 silly gunzTarPerm extractEntry compat/chaining/wrapperChain.js
+1329 silly gunzTarPerm modified mode [ 'compat/chaining/wrapperChain.js', 420, 438 ]
+1330 silly gunzTarPerm extractEntry compat/chaining/wrapperToString.js
+1331 silly gunzTarPerm modified mode [ 'compat/chaining/wrapperToString.js', 420, 438 ]
+1332 silly gunzTarPerm extractEntry compat/chaining/wrapperValueOf.js
+1333 silly gunzTarPerm modified mode [ 'compat/chaining/wrapperValueOf.js', 420, 438 ]
+1334 silly gunzTarPerm extractEntry compat/utilities/constant.js
+1335 silly gunzTarPerm modified mode [ 'compat/utilities/constant.js', 420, 438 ]
+1336 silly gunzTarPerm extractEntry compat/utilities/noConflict.js
+1337 silly gunzTarPerm modified mode [ 'compat/utilities/noConflict.js', 420, 438 ]
+1338 silly gunzTarPerm extractEntry compat/utilities/noop.js
+1339 silly gunzTarPerm modified mode [ 'compat/utilities/noop.js', 420, 438 ]
+1340 silly gunzTarPerm extractEntry compat/utilities/now.js
+1341 silly gunzTarPerm modified mode [ 'compat/utilities/now.js', 420, 438 ]
+1342 silly gunzTarPerm extractEntry compat/utilities/parseInt.js
+1343 silly gunzTarPerm modified mode [ 'compat/utilities/parseInt.js', 420, 438 ]
+1344 silly gunzTarPerm extractEntry compat/utilities/mixin.js
+1345 silly gunzTarPerm modified mode [ 'compat/utilities/mixin.js', 420, 438 ]
+1346 silly gunzTarPerm extractEntry compat/utilities/random.js
+1347 silly gunzTarPerm modified mode [ 'compat/utilities/random.js', 420, 438 ]
+1348 silly gunzTarPerm extractEntry compat/utilities/result.js
+1349 silly gunzTarPerm modified mode [ 'compat/utilities/result.js', 420, 438 ]
+1350 silly gunzTarPerm extractEntry compat/utilities/template.js
+1351 silly gunzTarPerm modified mode [ 'compat/utilities/template.js', 420, 438 ]
+1352 silly gunzTarPerm extractEntry compat/utilities/templateSettings.js
+1353 silly gunzTarPerm modified mode [ 'compat/utilities/templateSettings.js', 420, 438 ]
+1354 silly gunzTarPerm extractEntry compat/utilities/times.js
+1355 silly gunzTarPerm modified mode [ 'compat/utilities/times.js', 420, 438 ]
+1356 silly gunzTarPerm extractEntry compat/utilities/identity.js
+1357 silly gunzTarPerm modified mode [ 'compat/utilities/identity.js', 420, 438 ]
+1358 silly gunzTarPerm extractEntry compat/utilities/unescape.js
+1359 silly gunzTarPerm modified mode [ 'compat/utilities/unescape.js', 420, 438 ]
+1360 silly gunzTarPerm extractEntry compat/utilities/escape.js
+1361 silly gunzTarPerm modified mode [ 'compat/utilities/escape.js', 420, 438 ]
+1362 silly gunzTarPerm extractEntry compat/utilities/uniqueId.js
+1363 silly gunzTarPerm modified mode [ 'compat/utilities/uniqueId.js', 420, 438 ]
+1364 silly gunzTarPerm extractEntry compat/utilities/property.js
+1365 silly gunzTarPerm modified mode [ 'compat/utilities/property.js', 420, 438 ]
+1366 silly gunzTarPerm extractEntry compat/arrays/compact.js
+1367 silly gunzTarPerm modified mode [ 'compat/arrays/compact.js', 420, 438 ]
+1368 silly gunzTarPerm extractEntry compat/arrays/initial.js
+1369 silly gunzTarPerm modified mode [ 'compat/arrays/initial.js', 420, 438 ]
+1370 silly gunzTarPerm extractEntry compat/arrays/intersection.js
+1371 silly gunzTarPerm modified mode [ 'compat/arrays/intersection.js', 420, 438 ]
+1372 silly gunzTarPerm extractEntry compat/arrays/last.js
+1373 silly gunzTarPerm modified mode [ 'compat/arrays/last.js', 420, 438 ]
+1374 silly gunzTarPerm extractEntry compat/arrays/lastIndexOf.js
+1375 silly gunzTarPerm modified mode [ 'compat/arrays/lastIndexOf.js', 420, 438 ]
+1376 silly gunzTarPerm extractEntry compat/arrays/indexOf.js
+1377 silly gunzTarPerm modified mode [ 'compat/arrays/indexOf.js', 420, 438 ]
+1378 silly gunzTarPerm extractEntry compat/arrays/range.js
+1379 silly gunzTarPerm modified mode [ 'compat/arrays/range.js', 420, 438 ]
+1380 silly gunzTarPerm extractEntry compat/arrays/remove.js
+1381 silly gunzTarPerm modified mode [ 'compat/arrays/remove.js', 420, 438 ]
+1382 silly gunzTarPerm extractEntry compat/arrays/rest.js
+1383 silly gunzTarPerm modified mode [ 'compat/arrays/rest.js', 420, 438 ]
+1384 silly gunzTarPerm extractEntry compat/arrays/sortedIndex.js
+1385 silly gunzTarPerm modified mode [ 'compat/arrays/sortedIndex.js', 420, 438 ]
+1386 silly gunzTarPerm extractEntry compat/arrays/union.js
+1387 silly gunzTarPerm modified mode [ 'compat/arrays/union.js', 420, 438 ]
+1388 silly gunzTarPerm extractEntry compat/arrays/flatten.js
+1389 silly gunzTarPerm modified mode [ 'compat/arrays/flatten.js', 420, 438 ]
+1390 silly gunzTarPerm extractEntry compat/arrays/uniq.js
+1391 silly gunzTarPerm modified mode [ 'compat/arrays/uniq.js', 420, 438 ]
+1392 silly gunzTarPerm extractEntry compat/arrays/first.js
+1393 silly gunzTarPerm modified mode [ 'compat/arrays/first.js', 420, 438 ]
+1394 silly gunzTarPerm extractEntry compat/arrays/without.js
+1395 silly gunzTarPerm modified mode [ 'compat/arrays/without.js', 420, 438 ]
+1396 silly gunzTarPerm extractEntry compat/arrays/findLastIndex.js
+1397 silly gunzTarPerm modified mode [ 'compat/arrays/findLastIndex.js', 420, 438 ]
+1398 silly gunzTarPerm extractEntry compat/arrays/xor.js
+1399 silly gunzTarPerm modified mode [ 'compat/arrays/xor.js', 420, 438 ]
+1400 silly gunzTarPerm extractEntry compat/arrays/findIndex.js
+1401 silly gunzTarPerm modified mode [ 'compat/arrays/findIndex.js', 420, 438 ]
+1402 silly gunzTarPerm extractEntry compat/arrays/zip.js
+1403 silly gunzTarPerm modified mode [ 'compat/arrays/zip.js', 420, 438 ]
+1404 silly gunzTarPerm extractEntry compat/arrays/difference.js
+1405 silly gunzTarPerm modified mode [ 'compat/arrays/difference.js', 420, 438 ]
+1406 silly gunzTarPerm extractEntry compat/arrays/zipObject.js
+1407 silly gunzTarPerm modified mode [ 'compat/arrays/zipObject.js', 420, 438 ]
+1408 silly gunzTarPerm extractEntry compat/arrays/pull.js
+1409 silly gunzTarPerm modified mode [ 'compat/arrays/pull.js', 420, 438 ]
+1410 silly gunzTarPerm extractEntry modern/utilities.js
+1411 silly gunzTarPerm modified mode [ 'modern/utilities.js', 420, 438 ]
+1412 silly gunzTarPerm extractEntry modern/support.js
+1413 silly gunzTarPerm modified mode [ 'modern/support.js', 420, 438 ]
+1414 silly gunzTarPerm extractEntry modern/chaining.js
+1415 silly gunzTarPerm modified mode [ 'modern/chaining.js', 420, 438 ]
+1416 silly gunzTarPerm extractEntry modern/objects.js
+1417 silly gunzTarPerm modified mode [ 'modern/objects.js', 420, 438 ]
+1418 silly gunzTarPerm extractEntry modern/collections.js
+1419 silly gunzTarPerm modified mode [ 'modern/collections.js', 420, 438 ]
+1420 silly gunzTarPerm extractEntry modern/index.js
+1421 silly gunzTarPerm modified mode [ 'modern/index.js', 420, 438 ]
+1422 silly gunzTarPerm extractEntry modern/arrays.js
+1423 silly gunzTarPerm modified mode [ 'modern/arrays.js', 420, 438 ]
+1424 silly gunzTarPerm extractEntry modern/functions.js
+1425 silly gunzTarPerm modified mode [ 'modern/functions.js', 420, 438 ]
+1426 silly gunzTarPerm extractEntry modern/functions/after.js
+1427 silly gunzTarPerm modified mode [ 'modern/functions/after.js', 420, 438 ]
+1428 silly gunzTarPerm extractEntry modern/functions/compose.js
+1429 silly gunzTarPerm modified mode [ 'modern/functions/compose.js', 420, 438 ]
+1430 silly gunzTarPerm extractEntry modern/functions/createCallback.js
+1431 silly gunzTarPerm modified mode [ 'modern/functions/createCallback.js', 420, 438 ]
+1432 silly gunzTarPerm extractEntry modern/functions/curry.js
+1433 silly gunzTarPerm modified mode [ 'modern/functions/curry.js', 420, 438 ]
+1434 silly gunzTarPerm extractEntry modern/functions/debounce.js
+1435 silly gunzTarPerm modified mode [ 'modern/functions/debounce.js', 420, 438 ]
+1436 silly gunzTarPerm extractEntry modern/functions/bindKey.js
+1437 silly gunzTarPerm modified mode [ 'modern/functions/bindKey.js', 420, 438 ]
+1438 silly gunzTarPerm extractEntry modern/functions/delay.js
+1439 silly gunzTarPerm modified mode [ 'modern/functions/delay.js', 420, 438 ]
+1440 silly gunzTarPerm extractEntry modern/functions/memoize.js
+1441 silly gunzTarPerm modified mode [ 'modern/functions/memoize.js', 420, 438 ]
+1442 silly gunzTarPerm extractEntry modern/functions/once.js
+1443 silly gunzTarPerm modified mode [ 'modern/functions/once.js', 420, 438 ]
+1444 silly gunzTarPerm extractEntry modern/functions/partial.js
+1445 silly gunzTarPerm modified mode [ 'modern/functions/partial.js', 420, 438 ]
+1446 silly gunzTarPerm extractEntry modern/functions/partialRight.js
+1447 silly gunzTarPerm modified mode [ 'modern/functions/partialRight.js', 420, 438 ]
+1448 silly gunzTarPerm extractEntry modern/functions/bindAll.js
+1449 silly gunzTarPerm modified mode [ 'modern/functions/bindAll.js', 420, 438 ]
+1450 silly gunzTarPerm extractEntry modern/functions/throttle.js
+1451 silly gunzTarPerm modified mode [ 'modern/functions/throttle.js', 420, 438 ]
+1452 silly gunzTarPerm extractEntry modern/functions/bind.js
+1453 silly gunzTarPerm modified mode [ 'modern/functions/bind.js', 420, 438 ]
+1454 silly gunzTarPerm extractEntry modern/functions/wrap.js
+1455 silly gunzTarPerm modified mode [ 'modern/functions/wrap.js', 420, 438 ]
+1456 silly gunzTarPerm extractEntry modern/functions/defer.js
+1457 silly gunzTarPerm modified mode [ 'modern/functions/defer.js', 420, 438 ]
+1458 silly gunzTarPerm extractEntry modern/internals/arrayPool.js
+1459 silly gunzTarPerm modified mode [ 'modern/internals/arrayPool.js', 420, 438 ]
+1460 silly gunzTarPerm extractEntry modern/internals/createCache.js
+1461 silly gunzTarPerm modified mode [ 'modern/internals/createCache.js', 420, 438 ]
+1462 silly gunzTarPerm extractEntry modern/internals/createWrapper.js
+1463 silly gunzTarPerm modified mode [ 'modern/internals/createWrapper.js', 420, 438 ]
+1464 silly gunzTarPerm extractEntry modern/internals/escapeHtmlChar.js
+1465 silly gunzTarPerm modified mode [ 'modern/internals/escapeHtmlChar.js', 420, 438 ]
+1466 silly gunzTarPerm extractEntry modern/internals/createAggregator.js
+1467 silly gunzTarPerm modified mode [ 'modern/internals/createAggregator.js', 420, 438 ]
+1468 silly gunzTarPerm extractEntry modern/internals/getArray.js
+1469 silly gunzTarPerm modified mode [ 'modern/internals/getArray.js', 420, 438 ]
+1470 silly gunzTarPerm extractEntry modern/internals/getObject.js
+1471 silly gunzTarPerm modified mode [ 'modern/internals/getObject.js', 420, 438 ]
+1472 silly gunzTarPerm extractEntry modern/internals/htmlEscapes.js
+1473 silly gunzTarPerm modified mode [ 'modern/internals/htmlEscapes.js', 420, 438 ]
+1474 silly gunzTarPerm extractEntry modern/internals/htmlUnescapes.js
+1475 silly gunzTarPerm modified mode [ 'modern/internals/htmlUnescapes.js', 420, 438 ]
+1476 silly gunzTarPerm extractEntry modern/internals/isNative.js
+1477 silly gunzTarPerm modified mode [ 'modern/internals/isNative.js', 420, 438 ]
+1478 silly gunzTarPerm extractEntry modern/internals/compareAscending.js
+1479 silly gunzTarPerm modified mode [ 'modern/internals/compareAscending.js', 420, 438 ]
+1480 silly gunzTarPerm extractEntry modern/internals/keyPrefix.js
+1481 silly gunzTarPerm modified mode [ 'modern/internals/keyPrefix.js', 420, 438 ]
+1482 silly gunzTarPerm extractEntry modern/internals/charAtCallback.js
+1483 silly gunzTarPerm modified mode [ 'modern/internals/charAtCallback.js', 420, 438 ]
+1484 silly gunzTarPerm extractEntry modern/internals/largeArraySize.js
+1485 silly gunzTarPerm modified mode [ 'modern/internals/largeArraySize.js', 420, 438 ]
+1486 silly gunzTarPerm extractEntry modern/internals/cachePush.js
+1487 silly gunzTarPerm modified mode [ 'modern/internals/cachePush.js', 420, 438 ]
+1488 silly gunzTarPerm extractEntry modern/internals/lodashWrapper.js
+1489 silly gunzTarPerm modified mode [ 'modern/internals/lodashWrapper.js', 420, 438 ]
+1490 silly gunzTarPerm extractEntry modern/internals/cacheIndexOf.js
+1491 silly gunzTarPerm modified mode [ 'modern/internals/cacheIndexOf.js', 420, 438 ]
+1492 silly gunzTarPerm extractEntry modern/internals/maxPoolSize.js
+1493 silly gunzTarPerm modified mode [ 'modern/internals/maxPoolSize.js', 420, 438 ]
+1494 silly gunzTarPerm extractEntry modern/internals/baseUniq.js
+1495 silly gunzTarPerm modified mode [ 'modern/internals/baseUniq.js', 420, 438 ]
+1496 silly gunzTarPerm extractEntry modern/internals/objectPool.js
+1497 silly gunzTarPerm modified mode [ 'modern/internals/objectPool.js', 420, 438 ]
+1498 silly gunzTarPerm extractEntry modern/internals/baseRandom.js
+1499 silly gunzTarPerm modified mode [ 'modern/internals/baseRandom.js', 420, 438 ]
+1500 silly gunzTarPerm extractEntry modern/internals/objectTypes.js
+1501 silly gunzTarPerm modified mode [ 'modern/internals/objectTypes.js', 420, 438 ]
+1502 silly gunzTarPerm extractEntry modern/internals/baseMerge.js
+1503 silly gunzTarPerm modified mode [ 'modern/internals/baseMerge.js', 420, 438 ]
+1504 silly gunzTarPerm extractEntry modern/internals/reEscapedHtml.js
+1505 silly gunzTarPerm modified mode [ 'modern/internals/reEscapedHtml.js', 420, 438 ]
+1506 silly gunzTarPerm extractEntry modern/internals/baseIsEqual.js
+1507 silly gunzTarPerm modified mode [ 'modern/internals/baseIsEqual.js', 420, 438 ]
+1508 silly gunzTarPerm extractEntry modern/internals/reInterpolate.js
+1509 silly gunzTarPerm modified mode [ 'modern/internals/reInterpolate.js', 420, 438 ]
+1510 silly gunzTarPerm extractEntry modern/internals/baseIndexOf.js
+1511 silly gunzTarPerm modified mode [ 'modern/internals/baseIndexOf.js', 420, 438 ]
+1512 silly gunzTarPerm extractEntry modern/internals/reUnescapedHtml.js
+1513 silly gunzTarPerm modified mode [ 'modern/internals/reUnescapedHtml.js', 420, 438 ]
+1514 silly gunzTarPerm extractEntry modern/internals/baseFlatten.js
+1515 silly gunzTarPerm modified mode [ 'modern/internals/baseFlatten.js', 420, 438 ]
+1516 silly gunzTarPerm extractEntry modern/internals/releaseArray.js
+1517 silly gunzTarPerm modified mode [ 'modern/internals/releaseArray.js', 420, 438 ]
+1518 silly gunzTarPerm extractEntry modern/internals/baseDifference.js
+1519 silly gunzTarPerm modified mode [ 'modern/internals/baseDifference.js', 420, 438 ]
+1520 silly gunzTarPerm extractEntry modern/internals/releaseObject.js
+1521 silly gunzTarPerm modified mode [ 'modern/internals/releaseObject.js', 420, 438 ]
+1522 silly gunzTarPerm extractEntry modern/internals/baseCreateWrapper.js
+1523 silly gunzTarPerm modified mode [ 'modern/internals/baseCreateWrapper.js', 420, 438 ]
+1524 silly gunzTarPerm extractEntry modern/internals/setBindData.js
+1525 silly gunzTarPerm modified mode [ 'modern/internals/setBindData.js', 420, 438 ]
+1526 silly gunzTarPerm extractEntry modern/internals/baseCreateCallback.js
+1527 silly gunzTarPerm modified mode [ 'modern/internals/baseCreateCallback.js', 420, 438 ]
+1528 silly gunzTarPerm extractEntry modern/internals/shimIsPlainObject.js
+1529 silly gunzTarPerm modified mode [ 'modern/internals/shimIsPlainObject.js', 420, 438 ]
+1530 silly gunzTarPerm extractEntry modern/internals/baseCreate.js
+1531 silly gunzTarPerm modified mode [ 'modern/internals/baseCreate.js', 420, 438 ]
+1532 silly gunzTarPerm extractEntry modern/internals/shimKeys.js
+1533 silly gunzTarPerm modified mode [ 'modern/internals/shimKeys.js', 420, 438 ]
+1534 silly gunzTarPerm extractEntry modern/internals/baseClone.js
+1535 silly gunzTarPerm modified mode [ 'modern/internals/baseClone.js', 420, 438 ]
+1536 silly gunzTarPerm extractEntry modern/internals/slice.js
+1537 silly gunzTarPerm modified mode [ 'modern/internals/slice.js', 420, 438 ]
+1538 silly gunzTarPerm extractEntry modern/internals/baseBind.js
+1539 silly gunzTarPerm modified mode [ 'modern/internals/baseBind.js', 420, 438 ]
+1540 silly gunzTarPerm extractEntry modern/internals/unescapeHtmlChar.js
+1541 silly gunzTarPerm modified mode [ 'modern/internals/unescapeHtmlChar.js', 420, 438 ]
+1542 silly gunzTarPerm extractEntry modern/internals/escapeStringChar.js
+1543 silly gunzTarPerm modified mode [ 'modern/internals/escapeStringChar.js', 420, 438 ]
+1544 silly gunzTarPerm extractEntry modern/objects/assign.js
+1545 silly gunzTarPerm modified mode [ 'modern/objects/assign.js', 420, 438 ]
+1546 silly gunzTarPerm extractEntry modern/objects/isBoolean.js
+1547 silly gunzTarPerm modified mode [ 'modern/objects/isBoolean.js', 420, 438 ]
+1548 silly gunzTarPerm extractEntry modern/objects/isDate.js
+1549 silly gunzTarPerm modified mode [ 'modern/objects/isDate.js', 420, 438 ]
+1550 silly gunzTarPerm extractEntry modern/objects/isElement.js
+1551 silly gunzTarPerm modified mode [ 'modern/objects/isElement.js', 420, 438 ]
+1552 silly gunzTarPerm extractEntry modern/objects/isArray.js
+1553 silly gunzTarPerm modified mode [ 'modern/objects/isArray.js', 420, 438 ]
+1554 silly gunzTarPerm extractEntry modern/objects/isEqual.js
+1555 silly gunzTarPerm modified mode [ 'modern/objects/isEqual.js', 420, 438 ]
+1556 silly gunzTarPerm extractEntry modern/objects/isFinite.js
+1557 silly gunzTarPerm modified mode [ 'modern/objects/isFinite.js', 420, 438 ]
+1558 silly gunzTarPerm extractEntry modern/objects/isFunction.js
+1559 silly gunzTarPerm modified mode [ 'modern/objects/isFunction.js', 420, 438 ]
+1560 silly gunzTarPerm extractEntry modern/objects/isNaN.js
+1561 silly gunzTarPerm modified mode [ 'modern/objects/isNaN.js', 420, 438 ]
+1562 silly gunzTarPerm extractEntry modern/objects/isNull.js
+1563 silly gunzTarPerm modified mode [ 'modern/objects/isNull.js', 420, 438 ]
+1564 silly gunzTarPerm extractEntry modern/objects/isArguments.js
+1565 silly gunzTarPerm modified mode [ 'modern/objects/isArguments.js', 420, 438 ]
+1566 silly gunzTarPerm extractEntry modern/objects/isNumber.js
+1567 silly gunzTarPerm modified mode [ 'modern/objects/isNumber.js', 420, 438 ]
+1568 silly gunzTarPerm extractEntry modern/objects/invert.js
+1569 silly gunzTarPerm modified mode [ 'modern/objects/invert.js', 420, 438 ]
+1570 silly gunzTarPerm extractEntry modern/objects/isObject.js
+1571 silly gunzTarPerm modified mode [ 'modern/objects/isObject.js', 420, 438 ]
+1572 silly gunzTarPerm extractEntry modern/objects/has.js
+1573 silly gunzTarPerm modified mode [ 'modern/objects/has.js', 420, 438 ]
+1574 silly gunzTarPerm extractEntry modern/objects/isPlainObject.js
+1575 silly gunzTarPerm modified mode [ 'modern/objects/isPlainObject.js', 420, 438 ]
+1576 silly gunzTarPerm extractEntry modern/objects/functions.js
+1577 silly gunzTarPerm modified mode [ 'modern/objects/functions.js', 420, 438 ]
+1578 silly gunzTarPerm extractEntry modern/objects/isRegExp.js
+1579 silly gunzTarPerm modified mode [ 'modern/objects/isRegExp.js', 420, 438 ]
+1580 silly gunzTarPerm extractEntry modern/objects/forOwnRight.js
+1581 silly gunzTarPerm modified mode [ 'modern/objects/forOwnRight.js', 420, 438 ]
+1582 silly gunzTarPerm extractEntry modern/objects/isString.js
+1583 silly gunzTarPerm modified mode [ 'modern/objects/isString.js', 420, 438 ]
+1584 silly gunzTarPerm extractEntry modern/objects/forOwn.js
+1585 silly gunzTarPerm modified mode [ 'modern/objects/forOwn.js', 420, 438 ]
+1586 silly gunzTarPerm extractEntry modern/objects/isUndefined.js
+1587 silly gunzTarPerm modified mode [ 'modern/objects/isUndefined.js', 420, 438 ]
+1588 silly gunzTarPerm extractEntry modern/objects/forInRight.js
+1589 silly gunzTarPerm modified mode [ 'modern/objects/forInRight.js', 420, 438 ]
+1590 silly gunzTarPerm extractEntry modern/objects/keys.js
+1591 silly gunzTarPerm modified mode [ 'modern/objects/keys.js', 420, 438 ]
+1592 silly gunzTarPerm extractEntry modern/objects/forIn.js
+1593 silly gunzTarPerm modified mode [ 'modern/objects/forIn.js', 420, 438 ]
+1594 silly gunzTarPerm extractEntry modern/objects/mapValues.js
+1595 silly gunzTarPerm modified mode [ 'modern/objects/mapValues.js', 420, 438 ]
+1596 silly gunzTarPerm extractEntry modern/objects/findLastKey.js
+1597 silly gunzTarPerm modified mode [ 'modern/objects/findLastKey.js', 420, 438 ]
+1598 silly gunzTarPerm extractEntry modern/objects/merge.js
+1599 silly gunzTarPerm modified mode [ 'modern/objects/merge.js', 420, 438 ]
+1600 silly gunzTarPerm extractEntry modern/objects/findKey.js
+1601 silly gunzTarPerm modified mode [ 'modern/objects/findKey.js', 420, 438 ]
+1602 silly gunzTarPerm extractEntry modern/objects/omit.js
+1603 silly gunzTarPerm modified mode [ 'modern/objects/omit.js', 420, 438 ]
+1604 silly gunzTarPerm extractEntry modern/objects/defaults.js
+1605 silly gunzTarPerm modified mode [ 'modern/objects/defaults.js', 420, 438 ]
+1606 silly gunzTarPerm extractEntry modern/objects/pairs.js
+1607 silly gunzTarPerm modified mode [ 'modern/objects/pairs.js', 420, 438 ]
+1608 silly gunzTarPerm extractEntry modern/objects/create.js
+1609 silly gunzTarPerm modified mode [ 'modern/objects/create.js', 420, 438 ]
+1610 silly gunzTarPerm extractEntry modern/objects/pick.js
+1611 silly gunzTarPerm modified mode [ 'modern/objects/pick.js', 420, 438 ]
+1612 silly gunzTarPerm extractEntry modern/objects/cloneDeep.js
+1613 silly gunzTarPerm modified mode [ 'modern/objects/cloneDeep.js', 420, 438 ]
+1614 silly gunzTarPerm extractEntry modern/objects/transform.js
+1615 silly gunzTarPerm modified mode [ 'modern/objects/transform.js', 420, 438 ]
+1616 silly gunzTarPerm extractEntry modern/objects/clone.js
+1617 silly gunzTarPerm modified mode [ 'modern/objects/clone.js', 420, 438 ]
+1618 silly gunzTarPerm extractEntry modern/objects/values.js
+1619 silly gunzTarPerm modified mode [ 'modern/objects/values.js', 420, 438 ]
+1620 silly gunzTarPerm extractEntry modern/objects/isEmpty.js
+1621 silly gunzTarPerm modified mode [ 'modern/objects/isEmpty.js', 420, 438 ]
+1622 silly gunzTarPerm extractEntry modern/collections/at.js
+1623 silly gunzTarPerm modified mode [ 'modern/collections/at.js', 420, 438 ]
+1624 silly gunzTarPerm extractEntry modern/collections/groupBy.js
+1625 silly gunzTarPerm modified mode [ 'modern/collections/groupBy.js', 420, 438 ]
+1626 silly gunzTarPerm extractEntry modern/collections/indexBy.js
+1627 silly gunzTarPerm modified mode [ 'modern/collections/indexBy.js', 420, 438 ]
+1628 silly gunzTarPerm extractEntry modern/collections/invoke.js
+1629 silly gunzTarPerm modified mode [ 'modern/collections/invoke.js', 420, 438 ]
+1630 silly gunzTarPerm extractEntry modern/collections/map.js
+1631 silly gunzTarPerm modified mode [ 'modern/collections/map.js', 420, 438 ]
+1632 silly gunzTarPerm extractEntry modern/collections/forEachRight.js
+1633 silly gunzTarPerm modified mode [ 'modern/collections/forEachRight.js', 420, 438 ]
+1634 silly gunzTarPerm extractEntry modern/collections/min.js
+1635 silly gunzTarPerm modified mode [ 'modern/collections/min.js', 420, 438 ]
+1636 silly gunzTarPerm extractEntry modern/collections/pluck.js
+1637 silly gunzTarPerm modified mode [ 'modern/collections/pluck.js', 420, 438 ]
+1638 silly gunzTarPerm extractEntry modern/collections/reduce.js
+1639 silly gunzTarPerm modified mode [ 'modern/collections/reduce.js', 420, 438 ]
+1640 silly gunzTarPerm extractEntry modern/collections/reduceRight.js
+1641 silly gunzTarPerm modified mode [ 'modern/collections/reduceRight.js', 420, 438 ]
+1642 silly gunzTarPerm extractEntry modern/collections/reject.js
+1643 silly gunzTarPerm modified mode [ 'modern/collections/reject.js', 420, 438 ]
+1644 silly gunzTarPerm extractEntry modern/collections/forEach.js
+1645 silly gunzTarPerm modified mode [ 'modern/collections/forEach.js', 420, 438 ]
+1646 silly gunzTarPerm extractEntry modern/collections/sample.js
+1647 silly gunzTarPerm modified mode [ 'modern/collections/sample.js', 420, 438 ]
+1648 silly gunzTarPerm extractEntry modern/collections/findLast.js
+1649 silly gunzTarPerm modified mode [ 'modern/collections/findLast.js', 420, 438 ]
+1650 silly gunzTarPerm extractEntry modern/collections/shuffle.js
+1651 silly gunzTarPerm modified mode [ 'modern/collections/shuffle.js', 420, 438 ]
+1652 silly gunzTarPerm extractEntry modern/collections/find.js
+1653 silly gunzTarPerm modified mode [ 'modern/collections/find.js', 420, 438 ]
+1654 silly gunzTarPerm extractEntry modern/collections/size.js
+1655 silly gunzTarPerm modified mode [ 'modern/collections/size.js', 420, 438 ]
+1656 silly gunzTarPerm extractEntry modern/collections/filter.js
+1657 silly gunzTarPerm modified mode [ 'modern/collections/filter.js', 420, 438 ]
+1658 silly gunzTarPerm extractEntry modern/collections/some.js
+1659 silly gunzTarPerm modified mode [ 'modern/collections/some.js', 420, 438 ]
+1660 silly gunzTarPerm extractEntry modern/collections/every.js
+1661 silly gunzTarPerm modified mode [ 'modern/collections/every.js', 420, 438 ]
+1662 silly gunzTarPerm extractEntry modern/collections/sortBy.js
+1663 silly gunzTarPerm modified mode [ 'modern/collections/sortBy.js', 420, 438 ]
+1664 silly gunzTarPerm extractEntry modern/collections/countBy.js
+1665 silly gunzTarPerm modified mode [ 'modern/collections/countBy.js', 420, 438 ]
+1666 silly gunzTarPerm extractEntry modern/collections/toArray.js
+1667 silly gunzTarPerm modified mode [ 'modern/collections/toArray.js', 420, 438 ]
+1668 silly gunzTarPerm extractEntry modern/collections/contains.js
+1669 silly gunzTarPerm modified mode [ 'modern/collections/contains.js', 420, 438 ]
+1670 silly gunzTarPerm extractEntry modern/collections/where.js
+1671 silly gunzTarPerm modified mode [ 'modern/collections/where.js', 420, 438 ]
+1672 silly gunzTarPerm extractEntry modern/collections/max.js
+1673 silly gunzTarPerm modified mode [ 'modern/collections/max.js', 420, 438 ]
+1674 silly gunzTarPerm extractEntry modern/chaining/chain.js
+1675 silly gunzTarPerm modified mode [ 'modern/chaining/chain.js', 420, 438 ]
+1676 silly gunzTarPerm extractEntry modern/chaining/tap.js
+1677 silly gunzTarPerm modified mode [ 'modern/chaining/tap.js', 420, 438 ]
+1678 silly gunzTarPerm extractEntry modern/chaining/wrapperChain.js
+1679 silly gunzTarPerm modified mode [ 'modern/chaining/wrapperChain.js', 420, 438 ]
+1680 silly gunzTarPerm extractEntry modern/chaining/wrapperToString.js
+1681 silly gunzTarPerm modified mode [ 'modern/chaining/wrapperToString.js', 420, 438 ]
+1682 silly gunzTarPerm extractEntry modern/chaining/wrapperValueOf.js
+1683 silly gunzTarPerm modified mode [ 'modern/chaining/wrapperValueOf.js', 420, 438 ]
+1684 silly gunzTarPerm extractEntry modern/utilities/constant.js
+1685 silly gunzTarPerm modified mode [ 'modern/utilities/constant.js', 420, 438 ]
+1686 silly gunzTarPerm extractEntry modern/utilities/noConflict.js
+1687 silly gunzTarPerm modified mode [ 'modern/utilities/noConflict.js', 420, 438 ]
+1688 silly gunzTarPerm extractEntry modern/utilities/noop.js
+1689 silly gunzTarPerm modified mode [ 'modern/utilities/noop.js', 420, 438 ]
+1690 silly gunzTarPerm extractEntry modern/utilities/now.js
+1691 silly gunzTarPerm modified mode [ 'modern/utilities/now.js', 420, 438 ]
+1692 silly gunzTarPerm extractEntry modern/utilities/parseInt.js
+1693 silly gunzTarPerm modified mode [ 'modern/utilities/parseInt.js', 420, 438 ]
+1694 silly gunzTarPerm extractEntry modern/utilities/mixin.js
+1695 silly gunzTarPerm modified mode [ 'modern/utilities/mixin.js', 420, 438 ]
+1696 silly gunzTarPerm extractEntry modern/utilities/random.js
+1697 silly gunzTarPerm modified mode [ 'modern/utilities/random.js', 420, 438 ]
+1698 silly gunzTarPerm extractEntry modern/utilities/result.js
+1699 silly gunzTarPerm modified mode [ 'modern/utilities/result.js', 420, 438 ]
+1700 silly gunzTarPerm extractEntry modern/utilities/template.js
+1701 silly gunzTarPerm modified mode [ 'modern/utilities/template.js', 420, 438 ]
+1702 silly gunzTarPerm extractEntry modern/utilities/templateSettings.js
+1703 silly gunzTarPerm modified mode [ 'modern/utilities/templateSettings.js', 420, 438 ]
+1704 silly gunzTarPerm extractEntry modern/utilities/times.js
+1705 silly gunzTarPerm modified mode [ 'modern/utilities/times.js', 420, 438 ]
+1706 silly gunzTarPerm extractEntry modern/utilities/identity.js
+1707 silly gunzTarPerm modified mode [ 'modern/utilities/identity.js', 420, 438 ]
+1708 silly gunzTarPerm extractEntry modern/utilities/unescape.js
+1709 silly gunzTarPerm modified mode [ 'modern/utilities/unescape.js', 420, 438 ]
+1710 silly gunzTarPerm extractEntry modern/utilities/escape.js
+1711 silly gunzTarPerm modified mode [ 'modern/utilities/escape.js', 420, 438 ]
+1712 silly gunzTarPerm extractEntry modern/utilities/uniqueId.js
+1713 silly gunzTarPerm modified mode [ 'modern/utilities/uniqueId.js', 420, 438 ]
+1714 silly gunzTarPerm extractEntry modern/utilities/property.js
+1715 silly gunzTarPerm modified mode [ 'modern/utilities/property.js', 420, 438 ]
+1716 silly gunzTarPerm extractEntry modern/arrays/compact.js
+1717 silly gunzTarPerm modified mode [ 'modern/arrays/compact.js', 420, 438 ]
+1718 silly gunzTarPerm extractEntry modern/arrays/initial.js
+1719 silly gunzTarPerm modified mode [ 'modern/arrays/initial.js', 420, 438 ]
+1720 silly gunzTarPerm extractEntry modern/arrays/intersection.js
+1721 silly gunzTarPerm modified mode [ 'modern/arrays/intersection.js', 420, 438 ]
+1722 silly gunzTarPerm extractEntry modern/arrays/last.js
+1723 silly gunzTarPerm modified mode [ 'modern/arrays/last.js', 420, 438 ]
+1724 silly gunzTarPerm extractEntry modern/arrays/lastIndexOf.js
+1725 silly gunzTarPerm modified mode [ 'modern/arrays/lastIndexOf.js', 420, 438 ]
+1726 silly gunzTarPerm extractEntry modern/arrays/indexOf.js
+1727 silly gunzTarPerm modified mode [ 'modern/arrays/indexOf.js', 420, 438 ]
+1728 silly gunzTarPerm extractEntry modern/arrays/range.js
+1729 silly gunzTarPerm modified mode [ 'modern/arrays/range.js', 420, 438 ]
+1730 silly gunzTarPerm extractEntry modern/arrays/remove.js
+1731 silly gunzTarPerm modified mode [ 'modern/arrays/remove.js', 420, 438 ]
+1732 silly gunzTarPerm extractEntry modern/arrays/rest.js
+1733 silly gunzTarPerm modified mode [ 'modern/arrays/rest.js', 420, 438 ]
+1734 silly gunzTarPerm extractEntry modern/arrays/sortedIndex.js
+1735 silly gunzTarPerm modified mode [ 'modern/arrays/sortedIndex.js', 420, 438 ]
+1736 silly gunzTarPerm extractEntry modern/arrays/union.js
+1737 silly gunzTarPerm modified mode [ 'modern/arrays/union.js', 420, 438 ]
+1738 silly gunzTarPerm extractEntry modern/arrays/flatten.js
+1739 silly gunzTarPerm modified mode [ 'modern/arrays/flatten.js', 420, 438 ]
+1740 silly gunzTarPerm extractEntry modern/arrays/uniq.js
+1741 silly gunzTarPerm modified mode [ 'modern/arrays/uniq.js', 420, 438 ]
+1742 silly gunzTarPerm extractEntry modern/arrays/first.js
+1743 silly gunzTarPerm modified mode [ 'modern/arrays/first.js', 420, 438 ]
+1744 silly gunzTarPerm extractEntry modern/arrays/without.js
+1745 silly gunzTarPerm modified mode [ 'modern/arrays/without.js', 420, 438 ]
+1746 silly gunzTarPerm extractEntry modern/arrays/findLastIndex.js
+1747 silly gunzTarPerm modified mode [ 'modern/arrays/findLastIndex.js', 420, 438 ]
+1748 silly gunzTarPerm extractEntry modern/arrays/xor.js
+1749 silly gunzTarPerm modified mode [ 'modern/arrays/xor.js', 420, 438 ]
+1750 silly gunzTarPerm extractEntry modern/arrays/findIndex.js
+1751 silly gunzTarPerm modified mode [ 'modern/arrays/findIndex.js', 420, 438 ]
+1752 silly gunzTarPerm extractEntry modern/arrays/zip.js
+1753 silly gunzTarPerm modified mode [ 'modern/arrays/zip.js', 420, 438 ]
+1754 silly gunzTarPerm extractEntry modern/arrays/difference.js
+1755 silly gunzTarPerm modified mode [ 'modern/arrays/difference.js', 420, 438 ]
+1756 silly gunzTarPerm extractEntry modern/arrays/zipObject.js
+1757 silly gunzTarPerm modified mode [ 'modern/arrays/zipObject.js', 420, 438 ]
+1758 silly gunzTarPerm extractEntry modern/arrays/pull.js
+1759 silly gunzTarPerm modified mode [ 'modern/arrays/pull.js', 420, 438 ]
+1760 silly gunzTarPerm extractEntry underscore/utilities.js
+1761 silly gunzTarPerm modified mode [ 'underscore/utilities.js', 420, 438 ]
+1762 silly gunzTarPerm extractEntry underscore/support.js
+1763 silly gunzTarPerm modified mode [ 'underscore/support.js', 420, 438 ]
+1764 silly gunzTarPerm extractEntry underscore/chaining.js
+1765 silly gunzTarPerm modified mode [ 'underscore/chaining.js', 420, 438 ]
+1766 silly gunzTarPerm extractEntry underscore/objects.js
+1767 silly gunzTarPerm modified mode [ 'underscore/objects.js', 420, 438 ]
+1768 silly gunzTarPerm extractEntry underscore/collections.js
+1769 silly gunzTarPerm modified mode [ 'underscore/collections.js', 420, 438 ]
+1770 silly gunzTarPerm extractEntry underscore/index.js
+1771 silly gunzTarPerm modified mode [ 'underscore/index.js', 420, 438 ]
+1772 silly gunzTarPerm extractEntry underscore/arrays.js
+1773 silly gunzTarPerm modified mode [ 'underscore/arrays.js', 420, 438 ]
+1774 silly gunzTarPerm extractEntry underscore/functions.js
+1775 silly gunzTarPerm modified mode [ 'underscore/functions.js', 420, 438 ]
+1776 silly gunzTarPerm extractEntry underscore/functions/after.js
+1777 silly gunzTarPerm modified mode [ 'underscore/functions/after.js', 420, 438 ]
+1778 silly gunzTarPerm extractEntry underscore/functions/compose.js
+1779 silly gunzTarPerm modified mode [ 'underscore/functions/compose.js', 420, 438 ]
+1780 silly gunzTarPerm extractEntry underscore/functions/createCallback.js
+1781 silly gunzTarPerm modified mode [ 'underscore/functions/createCallback.js', 420, 438 ]
+1782 silly gunzTarPerm extractEntry underscore/functions/debounce.js
+1783 silly gunzTarPerm modified mode [ 'underscore/functions/debounce.js', 420, 438 ]
+1784 silly gunzTarPerm extractEntry underscore/functions/bindAll.js
+1785 silly gunzTarPerm modified mode [ 'underscore/functions/bindAll.js', 420, 438 ]
+1786 silly gunzTarPerm extractEntry underscore/functions/delay.js
+1787 silly gunzTarPerm modified mode [ 'underscore/functions/delay.js', 420, 438 ]
+1788 silly gunzTarPerm extractEntry underscore/functions/memoize.js
+1789 silly gunzTarPerm modified mode [ 'underscore/functions/memoize.js', 420, 438 ]
+1790 silly gunzTarPerm extractEntry underscore/functions/once.js
+1791 silly gunzTarPerm modified mode [ 'underscore/functions/once.js', 420, 438 ]
+1792 silly gunzTarPerm extractEntry underscore/functions/partial.js
+1793 silly gunzTarPerm modified mode [ 'underscore/functions/partial.js', 420, 438 ]
+1794 silly gunzTarPerm extractEntry underscore/functions/throttle.js
+1795 silly gunzTarPerm modified mode [ 'underscore/functions/throttle.js', 420, 438 ]
+1796 silly gunzTarPerm extractEntry underscore/functions/bind.js
+1797 silly gunzTarPerm modified mode [ 'underscore/functions/bind.js', 420, 438 ]
+1798 silly gunzTarPerm extractEntry underscore/functions/wrap.js
+1799 silly gunzTarPerm modified mode [ 'underscore/functions/wrap.js', 420, 438 ]
+1800 silly gunzTarPerm extractEntry underscore/functions/defer.js
+1801 silly gunzTarPerm modified mode [ 'underscore/functions/defer.js', 420, 438 ]
+1802 silly gunzTarPerm extractEntry underscore/internals/baseBind.js
+1803 silly gunzTarPerm modified mode [ 'underscore/internals/baseBind.js', 420, 438 ]
+1804 silly gunzTarPerm extractEntry underscore/internals/compareAscending.js
+1805 silly gunzTarPerm modified mode [ 'underscore/internals/compareAscending.js', 420, 438 ]
+1806 silly gunzTarPerm extractEntry underscore/internals/createAggregator.js
+1807 silly gunzTarPerm modified mode [ 'underscore/internals/createAggregator.js', 420, 438 ]
+1808 silly gunzTarPerm extractEntry underscore/internals/createWrapper.js
+1809 silly gunzTarPerm modified mode [ 'underscore/internals/createWrapper.js', 420, 438 ]
+1810 silly gunzTarPerm extractEntry underscore/internals/escapeHtmlChar.js
+1811 silly gunzTarPerm modified mode [ 'underscore/internals/escapeHtmlChar.js', 420, 438 ]
+1812 silly gunzTarPerm extractEntry underscore/internals/baseUniq.js
+1813 silly gunzTarPerm modified mode [ 'underscore/internals/baseUniq.js', 420, 438 ]
+1814 silly gunzTarPerm extractEntry underscore/internals/htmlEscapes.js
+1815 silly gunzTarPerm modified mode [ 'underscore/internals/htmlEscapes.js', 420, 438 ]
+1816 silly gunzTarPerm extractEntry underscore/internals/htmlUnescapes.js
+1817 silly gunzTarPerm modified mode [ 'underscore/internals/htmlUnescapes.js', 420, 438 ]
+1818 silly gunzTarPerm extractEntry underscore/internals/indicatorObject.js
+1819 silly gunzTarPerm modified mode [ 'underscore/internals/indicatorObject.js', 420, 438 ]
+1820 silly gunzTarPerm extractEntry underscore/internals/isNative.js
+1821 silly gunzTarPerm modified mode [ 'underscore/internals/isNative.js', 420, 438 ]
+1822 silly gunzTarPerm extractEntry underscore/internals/keyPrefix.js
+1823 silly gunzTarPerm modified mode [ 'underscore/internals/keyPrefix.js', 420, 438 ]
+1824 silly gunzTarPerm extractEntry underscore/internals/baseRandom.js
+1825 silly gunzTarPerm modified mode [ 'underscore/internals/baseRandom.js', 420, 438 ]
+1826 silly gunzTarPerm extractEntry underscore/internals/lodashWrapper.js
+1827 silly gunzTarPerm modified mode [ 'underscore/internals/lodashWrapper.js', 420, 438 ]
+1828 silly gunzTarPerm extractEntry underscore/internals/baseIsEqual.js
+1829 silly gunzTarPerm modified mode [ 'underscore/internals/baseIsEqual.js', 420, 438 ]
+1830 silly gunzTarPerm extractEntry underscore/internals/objectTypes.js
+1831 silly gunzTarPerm modified mode [ 'underscore/internals/objectTypes.js', 420, 438 ]
+1832 silly gunzTarPerm extractEntry underscore/internals/baseIndexOf.js
+1833 silly gunzTarPerm modified mode [ 'underscore/internals/baseIndexOf.js', 420, 438 ]
+1834 silly gunzTarPerm extractEntry underscore/internals/reEscapedHtml.js
+1835 silly gunzTarPerm modified mode [ 'underscore/internals/reEscapedHtml.js', 420, 438 ]
+1836 silly gunzTarPerm extractEntry underscore/internals/baseFlatten.js
+1837 silly gunzTarPerm modified mode [ 'underscore/internals/baseFlatten.js', 420, 438 ]
+1838 silly gunzTarPerm extractEntry underscore/internals/reInterpolate.js
+1839 silly gunzTarPerm modified mode [ 'underscore/internals/reInterpolate.js', 420, 438 ]
+1840 silly gunzTarPerm extractEntry underscore/internals/baseDifference.js
+1841 silly gunzTarPerm modified mode [ 'underscore/internals/baseDifference.js', 420, 438 ]
+1842 silly gunzTarPerm extractEntry underscore/internals/reUnescapedHtml.js
+1843 silly gunzTarPerm modified mode [ 'underscore/internals/reUnescapedHtml.js', 420, 438 ]
+1844 silly gunzTarPerm extractEntry underscore/internals/baseCreateWrapper.js
+1845 silly gunzTarPerm modified mode [ 'underscore/internals/baseCreateWrapper.js', 420, 438 ]
+1846 silly gunzTarPerm extractEntry underscore/internals/shimKeys.js
+1847 silly gunzTarPerm modified mode [ 'underscore/internals/shimKeys.js', 420, 438 ]
+1848 silly gunzTarPerm extractEntry underscore/internals/baseCreateCallback.js
+1849 silly gunzTarPerm modified mode [ 'underscore/internals/baseCreateCallback.js', 420, 438 ]
+1850 silly gunzTarPerm extractEntry underscore/internals/slice.js
+1851 silly gunzTarPerm modified mode [ 'underscore/internals/slice.js', 420, 438 ]
+1852 silly gunzTarPerm extractEntry underscore/internals/baseCreate.js
+1853 silly gunzTarPerm modified mode [ 'underscore/internals/baseCreate.js', 420, 438 ]
+1854 silly gunzTarPerm extractEntry underscore/internals/unescapeHtmlChar.js
+1855 silly gunzTarPerm modified mode [ 'underscore/internals/unescapeHtmlChar.js', 420, 438 ]
+1856 silly gunzTarPerm extractEntry underscore/internals/escapeStringChar.js
+1857 silly gunzTarPerm modified mode [ 'underscore/internals/escapeStringChar.js', 420, 438 ]
+1858 silly gunzTarPerm extractEntry underscore/objects/assign.js
+1859 silly gunzTarPerm modified mode [ 'underscore/objects/assign.js', 420, 438 ]
+1860 silly gunzTarPerm extractEntry underscore/objects/isDate.js
+1861 silly gunzTarPerm modified mode [ 'underscore/objects/isDate.js', 420, 438 ]
+1862 silly gunzTarPerm extractEntry underscore/objects/isElement.js
+1863 silly gunzTarPerm modified mode [ 'underscore/objects/isElement.js', 420, 438 ]
+1864 silly gunzTarPerm extractEntry underscore/objects/isEmpty.js
+1865 silly gunzTarPerm modified mode [ 'underscore/objects/isEmpty.js', 420, 438 ]
+1866 silly gunzTarPerm extractEntry underscore/objects/isBoolean.js
+1867 silly gunzTarPerm modified mode [ 'underscore/objects/isBoolean.js', 420, 438 ]
+1868 silly gunzTarPerm extractEntry underscore/objects/isFinite.js
+1869 silly gunzTarPerm modified mode [ 'underscore/objects/isFinite.js', 420, 438 ]
+1870 silly gunzTarPerm extractEntry underscore/objects/isFunction.js
+1871 silly gunzTarPerm modified mode [ 'underscore/objects/isFunction.js', 420, 438 ]
+1872 silly gunzTarPerm extractEntry underscore/objects/isNaN.js
+1873 silly gunzTarPerm modified mode [ 'underscore/objects/isNaN.js', 420, 438 ]
+1874 silly gunzTarPerm extractEntry underscore/objects/isNull.js
+1875 silly gunzTarPerm modified mode [ 'underscore/objects/isNull.js', 420, 438 ]
+1876 silly gunzTarPerm extractEntry underscore/objects/isNumber.js
+1877 silly gunzTarPerm modified mode [ 'underscore/objects/isNumber.js', 420, 438 ]
+1878 silly gunzTarPerm extractEntry underscore/objects/isArray.js
+1879 silly gunzTarPerm modified mode [ 'underscore/objects/isArray.js', 420, 438 ]
+1880 silly gunzTarPerm extractEntry underscore/objects/isObject.js
+1881 silly gunzTarPerm modified mode [ 'underscore/objects/isObject.js', 420, 438 ]
+1882 silly gunzTarPerm extractEntry underscore/objects/isArguments.js
+1883 silly gunzTarPerm modified mode [ 'underscore/objects/isArguments.js', 420, 438 ]
+1884 silly gunzTarPerm extractEntry underscore/objects/isRegExp.js
+1885 silly gunzTarPerm modified mode [ 'underscore/objects/isRegExp.js', 420, 438 ]
+1886 silly gunzTarPerm extractEntry underscore/objects/invert.js
+1887 silly gunzTarPerm modified mode [ 'underscore/objects/invert.js', 420, 438 ]
+1888 silly gunzTarPerm extractEntry underscore/objects/isString.js
+1889 silly gunzTarPerm modified mode [ 'underscore/objects/isString.js', 420, 438 ]
+1890 silly gunzTarPerm extractEntry underscore/objects/has.js
+1891 silly gunzTarPerm modified mode [ 'underscore/objects/has.js', 420, 438 ]
+1892 silly gunzTarPerm extractEntry underscore/objects/isUndefined.js
+1893 silly gunzTarPerm modified mode [ 'underscore/objects/isUndefined.js', 420, 438 ]
+1894 silly gunzTarPerm extractEntry underscore/objects/functions.js
+1895 silly gunzTarPerm modified mode [ 'underscore/objects/functions.js', 420, 438 ]
+1896 silly gunzTarPerm extractEntry underscore/objects/keys.js
+1897 silly gunzTarPerm modified mode [ 'underscore/objects/keys.js', 420, 438 ]
+1898 silly gunzTarPerm extractEntry underscore/objects/forOwn.js
+1899 silly gunzTarPerm modified mode [ 'underscore/objects/forOwn.js', 420, 438 ]
+1900 silly gunzTarPerm extractEntry underscore/objects/omit.js
+1901 silly gunzTarPerm modified mode [ 'underscore/objects/omit.js', 420, 438 ]
+1902 silly gunzTarPerm extractEntry underscore/objects/forIn.js
+1903 silly gunzTarPerm modified mode [ 'underscore/objects/forIn.js', 420, 438 ]
+1904 silly gunzTarPerm extractEntry underscore/objects/pairs.js
+1905 silly gunzTarPerm modified mode [ 'underscore/objects/pairs.js', 420, 438 ]
+1906 silly gunzTarPerm extractEntry underscore/objects/defaults.js
+1907 silly gunzTarPerm modified mode [ 'underscore/objects/defaults.js', 420, 438 ]
+1908 silly gunzTarPerm extractEntry underscore/objects/pick.js
+1909 silly gunzTarPerm modified mode [ 'underscore/objects/pick.js', 420, 438 ]
+1910 silly gunzTarPerm extractEntry underscore/objects/clone.js
+1911 silly gunzTarPerm modified mode [ 'underscore/objects/clone.js', 420, 438 ]
+1912 silly gunzTarPerm extractEntry underscore/objects/values.js
+1913 silly gunzTarPerm modified mode [ 'underscore/objects/values.js', 420, 438 ]
+1914 silly gunzTarPerm extractEntry underscore/objects/isEqual.js
+1915 silly gunzTarPerm modified mode [ 'underscore/objects/isEqual.js', 420, 438 ]
+1916 silly gunzTarPerm extractEntry underscore/collections/contains.js
+1917 silly gunzTarPerm modified mode [ 'underscore/collections/contains.js', 420, 438 ]
+1918 silly gunzTarPerm extractEntry underscore/collections/indexBy.js
+1919 silly gunzTarPerm modified mode [ 'underscore/collections/indexBy.js', 420, 438 ]
+1920 silly gunzTarPerm extractEntry underscore/collections/invoke.js
+1921 silly gunzTarPerm modified mode [ 'underscore/collections/invoke.js', 420, 438 ]
+1922 silly gunzTarPerm extractEntry underscore/collections/map.js
+1923 silly gunzTarPerm modified mode [ 'underscore/collections/map.js', 420, 438 ]
+1924 silly gunzTarPerm extractEntry underscore/collections/groupBy.js
+1925 silly gunzTarPerm modified mode [ 'underscore/collections/groupBy.js', 420, 438 ]
+1926 silly gunzTarPerm extractEntry underscore/collections/min.js
+1927 silly gunzTarPerm modified mode [ 'underscore/collections/min.js', 420, 438 ]
+1928 silly gunzTarPerm extractEntry underscore/collections/pluck.js
+1929 silly gunzTarPerm modified mode [ 'underscore/collections/pluck.js', 420, 438 ]
+1930 silly gunzTarPerm extractEntry underscore/collections/reduce.js
+1931 silly gunzTarPerm modified mode [ 'underscore/collections/reduce.js', 420, 438 ]
+1932 silly gunzTarPerm extractEntry underscore/collections/reduceRight.js
+1933 silly gunzTarPerm modified mode [ 'underscore/collections/reduceRight.js', 420, 438 ]
+1934 silly gunzTarPerm extractEntry underscore/collections/reject.js
+1935 silly gunzTarPerm modified mode [ 'underscore/collections/reject.js', 420, 438 ]
+1936 silly gunzTarPerm extractEntry underscore/collections/forEachRight.js
+1937 silly gunzTarPerm modified mode [ 'underscore/collections/forEachRight.js', 420, 438 ]
+1938 silly gunzTarPerm extractEntry underscore/collections/sample.js
+1939 silly gunzTarPerm modified mode [ 'underscore/collections/sample.js', 420, 438 ]
+1940 silly gunzTarPerm extractEntry underscore/collections/forEach.js
+1941 silly gunzTarPerm modified mode [ 'underscore/collections/forEach.js', 420, 438 ]
+1942 silly gunzTarPerm extractEntry underscore/collections/shuffle.js
+1943 silly gunzTarPerm modified mode [ 'underscore/collections/shuffle.js', 420, 438 ]
+1944 silly gunzTarPerm extractEntry underscore/collections/findWhere.js
+1945 silly gunzTarPerm modified mode [ 'underscore/collections/findWhere.js', 420, 438 ]
+1946 silly gunzTarPerm extractEntry underscore/collections/size.js
+1947 silly gunzTarPerm modified mode [ 'underscore/collections/size.js', 420, 438 ]
+1948 silly gunzTarPerm extractEntry underscore/collections/find.js
+1949 silly gunzTarPerm modified mode [ 'underscore/collections/find.js', 420, 438 ]
+1950 silly gunzTarPerm extractEntry underscore/collections/some.js
+1951 silly gunzTarPerm modified mode [ 'underscore/collections/some.js', 420, 438 ]
+1952 silly gunzTarPerm extractEntry underscore/collections/filter.js
+1953 silly gunzTarPerm modified mode [ 'underscore/collections/filter.js', 420, 438 ]
+1954 silly gunzTarPerm extractEntry underscore/collections/sortBy.js
+1955 silly gunzTarPerm modified mode [ 'underscore/collections/sortBy.js', 420, 438 ]
+1956 silly gunzTarPerm extractEntry underscore/collections/every.js
+1957 silly gunzTarPerm modified mode [ 'underscore/collections/every.js', 420, 438 ]
+1958 silly gunzTarPerm extractEntry underscore/collections/toArray.js
+1959 silly gunzTarPerm modified mode [ 'underscore/collections/toArray.js', 420, 438 ]
+1960 silly gunzTarPerm extractEntry underscore/collections/countBy.js
+1961 silly gunzTarPerm modified mode [ 'underscore/collections/countBy.js', 420, 438 ]
+1962 silly gunzTarPerm extractEntry underscore/collections/where.js
+1963 silly gunzTarPerm modified mode [ 'underscore/collections/where.js', 420, 438 ]
+1964 silly gunzTarPerm extractEntry underscore/collections/max.js
+1965 silly gunzTarPerm modified mode [ 'underscore/collections/max.js', 420, 438 ]
+1966 silly gunzTarPerm extractEntry underscore/chaining/chain.js
+1967 silly gunzTarPerm modified mode [ 'underscore/chaining/chain.js', 420, 438 ]
+1968 silly gunzTarPerm extractEntry underscore/chaining/tap.js
+1969 silly gunzTarPerm modified mode [ 'underscore/chaining/tap.js', 420, 438 ]
+1970 silly gunzTarPerm extractEntry underscore/chaining/wrapperChain.js
+1971 silly gunzTarPerm modified mode [ 'underscore/chaining/wrapperChain.js', 420, 438 ]
+1972 silly gunzTarPerm extractEntry underscore/chaining/wrapperValueOf.js
+1973 silly gunzTarPerm modified mode [ 'underscore/chaining/wrapperValueOf.js', 420, 438 ]
+1974 silly gunzTarPerm extractEntry underscore/utilities/escape.js
+1975 silly gunzTarPerm modified mode [ 'underscore/utilities/escape.js', 420, 438 ]
+1976 silly gunzTarPerm extractEntry underscore/utilities/noConflict.js
+1977 silly gunzTarPerm modified mode [ 'underscore/utilities/noConflict.js', 420, 438 ]
+1978 silly gunzTarPerm extractEntry underscore/utilities/noop.js
+1979 silly gunzTarPerm modified mode [ 'underscore/utilities/noop.js', 420, 438 ]
+1980 silly gunzTarPerm extractEntry underscore/utilities/now.js
+1981 silly gunzTarPerm modified mode [ 'underscore/utilities/now.js', 420, 438 ]
+1982 silly gunzTarPerm extractEntry underscore/utilities/property.js
+1983 silly gunzTarPerm modified mode [ 'underscore/utilities/property.js', 420, 438 ]
+1984 silly gunzTarPerm extractEntry underscore/utilities/mixin.js
+1985 silly gunzTarPerm modified mode [ 'underscore/utilities/mixin.js', 420, 438 ]
+1986 silly gunzTarPerm extractEntry underscore/utilities/result.js
+1987 silly gunzTarPerm modified mode [ 'underscore/utilities/result.js', 420, 438 ]
+1988 silly gunzTarPerm extractEntry underscore/utilities/template.js
+1989 silly gunzTarPerm modified mode [ 'underscore/utilities/template.js', 420, 438 ]
+1990 silly gunzTarPerm extractEntry underscore/utilities/templateSettings.js
+1991 silly gunzTarPerm modified mode [ 'underscore/utilities/templateSettings.js', 420, 438 ]
+1992 silly gunzTarPerm extractEntry underscore/utilities/times.js
+1993 silly gunzTarPerm modified mode [ 'underscore/utilities/times.js', 420, 438 ]
+1994 silly gunzTarPerm extractEntry underscore/utilities/unescape.js
+1995 silly gunzTarPerm modified mode [ 'underscore/utilities/unescape.js', 420, 438 ]
+1996 silly gunzTarPerm extractEntry underscore/utilities/identity.js
+1997 silly gunzTarPerm modified mode [ 'underscore/utilities/identity.js', 420, 438 ]
+1998 silly gunzTarPerm extractEntry underscore/utilities/uniqueId.js
+1999 silly gunzTarPerm modified mode [ 'underscore/utilities/uniqueId.js', 420, 438 ]
+2000 silly gunzTarPerm extractEntry underscore/utilities/random.js
+2001 silly gunzTarPerm modified mode [ 'underscore/utilities/random.js', 420, 438 ]
+2002 silly gunzTarPerm extractEntry underscore/arrays/compact.js
+2003 silly gunzTarPerm modified mode [ 'underscore/arrays/compact.js', 420, 438 ]
+2004 silly gunzTarPerm extractEntry underscore/arrays/initial.js
+2005 silly gunzTarPerm modified mode [ 'underscore/arrays/initial.js', 420, 438 ]
+2006 silly gunzTarPerm extractEntry underscore/arrays/intersection.js
+2007 silly gunzTarPerm modified mode [ 'underscore/arrays/intersection.js', 420, 438 ]
+2008 silly gunzTarPerm extractEntry underscore/arrays/last.js
+2009 silly gunzTarPerm modified mode [ 'underscore/arrays/last.js', 420, 438 ]
+2010 silly gunzTarPerm extractEntry underscore/arrays/indexOf.js
+2011 silly gunzTarPerm modified mode [ 'underscore/arrays/indexOf.js', 420, 438 ]
+2012 silly gunzTarPerm extractEntry underscore/arrays/range.js
+2013 silly gunzTarPerm modified mode [ 'underscore/arrays/range.js', 420, 438 ]
+2014 silly gunzTarPerm extractEntry underscore/arrays/rest.js
+2015 silly gunzTarPerm modified mode [ 'underscore/arrays/rest.js', 420, 438 ]
+2016 silly gunzTarPerm extractEntry underscore/arrays/sortedIndex.js
+2017 silly gunzTarPerm modified mode [ 'underscore/arrays/sortedIndex.js', 420, 438 ]
+2018 silly gunzTarPerm extractEntry underscore/arrays/union.js
+2019 silly gunzTarPerm modified mode [ 'underscore/arrays/union.js', 420, 438 ]
+2020 silly gunzTarPerm extractEntry underscore/arrays/uniq.js
+2021 silly gunzTarPerm modified mode [ 'underscore/arrays/uniq.js', 420, 438 ]
+2022 silly gunzTarPerm extractEntry underscore/arrays/flatten.js
+2023 silly gunzTarPerm modified mode [ 'underscore/arrays/flatten.js', 420, 438 ]
+2024 silly gunzTarPerm extractEntry underscore/arrays/without.js
+2025 silly gunzTarPerm modified mode [ 'underscore/arrays/without.js', 420, 438 ]
+2026 silly gunzTarPerm extractEntry underscore/arrays/first.js
+2027 silly gunzTarPerm modified mode [ 'underscore/arrays/first.js', 420, 438 ]
+2028 silly gunzTarPerm extractEntry underscore/arrays/zip.js
+2029 silly gunzTarPerm modified mode [ 'underscore/arrays/zip.js', 420, 438 ]
+2030 silly gunzTarPerm extractEntry underscore/arrays/difference.js
+2031 silly gunzTarPerm modified mode [ 'underscore/arrays/difference.js', 420, 438 ]
+2032 silly gunzTarPerm extractEntry underscore/arrays/zipObject.js
+2033 silly gunzTarPerm modified mode [ 'underscore/arrays/zipObject.js', 420, 438 ]
+2034 silly gunzTarPerm extractEntry underscore/arrays/lastIndexOf.js
+2035 silly gunzTarPerm modified mode [ 'underscore/arrays/lastIndexOf.js', 420, 438 ]
+2036 verbose write writing to E:\Documents\GitHub\PayPoint\app\node_modules\node-thermal-printer\node_modules\lwip\node_modules\decree\node_modules\lodash-node\package.json
+2037 info preinstall lodash-node@2.4.1
+2038 verbose readDependencies loading dependencies from E:\Documents\GitHub\PayPoint\app\node_modules\node-thermal-printer\node_modules\lwip\node_modules\decree\node_modules\lodash-node\package.json
+2039 verbose readDependencies loading dependencies from E:\Documents\GitHub\PayPoint\app\node_modules\node-thermal-printer\node_modules\lwip\node_modules\decree\node_modules\lodash-node\package.json
+2040 silly install resolved []
+2041 verbose about to build E:\Documents\GitHub\PayPoint\app\node_modules\node-thermal-printer\node_modules\lwip\node_modules\decree\node_modules\lodash-node
+2042 info build E:\Documents\GitHub\PayPoint\app\node_modules\node-thermal-printer\node_modules\lwip\node_modules\decree\node_modules\lodash-node
+2043 info linkStuff lodash-node@2.4.1
+2044 silly linkStuff lodash-node@2.4.1 has E:\Documents\GitHub\PayPoint\app\node_modules\node-thermal-printer\node_modules\lwip\node_modules\decree\node_modules as its parent node_modules
+2045 verbose linkBins lodash-node@2.4.1
+2046 verbose linkMans lodash-node@2.4.1
+2047 verbose rebuildBundles lodash-node@2.4.1
+2048 info install lodash-node@2.4.1
+2049 info postinstall lodash-node@2.4.1
+2050 verbose unlock done using C:\Users\caillot\AppData\Roaming\npm-cache\_locks\lodash-node-f52deae85871b047.lock for E:\Documents\GitHub\PayPoint\app\node_modules\node-thermal-printer\node_modules\lwip\node_modules\decree\node_modules\lodash-node
+2051 verbose about to build E:\Documents\GitHub\PayPoint\app\node_modules\node-thermal-printer\node_modules\lwip\node_modules\decree
+2052 info build E:\Documents\GitHub\PayPoint\app\node_modules\node-thermal-printer\node_modules\lwip\node_modules\decree
+2053 info linkStuff decree@0.0.6
+2054 silly linkStuff decree@0.0.6 has E:\Documents\GitHub\PayPoint\app\node_modules\node-thermal-printer\node_modules\lwip\node_modules as its parent node_modules
+2055 verbose linkBins decree@0.0.6
+2056 verbose linkMans decree@0.0.6
+2057 verbose rebuildBundles decree@0.0.6
+2058 verbose rebuildBundles [ 'lodash-node' ]
+2059 info install decree@0.0.6
+2060 info postinstall decree@0.0.6
+2061 verbose unlock done using C:\Users\caillot\AppData\Roaming\npm-cache\_locks\decree-030481fb3ea1cfd4.lock for E:\Documents\GitHub\PayPoint\app\node_modules\node-thermal-printer\node_modules\lwip\node_modules\decree
+2062 verbose about to build E:\Documents\GitHub\PayPoint\app\node_modules\node-thermal-printer\node_modules\lwip
+2063 info build E:\Documents\GitHub\PayPoint\app\node_modules\node-thermal-printer\node_modules\lwip
+2064 info linkStuff lwip@0.0.6
+2065 silly linkStuff lwip@0.0.6 has E:\Documents\GitHub\PayPoint\app\node_modules\node-thermal-printer\node_modules as its parent node_modules
+2066 verbose linkBins lwip@0.0.6
+2067 verbose linkMans lwip@0.0.6
+2068 verbose rebuildBundles lwip@0.0.6
+2069 verbose rebuildBundles [ 'async', 'decree', 'nan' ]
+2070 info install lwip@0.0.6
+2071 verbose unsafe-perm in lifecycle true
+2072 info lwip@0.0.6 Failed to exec install script
+2073 verbose unlock done using C:\Users\caillot\AppData\Roaming\npm-cache\_locks\lwip-8fc7f3c1f77da911.lock for E:\Documents\GitHub\PayPoint\app\node_modules\node-thermal-printer\node_modules\lwip
+2074 verbose about to build E:\Documents\GitHub\PayPoint\app\node_modules\node-thermal-printer
+2075 verbose unlock done using C:\Users\caillot\AppData\Roaming\npm-cache\_locks\node-thermal-printer-f73068fcb57e127e.lock for E:\Documents\GitHub\PayPoint\app\node_modules\node-thermal-printer
+2076 verbose stack Error: lwip@0.0.6 install: `node-gyp rebuild`
+2076 verbose stack Exit status 1
+2076 verbose stack     at EventEmitter.<anonymous> (C:\Program Files\nodejs\node_modules\npm\lib\utils\lifecycle.js:213:16)
+2076 verbose stack     at EventEmitter.emit (events.js:110:17)
+2076 verbose stack     at ChildProcess.<anonymous> (C:\Program Files\nodejs\node_modules\npm\lib\utils\spawn.js:24:14)
+2076 verbose stack     at ChildProcess.emit (events.js:110:17)
+2076 verbose stack     at maybeClose (child_process.js:1015:16)
+2076 verbose stack     at Process.ChildProcess._handle.onexit (child_process.js:1087:5)
+2077 verbose pkgid lwip@0.0.6
+2078 verbose cwd E:\Documents\GitHub\PayPoint\app
+2079 error Windows_NT 6.1.7601
+2080 error argv "C:\\Program Files\\nodejs\\\\node.exe" "C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js" "install" "node-thermal-printer"
+2081 error node v0.12.5
+2082 error npm  v2.11.2
+2083 error code ELIFECYCLE
+2084 error lwip@0.0.6 install: `node-gyp rebuild`
+2084 error Exit status 1
+2085 error Failed at the lwip@0.0.6 install script 'node-gyp rebuild'.
+2085 error This is most likely a problem with the lwip package,
+2085 error not with npm itself.
+2085 error Tell the author that this fails on your system:
+2085 error     node-gyp rebuild
+2085 error You can get their info via:
+2085 error     npm owner ls lwip
+2085 error There is likely additional logging output above.
+2086 verbose exit [ 1, true ]
+2087 verbose unbuild node_modules\node-thermal-printer\node_modules\lwip
+2088 info preuninstall lwip@0.0.6
+2089 info uninstall lwip@0.0.6
+2090 verbose unbuild rmStuff lwip@0.0.6 from E:\Documents\GitHub\PayPoint\app\node_modules
+2091 verbose unbuild rmStuff in E:\Documents\GitHub\PayPoint\app\node_modules\node-thermal-printer\node_modules
+2092 info postuninstall lwip@0.0.6
+2093 silly gentlyRm E:\Documents\GitHub\PayPoint\app\node_modules\node-thermal-printer\node_modules\lwip is being purged from base E:\Documents\GitHub\PayPoint\app
+2094 verbose gentlyRm don't care about contents; nuking E:\Documents\GitHub\PayPoint\app\node_modules\node-thermal-printer\node_modules\lwip
+2095 silly vacuum-fs purging E:\Documents\GitHub\PayPoint\app\node_modules\node-thermal-printer\node_modules\lwip
+2096 silly vacuum-fs quitting because other entries in E:\Documents\GitHub\PayPoint\app\node_modules\node-thermal-printer\node_modules
+2097 verbose unbuild node_modules\node-thermal-printer
+2098 info preuninstall node-thermal-printer@0.0.3
+2099 info uninstall node-thermal-printer@0.0.3
+2100 verbose unbuild rmStuff node-thermal-printer@0.0.3 from E:\Documents\GitHub\PayPoint\app\node_modules
+2101 info postuninstall node-thermal-printer@0.0.3
+2102 silly gentlyRm E:\Documents\GitHub\PayPoint\app\node_modules\node-thermal-printer is being purged from base E:\Documents\GitHub\PayPoint\app
+2103 verbose gentlyRm don't care about contents; nuking E:\Documents\GitHub\PayPoint\app\node_modules\node-thermal-printer
+2104 silly vacuum-fs purging E:\Documents\GitHub\PayPoint\app\node_modules\node-thermal-printer
+2105 silly vacuum-fs quitting because other entries in E:\Documents\GitHub\PayPoint\app\node_modules

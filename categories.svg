@@ -9,8 +9,8 @@
    xmlns="http://www.w3.org/2000/svg"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   width="210mm"
-   height="297mm"
+   width="2674.7722"
+   height="995.0694"
    id="svg2"
    version="1.1"
    inkscape:version="0.48.4 r9939"
@@ -24,19 +24,23 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="1.4"
-     inkscape:cx="911.37135"
-     inkscape:cy="484.77417"
+     inkscape:zoom="1"
+     inkscape:cx="1469.0883"
+     inkscape:cy="118.64278"
      inkscape:document-units="px"
-     inkscape:current-layer="g4826"
+     inkscape:current-layer="g3348"
      showgrid="false"
      showguides="true"
      inkscape:guide-bbox="true"
-     inkscape:window-width="1366"
-     inkscape:window-height="706"
-     inkscape:window-x="-8"
+     inkscape:window-width="1920"
+     inkscape:window-height="1018"
+     inkscape:window-x="1272"
      inkscape:window-y="-8"
-     inkscape:window-maximized="1" />
+     inkscape:window-maximized="1"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0" />
   <metadata
      id="metadata7">
     <rdf:RDF>
@@ -52,12 +56,14 @@
   <g
      inkscape:label="Calque 1"
      inkscape:groupmode="layer"
-     id="layer1">
+     id="layer1"
+     transform="translate(2070.5673,-650.23618)">
     <g
        id="g4698"
        inkscape:export-filename="C:\Users\Rémi\Documents\GitHub\PayPoint\PayPoint\data\images\Miniatures\liquides.png"
        inkscape:export-xdpi="58.423256"
-       inkscape:export-ydpi="58.423256">
+       inkscape:export-ydpi="58.423256"
+       transform="translate(-1440.7669,902.15977)">
       <rect
          y="86.173042"
          x="722.58575"
@@ -142,7 +148,7 @@
        d=""
        style="fill:#ffeeaa;fill-opacity:1;stroke:none" />
     <g
-       transform="translate(440.29015,-32.424601)"
+       transform="translate(-184.0868,660.98464)"
        id="g4232"
        inkscape:export-filename="C:\Users\Rémi\Documents\GitHub\PayPoint\PayPoint\data\images\Miniatures\nourritures.png"
        inkscape:export-xdpi="58.423248"
@@ -323,7 +329,8 @@
        id="g4564"
        inkscape:export-filename="C:\Users\Rémi\Documents\GitHub\PayPoint\PayPoint\data\images\Miniatures\appats.png"
        inkscape:export-xdpi="58.423256"
-       inkscape:export-ydpi="58.423256">
+       inkscape:export-ydpi="58.423256"
+       transform="translate(-329.8727,192.70184)">
       <g
          id="g4451"
          transform="translate(721.71872,203.28969)">
@@ -377,98 +384,137 @@
       </g>
     </g>
     <g
-       transform="translate(641.68936,694.54406)"
-       id="g4451-3"
-       inkscape:export-filename="C:\Users\Rémi\Documents\GitHub\PayPoint\materiel.png"
-       inkscape:export-xdpi="58.423256"
-       inkscape:export-ydpi="58.423256">
+       id="g3330"
+       transform="translate(220.27385,-827.1584)">
+      <rect
+         y="1815.4912"
+         x="-262.26199"
+         height="308.09653"
+         width="308.09653"
+         id="rect2985-1-1-4"
+         style="fill:#ffb3ce;fill-opacity:1;fill-rule:evenodd;stroke:none" />
       <g
-         id="g4613">
+         transform="translate(1608,140)"
+         id="g3314">
         <g
-           id="g4649"
-           transform="translate(24.285714,-25.714286)">
-          <g
-             id="g4232-1-4"
-             transform="translate(76.869867,249.85239)"
-             style="fill:#e3dbde">
-            <rect
-               style="fill:#e3dbde;fill-rule:evenodd;stroke:none"
-               id="rect2985-1-1-4"
-               width="308.09653"
-               height="308.09653"
-               x="-195.99786"
-               y="327.34818" />
-          </g>
-          <g
-             id="g4638">
-            <g
-               id="g4621"
-               transform="matrix(0.91930658,0,0,0.91930658,-0.82311524,35.125097)">
-              <path
-                 style="fill:#666666;stroke:none"
-                 d="m 1238.9521,509.40519 c -5.1186,1.09098 -99.6684,106.06602 -149.5026,159.09903 l 2.3991,2.65164 c 47.4772,-55.39003 147.521,-158.47108 147.1035,-161.75067 z"
-                 id="path4603"
-                 inkscape:connector-curvature="0"
-                 transform="translate(-1104.5465,122.5988)"
-                 sodipodi:nodetypes="cccc" />
-              <path
-                 style="fill:#a05a2c;stroke:none"
-                 d="m 1088.0606,666.1051 5.6821,6.9448 -49.1818,49.1818 -6.4398,-6.43972 z"
-                 id="path4605"
-                 inkscape:connector-curvature="0"
-                 transform="translate(-1104.5465,122.5988)" />
-              <path
-                 style="fill:none;stroke:#000000;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
-                 d="M 1238.8393,509.41575 C 1161.1377,632.36619 1160.4148,631.91616 1093.75,672.00504"
-                 id="path4611"
-                 inkscape:connector-curvature="0"
-                 transform="translate(-1104.5465,122.5988)"
-                 sodipodi:nodetypes="cc" />
-              <path
-                 sodipodi:type="arc"
-                 style="fill:#4d4d4d;fill-opacity:1;stroke:none"
-                 id="path4609"
-                 sodipodi:cx="1093.5714"
-                 sodipodi:cy="687.36218"
-                 sodipodi:rx="13.035714"
-                 sodipodi:ry="13.035714"
-                 d="m 1106.6071,687.36218 c 0,7.19943 -5.8363,13.03572 -13.0357,13.03572 -7.1994,0 -13.0357,-5.83629 -13.0357,-13.03572 0,-7.19942 5.8363,-13.03571 13.0357,-13.03571 7.1994,0 13.0357,5.83629 13.0357,13.03571 z"
-                 transform="translate(-1101.1536,117.24166)" />
-            </g>
-            <g
-               id="g4633"
-               transform="matrix(1.307474,0,0,1.307474,-67.096081,-171.58218)"
-               style="stroke:#4d4d4d">
-              <path
-                 sodipodi:nodetypes="ccc"
-                 inkscape:connector-curvature="0"
-                 id="path4627"
-                 d="m 139.53104,686.78711 0,48.51848 c -4.31927,50.87096 -42.884584,59.69234 -51.831782,0"
-                 style="fill:none;stroke:#4d4d4d;stroke-width:3.79512072;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
-              <path
-                 inkscape:connector-curvature="0"
-                 id="path4629"
-                 d="m 88.569896,735.03955 9.02829,10.22779"
-                 style="fill:none;stroke:#4d4d4d;stroke-width:3;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
-              <path
-                 transform="translate(-1104.5465,122.5988)"
-                 d="m 1255.1146,551.8316 c 0,5.7184 -4.6357,10.35407 -10.3541,10.35407 -5.7184,0 -10.3541,-4.63567 -10.3541,-10.35407 0,-5.71839 4.6357,-10.35406 10.3541,-10.35406 5.7184,0 10.3541,4.63567 10.3541,10.35406 z"
-                 sodipodi:ry="10.354064"
-                 sodipodi:rx="10.354064"
-                 sodipodi:cy="551.8316"
-                 sodipodi:cx="1244.7605"
-                 id="path4631"
-                 style="fill:none;stroke:#4d4d4d;stroke-width:3;stroke-linecap:round;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
-                 sodipodi:type="arc" />
-            </g>
-          </g>
+           id="g4621"
+           transform="matrix(0.91930658,0,0,0.91930658,-1751.9571,1133.4157)">
+          <path
+             style="fill:#666666;stroke:none"
+             d="m 1238.9521,509.40519 c -5.1186,1.09098 -99.6684,106.06602 -149.5026,159.09903 l 2.3991,2.65164 c 47.4772,-55.39003 147.521,-158.47108 147.1035,-161.75067 z"
+             id="path4603"
+             inkscape:connector-curvature="0"
+             transform="translate(-1104.5465,122.5988)"
+             sodipodi:nodetypes="cccc" />
+          <path
+             style="fill:#a05a2c;stroke:none"
+             d="m 1088.0606,666.1051 5.6821,6.9448 -49.1818,49.1818 -6.4398,-6.43972 z"
+             id="path4605"
+             inkscape:connector-curvature="0"
+             transform="translate(-1104.5465,122.5988)" />
+          <path
+             style="fill:none;stroke:#000000;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+             d="M 1238.8393,509.41575 C 1161.1377,632.36619 1160.4148,631.91616 1093.75,672.00504"
+             id="path4611"
+             inkscape:connector-curvature="0"
+             transform="translate(-1104.5465,122.5988)"
+             sodipodi:nodetypes="cc" />
+          <path
+             sodipodi:type="arc"
+             style="fill:#4d4d4d;fill-opacity:1;stroke:none"
+             id="path4609"
+             sodipodi:cx="1093.5714"
+             sodipodi:cy="687.36218"
+             sodipodi:rx="13.035714"
+             sodipodi:ry="13.035714"
+             d="m 1106.6071,687.36218 c 0,7.19943 -5.8363,13.03572 -13.0357,13.03572 -7.1994,0 -13.0357,-5.83629 -13.0357,-13.03572 0,-7.19942 5.8363,-13.03571 13.0357,-13.03571 7.1994,0 13.0357,5.83629 13.0357,13.03571 z"
+             transform="translate(-1101.1536,117.24166)" />
+        </g>
+        <g
+           id="g4633"
+           transform="matrix(1.307474,0,0,1.307474,-1818.2301,926.70842)"
+           style="stroke:#4d4d4d">
+          <path
+             sodipodi:nodetypes="ccc"
+             inkscape:connector-curvature="0"
+             id="path4627"
+             d="m 139.53104,686.78711 0,48.51848 c -4.31927,50.87096 -42.884584,59.69234 -51.831782,0"
+             style="fill:none;stroke:#4d4d4d;stroke-width:3.79512072;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
+          <path
+             inkscape:connector-curvature="0"
+             id="path4629"
+             d="m 88.569896,735.03955 9.02829,10.22779"
+             style="fill:none;stroke:#4d4d4d;stroke-width:3;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
+          <path
+             transform="translate(-1104.5465,122.5988)"
+             d="m 1255.1146,551.8316 c 0,5.7184 -4.6357,10.35407 -10.3541,10.35407 -5.7184,0 -10.3541,-4.63567 -10.3541,-10.35407 0,-5.71839 4.6357,-10.35406 10.3541,-10.35406 5.7184,0 10.3541,4.63567 10.3541,10.35406 z"
+             sodipodi:ry="10.354064"
+             sodipodi:rx="10.354064"
+             sodipodi:cy="551.8316"
+             sodipodi:cx="1244.7605"
+             id="path4631"
+             style="fill:none;stroke:#4d4d4d;stroke-width:3;stroke-linecap:round;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+             sodipodi:type="arc" />
+        </g>
+        <g
+           transform="matrix(0.5059572,0.1281894,-0.1281894,0.5059572,-1830.9942,1371.4925)"
+           id="g3939">
+          <path
+             inkscape:connector-curvature="0"
+             id="path3928"
+             d="m 268.92283,742.33961 0,82.43679"
+             style="fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:2.61136293;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+             transform="translate(-4.3445948e-6,3.159793e-5)" />
+          <path
+             style="fill:#ff0000;fill-opacity:1;stroke:#ff0000;stroke-width:2.61136293;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+             d="m 268.92283,612.69675 0,82.43679"
+             id="path3922"
+             inkscape:connector-curvature="0"
+             transform="translate(-4.3445948e-6,3.159793e-5)" />
+          <path
+             id="path3152"
+             d="m 268.86966,647.61381 c -19.80516,0 -35.84375,16.0386 -35.84375,35.8438 0,0.0524 -2.2e-4,0.1039 0,0.1562 l 71.7188,0 c 2e-4,-0.0523 0,-0.1038 0,-0.1562 0,-19.8052 -16.0699,-35.8438 -35.87505,-35.8438 z"
+             style="fill:#ff0000;fill-opacity:1;stroke:none"
+             inkscape:connector-curvature="0" />
+          <path
+             inkscape:connector-curvature="0"
+             id="path3148"
+             d="m 304.75093,683.58414 -71.65625,0 c 0.61242,55.96355 16.39554,100.83854 35.8125,100.83854 19.41715,0 35.23155,-44.87441 35.84375,-100.83854 z"
+             style="fill:#d8935f;fill-opacity:1;stroke:none" />
         </g>
       </g>
     </g>
     <g
+       id="g3348"
+       transform="translate(139.02602,1024.7209)">
+      <rect
+         style="fill:#37abc8;fill-opacity:1;fill-rule:evenodd;stroke:none"
+         id="rect2985-1-1-4-1"
+         width="308.09653"
+         height="308.09653"
+         x="-857.20721"
+         y="301.70853"
+         inkscape:export-filename="E:\Documents\GitHub\PayPoint\app\data\images\Miniatures\freeAmount.png"
+         inkscape:export-xdpi="58.423244"
+         inkscape:export-ydpi="58.423244" />
+      <text
+         xml:space="preserve"
+         style="font-size:246.69947815px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none;font-family:Sans"
+         x="-726.90613"
+         y="579.66608"
+         id="text3157"
+         sodipodi:linespacing="125%"
+         transform="scale(1.0766371,0.92881807)"><tspan
+           sodipodi:role="line"
+           id="tspan3159"
+           x="-726.90613"
+           y="579.66608"
+           style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:DokChampa;-inkscape-font-specification:DokChampa Bold">€</tspan></text>
+    </g>
+    <g
        id="g4826"
-       transform="translate(-414.28571,251.42857)"
-       inkscape:export-filename="C:\Users\Rémi\Documents\GitHub\PayPoint\PayPoint\data\images\Miniatures\sucreries.png"
+       transform="translate(-2954.8454,794.07526)"
+       inkscape:export-filename="E:\Documents\GitHub\PayPoint\PayPoint\data\images\Miniatures\sucreries.png"
        inkscape:export-xdpi="58.423256"
        inkscape:export-ydpi="58.423256">
       <rect
@@ -477,7 +523,7 @@
          height="308.09653"
          width="308.09653"
          id="rect2985-9"
-         style="fill:#c385b2;fill-opacity:1;fill-rule:evenodd;stroke:none"
+         style="fill:#ff7f2a;fill-opacity:1;fill-rule:evenodd;stroke:none"
          inkscape:export-filename="C:\Users\Rémi\Documents\GitHub\PayPoint\PayPoint\data\images\Miniatures\sucreries.png"
          inkscape:export-xdpi="58.423256"
          inkscape:export-ydpi="58.423256" />
@@ -596,7 +642,7 @@
          transform="translate(414.28571,-251.42857)" />
     </g>
     <g
-       transform="translate(-87.027926,44.429052)"
+       transform="translate(-540.54911,326.8177)"
        id="g4232-4"
        inkscape:export-filename="C:\Users\Rémi\Documents\GitHub\PayPoint\PayPoint\data\images\Miniatures\nourritures.png"
        inkscape:export-xdpi="58.423248"
@@ -679,7 +725,8 @@
        id="g5146"
        inkscape:export-filename="C:\Users\Rémi\Documents\GitHub\PayPoint\PayPoint\data\images\Miniatures\produitFini.png"
        inkscape:export-xdpi="58.423248"
-       inkscape:export-ydpi="58.423248">
+       inkscape:export-ydpi="58.423248"
+       transform="translate(-915.36145,-61.199513)">
       <g
          inkscape:export-ydpi="58.423248"
          inkscape:export-xdpi="58.423248"
@@ -762,6 +809,260 @@
                sodipodi:type="arc" />
           </g>
         </g>
+      </g>
+    </g>
+    <g
+       id="g3212"
+       transform="translate(-974.09015,421.89422)">
+      <g
+         inkscape:export-ydpi="58.423248"
+         inkscape:export-xdpi="58.423248"
+         inkscape:export-filename="E:\Documents\GitHub\PayPoint\PayPoint\data\images\Miniatures\adultday.png"
+         id="g4232-4-1-7"
+         transform="translate(95.444457,243.0201)"
+         style="fill:#365bd4;fill-opacity:1">
+        <g
+           inkscape:export-ydpi="58.423248"
+           inkscape:export-xdpi="58.423248"
+           inkscape:export-filename="C:\Users\Rémi\Documents\GitHub\PayPoint\PayPoint\data\images\Miniatures\poissondetail.png"
+           id="g5017-4"
+           style="fill:#365bd4;fill-opacity:1">
+          <rect
+             y="323.41849"
+             x="-177.63203"
+             height="308.09653"
+             width="308.09653"
+             id="rect2985-1-8-4-0"
+             style="fill:#365bd4;fill-opacity:1;fill-rule:evenodd;stroke:none"
+             inkscape:export-filename="E:\Documents\GitHub\PayPoint\PayPoint\data\images\Miniatures\adultday.png"
+             inkscape:export-xdpi="58"
+             inkscape:export-ydpi="58" />
+        </g>
+      </g>
+      <path
+         sodipodi:type="arc"
+         style="fill:#ffffff;fill-opacity:1;stroke:none"
+         id="path3165"
+         sodipodi:cx="-39.39595"
+         sodipodi:cy="1831.1898"
+         sodipodi:rx="52.527931"
+         sodipodi:ry="52.527931"
+         d="m 13.131981,1831.1898 c 0,29.0104 -23.517556,52.528 -52.527931,52.528 -29.010376,0 -52.527932,-23.5176 -52.527932,-52.528 0,-29.0104 23.517556,-52.5279 52.527932,-52.5279 29.010375,0 52.527931,23.5175 52.527931,52.5279 z"
+         transform="translate(64.376823,-1167.544)" />
+      <g
+         transform="translate(58.728703,-144.99711)"
+         id="g3941"
+         style="fill:#ff6b6f;fill-opacity:1">
+        <path
+           transform="translate(-9.0966237,-1014.1932)"
+           d="m 123.57143,1981.2908 c 0,34.9123 -18.46826,63.2143 -41.250004,63.2143 -22.781746,0 -41.25,-28.302 -41.25,-63.2143 0,-34.9123 18.468254,-63.2143 41.25,-63.2143 22.781744,0 41.250004,28.302 41.250004,63.2143 z"
+           sodipodi:ry="63.214287"
+           sodipodi:rx="41.25"
+           sodipodi:cy="1981.2908"
+           sodipodi:cx="82.321426"
+           id="path3937"
+           style="fill:#ff6b6f;fill-opacity:1;stroke:none"
+           sodipodi:type="arc" />
+        <path
+           transform="translate(-6.0609105,-1014.1932)"
+           d="m 104.64286,1879.505 c 0,14.0044 -11.352783,25.3571 -25.357147,25.3571 -14.004363,0 -25.357143,-11.3527 -25.357143,-25.3571 0,-14.0044 11.35278,-25.3571 25.357143,-25.3571 14.004364,0 25.357147,11.3527 25.357147,25.3571 z"
+           sodipodi:ry="25.357143"
+           sodipodi:rx="25.357143"
+           sodipodi:cy="1879.505"
+           sodipodi:cx="79.285713"
+           id="path3939"
+           style="fill:#ff6b6f;fill-opacity:1;stroke:none"
+           sodipodi:type="arc" />
+      </g>
+    </g>
+    <g
+       id="g3221"
+       transform="translate(-2361.126,425.26379)">
+      <g
+         inkscape:export-ydpi="58.423248"
+         inkscape:export-xdpi="58.423248"
+         inkscape:export-filename="C:\Users\Rémi\Documents\GitHub\PayPoint\PayPoint\data\images\Miniatures\nourritures.png"
+         id="g4232-4-1-7-1"
+         transform="translate(468.19075,239.65053)">
+        <g
+           inkscape:export-ydpi="58.423248"
+           inkscape:export-xdpi="58.423248"
+           inkscape:export-filename="C:\Users\Rémi\Documents\GitHub\PayPoint\PayPoint\data\images\Miniatures\poissondetail.png"
+           id="g5017-4-5">
+          <rect
+             y="323.41849"
+             x="-177.63203"
+             height="308.09653"
+             width="308.09653"
+             id="rect2985-1-8-4-0-2"
+             style="fill:#ff6b6f;fill-opacity:1;fill-rule:evenodd;stroke:none"
+             inkscape:export-filename="E:\Documents\GitHub\PayPoint\PayPoint\data\images\Miniatures\adulthalfday.png"
+             inkscape:export-xdpi="58"
+             inkscape:export-ydpi="58" />
+        </g>
+      </g>
+      <path
+         sodipodi:type="arc"
+         style="fill:#ffffff;fill-opacity:1;stroke:none"
+         id="path3165-7"
+         sodipodi:cx="-39.39595"
+         sodipodi:cy="1831.1898"
+         sodipodi:rx="52.527931"
+         sodipodi:ry="52.527931"
+         d="m -39.395949,1883.7178 c -29.010375,0 -52.527932,-23.5176 -52.527933,-52.528 0,-29.0104 23.517555,-52.5279 52.52793,-52.5279 1e-6,0 2e-6,0 3e-6,0 l -10e-7,52.5279 z"
+         transform="translate(437.12312,-1170.9136)"
+         sodipodi:start="1.5707963"
+         sodipodi:end="4.712389" />
+      <g
+         transform="translate(431.475,-148.36667)"
+         id="g3941-6"
+         style="fill:#365bd4;fill-opacity:1">
+        <path
+           transform="translate(-9.0966237,-1014.1932)"
+           d="m 123.57143,1981.2908 c 0,34.9123 -18.46826,63.2143 -41.250004,63.2143 -22.781746,0 -41.25,-28.302 -41.25,-63.2143 0,-34.9123 18.468254,-63.2143 41.25,-63.2143 22.781744,0 41.250004,28.302 41.250004,63.2143 z"
+           sodipodi:ry="63.214287"
+           sodipodi:rx="41.25"
+           sodipodi:cy="1981.2908"
+           sodipodi:cx="82.321426"
+           id="path3937-1"
+           style="fill:#365bd4;fill-opacity:1;stroke:none"
+           sodipodi:type="arc" />
+        <path
+           transform="translate(-6.0609105,-1014.1932)"
+           d="m 104.64286,1879.505 c 0,14.0044 -11.352783,25.3571 -25.357147,25.3571 -14.004363,0 -25.357143,-11.3527 -25.357143,-25.3571 0,-14.0044 11.35278,-25.3571 25.357143,-25.3571 14.004364,0 25.357147,11.3527 25.357147,25.3571 z"
+           sodipodi:ry="25.357143"
+           sodipodi:rx="25.357143"
+           sodipodi:cy="1879.505"
+           sodipodi:cx="79.285713"
+           id="path3939-4"
+           style="fill:#365bd4;fill-opacity:1;stroke:none"
+           sodipodi:type="arc" />
+      </g>
+    </g>
+    <g
+       id="g3194"
+       transform="translate(-301.56134,416.98136)">
+      <g
+         inkscape:export-ydpi="58.423248"
+         inkscape:export-xdpi="58.423248"
+         inkscape:export-filename="C:\Users\Rémi\Documents\GitHub\PayPoint\PayPoint\data\images\Miniatures\nourritures.png"
+         id="g4232-4-1-7-2"
+         transform="translate(99.10871,586.02959)">
+        <g
+           inkscape:export-ydpi="58.423248"
+           inkscape:export-xdpi="58.423248"
+           inkscape:export-filename="C:\Users\Rémi\Documents\GitHub\PayPoint\PayPoint\data\images\Miniatures\poissondetail.png"
+           id="g5017-4-3">
+          <rect
+             y="323.41849"
+             x="-177.63203"
+             height="308.09653"
+             width="308.09653"
+             id="rect2985-1-8-4-0-22"
+             style="fill:#0096f7;fill-opacity:1;fill-rule:evenodd;stroke:none"
+             inkscape:export-filename="E:\Documents\GitHub\PayPoint\PayPoint\data\images\Miniatures\childday.png"
+             inkscape:export-xdpi="58"
+             inkscape:export-ydpi="58" />
+        </g>
+      </g>
+      <path
+         sodipodi:type="arc"
+         style="fill:#ffffff;fill-opacity:1;stroke:none"
+         id="path3165-1"
+         sodipodi:cx="-39.39595"
+         sodipodi:cy="1831.1898"
+         sodipodi:rx="52.527931"
+         sodipodi:ry="52.527931"
+         d="m 13.131981,1831.1898 c 0,29.0104 -23.517556,52.528 -52.527931,52.528 -29.010376,0 -52.527932,-23.5176 -52.527932,-52.528 0,-29.0104 23.517556,-52.5279 52.527932,-52.5279 29.010375,0 52.527931,23.5175 52.527931,52.5279 z"
+         transform="translate(68.04108,-824.53451)" />
+      <g
+         transform="matrix(1,0,0,0.69221627,62.39296,515.12561)"
+         id="g3941-68"
+         style="fill:#f7d000;fill-opacity:1">
+        <path
+           transform="translate(-10.72931,-1014.1932)"
+           d="m 123.57143,1981.2908 c 0,34.9123 -18.46826,63.2143 -41.250004,63.2143 -22.781746,0 -41.25,-28.302 -41.25,-63.2143 0,-34.9123 18.468254,-63.2143 41.25,-63.2143 22.781744,0 41.250004,28.302 41.250004,63.2143 z"
+           sodipodi:ry="63.214287"
+           sodipodi:rx="41.25"
+           sodipodi:cy="1981.2908"
+           sodipodi:cx="82.321426"
+           id="path3937-5"
+           style="fill:#f7d000;fill-opacity:1;stroke:none"
+           sodipodi:type="arc" />
+        <path
+           sodipodi:type="arc"
+           style="fill:#f7d000;fill-opacity:1;stroke:none"
+           id="path4000"
+           sodipodi:cx="81.317284"
+           sodipodi:cy="2263.5352"
+           sodipodi:rx="23.738585"
+           sodipodi:ry="23.738585"
+           d="m 105.05587,2263.5352 c 0,13.1104 -10.628128,23.7385 -23.738586,23.7385 -13.110459,0 -23.738585,-10.6281 -23.738585,-23.7385 0,-13.1105 10.628126,-23.7386 23.738585,-23.7386 13.110458,0 23.738586,10.6281 23.738586,23.7386 z"
+           transform="matrix(1,0,0,1.4446352,-9.7251674,-2418.7757)" />
+      </g>
+    </g>
+    <g
+       id="g3203"
+       transform="translate(-1679.8822,80.801755)">
+      <g
+         inkscape:export-ydpi="58.423248"
+         inkscape:export-xdpi="58.423248"
+         inkscape:export-filename="C:\Users\Rémi\Documents\GitHub\PayPoint\PayPoint\data\images\Miniatures\nourritures.png"
+         id="g4232-4-1-7-2-5"
+         transform="translate(463.13998,584.11257)">
+        <g
+           inkscape:export-ydpi="58.423248"
+           inkscape:export-xdpi="58.423248"
+           inkscape:export-filename="C:\Users\Rémi\Documents\GitHub\PayPoint\PayPoint\data\images\Miniatures\poissondetail.png"
+           id="g5017-4-3-4">
+          <rect
+             y="323.41849"
+             x="-177.63203"
+             height="308.09653"
+             width="308.09653"
+             id="rect2985-1-8-4-0-22-3"
+             style="fill:#f7d000;fill-opacity:1;fill-rule:evenodd;stroke:none"
+             inkscape:export-filename="E:\Documents\GitHub\PayPoint\PayPoint\data\images\Miniatures\childhalfday.png"
+             inkscape:export-xdpi="58"
+             inkscape:export-ydpi="58" />
+        </g>
+      </g>
+      <path
+         sodipodi:type="arc"
+         style="fill:#ffffff;fill-opacity:1;stroke:none"
+         id="path3165-1-1"
+         sodipodi:cx="-39.39595"
+         sodipodi:cy="1831.1898"
+         sodipodi:rx="52.527931"
+         sodipodi:ry="52.527931"
+         d="m -39.395949,1883.7178 c -29.010375,0 -52.527932,-23.5176 -52.527933,-52.528 0,-29.0104 23.517555,-52.5279 52.52793,-52.5279 1e-6,0 2e-6,0 3e-6,0 l -10e-7,52.5279 z"
+         transform="translate(432.07235,-826.45153)"
+         sodipodi:start="1.5707963"
+         sodipodi:end="4.712389" />
+      <g
+         transform="matrix(1,0,0,0.69221627,426.42423,513.20857)"
+         id="g3941-68-2"
+         style="fill:#379fc8;fill-opacity:1">
+        <path
+           transform="translate(-10.72931,-1014.1932)"
+           d="m 123.57143,1981.2908 c 0,34.9123 -18.46826,63.2143 -41.250004,63.2143 -22.781746,0 -41.25,-28.302 -41.25,-63.2143 0,-34.9123 18.468254,-63.2143 41.25,-63.2143 22.781744,0 41.250004,28.302 41.250004,63.2143 z"
+           sodipodi:ry="63.214287"
+           sodipodi:rx="41.25"
+           sodipodi:cy="1981.2908"
+           sodipodi:cx="82.321426"
+           id="path3937-5-3"
+           style="fill:#379fc8;fill-opacity:1;stroke:none"
+           sodipodi:type="arc" />
+        <path
+           sodipodi:type="arc"
+           style="fill:#379fc8;fill-opacity:1;stroke:none"
+           id="path4000-3"
+           sodipodi:cx="81.317284"
+           sodipodi:cy="2263.5352"
+           sodipodi:rx="23.738585"
+           sodipodi:ry="23.738585"
+           d="m 105.05587,2263.5352 c 0,13.1104 -10.628128,23.7385 -23.738586,23.7385 -13.110459,0 -23.738585,-10.6281 -23.738585,-23.7385 0,-13.1105 10.628126,-23.7386 23.738585,-23.7386 13.110458,0 23.738586,10.6281 23.738586,23.7386 z"
+           transform="matrix(1,0,0,1.4446352,-9.7251674,-2418.7757)" />
       </g>
     </g>
   </g>

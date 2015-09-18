@@ -1,0 +1,175 @@
+<!doctype html>
+<html>
+    <head>
+        <title>PayPoint</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <link rel="stylesheet" type="text/css" href="data/style/fontload.css">
+        <link rel="stylesheet" type="text/css" href="data/style/animate.css">
+        <link rel="stylesheet" type="text/css" href="data/style/style.css">
+    </head>
+    <body>
+        <button id="menuGeneralButton" openMenu="false"></button>
+        <div class="dragBar" style="-webkit-app-region: drag">
+        </div>
+        <nav>
+            <div class="window-control close"></div>
+            <div class="window-control maximize"> </div>
+            <div class="window-control minimize"> </div>
+            <div class="window-control dev"> </div>
+            <div class="window-control reload"> </div>
+        </nav>
+        <div id="menuGeneral">
+        </div>
+        <div id="screenWraper">
+            <div id="orderScreen">
+                <div class="nav_productList">
+                    <div class="navContainer">
+                        <div class="navCarret">
+                            <a targetType="ancre" href="#" target="0">
+                            <div class="navitem selected">
+                                Grille Produits
+                            </div>
+                            </a>
+                            <a targetType="ancre" href="#" target="1">
+                            <div class="navitem">
+                                Montant libre
+                            </div>
+                            </a>
+                            <a targetType="ancre" href="#" target="2">
+                            <div class="navitem">
+                                Forfaits pêche
+                            </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div id="category">
+                    <div class="container"></div>
+                </div>
+                <div id="qtsInputContainer">
+                    <div class="frameWarper">
+                        <div class="numericpad quantity">
+                            <div class="number">
+                                <span class="int" hit="0">0</span>
+                                .
+                                <span class="decimal" hit="0">00</span>
+                                €
+                            </div>
+                            <div class="pad" target="quantity">
+                                <button padvalue="1">1</button>
+                                <button padvalue="2">2</button>
+                                <button padvalue="3">3</button>
+                                <button padvalue="4">4</button>
+                                <button padvalue="5">5</button>
+                                <button padvalue="6">6</button>
+                                <button padvalue="7">7</button>
+                                <button padvalue="8">8</button>
+                                <button padvalue="9">9</button>
+                                <button  padvalue="c">C</button>
+                                <button  padvalue="0">0</button>
+                                <button padvalue="VALID">OK</button>
+                            </div>
+                        </div>
+                        <div class="leftPart">
+                            <h1>12€ / kg</h1>
+                        </div>
+                    </div>
+                </div>
+                <div id="productList">
+                    <div id="productList_wrapper">
+                        <div class="tab products">
+                        </div>
+                        <div class="tab manualAmount">
+                            <div class="optionChooser" choiceName="TVA">
+                                <div class="choiceItem" itemID="0">5.5%</div>
+                                <div class="choiceItem" itemID="1">10%</div>
+                                <div class="choiceItem" itemID="2">20%</div>
+                            </div>
+                            <div class="numericpad manualAmount">
+                                <div class="number">
+                                    <span class="int" hit="0">0</span>
+                                    .
+                                    <span class="decimal" hit="0">00</span>
+                                    €
+                                </div>
+                                <div class="pad" target="manualAmount">
+                                    <button padvalue="1">1</button>
+                                    <button padvalue="2">2</button>
+                                    <button padvalue="3">3</button>
+                                    <button padvalue="4">4</button>
+                                    <button padvalue="5">5</button>
+                                    <button padvalue="6">6</button>
+                                    <button padvalue="7">7</button>
+                                    <button padvalue="8">8</button>
+                                    <button padvalue="9">9</button>
+                                    <button padvalue="c">C</button>
+                                    <button padvalue="0">0</button>
+                                    <button padvalue="VALID">OK</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab package">
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+             <div id="orderTicket">
+                    <h1>Commande</h1>
+                    <div class="productListContener">
+                        <table class="productList">
+                            <thead><tr>
+                                <td class="miniature">
+                                </td>
+                                <td>Produit</td>
+                                <td>Qts</td>
+                                <td>Prix</td>
+                            </tr></thead>
+                            <tbody>
+                            </tbody>
+                        </table>
+                    </div>
+                    <h3 class="totalAmount HT">Total HT: <span>0.00€</span></h3>
+                    <h3 class="totalAmount TTC">Total TTC: <span>0.00€</span></h3>
+                    <button class="orderValid">Valider la commande</button>
+                    <button class="orderCancel">Annuler la commande</button>
+                </div>
+            <div id="paymentScreen" style="display: none;">
+                <div class="title">Commande > Paiement</div>
+                <div class="optionChooser" choiceName="paymentType">
+                    <div class="choiceItem" itemID="0" style="background-image: url(data/images/especes.png);"><legend>Espèces</legend></div>
+                    <div class="choiceItem" itemID="1" style="background-image: url(data/images/cheques.png)"><legend>Chèques</legend></div>
+                    <div class="choiceItem" itemID="2" style="background-image: url(data/images/virement.png)"><legend>Virement</legend></div>
+                </div>
+                <div class="numericpad cashAmount">
+                    <div class="number">
+                        <span class="int" hit="0">0</span>
+                        .
+                        <span class="decimal" hit="0">00</span>
+                        €
+                    </div>
+                    <div class="pad" target="cashAmount">
+                        <button padvalue="1">1</button>
+                        <button padvalue="2">2</button>
+                        <button padvalue="3">3</button>
+                        <button padvalue="4">4</button>
+                        <button padvalue="5">5</button>
+                        <button padvalue="6">6</button>
+                        <button padvalue="7">7</button>
+                        <button padvalue="8">8</button>
+                        <button padvalue="9">9</button>
+                        <button padvalue="c">C</button>
+                        <button padvalue="0">0</button>
+                        <button padvalue="VALID">OK</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script type="text/javascript" src="data/script/jquery.js"></script>
+        <script type="text/javascript" src="data/script/gui.js"></script>
+        <script type="text/javascript" src="data/script/money.js"></script>
+        <script type="text/javascript" src="data/script/moneyInput.js"></script>
+        <script type="text/javascript" src="http://localhost:3546/socket.io/socket.io.js"></script>
+        <script type="text/javascript" src="data/script/work.js"></script>
+    </body>
+</html>
