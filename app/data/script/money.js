@@ -32,5 +32,8 @@ var money = {
             number = price.replace(',', '.');
             return parseFloat(number);
         }
+    },
+    givingChanges: function(price, money){
+        return price - money;
     }
 }

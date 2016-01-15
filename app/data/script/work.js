@@ -1,9 +1,13 @@
 var ppServer = io.connect("http://localhost:3546"),
     client = "niy",
-    currentOrder = "niy",
+    currentOrder = {
+        totalHT: 0,
+        totalTTC: 0,
+        orderTicket: new Array(),
+    },
     itemsJquery = false,
-    md5 = require("MD5"),
-    orderTicket = new Array();
+    md5 = require("MD5");
+orderState = "composing";
 
 function generateID(seed) {
     if (!seed) seed = 12;
@@ -87,36 +91,38 @@ function addProductToOrderTicket(product) {
     var match = false;
     var rank = false;
     $(".productList tbody").html("");
-    for (var i = 0; i < orderTicket.length; i++) {
-        if (orderTicket[i].productID == product._id) {
+    for (var i = 0; i < currentOrder.orderTicket.length; i++) {
+        if (currentOrder.orderTicket[i].productID == product._id) {
             match = true;
             rank = i;
         }
     }
     if (!match) {
-        orderTicket.push({
+        currentOrder.orderTicket.push({
             productID: product._id,
             qts: 1,
             type: product.type
         });
     } else {
-        orderTicket[rank].qts++;
+        currentOrder.orderTicket[rank].qts++;
     }
     var orderAmountTTC = 0;
     var orderAmountHT = 0;
-    for (var i = 0; i < orderTicket.length; i++) {
-        if (orderTicket[i].type == "package") {
+    for (var i = 0; i < currentOrder.orderTicket.length; i++) {
+        if (currentOrder.orderTicket[i].type == "package") {
             var registery = client.packages;
-        } else if (orderTicket[i].type == "product") {
+        } else if (currentOrder.orderTicket[i].type == "product") {
             var registery = client.products;
         }
-        var productqtzied = registery[orderTicket[i].productID];
-        productqtzied.qts = orderTicket[i].qts;
+        var productqtzied = registery[currentOrder.orderTicket[i].productID];
+        productqtzied.qts = currentOrder.orderTicket[i].qts;
         addProductToOrderList(productqtzied);
         initProductListJquery(productqtzied._id);
         orderAmountTTC = orderAmountTTC + (productqtzied.price * productqtzied.qts);
         orderAmountHT = orderAmountHT + money.calculTva.TTCtoHT(productqtzied.price * productqtzied.qts, productqtzied.tvaRate);
     }
+    currentOrder.totalHT = orderAmountHT;
+    currentOrder.totalTTC = orderAmountTTC;
     $(".totalAmount.HT span").text(money.format.numberToPrice(Math.round(orderAmountHT * 100) / 100));
     $(".totalAmount.TTC span").text(money.format.numberToPrice(orderAmountTTC));
 }
@@ -137,69 +143,78 @@ function addFreeAmountToOrderTicket(amount) {
 
 function removeProductFromOrderTicket(productID) {
     $(".productList tbody").html("");
-    for (var i = 0; i < orderTicket.length; i++) {
-        if (orderTicket[i].productID == productID) {
-            if (orderTicket[i].qts > 1) {
-                orderTicket[i].qts--;
+    for (var i = 0; i < currentOrder.orderTicket.length; i++) {
+        if (currentOrder.orderTicket[i].productID == productID) {
+            if (currentOrder.orderTicket[i].qts > 1) {
+                currentOrder.orderTicket[i].qts--;
             } else {
-                orderTicket.splice(i, 1);
+                currentOrder.orderTicket.splice(i, 1);
             }
         }
     }
     var orderAmountTTC = 0;
     var orderAmountHT = 0;
-    for (var i = 0; i < orderTicket.length; i++) {
-        if (orderTicket[i].type == "package") {
+    for (var i = 0; i < currentOrder.orderTicket.length; i++) {
+        if (currentOrder.orderTicket[i].type == "package") {
             var registery = client.packages;
-        } else if (orderTicket[i].type == "product") {
+        } else if (currentOrder.orderTicket[i].type == "product") {
             var registery = client.products;
         }
-        var productqtzied = registery[orderTicket[i].productID];
-        productqtzied.qts = orderTicket[i].qts;
+        var productqtzied = registery[currentOrder.orderTicket[i].productID];
+        productqtzied.qts = currentOrder.orderTicket[i].qts;
         addProductToOrderList(productqtzied);
         initProductListJquery(productqtzied._id);
         orderAmountTTC = orderAmountTTC + (productqtzied.price * productqtzied.qts);
         orderAmountHT = orderAmountHT + money.calculTva.TTCtoHT(productqtzied.price * productqtzied.qts, productqtzied.tvaRate);
     }
+    currentOrder.totalHT = orderAmountHT;
+    currentOrder.totalTTC = orderAmountTTC;
     $(".totalAmount.HT span").text(money.format.numberToPrice(Math.round(orderAmountHT * 100) / 100));
     $(".totalAmount.TTC span").text(money.format.numberToPrice(orderAmountTTC));
 }
 
 function cancelOrder() {
     $(".productList tbody").html("");
-    orderTicket.splice(0, orderTicket.length);
+    currentOrder.orderTicket.splice(0, currentOrder.orderTicket.length);
     var orderAmountTTC = 0;
     var orderAmountHT = 0;
-    for (var i = 0; i < orderTicket.length; i++) {
-        if (orderTicket[i].type == "package") {
+    for (var i = 0; i < currentOrder.orderTicket.length; i++) {
+        if (currentOrder.orderTicket[i].type == "package") {
             var registery = client.packages;
-        } else if (orderTicket[i].type == "product") {
+        } else if (currentOrder.orderTicket[i].type == "product") {
             var registery = client.products;
         }
-        var productqtzied = registery[orderTicket[i].productID];
-        productqtzied.qts = orderTicket[i].qts;
+        var productqtzied = registery[currentOrder.orderTicket[i].productID];
+        productqtzied.qts = currentOrder.orderTicket[i].qts;
         addProductToOrderList(productqtzied);
         initProductListJquery(productqtzied._id);
         orderAmountTTC = orderAmountTTC + (productqtzied.price * productqtzied.qts);
         orderAmountHT = orderAmountHT + money.calculTva.TTCtoHT(productqtzied.price * productqtzied.qts, productqtzied.tvaRate);
     }
+    currentOrder.totalHT = orderAmountHT;
+    currentOrder.totalTTC = orderAmountTTC;
     $(".totalAmount.HT span").text(money.format.numberToPrice(Math.round(orderAmountHT * 100) / 100));
     $(".totalAmount.TTC span").text(money.format.numberToPrice(orderAmountTTC));
     $("#paymentScreen").hide('fast', function() {
-            $("#orderScreen").show(0, function() {
-                //alert(orderTicket);
-            });
+        $("#orderScreen").show(0, function() {
+            //alert(currentOrder.orderTicket);
         });
+    });
 }
 
 function validOrder() {
-    if (orderTicket.length != 0) {
-        $("#orderScreen").hide('fast', function() {
-            $("#paymentScreen").show(0, function() {
-                //alert(orderTicket);
+    if (currentOrder.orderTicket.length != 0) {
+        if (orderState == "composing") {
+            $("#orderScreen").hide('fast', function() {
+                $(".orderValid").text("Valider la commande")
+                $("#paymentScreen").show(0, function() {
+                    //alert(currentOrder.orderTicket);
+                });
             });
-        });
-    }else{
+        } else{
+            
+        }
+    } else {
         alert("Action impossible : Votre commande ne comporte aucun produit")
     }
 }

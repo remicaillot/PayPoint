@@ -1,3 +1,5 @@
 {
-	"tvaRate": [5.5, 10, 20]
+	"tvaRate": [5.5, 10, 20],
+	"paymentMethod": ["Especes", "cheques", "Virement"],
+	"cashlogPath": ""
 }

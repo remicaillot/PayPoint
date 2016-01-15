@@ -16,7 +16,16 @@
                     });
                 }
             } else if (target == "cashAmount") {
-                alert(parseFloat($(".numericpad." + target + "  .number .int").text() + "." + $(".numericpad." + target + " .number .decimal").text()))
+                if ($(".optionChooser[choiceName='paymentType'] .choiceItem.selected").attr("itemID") == undefined) {
+                    alert("Veuillez choisir une methode de payement");
+                } else {
+                    currentOrder.cashGived = parseFloat($(".numericpad." + target + "  .number .int").text() + "." + $(".numericpad." + target + " .number .decimal").text());
+                    currentOrder.paymentMethod = $(".optionChooser[choiceName='paymentType'] .choiceItem.selected").attr("itemID");
+                    currentOrder.givingChanges = money.givingChanges(currentOrder.totalTTC, currentOrder.cashGived);
+                    printTicket(currentOrder);
+                    alert("Rendre : " + money.givingChanges(currentOrder.totalTTC, parseFloat($(".numericpad." + target + "  .number .int").text() + "." + $(".numericpad." + target + " .number .decimal").text())) + "€");
+                    cancelOrder();
+                }
             }
         } else if (padValue == "c") {
             $(".numericpad." + target + " .number .decimal").attr("hit", 0);

@@ -160,7 +160,7 @@ io.on("connection", function(socket) {
                     packages: packages,
                     tvaRate: config.tvaRate
                 });
-                log.info('POS Station initialized correctly', initData);
+                log.info('POS Station initialized correctly');
             });
         });
     });
