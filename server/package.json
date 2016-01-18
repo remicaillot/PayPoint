@@ -1,11 +1,12 @@
 {
-  "name": "StudioID_server",
-  "description": "account management server",
+  "name": "PayPointServer",
+  "description": "Pos Station server Management",
   "version": "0.0.1",
   "private": true,
   "dependencies": {
     "socket.io": "*",
     "MD5": "*",
-    "delivery": "*"
+    "npmlog": "*",
+    "nano":"*"
   }
 }
