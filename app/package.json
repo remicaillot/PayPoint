@@ -20,5 +20,10 @@
     "webkit": {
         "plugin": true
     },
-    "devtools": true
+    "devtools": true,
+    "dependencies": {
+        "fs": "*",
+        "MD5": "*",
+        "node-thermal-printer": "*"
+    }
 }
