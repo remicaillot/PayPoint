@@ -1,0 +1,96 @@
+body{
+	padding: 0;
+	margin: 0;
+	font-family: 'Amble';
+	font-weight: normal;
+	font-style: normal;
+    -webkit-user-select: none;
+}
+header{
+	background: #c1261c;
+	height: 100px;
+	-webkit-app-region: drag;
+}
+#logo, #searchForm{
+	display: inline-block;
+}
+#windowControls{
+	position: absolute;
+	right: 0;
+	top: 0;
+	-webkit-app-region: no-drag;
+}
+#logo {
+	height: 100px;
+	text-align: center;
+	width: 200px;
+}
+#logo img{
+	height: 60px;
+	margin-top: 20px;
+}
+#windowControls .window-control {
+    float: right;
+    border: none;
+    width: 35px;
+    height: 20px;
+    padding: 0;
+    margin-left: 3px;
+    margin-top: 5px;
+    z-index: 9999999999;
+    transition: all 0.3s;
+    border-radius: 2px;
+}
+#windowControls .window-control.close {
+    background: rgba(0,0,0,0.15) url(../assets/images/close.svg) center;
+    margin-right: 5px;
+    width: 45px;
+}
+#windowControls .window-control.maximize {
+    background-image: url(../assets/images/maximize.svg);
+}
+#windowControls .window-control.minimize {
+    background: url(../assets/images/minimize.svg);
+}
+#windowControls .window-control.dev {
+    background: url(../assets/images/developer.svg);
+}
+#windowControls .window-control.reload {
+    background: url(../assets/images/reload.svg);
+}
+#windowControls .window-control.dev:hover {
+    background: rgba(0,0,0,0.5) url(../assets/images/developer.svg);
+}
+#windowControls .window-control.reload:hover {
+    background: rgba(0,0,0,0.5) url(../assets/images/reload.svg);
+}
+#windowControls .window-control.close:hover {
+    background-color: rgba(0,0,0,0.5);
+}
+#windowControls .window-control.maximize:hover {
+    background-color: rgba(0,0,0,0.5);
+}
+#windowControls .window-control.minimize:hover {
+    background-color: rgba(0,0,0,0.5);
+}
+#searchForm{
+	position: absolute;
+	left: 200px;
+	right: 300px;
+	text-align: center;
+}
+#searchForm form input[type="text"]{
+	width: 70%;
+	border: none;
+	background: rgba(255,255,255,0.2);
+	color: white;
+	font-family: 'Amble';
+	font-weight: normal;
+	height: 30px;
+	padding: 10px 30px 10px 30px;
+	border-radius: 50px;
+	margin-top: 25px;
+	font-size: 20px;
+	outline: none;
+	-webkit-app-region: no-drag;
+}
