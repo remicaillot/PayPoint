@@ -108,10 +108,34 @@ main{
 	bottom: 0;
 	background: #333;
 	width: 50px;
+	overflow: hidden;
+	transition: width 0.1s cubic-bezier(.17,.67,.83,.67);
 }
-.sideBarIcon{
-	width: 30px;
-	padding: 10px;
+#leftPanel:hover{
+	width: 200px;
+}
+.categorie{
+	height: 50px;
+	width: 200px;
+}
+.categorie:hover{
+	background: rgba(255,255,255,0.3);
+}
+.categorie img{
+	float: left;
+	width: 20px;
+	padding: 15px;
+}
+.categorie p{
+	display: inline-block;
+	padding: 0;
+	margin: 0;
+	height: 50px;
+	line-height: 50px;
+	margin-left: 10px;
+	font-family: 'Amble';
+	font-weight: bold;
+	color: white;
 }
 #orderTicket{
 	position: absolute;
