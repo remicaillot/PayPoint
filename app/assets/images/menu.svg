@@ -13,7 +13,7 @@
    height="488.57001"
    id="svg2"
    version="1.1"
-   inkscape:version="0.48.4 r9939"
+   inkscape:version="0.91 r13725"
    inkscape:export-filename="C:\Users\Rémi\Documents\GitHub\PayPoint\PayPoint\data\images\menu.png"
    inkscape:export-xdpi="5.5263319"
    inkscape:export-ydpi="5.5263319"
@@ -27,9 +27,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.24748737"
-     inkscape:cx="1376.836"
-     inkscape:cy="-148.49173"
+     inkscape:zoom="0.98994948"
+     inkscape:cx="241.19297"
+     inkscape:cy="227.07992"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -39,8 +39,8 @@
      fit-margin-bottom="0"
      showguides="true"
      inkscape:guide-bbox="true"
-     inkscape:window-width="1366"
-     inkscape:window-height="706"
+     inkscape:window-width="1920"
+     inkscape:window-height="1017"
      inkscape:window-x="-8"
      inkscape:window-y="-8"
      inkscape:window-maximized="1" />
@@ -63,8 +63,8 @@
      transform="translate(-126.57143,-225.22072)">
     <g
        id="g3051"
-       style="fill:#ffffff"
-       transform="translate(-6.982959e-4,-47.142153)">
+       style="fill:#1a1a1a"
+       transform="translate(-615.18361,-47.142153)">
       <rect
          ry="46.132706"
          y="310.5152"
@@ -72,7 +72,7 @@
          height="92.265411"
          width="488.57141"
          id="rect2985"
-         style="fill:#ffffff;fill-opacity:1;stroke:none" />
+         style="fill:#1a1a1a;fill-opacity:1;stroke:none" />
       <rect
          ry="46.132706"
          y="467.65515"
@@ -80,7 +80,7 @@
          height="92.265411"
          width="488.57141"
          id="rect2985-6"
-         style="fill:#ffffff;fill-opacity:1;stroke:none" />
+         style="fill:#1a1a1a;fill-opacity:1;stroke:none" />
       <rect
          ry="46.132706"
          y="624.7951"
@@ -88,7 +88,33 @@
          height="92.265411"
          width="488.57141"
          id="rect2985-5"
-         style="fill:#ffffff;fill-opacity:1;stroke:none" />
+         style="fill:#1a1a1a;fill-opacity:1;stroke:none" />
+    </g>
+    <g
+       id="g4143"
+       transform="translate(3.6083985e-6,5.7277562)"
+       style="fill:#ffffff">
+      <rect
+         y="282.4556"
+         x="143.06703"
+         height="41.416256"
+         width="455.5788"
+         id="rect4137"
+         style="opacity:1;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:5.05600023;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:15.1680007, 15.16800070000000000;stroke-dashoffset:0;stroke-opacity:1" />
+      <rect
+         style="opacity:1;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:5.05600023;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:15.1680007, 15.16800070000000000;stroke-dashoffset:0;stroke-opacity:1"
+         id="rect4139"
+         width="455.5788"
+         height="41.416256"
+         x="143.06703"
+         y="443.06985" />
+      <rect
+         y="603.68408"
+         x="143.06703"
+         height="41.416256"
+         width="455.5788"
+         id="rect4141"
+         style="opacity:1;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:5.05600023;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:15.1680007, 15.16800070000000000;stroke-dashoffset:0;stroke-opacity:1" />
     </g>
   </g>
 </svg>
