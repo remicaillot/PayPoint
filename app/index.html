@@ -10,6 +10,8 @@
 	<script type="text/javascript" src="./js/app.js"></script>
 	<script type="text/javascript" src="./js/gui.js"></script>
 	<script type="text/javascript" src="./js/work.js"></script>
+	<script src="https://use.typekit.net/ugv7lud.js"></script>
+	<script>try{Typekit.load({ async: true });}catch(e){}</script>
 	<meta charset="utf-8"> 
 </head>
 <body>
@@ -35,18 +37,85 @@
 	<main>
 		<div id="leftPanel">
 			<div class="categorie">
-				<img class="sideBarIcon" src="./assets/images/menu.svg"><p>Catégories</p>
+				<div class="catContent">				
+					<img class="sideBarIcon" src="./assets/images/menu.svg"><p>Menu</p>
+				</div>
 			</div>
 			<div id="categories">
 				<!-- {{#categorie}} -->
+				<div class="categorie activated">
+					<div class="catContent">
+						<img class="sideBarIcon" src="./assets/images/categorie.svg"><p>Emporter</p>
+					</div>
+				</div>
 				<div class="categorie">
-					<img class="sideBarIcon" src="./assets/images/categorie.svg"><p>Example</p>
+					<div class="catContent">
+						<img class="sideBarIcon" src="./assets/images/livraison.svg"><p>Livraison</p>
+					</div>
+				</div>
+				<div class="categorie">
+					<div class="catContent">
+						<img class="sideBarIcon" src="./assets/images/etang.svg"><p>Location d'étang</p>
+					</div>
+				</div>
+				<div class="categorie">
+					<div class="catContent">
+						<img class="sideBarIcon" src="./assets/images/detail.svg"><p>Détail</p>
+					</div>
 				</div>
 				<!-- {{/categorie}} -->
 			</div>
 		</div>
+		<div id="productsContainer">
+			<div class="productTile">
+				<img src="./assets/images/Miniatures/poissondetail.png">
+				<div class="price">9€ / Kg</div>
+				<div class="name">Poisson détail</div>
+			</div>
+			<div class="productTile">
+				<img src="./assets/images/Miniatures/poissondetail.png">
+				<div class="price">9€ / Kg</div>
+				<div class="name">Poisson détail</div>
+			</div>
+			<div class="productTile">
+				<img src="./assets/images/Miniatures/poissondetail.png">
+				<div class="price">9€ / Kg</div>
+				<div class="name">Poisson détail</div>
+			</div>
+			<div class="productTile">
+				<img src="./assets/images/Miniatures/poissondetail.png">
+				<div class="price">9€ / Kg</div>
+				<div class="name">Poisson détail</div>
+			</div>
+			<div class="productTile">
+				<img src="./assets/images/Miniatures/poissondetail.png">
+				<div class="price">9€ / Kg</div>
+				<div class="name">Poisson détail</div>
+			</div>
+			<div class="productTile">
+				<img src="./assets/images/Miniatures/poissondetail.png">
+				<div class="price">9€ / Kg</div>
+				<div class="name">Poisson détail</div>
+			</div>
+			<div class="productTile">
+				<img src="./assets/images/Miniatures/poissondetail.png">
+				<div class="price">9€ / Kg</div>
+				<div class="name">Poisson détail</div>
+			</div>
+			<div class="productTile">
+				<img src="./assets/images/Miniatures/poissondetail.png">
+				<div class="price">9€ / Kg</div>
+				<div class="name">Poisson détail</div>
+			</div>
+			<div class="productTile">
+				<img src="./assets/images/Miniatures/poissondetail.png">
+				<div class="price">9€ / Kg</div>
+				<div class="name">Poisson détail</div>
+			</div>
+
+		</div>
 		<div id="orderTicket">
-			
+			<h1>Commande</h1>
 		</div>
 	</main>
 </body>

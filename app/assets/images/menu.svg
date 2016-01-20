@@ -28,7 +28,7 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="0.98994948"
-     inkscape:cx="241.19297"
+     inkscape:cx="84.619323"
      inkscape:cy="227.07992"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
@@ -39,9 +39,9 @@
      fit-margin-bottom="0"
      showguides="true"
      inkscape:guide-bbox="true"
-     inkscape:window-width="1920"
-     inkscape:window-height="1017"
-     inkscape:window-x="-8"
+     inkscape:window-width="1304"
+     inkscape:window-height="745"
+     inkscape:window-x="54"
      inkscape:window-y="-8"
      inkscape:window-maximized="1" />
   <metadata
@@ -91,11 +91,11 @@
          style="fill:#1a1a1a;fill-opacity:1;stroke:none" />
     </g>
     <g
-       id="g4143"
-       transform="translate(3.6083985e-6,5.7277562)"
+       id="g4144"
+       transform="translate(3.6083985e-6,-1.51524)"
        style="fill:#ffffff">
       <rect
-         y="282.4556"
+         y="332.63007"
          x="143.06703"
          height="41.416256"
          width="455.5788"
@@ -107,9 +107,9 @@
          width="455.5788"
          height="41.416256"
          x="143.06703"
-         y="443.06985" />
+         y="450.31281" />
       <rect
-         y="603.68408"
+         y="567.99561"
          x="143.06703"
          height="41.416256"
          width="455.5788"
