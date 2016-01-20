@@ -107,7 +107,7 @@ main{
 	left: 0;
 	top: 90px;
 	bottom: 0;
-	background: #333;
+	background: #111;
 	width: 50px;
 	overflow: hidden;
 	-webkit-transition: width 0.2s cubic-bezier(.07,.7,.6,.96);
@@ -192,8 +192,9 @@ main{
 .productTile .price{
 	background: #333;
 	color: white;
-	font-weight: normal;
+	font-weight: bold;
 	margin-top: -5px;
+	font-size: 1.1em;
 }
 .productTile .name{
 	font-size: 20px;

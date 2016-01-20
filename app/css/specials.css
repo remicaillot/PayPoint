@@ -67,5 +67,5 @@ background-position: -19px 50%;
 background-position: 50% -19px;
 }
 ::-webkit-input-placeholder { /* WebKit browsers */
-    color:    #fff;
+    color: rgba(255,255,255,0.5);
 }
