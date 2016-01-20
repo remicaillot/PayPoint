@@ -8,7 +8,7 @@ body{
 }
 header{
 	background: #c1261c;
-	height: 100px;
+	height: 90px;
 	-webkit-app-region: drag;
 }
 #logo, #searchForm{
@@ -27,7 +27,7 @@ header{
 }
 #logo img{
 	height: 60px;
-	margin-top: 20px;
+	margin-top: 15px;
 }
 #windowControls .window-control {
     float: right;
@@ -89,8 +89,27 @@ header{
 	height: 30px;
 	padding: 10px 30px 10px 30px;
 	border-radius: 50px;
-	margin-top: 25px;
+	margin-top: 20px;
 	font-size: 20px;
 	outline: none;
 	-webkit-app-region: no-drag;
+}
+#searchForm form input[type="text"]:focus{
+
+	background: rgba(255,255,255,0.3);
+}
+main{
+
+}
+#leftPanel{
+	position: absolute;
+	left: 0;
+	top: 90px;
+	bottom: 0;
+	background: #333;
+	width: 230px;
+}
+#orderTicket{
+	width: 300px;
+	
 }

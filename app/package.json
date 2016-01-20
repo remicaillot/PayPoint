@@ -7,7 +7,7 @@
     "single-instance": true,
     "window": {
         "title": "PayPoint",
-        "icon": "data/images/logo.png",
+        "icon": "assets/images/logo.png",
         "toolbar": false,
         "frame": false,
         "fullscreen": false,
