@@ -94,6 +94,7 @@ header{
 	font-size: 20px;
 	outline: none;
 	-webkit-app-region: no-drag;
+	-webkit-transition: background 0.2s cubic-bezier(.07,.7,.6,.96);
 }
 #searchForm form input[type="text"]:focus{
 
@@ -114,16 +115,16 @@ header{
 	height: 50px;
 	width: 50px;
 	overflow: hidden;
-	-webkit-transition: width 0.2s cubic-bezier(.07,.7,.6,.96);
+	-webkit-transition: width 0.2s cubic-bezier(.07,.7,.6,.96), background 0.2s cubic-bezier(.07,.7,.6,.96);
 	white-space: nowrap
 }
-.categorie:hover{
+.categorie:active{
 	background: rgba(255,255,255,0.3);
 }
 .categorie.activated{
 	background: #c1261c;
 }
-.categorie.activated:hover{
+.categorie.activated:active{
 	background: #e44b42;
 }
 .categorie .catContent{

@@ -14,5 +14,11 @@ jQuery(document).ready(function($) {
 		}
 		
 	});
+	$("#productsContainer").click(function(e){
+		$("#leftPanel").attr("open", false);
+		$("#leftPanel").css('width', '50px');
+		$(".categorie").css('width', '50px');
+		$(".categorie:active .catContent").css('-webkit-transform', 'scale3d(0.93,0.93,0.93)');
+	});
 });
 	
