@@ -99,9 +99,6 @@ header{
 
 	background: rgba(255,255,255,0.3);
 }
-main{
-
-}
 #leftPanel{
 	position: absolute;
 	left: 0;
@@ -113,12 +110,12 @@ main{
 	-webkit-transition: width 0.2s cubic-bezier(.07,.7,.6,.96);
 	z-index: 1000;
 }
-#leftPanel:hover{
-	width: 200px;
-}
 .categorie{
 	height: 50px;
-	width: 200px;
+	width: 50px;
+	overflow: hidden;
+	-webkit-transition: width 0.2s cubic-bezier(.07,.7,.6,.96);
+	white-space: nowrap
 }
 .categorie:hover{
 	background: rgba(255,255,255,0.3);
@@ -133,7 +130,7 @@ main{
 	-webkit-transition: -webkit-transform 0.2s cubic-bezier(.07,.7,.6,.96);
 }
 .categorie:active .catContent{
-	-webkit-transform: scale3d(0.96,0.96,0.96);
+	-webkit-transform: scale3d(0.93,0.93,0.93);
 }
 .categorie img{
 	float: left;
@@ -183,7 +180,7 @@ main{
     display: inline-block;
 	-webkit-transition: -webkit-transform 0.2s cubic-bezier(.07,.7,.6,.96);
 }
-.productTile .price, .productTile .name{
+.productTile .price, .productTile .name, .productTile .subcategory{
 	height: 40px;
 	line-height: 40px;
 	text-align: center;
@@ -195,6 +192,11 @@ main{
 	font-weight: bold;
 	margin-top: -5px;
 	font-size: 1.1em;
+}
+.productTile .subcategory{
+	background: #c1261c url(../assets/images/folder.svg) no-repeat center center;
+	background-size: 18px;
+	margin-top: -5px;
 }
 .productTile .name{
 	font-size: 20px;

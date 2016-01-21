@@ -1,6 +1,4 @@
-var gui = require('nw.gui'),
-    win = gui.Window.get(),
-    manifest = require("./package.json");
+var manifest = require("./package.json");
 gui.App.setCrashDumpDir("./");
 if (localStorage.getItem("isMaximized") == "true") {
     win.maximize();

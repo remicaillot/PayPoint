@@ -1,17 +1,20 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<title></title>
+<head id="head">
+	<title>PayPoint - Hundred Factorial</title>
 	<link rel="stylesheet" type="text/css" href="./css/fonts.css">
 	<link rel="stylesheet" type="text/css" href="./css/specials.css">
 	<link rel="stylesheet" type="text/css" href="./css/global.css">
 	<script type="text/javascript" src="./libs/jquery-2.2.0.min.js"></script>
+	<script type="text/javascript" src="./libs/libInit.js"></script>
+	<script type="text/javascript" src="./libs/libKeyboardCtrl.js"></script>
+	<script type="text/javascript" src="./libs/libmoney.js"></script>
+	<script type="text/javascript" src="./libs/libposPrint"></script>
 	<script type="text/javascript" src="./libs/libWindowControl.js"></script>
+	<script type="text/javascript" src="./libs/mustache.min.js"></script>
 	<script type="text/javascript" src="./js/app.js"></script>
 	<script type="text/javascript" src="./js/gui.js"></script>
 	<script type="text/javascript" src="./js/work.js"></script>
-	<script src="https://use.typekit.net/ugv7lud.js"></script>
-	<script>try{Typekit.load({ async: true });}catch(e){}</script>
 	<meta charset="utf-8"> 
 </head>
 <body>
@@ -36,8 +39,8 @@
 	</header>
 	<main>
 		<div id="leftPanel">
-			<div class="categorie">
-				<div class="catContent">				
+			<div class="categorie" id="sideBarMenu">
+				<div class="catContent" >				
 					<img class="sideBarIcon" src="./assets/images/menu.svg"><p>Menu</p>
 				</div>
 			</div>
@@ -67,47 +70,12 @@
 			</div>
 		</div>
 		<div id="productsContainer">
-			<div class="productTile">
-				<img src="./assets/images/Miniatures/poissondetail.png">
-				<div class="price">9€ / Kg</div>
-				<div class="name">Poisson détail</div>
+			<div class="productTile subCat">
+				<img src="./assets/images/Miniatures/liquides.png">
+				<div class="subcategory"></div>
+				<div class="name">Boissons</div>
 			</div>
-			<div class="productTile">
-				<img src="./assets/images/Miniatures/poissondetail.png">
-				<div class="price">9€ / Kg</div>
-				<div class="name">Poisson détail</div>
-			</div>
-			<div class="productTile">
-				<img src="./assets/images/Miniatures/poissondetail.png">
-				<div class="price">9€ / Kg</div>
-				<div class="name">Poisson détail</div>
-			</div>
-			<div class="productTile">
-				<img src="./assets/images/Miniatures/poissondetail.png">
-				<div class="price">9€ / Kg</div>
-				<div class="name">Poisson détail</div>
-			</div>
-			<div class="productTile">
-				<img src="./assets/images/Miniatures/poissondetail.png">
-				<div class="price">9€ / Kg</div>
-				<div class="name">Poisson détail</div>
-			</div>
-			<div class="productTile">
-				<img src="./assets/images/Miniatures/poissondetail.png">
-				<div class="price">9€ / Kg</div>
-				<div class="name">Poisson détail</div>
-			</div>
-			<div class="productTile">
-				<img src="./assets/images/Miniatures/poissondetail.png">
-				<div class="price">9€ / Kg</div>
-				<div class="name">Poisson détail</div>
-			</div>
-			<div class="productTile">
-				<img src="./assets/images/Miniatures/poissondetail.png">
-				<div class="price">9€ / Kg</div>
-				<div class="name">Poisson détail</div>
-			</div>
-			<div class="productTile">
+			<div class="productTile product">
 				<img src="./assets/images/Miniatures/poissondetail.png">
 				<div class="price">9€ / Kg</div>
 				<div class="name">Poisson détail</div>
@@ -118,5 +86,42 @@
 			<h1>Commande</h1>
 		</div>
 	</main>
+	<div id="keyboard">
+		<div id="numericPad">
+			
+		</div>
+		<div id="alphanumericPad">
+			<div class="key" value="a">a</div>
+			<div class="key" value="z">z</div>
+			<div class="key" value="e">e</div>
+			<div class="key" value="r">r</div>
+			<div class="key" value="t">t</div>
+			<div class="key" value="y">y</div>
+			<div class="key" value="u">u</div>
+			<div class="key" value="i">i</div>
+			<div class="key" value="o">o</div>
+			<div class="key" value="p">p</div>
+			<div class="key" value="q">q</div>
+			<div class="key" value="s">s</div>
+			<div class="key" value="d">d</div>
+			<div class="key" value="f">f</div>
+			<div class="key" value="g">g</div>
+			<div class="key" value="h">h</div>
+			<div class="key" value="j">j</div>
+			<div class="key" value="k">k</div>
+			<div class="key" value="l">l</div>
+			<div class="key" value="m">m</div>
+			<div class="key" value="w">w</div>
+			<div class="key" value="x">x</div>
+			<div class="key" value="c">c</div>
+			<div class="key" value="v">v</div>
+			<div class="key" value="b">b</div>
+			<div class="key" value="n">n</div>
+			<div class="key" value=",">,</div>
+			<div class="key" value=" ">Espace</div>
+			<div class="key" value=".">.</div>
+			<div class="key" value="#numericPad">123</div>
+		</div>
+	</div>
 </body>
 </html>
