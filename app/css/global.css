@@ -116,7 +116,8 @@ header{
 	width: 50px;
 	overflow: hidden;
 	-webkit-transition: width 0.2s cubic-bezier(.07,.7,.6,.96), background 0.2s cubic-bezier(.07,.7,.6,.96);
-	white-space: nowrap
+	white-space: nowrap;	
+	cursor: pointer;
 }
 .categorie:active{
 	background: rgba(255,255,255,0.3);
@@ -217,7 +218,7 @@ header{
 	-webkit-transition: bottom 0.2s;
 }
 #alphanumericPad{
-	width: 740px;
+	width: 813px;
 	margin: auto;
 	margin-top: 29px;
 }
@@ -244,6 +245,7 @@ header{
 	margin-right: 3px;
 	-webkit-transition: background 1s cubic-bezier(.07,.7,.6,.96);
 	border-radius: 3px;
+	cursor: pointer;
 }
 #keyboard .key.special{
 	width: 143px;
