@@ -263,40 +263,53 @@ header{
 	text-align: center;
 	overflow: hidden;
 }
- 
-#orderTicket table{
-	
-	width: 95%;
-	margin: auto;
-	overflow: auto
+#orderTicket #ticketProductList{
+	position: absolute;
+	top: 120px;
+	bottom: 160px;
+	width: 100%;
+	overflow: hidden auto;
 }
-#orderTicker td{
-	padding: 3px;
-}
-#orderTicket table thead td{
+
+#orderTicket #tableHead div{
 	background: #4d4d4d;
 	color: white;
 	border-radius: 3px;
 	font-weight: bold;
-	padding-top: 3px;
-	padding-bottom: 3px;
+	padding: 3px;
+	display: inline-block;
 }
-#orderTicket table tbody td:first-child img{
+#orderTicket #tableBody {
+	position: absolute;
+	bottom: 0;
+	top: 30px;
+	overflow: auto;
+	width: 100%;
+}
+#orderTicket div.product{
+	width: 60%;
+}
+#orderTicket  div.qts{
+	width: 10%;
+}
+#orderTicket  div.price{
+	width: 20%;
+}
+#orderTicket .tableLine{
+	height: 40px;
+	margin-top: 10px;
+}
+#orderTicket .tableLine img{
 	width: 40px;
 	height: 40px;
 	border-radius: 30px;
 	float: left;
 }
-#orderTicket table tbody td{
+#orderTicket .tableLine div{
 	line-height: 40px;
+	display: inline-block;
 }
-#orderTicket table tbody{
-	width: 95%;
-	position: absolute;
-	bottom: 160px;
-	top: 150px;
-	overflow: auto;
-}
+
 #orderTicket #ticketControler{
 	position: absolute;
 	bottom: 0;
@@ -305,6 +318,7 @@ header{
 	border-top: 5px dashed #888;
 	padding-top: 5px; 
 }
+
 #ticketControler #totalHT{
 	color: #555;
 	font-size: 20px;
