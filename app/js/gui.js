@@ -14,12 +14,6 @@ jQuery(document).ready(function($) {
 		}
 		
 	});
-	$("#productsContainer").click(function(e){
-		$("#leftPanel").attr("open", false);
-		$("#leftPanel").css('width', '50px');
-		$(".categorie").css('width', '50px');
-		$(".categorie:active .catContent").css('-webkit-transform', 'scale3d(0.93,0.93,0.93)');
-	});
 	$(".categorie").click(function(event) {
 		if($(this).attr('id') != "sideBarMenu"){
 			$(".categorie").removeClass('activated');
@@ -41,9 +35,17 @@ jQuery(document).ready(function($) {
 	});
 	$('html').click(function() {
 		$("#keyboard").css('bottom', '-350px');
+		$("#leftPanel").attr("open", false);
+		$("#leftPanel").css('width', '50px');
+		$(".categorie").css('width', '50px');
+		$(".categorie:active .catContent").css('-webkit-transform', 'scale3d(0.93,0.93,0.93)');
+		
 		currentFocusedElement.removeClass('focused');
 	});
 	$("input[type='text']").click(function(event){
+	    event.stopPropagation();
+	});
+	$("#leftPanel").click(function(event){
 	    event.stopPropagation();
 	});
 	$("#keyboard").click(function(event){

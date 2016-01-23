@@ -150,17 +150,6 @@ header{
 	font-weight: bold;
 	color: white;
 }
-#orderTicket{
-	position: absolute;
-	right: 10px;
-	top: 30px;
-	bottom: 10px;
-	width: 300px;
-	background: white;
-    box-shadow: 0px 0px 3px rgb(125, 125, 125);
-    border-radius: 3px;
-	-webkit-app-region: no-drag;
-}
 #productsContainer{
 	position: absolute;
 	left: 50px;
@@ -171,9 +160,9 @@ header{
 	overflow-y: auto;
 }
 #productsContainer .productTile{
-	width: 200px;
+	width: 150px;
 	background: #fff;
-	height: 280px;
+	height: 230px;
 	margin-left: 10px;
 	margin-top: 10px;
 	border-radius: 3px;
@@ -181,6 +170,9 @@ header{
     overflow: hidden;
     display: inline-block;
 	-webkit-transition: -webkit-transform 0.2s cubic-bezier(.07,.7,.6,.96);
+}
+#productsContainer .productTile img{
+	width: 150px;
 }
 .productTile .price, .productTile .name, .productTile .subcategory{
 	height: 40px;
@@ -201,7 +193,7 @@ header{
 	margin-top: -5px;
 }
 .productTile .name{
-	font-size: 20px;
+	font-size: 15px;
 }
 .productTile:active {
 	-webkit-transform: scale3d(0.96,0.96,0.96);
@@ -256,4 +248,100 @@ header{
 #keyboard .key:active{
 	background: rgba(255,255,255,0.1);
 	-webkit-transition: none;
+}
+#orderTicket{
+	position: absolute;
+	right: 10px;
+	top: 30px;
+	bottom: 10px;
+	width: 300px;
+	background: white;
+    box-shadow: 0px 0px 3px rgb(125, 125, 125);
+    border-radius: 3px;
+	-webkit-app-region: no-drag;
+	text-align: center;
+	overflow: hidden;
+}
+ 
+#orderTicket table{
+	width: 95%;
+	margin: auto;
+}
+#orderTicker td{
+	padding: 3px;
+}
+#orderTicket table thead td{
+	background: #4d4d4d;
+	color: white;
+	border-radius: 3px;
+	font-weight: bold;
+	padding-top: 3px;
+	padding-bottom: 3px;
+}
+#orderTicket table tbody td:first-child img{
+	width: 40px;
+	height: 40px;
+	border-radius: 30px;
+	float: left;
+}
+#orderTicket table tbody td{
+	line-height: 40px;
+}
+#orderTicket #ticketControler{
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	width: 100%;
+	border-top: 5px dashed #888;
+	padding-top: 5px; 
+}
+#ticketControler #totalHT{
+	color: #555;
+	font-size: 20px;
+	font-weight: bold;
+	width: 95%;
+	margin: auto;
+	text-align: left;
+}
+#ticketControler #totalHT div{
+	display: inline-block;
+}
+#ticketControler #totalHT .amount{
+	float: right;
+}
+#ticketControler #totalTTC{
+	color: #111;
+	font-size: 25px;
+	font-weight: bold;
+	width: 95%;
+	margin: auto;
+	text-align: left;
+}
+#ticketControler #totalTTC div{
+	display: inline-block;
+}
+#ticketControler #totalTTC .amount{
+	float: right;
+}
+#ticketControler button{
+	width: 95%;
+	margin-bottom: 5px;
+	border: none;
+	border-radius: 5px;
+}
+#ticketControler button#validTicket{
+	height: 50px;
+	background: #67aa00;
+	font-weight: bolder;
+	font-size: 15px;
+	color: white;
+	outline: none;
+}
+#ticketControler button#cancelTicket{
+	height: 30px;
+	background: #b3b3b3;
+	font-weight: bolder;
+	font-size: 15px;
+	color: white;
+	outline: none;
 }
