@@ -194,6 +194,7 @@ header{
 }
 .productTile .name{
 	font-size: 15px;
+	font-weight: bolder;
 }
 .productTile:active {
 	-webkit-transform: scale3d(0.96,0.96,0.96);
@@ -264,8 +265,10 @@ header{
 }
  
 #orderTicket table{
+	
 	width: 95%;
 	margin: auto;
+	overflow: auto
 }
 #orderTicker td{
 	padding: 3px;
@@ -286,6 +289,13 @@ header{
 }
 #orderTicket table tbody td{
 	line-height: 40px;
+}
+#orderTicket table tbody{
+	width: 95%;
+	position: absolute;
+	bottom: 160px;
+	top: 150px;
+	overflow: auto;
 }
 #orderTicket #ticketControler{
 	position: absolute;
