@@ -5,7 +5,7 @@
   "private": true,
   "dependencies": {
     "socket.io": "*",
-    "md5": "*",
+    "MD5": "*",
     "npmlog": "*",
     "mongodb": "*"
   }
