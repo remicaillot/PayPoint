@@ -8,7 +8,7 @@ jQuery(document).ready(function($) {
 	    currentFocusedInput.addClass('focused');
 	});
 	$(".key").click(function(event) {
-	    var valueOfInput = currentFocusedInput.value();
+	    var valueOfInput = currentFocusedInput.val();
 	    valueOfInput += $(this).attr('value');
 	    currentFocusedInput.val(valueOfInput);
 	});
