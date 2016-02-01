@@ -1,12 +1,3 @@
-var currentFocusedInput;
-$("input[type='text']").click(function(event) {
-	$("#alphanumericPad").show();
-	$("#numericPad").hide();
-	$("#keyboard").css('bottom', '0');
-	currentFocusedInput = $(this);
-	currentFocusedInput.addClass('focused');
-});
-
 $(".key").click(function(event) {
 	var valueOfInput = currentFocusedInput.value();
 	valueOfInput += $(this).attr('value');
