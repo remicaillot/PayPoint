@@ -10,5 +10,5 @@ $("input[type='text']").focus(function(event) {
 $(".key").click(function(event) {
 	var valueOfInput = currentFocusedInput.value();
 	valueOfInput += $(this).attr('value');
-	currentFocusedInput.value(valueOfInput);
+	currentFocusedInput.val(valueOfInput);
 });
