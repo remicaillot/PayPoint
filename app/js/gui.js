@@ -25,13 +25,13 @@ jQuery(document).ready(function($) {
 		}		
 	});
 
-	var currentFocusedElement;
+	var currentFocusedInput;
 	$("input[type='text']").focus(function(event) {
 		$("#alphanumericPad").show();
 		$("#numericPad").hide();
 		$("#keyboard").css('bottom', '0');
-		currentFocusedElement = $(this);
-		currentFocusedElement.addClass('focused');
+		currentFocusedInput = $(this);
+		currentFocusedInput.addClass('focused');
 	});
 	$('html').click(function() {
 		$("#keyboard").css('bottom', '-350px');
@@ -40,7 +40,7 @@ jQuery(document).ready(function($) {
 		$(".categorie").css('width', '50px');
 		$(".categorie:active .catContent").css('-webkit-transform', 'scale3d(0.93,0.93,0.93)');
 		
-		currentFocusedElement.removeClass('focused');
+		currentFocusedInput.removeClass('focused');
 	});
 	$("input[type='text']").click(function(event){
 	    event.stopPropagation();
@@ -50,7 +50,7 @@ jQuery(document).ready(function($) {
 	});
 	$("#keyboard").click(function(event){
 	    event.stopPropagation();
-		currentFocusedElement.addClass('focused');
+		currentFocusedInput.addClass('focused');
 	});
 });
 	

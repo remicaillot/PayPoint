@@ -1,5 +1,5 @@
 var currentFocusedInput;
-$("input[type='text']").focus(function(event) {
+$("input[type='text']").click(function(event) {
 	$("#alphanumericPad").show();
 	$("#numericPad").hide();
 	$("#keyboard").css('bottom', '0');
