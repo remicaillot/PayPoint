@@ -25,14 +25,7 @@ jQuery(document).ready(function($) {
 		}		
 	});
 
-	var currentFocusedInput;
-	$("input[type='text']").focus(function(event) {
-		$("#alphanumericPad").show();
-		$("#numericPad").hide();
-		$("#keyboard").css('bottom', '0');
-		currentFocusedInput = $(this);
-		currentFocusedInput.addClass('focused');
-	});
+	
 	$('html').click(function() {
 		$("#keyboard").css('bottom', '-350px');
 		$("#leftPanel").attr("open", false);
