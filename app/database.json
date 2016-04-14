@@ -1,0 +1,33 @@
+{
+	"products": [{
+		"productID": "351920de1975609dedf90c4ab7ac55b8",
+		"name": "Barre sucrée",
+		"picture": "assets/images/Miniatures/sucreries.png",
+		"subCat": "",
+		"category": "2b39a06be27aff570d0c1c7afec2b9e4",
+		"sellMode": "unit",
+		"price": 1.5,
+		"unit": "piece"
+	}, {
+		"productID": "458f9c95ea75a8f90798eef2792c2fe1",
+		"name": "Soda",
+		"picture": "assets/images/Miniatures/liquides.png",
+		"subCat": "6d1a13af07fe2c3ee82f4a8c987039eb",
+		"category": "2b39a06be27aff570d0c1c7afec2b9e4",
+		"sellMode": "unit",
+		"price": 2.2,
+		"unit": "piece"
+	}],
+	"categories": [{
+		"categoryId": "2b39a06be27aff570d0c1c7afec2b9e4",
+		"name": "Emporter",
+		"picture": "assets/images/categorie.svg",
+		"defaultFocused": true
+	}],
+	"subcategories": [{
+		"subcategoryId": "6d1a13af07fe2c3ee82f4a8c987039eb",
+		"name": "Boissons",
+		"picture": "assets/images/Miniatures/liquides.png",
+		"category": "2b39a06be27aff570d0c1c7afec2b9e4"
+	}]
+}

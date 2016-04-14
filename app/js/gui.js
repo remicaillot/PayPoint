@@ -32,8 +32,10 @@ jQuery(document).ready(function($) {
 		$("#leftPanel").css('width', '50px');
 		$(".categorie").css('width', '50px');
 		$(".categorie:active .catContent").css('-webkit-transform', 'scale3d(0.93,0.93,0.93)');
-		
-		currentFocusedInput.removeClass('focused');
+		try{
+			currentFocusedInput.removeClass('focused');
+		}catch(e){
+		}
 	});
 	$("input[type='text']").click(function(event){
 	    event.stopPropagation();
@@ -43,7 +45,17 @@ jQuery(document).ready(function($) {
 	});
 	$("#keyboard").click(function(event){
 	    event.stopPropagation();
-		currentFocusedInput.addClass('focused');
+		try{
+			currentFocusedInput.addClass('focused');
+		}catch(e){
+		}
+	});
+	$(".productTile").click(function(event) {
+		console.log($(this).attr("data-objectID") + " is " + $(this).attr("data-objectTYPE"));
 	});
 });
-	
+function addItemToWindow(data){
+
+var subcategoryTemplate ='<div class="productTile" data-objectid="' + data.subcategoryId + '" data-objecttype="subcategory"><img src="' + data.picture + '"/><div class="subcategory"></div><div class="name">' + data.name + '</div></div>';
+var productTemplate ='<div class="productTile" data-objectid="' + data.productId + '" data-objecttype="product"><img src="' + data.picture + '"/><div class="price">' + data.price + '</div><div class="name">' + data.name + '</div></div>';
+}

@@ -129,26 +129,20 @@ header{
 	background: #e44b42;
 }
 .categorie .catContent{
+	position: relative;
+	height: 50px;
 	-webkit-transition: -webkit-transform 0.2s cubic-bezier(.07,.7,.6,.96);
+	font-family: "SourceSansPro";
+	font-weight: bold;
+	color: white;
 }
 .categorie:active .catContent{
 	-webkit-transform: scale3d(0.93,0.93,0.93);
 }
-.categorie img{
-	float: left;
+.catContent img{
+	vertical-align: middle;
 	width: 22px;
 	padding: 15px;
-}
-.categorie p{
-	display: inline-block;
-	padding: 0;
-	margin: 0;
-	height: 50px;
-	line-height: 50px;
-	margin-left: 10px;
-	font-family: "SourceSansPro";
-	font-weight: bold;
-	color: white;
 }
 #productsContainer{
 	position: absolute;
