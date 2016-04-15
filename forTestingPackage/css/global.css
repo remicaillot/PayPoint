@@ -1,0 +1,369 @@
+body{
+	padding: 0;
+	margin: 0;
+	font-family: "SourceSansPro";
+	font-weight: normal;
+	font-style: normal;
+    -webkit-user-select: none;
+    background: #e1e1e1;
+}
+header{
+	background: #c1261c;
+	height: 90px;
+	-webkit-app-region: drag;
+}
+#logo, #searchForm{
+	display: inline-block;
+}
+#windowControls{
+	position: absolute;
+	right: 0;
+	top: 0;
+	-webkit-app-region: no-drag;
+}
+#logo {
+	height: 100px;
+	text-align: center;
+	width: 100px;
+}
+#logo img{
+	height: 60px;
+	margin-top: 15px;
+}
+#windowControls .window-control {
+    float: right;
+    border: none;
+    width: 35px;
+    height: 20px;
+    padding: 0;
+    margin-left: 3px;
+    margin-top: 5px;
+    z-index: 9999999999;
+    transition: all 0.3s;
+    border-radius: 2px;
+}
+#windowControls .window-control.close {
+    background: rgba(0,0,0,0.15) url(../assets/images/close.svg) center;
+    margin-right: 5px;
+    width: 45px;
+}
+#windowControls .window-control.maximize {
+    background-image: url(../assets/images/maximize.svg);
+}
+#windowControls .window-control.minimize {
+    background: url(../assets/images/minimize.svg);
+}
+#windowControls .window-control.dev {
+    background: url(../assets/images/developer.svg);
+}
+#windowControls .window-control.reload {
+    background: url(../assets/images/reload.svg);
+}
+#windowControls .window-control.dev:hover {
+    background: rgba(0,0,0,0.5) url(../assets/images/developer.svg);
+}
+#windowControls .window-control.reload:hover {
+    background: rgba(0,0,0,0.5) url(../assets/images/reload.svg);
+}
+#windowControls .window-control.close:hover {
+    background-color: rgba(0,0,0,0.5);
+}
+#windowControls .window-control.maximize:hover {
+    background-color: rgba(0,0,0,0.5);
+}
+#windowControls .window-control.minimize:hover {
+    background-color: rgba(0,0,0,0.5);
+}
+#searchForm{
+	position: absolute;
+	left: 50px;
+	right: 300px;
+	text-align: center;
+}
+#searchForm form input[type="text"]{
+	width: 70%;
+	border: none;
+	background: rgba(255,255,255,0.2);
+	color: white;
+	font-family: "SourceSansPro";
+	font-weight: lighter;
+	height: 30px;
+	padding: 10px 30px 10px 30px;
+	border-radius: 50px;
+	margin-top: 20px;
+	font-size: 20px;
+	outline: none;
+	-webkit-app-region: no-drag;
+	-webkit-transition: background 0.2s cubic-bezier(.07,.7,.6,.96);
+}
+#searchForm form input[type="text"]:focus, #searchForm form input[type="text"].focused{
+
+	background: rgba(255,255,255,0.3);
+}
+#leftPanel{
+	position: absolute;
+	left: 0;
+	top: 90px;
+	bottom: 0;
+	background: #111;
+	width: 50px;
+	overflow: hidden;
+	-webkit-transition: width 0.2s cubic-bezier(.07,.7,.6,.96);
+	z-index: 1000;
+}
+.categorie{
+	height: 50px;
+	width: 50px;
+	overflow: hidden;
+	-webkit-transition: width 0.2s cubic-bezier(.07,.7,.6,.96), background 0.2s cubic-bezier(.07,.7,.6,.96);
+	white-space: nowrap;	
+	cursor: pointer;
+}
+.categorie:active{
+	background: rgba(255,255,255,0.3);
+}
+.categorie.activated{
+	background: #c1261c;
+}
+.categorie.activated:active{
+	background: #e44b42;
+}
+.categorie .catContent{
+	position: relative;
+	height: 50px;
+	-webkit-transition: -webkit-transform 0.2s cubic-bezier(.07,.7,.6,.96);
+	font-family: "SourceSansPro";
+	font-weight: bold;
+	color: white;
+}
+.categorie:active .catContent{
+	-webkit-transform: scale3d(0.93,0.93,0.93);
+}
+.catContent img{
+	vertical-align: middle;
+	width: 22px;
+	padding: 15px;
+}
+#productsContainer{
+	position: absolute;
+	left: 50px;
+	right: 310px;
+	top: 90px;
+	bottom: 0;
+	overflow-x: hidden;
+	overflow-y: auto;
+}
+#productsContainer .productTile{
+	width: 150px;
+	background: #fff;
+	height: 230px;
+	margin-left: 10px;
+	margin-top: 10px;
+	border-radius: 3px;
+    box-shadow: 0px 0px 3px rgb(125, 125, 125);
+    overflow: hidden;
+    display: inline-block;
+	-webkit-transition: -webkit-transform 0.2s cubic-bezier(.07,.7,.6,.96);
+}
+#productsContainer .productTile img{
+	width: 150px;
+}
+.productTile .price, .productTile .name, .productTile .subcategory{
+	height: 40px;
+	line-height: 40px;
+	text-align: center;
+	font-weight: bold;
+}
+.productTile .price{
+	background: #333;
+	color: white;
+	font-weight: bold;
+	margin-top: -5px;
+	font-size: 1.1em;
+}
+.productTile .subcategory{
+	background: #c1261c url(../assets/images/folder.svg) no-repeat center center;
+	background-size: 18px;
+	margin-top: -5px;
+}
+.productTile .name{
+	font-size: 15px;
+	font-weight: bolder;
+}
+.productTile:active {
+	-webkit-transform: scale3d(0.96,0.96,0.96);
+}
+#keyboard{
+	width: 100%;
+	height: 350px;
+	position: fixed;
+	bottom: -350px;
+	left: 0;
+	right: 0;
+	background: #333;
+	z-index: 1000000;
+	-webkit-transition: bottom 0.2s;
+}
+#alphanumericPad{
+	width: 813px;
+	margin: auto;
+	margin-top: 29px;
+	
+	display: none;
+}
+#numericPad{
+	width: 292px;
+	margin: auto;
+	margin-top: 29px;
+}
+#keyboard .key{
+	display: inline-block;
+	width: 70px;
+	height: 70px;
+	background: #111;
+	color: white;
+	text-align: center;
+	line-height: 70px;
+	font-family: "SourceSansPro";
+	font-weight: bolder;
+	font-size: 25px;
+	margin-bottom: 3px;
+	float: left;
+	margin-right: 3px;
+	-webkit-transition: background 0.7s cubic-bezier(.55,.26,.61,.83);
+	border-radius: 3px;
+	cursor: pointer;
+}
+#keyboard .key.special{
+	width: 143px;
+}
+#keyboard .key.space{
+	width:508px;
+}
+#keyboard .key:active{
+	background: rgba(255,255,255,0.1);
+	-webkit-transition: none;
+}
+#orderTicket{
+	position: absolute;
+	right: 10px;
+	top: 30px;
+	bottom: 10px;
+	width: 300px;
+	background: white;
+    box-shadow: 0px 0px 3px rgb(125, 125, 125);
+    border-radius: 3px;
+	-webkit-app-region: no-drag;
+	text-align: center;
+	overflow: hidden;
+}
+#orderTicket #ticketProductList{
+	position: absolute;
+	top: 70px;
+	bottom: 160px;
+	width: 100%;
+	overflow: hidden auto;
+}
+#orderTicket #tableHead{
+	margin-right: 15px;
+	margin-left: 5px;
+}
+#orderTicket #tableHead div{
+	background: #4d4d4d;
+	color: white;
+	border-radius: 3px;
+	font-weight: bold;
+	padding: 3px;
+	display: inline-block;
+}
+#orderTicket #tableBody {
+	position: absolute;
+	bottom: 0;
+	top: 30px;
+	overflow-y: scroll;
+	overflow-x: hidden;
+	width: 100%;
+}
+#orderTicket div.product{
+	width: 60%;
+}
+#orderTicket  div.qts{
+	width: 10%;
+}
+#orderTicket  div.price{
+	width: 20%;
+}
+#orderTicket .tableLine{
+	height: 40px;
+	margin-top: 10px;
+}
+#orderTicket .tableLine img{
+	width: 40px;
+	height: 40px;
+	border-radius: 30px;
+	float: left;
+}
+#orderTicket .tableLine div{
+	line-height: 40px;
+	display: inline-block;
+}
+
+#orderTicket #ticketControler{
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	width: 100%;
+	border-top: 5px dashed #888;
+	padding-top: 5px; 
+}
+
+#ticketControler #totalHT{
+	color: #555;
+	font-size: 20px;
+	font-weight: bold;
+	width: 95%;
+	margin: auto;
+	text-align: left;
+}
+#ticketControler #totalHT div{
+	display: inline-block;
+}
+#ticketControler #totalHT .amount{
+	float: right;
+}
+#ticketControler #totalTTC{
+	color: #111;
+	font-size: 25px;
+	font-weight: bold;
+	width: 95%;
+	margin: auto;
+	text-align: left;
+}
+#ticketControler #totalTTC div{
+	display: inline-block;
+}
+#ticketControler #totalTTC .amount{
+	float: right;
+}
+#ticketControler button{
+	width: 95%;
+	margin-bottom: 5px;
+	border: none;
+	border-radius: 5px;
+}
+#ticketControler button#validTicket{
+	height: 50px;
+	background: #67aa00;
+	font-weight: bolder;
+	font-size: 15px;
+	color: white;
+	outline: none;
+}
+#ticketControler button#cancelTicket{
+	height: 30px;
+	background: #b3b3b3;
+	font-weight: bolder;
+	font-size: 15px;
+	color: white;
+	outline: none;
+}

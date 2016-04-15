@@ -49,25 +49,46 @@ jQuery(document).ready(function($) {
         if($(this).data("objecttype") == "subcategory" && $(this).data("objectid") != "returnBack"){
             productPath += "/" + $(this).data("objectid");
         } else if($(this).data("objectid") == "returnBack"){
+            var newProductPath = productPath.split("/");
+            newProductPath.splice(newProductPath.length - 1, 1);
+            newProductPath.splice(0, 1);
             productPath = "";
+            for (var i = 0; i < newProductPath.length; i++) {
+                productPath += "/" + newProductPath[i];
+            }
         }
-        loadData(config.dataLocation);
+        loadData(config.dataLocation, false);
         $(document).trigger('tileReload');
     };
+
+
     $(document).on('tileReload', function(event) {
         $(".productTile").click(productTile);
     });
     $(".productTile").click(productTile);
+    $("#categories .categorie").click(function(event){
+        currentCategory = $(this).data("objectid");
+        productPath = "";
+        loadData(config.dataLocation, false);
+        $(document).trigger('tileReload');
+    });
 });
 
-function addItemToWindow(data) {
+function addItemToHome(data) {
     if (data.itemType == "product") {
         var productTemplate = '<div class="productTile" data-objectid="' + data.itemId + '" data-objecttype="product"><img src="' + data.picture + '"/><div class="price">' + money.format.numberToPrice(data.price) + '</div><div class="name">' + data.name + '</div></div>';
-    	$("#productsContainer").append(productTemplate)
+        $("#productsContainer").append(productTemplate)
     } else if (data.itemType == "subcategory") {
         var subcategoryTemplate = '<div class="productTile" data-objectid="' + data.itemId + '" data-objecttype="subcategory"><img src="' + data.picture + '"/><div class="subcategory"></div><div class="name">' + data.name + '</div></div>';
-    	$("#productsContainer").append(subcategoryTemplate)
+        $("#productsContainer").append(subcategoryTemplate)
     } else{
-    	console.error("unknown item type", data);
+        console.error("unknown item type", data);
     }
+}
+function addItemToMenu(data) {
+    var activated = "";
+    if(data.defaultFocused){
+        var activated = "activated";
+    }
+    $("#categories").append('<div class="categorie ' + activated + '" data-objectid="' + data.itemId + '" data-objecttype="category"><div class="catContent"><img class="sideBarIcon" src="' + data.picture + '"/>' + data.name + '</div></div>')
 }

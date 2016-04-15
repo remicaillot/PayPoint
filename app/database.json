@@ -30,25 +30,57 @@
 		"sellMode": "unit",
 		"price": 1.5,
 		"unit": "piece"
+	},
+	{
+		"itemId": "jf4596egdsrg75a8f90798eef2792c2f",
+		"itemType": "product",
+		"name": "Journée adulte",
+		"picture": "assets/images/Miniatures/adultday.png",
+		"subCat": "",
+		"category": "er56sdc8ujq4aff570d0c1c7afec2b9e4",
+		"sellMode": "unit",
+		"price": 26.0,
+		"unit": "piece"
+	},
+	{
+		"itemId": "hj458zecv5rg75a8f90798eef2792c2f",
+		"itemType": "product",
+		"name": "Demi-journée adulte",
+		"picture": "assets/images/Miniatures/adulthalfday.png",
+		"subCat": "",
+		"category": "er56sdc8ujq4aff570d0c1c7afec2b9e4",
+		"sellMode": "unit",
+		"price": 15.0,
+		"unit": "piece"
 	}],
 	"categories": [{
-		"categoryId": "2b39a06be27aff570d0c1c7afec2b9e4",
+		"itemId": "2b39a06be27aff570d0c1c7afec2b9e4",
+		"itemType": "category",
 		"name": "Emporter",
 		"picture": "assets/images/categorie.svg",
 		"defaultFocused": true
+	},
+	{
+		"itemId": "er56sdc8ujq4aff570d0c1c7afec2b9e4",
+		"itemType": "category",
+		"name": "Entrées",
+		"picture": "assets/images/entree.svg",
+		"defaultFocused": false
 	}],
 	"subcategories": [{
 		"itemId": "6d1a13af07fe2c3ee82f4a8c987039eb",
 		"itemType": "subcategory",
 		"name": "Boissons",
 		"picture": "assets/images/Miniatures/liquides.png",
-		"category": "2b39a06be27aff570d0c1c7afec2b9e4"
+		"category": "2b39a06be27aff570d0c1c7afec2b9e4",
+		"subcategoryId": "5d1a13af07fe2c3ee82f4a8c987039eb"
 	},
 	{
 		"itemId": "5d1a13af07fe2c3ee82f4a8c987039eb",
 		"itemType": "subcategory",
 		"name": "Matériel de pêche",
 		"picture": "assets/images/Miniatures/materiel.png",
-		"category": "2b39a06be27aff570d0c1c7afec2b9e4"
+		"category": "2b39a06be27aff570d0c1c7afec2b9e4",
+		"subcategoryId" : ""
 	}]
 }

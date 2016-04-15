@@ -1,6 +1,6 @@
 jQuery(document).ready(function($) {
 	var currentFocusedInput;
-	$("input[type='text']").focus(function(event) {
+	/*$("input[type='text']").focus(function(event) {
 	    $("#alphanumericPad").show();
 	    $("#numericPad").hide();
 	    $("#keyboard").css('bottom', '0');
@@ -11,5 +11,5 @@ jQuery(document).ready(function($) {
 	    var valueOfInput = currentFocusedInput.val();
 	    valueOfInput += $(this).attr('value');
 	    currentFocusedInput.val(valueOfInput);
-	});
+	});*/
 });
