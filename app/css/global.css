@@ -80,8 +80,57 @@ header{
 	right: 400px;
 	height: 90px;
 	text-align: center;
+	z-index: 100000;
 }
+#searchForm form{
+	width: 100%;
+	margin-top: 20px;
+	border-radius: 3px;
+}
+#searchForm form input[type="text"]{
+	width: calc(100% - 60px);
+	border: none;
+	background: #CC5149;
+	color: white;
+	font-family: "SourceSansPro";
+	font-weight: lighter;
+	height: 30px;
+	padding: 10px 30px 10px 30px;
+	border-radius: 3px;
+	font-size: 20px;
+	outline: none;
+	-webkit-app-region: no-drag;
+	-webkit-transition: background 0.2s cubic-bezier(.07,.7,.6,.96), border-radius 0.2s cubic-bezier(.07,.7,.6,.96);	
+}
+#searchForm form input[type="text"]:focus{
+	background: white;
+	color: black;
+	border-bottom-left-radius: 0;
+	border-bottom-right-radius: 0;
+	border-bottom: 1px solid #ddd;
+}
+#searchForm form input[type="text"]:focus::-webkit-input-placeholder { /* WebKit browsers */
+    color: #999;
+}
+#searchForm form.focus{
+    box-shadow: 0px 0px 3px rgb(125, 125, 125);
+}
+#searchForm form #searchAutocompletion{
+	width: calc(100% - 60px);
+	padding: 10px 30px 10px 30px;
+	background: white;
+	color: black;
+	border-bottom-left-radius: 3px;
+	border-bottom-right-radius: 3px;
+	height: 0px;
+	opacity: 0;
+	-webkit-transition: opacity 0.2s cubic-bezier(.07,.7,.6,.96), height 0.2s cubic-bezier(.07,.7,.6,.96);	
 
+}
+#searchForm form input[type="text"]:focus + #searchAutocompletion{
+	height: 300px;
+	opacity: 1;
+}
 #leftPanel{
 	position: absolute;
 	left: 0;

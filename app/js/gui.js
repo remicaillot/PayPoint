@@ -61,7 +61,12 @@ jQuery(document).ready(function($) {
         $(document).trigger('tileReload');
     };
 
-
+    $("#searchForm form input[type='text']").focus(function(event) {
+        $("#searchForm form").addClass('focus');
+    });
+    $("#searchForm form input[type='text']").blur(function(event) {
+        $("#searchForm form").removeClass('focus');
+    });
     $(document).on('tileReload', function(event) {
         $(".productTile").click(productTile);
     });
