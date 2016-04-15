@@ -1,6 +1,7 @@
 {
 	"products": [{
-		"productID": "351920de1975609dedf90c4ab7ac55b8",
+		"itemId": "351920de1975609dedf90c4ab7ac55b8",
+		"itemType": "product",
 		"name": "Barre sucrée",
 		"picture": "assets/images/Miniatures/sucreries.png",
 		"subCat": "",
@@ -9,13 +10,25 @@
 		"price": 1.5,
 		"unit": "piece"
 	}, {
-		"productID": "458f9c95ea75a8f90798eef2792c2fe1",
+		"itemId": "458f9c95ea75a8f90798eef2792c2fe1",
+		"itemType": "product",
 		"name": "Soda",
 		"picture": "assets/images/Miniatures/liquides.png",
 		"subCat": "6d1a13af07fe2c3ee82f4a8c987039eb",
 		"category": "2b39a06be27aff570d0c1c7afec2b9e4",
 		"sellMode": "unit",
 		"price": 2.2,
+		"unit": "piece"
+	},
+	{
+		"itemId": "g4ty5c95ea75a8f90798eef2792c2fe1",
+		"itemType": "product",
+		"name": "Vers de farine",
+		"picture": "assets/images/Miniatures/appats.png",
+		"subCat": "5d1a13af07fe2c3ee82f4a8c987039eb",
+		"category": "2b39a06be27aff570d0c1c7afec2b9e4",
+		"sellMode": "unit",
+		"price": 1.5,
 		"unit": "piece"
 	}],
 	"categories": [{
@@ -25,9 +38,17 @@
 		"defaultFocused": true
 	}],
 	"subcategories": [{
-		"subcategoryId": "6d1a13af07fe2c3ee82f4a8c987039eb",
+		"itemId": "6d1a13af07fe2c3ee82f4a8c987039eb",
+		"itemType": "subcategory",
 		"name": "Boissons",
 		"picture": "assets/images/Miniatures/liquides.png",
+		"category": "2b39a06be27aff570d0c1c7afec2b9e4"
+	},
+	{
+		"itemId": "5d1a13af07fe2c3ee82f4a8c987039eb",
+		"itemType": "subcategory",
+		"name": "Matériel de pêche",
+		"picture": "assets/images/Miniatures/materiel.png",
 		"category": "2b39a06be27aff570d0c1c7afec2b9e4"
 	}]
 }
