@@ -47,3 +47,4 @@ nw
 *.sh
 */node_modules
 */node-modules
+*/.idea
