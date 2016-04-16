@@ -2,41 +2,86 @@
 <html>
     <head id="head">
         <title>
-        PayPoint - Hundred Factorial
+            Lead
         </title>
-        <link rel="stylesheet" type="text/css" href="./css/fonts.css"/>
-        <link rel="stylesheet" type="text/css" href="./css/specials.css"/>
-        <link rel="stylesheet" type="text/css" href="./css/global.css"/>
-        <script type="text/javascript" src="./libs/jquery-2.2.0.min.js">
+        <link href="./css/fonts.css" rel="stylesheet" type="text/css"/>
+        <link href="./css/specials.css" rel="stylesheet" type="text/css"/>
+        <link href="./css/global.css" rel="stylesheet" type="text/css"/>
+        <script src="./libs/jquery-2.2.0.min.js" type="text/javascript">
         </script>
-        <script type="text/javascript" src="./libs/libInit.js">
+        <script src="./libs/libInit.js" type="text/javascript">
         </script>
-        <script type="text/javascript" src="./libs/libKeyboardCtrl.js">
+        <script src="./libs/libKeyboardCtrl.js" type="text/javascript">
         </script>
-        <script type="text/javascript" src="./libs/libmoney.js">
+        <script src="./libs/libmoney.js" type="text/javascript">
         </script>
-        <script type="text/javascript" src="./libs/libposPrint.js">
+        <script src="./libs/libposPrint.js" type="text/javascript">
         </script>
-        <script type="text/javascript" src="./libs/libWindowControl.js">
+        <script src="./libs/libWindowControl.js" type="text/javascript">
         </script>
-        <script type="text/javascript" src="./libs/mustache.min.js">
+        <script src="./libs/mustache.min.js" type="text/javascript">
         </script>
-        <script type="text/javascript" src="./js/app.js">
+        <script src="./js/app.js" type="text/javascript">
         </script>
-        <script type="text/javascript" src="./js/gui.js">
+        <script src="./js/gui.js" type="text/javascript">
         </script>
-        <script type="text/javascript" src="./js/work.js">
+        <script src="./js/work.js" type="text/javascript">
         </script>
         <meta charset="utf-8"/>
     </head>
     <body>
         <header>
             <div id="logo">
-                <img src="assets/images/logoWhite.png" alt="logo"/>
+                <img alt="logo" src="assets/images/logoWhite.png"/>
             </div>
             <div id="searchForm">
                 <form>
-                    <input type="text" name="search" id="search" placeholder="Rechercher..." autocomplete="off"/>
+                    <input autocomplete="off" id="search" name="search" placeholder="Rechercher..." type="text"/>
+                    <div id="searchAutocompletion">
+                        <div class="searchSection">
+                            <div class="sectionName">
+                                Produits
+                                <div class="more">
+                                    Plus
+                                </div>
+                            </div>
+                            <div class="searchResult">
+                                <div class="searchResultTile">
+                                    <img src="assets/images/Miniatures/adultday.png"/>
+                                    <div class="content">
+                                        <span>
+                                            Journée adulte
+                                        </span>
+                                        <div>
+                                            26,00€
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="searchResultTile">
+                                    <img src="assets/images/Miniatures/adulthalfday.png"/>
+                                    <div class="content">
+                                        <span>
+                                            Demi-journée adulte
+                                        </span>
+                                        <div>
+                                            15,00€
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="searchResultTile">
+                                    <img src="assets/images/Miniatures/sucreries.png"/>
+                                    <div class="content">
+                                        <span>
+                                            Barre sucrée
+                                        </span>
+                                        <div>
+                                            1,50€
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </form>
             </div>
             <div id="windowControls">
@@ -55,691 +100,192 @@
             </div>
         </header>
         <main>
-        <div id="leftPanel">
-            <div class="categorie" id="sideBarMenu">
-                <div class="catContent" >
-                    <img class="sideBarIcon" src="./assets/images/menu.svg"/>
-                    <p>
+            <div id="leftPanel">
+                <div class="categorie" id="sideBarMenu">
+                    <div class="catContent">
+                        <img class="sideBarIcon" src="./assets/images/menu.svg"/>
                         Menu
-                    </p>
-                </div>
-            </div>
-            <div id="categories">
-                <!-- {{#categorie}} -->
-                <div class="categorie activated">
-                    <div class="catContent">
-                        <img class="sideBarIcon" src="./assets/images/categorie.svg"/>
-                        <p>
-                            Emporter
-                        </p>
                     </div>
                 </div>
-                <div class="categorie">
-                    <div class="catContent">
-                        <img class="sideBarIcon" src="./assets/images/livraison.svg"/>
-                        <p>
-                            Livraison
-                        </p>
+                <div id="categories">
+                </div>
+            </div>
+            <div id="productsContainer">
+            </div>
+            <div id="orderTicket">
+                <h1>
+                    Commande
+                </h1>
+                <div id="ticketProductList">
+                    <div id="tableHead">
+                        <div class="product">
+                            Produit
+                        </div>
+                        <div class="qts">
+                            Qts
+                        </div>
+                        <div class="price">
+                            Prix
+                        </div>
+                    </div>
+                    <div id="tableBody">
+                        <div class="tableLine">
+                            <div class="product">
+                                <img src="./assets/images/Miniatures/materiel.png">
+                                    Canne à pêche
+                                </img>
+                            </div>
+                            <div class="qts">
+                                1
+                            </div>
+                            <div class="price">
+                                60,00€
+                            </div>
+                        </div>
+                        <div class="tableLine">
+                            <div class="product">
+                                <img src="./assets/images/Miniatures/materiel.png">
+                                    Canne à pêche
+                                </img>
+                            </div>
+                            <div class="qts">
+                                1
+                            </div>
+                            <div class="price">
+                                60,00€
+                            </div>
+                        </div>
+                        <div class="tableLine">
+                            <div class="product">
+                                <img src="./assets/images/Miniatures/materiel.png">
+                                    Canne à pêche
+                                </img>
+                            </div>
+                            <div class="qts">
+                                1
+                            </div>
+                            <div class="price">
+                                60,00€
+                            </div>
+                        </div>
+                        <div class="tableLine">
+                            <div class="product">
+                                <img src="./assets/images/Miniatures/materiel.png">
+                                    Canne à pêche
+                                </img>
+                            </div>
+                            <div class="qts">
+                                1
+                            </div>
+                            <div class="price">
+                                60,00€
+                            </div>
+                        </div>
+                        <div class="tableLine">
+                            <div class="product">
+                                <img src="./assets/images/Miniatures/materiel.png">
+                                    Canne à pêche
+                                </img>
+                            </div>
+                            <div class="qts">
+                                1
+                            </div>
+                            <div class="price">
+                                60,00€
+                            </div>
+                        </div>
+                        <div class="tableLine">
+                            <div class="product">
+                                <img src="./assets/images/Miniatures/materiel.png">
+                                    Canne à pêche
+                                </img>
+                            </div>
+                            <div class="qts">
+                                1
+                            </div>
+                            <div class="price">
+                                60,00€
+                            </div>
+                        </div>
+                        <div class="tableLine">
+                            <div class="product">
+                                <img src="./assets/images/Miniatures/materiel.png">
+                                    Canne à pêche
+                                </img>
+                            </div>
+                            <div class="qts">
+                                1
+                            </div>
+                            <div class="price">
+                                60,00€
+                            </div>
+                        </div>
+                        <div class="tableLine">
+                            <div class="product">
+                                <img src="./assets/images/Miniatures/materiel.png">
+                                    Canne à pêche
+                                </img>
+                            </div>
+                            <div class="qts">
+                                1
+                            </div>
+                            <div class="price">
+                                60,00€
+                            </div>
+                        </div>
+                        <div class="tableLine">
+                            <div class="product">
+                                <img src="./assets/images/Miniatures/materiel.png">
+                                    Canne à pêche
+                                </img>
+                            </div>
+                            <div class="qts">
+                                1
+                            </div>
+                            <div class="price">
+                                60,00€
+                            </div>
+                        </div>
+                        <div class="tableLine">
+                            <div class="product">
+                                <img src="./assets/images/Miniatures/materiel.png">
+                                    Canne à pêche
+                                </img>
+                            </div>
+                            <div class="qts">
+                                1
+                            </div>
+                            <div class="price">
+                                60,00€
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <div class="categorie">
-                    <div class="catContent">
-                        <img class="sideBarIcon" src="./assets/images/etang.svg"/>
-                        <p>
-                            Location d'étang
-                        </p>
+                <div id="ticketControler">
+                    <div id="totalHT">
+                        <div class="label">
+                            Total HT
+                        </div>
+                        <div class="amount">
+                            103,00€
+                        </div>
                     </div>
-                </div>
-                <div class="categorie">
-                    <div class="catContent">
-                        <img class="sideBarIcon" src="./assets/images/detail.svg"/>
-                        <p>
-                            Détail
-                        </p>
+                    <div id="totalTTC">
+                        <div class="label">
+                            Total TTC
+                        </div>
+                        <div class="amount">
+                            144,87€
+                        </div>
                     </div>
+                    <button id="validTicket">
+                        Valider la commande
+                    </button>
+                    <button id="cancelTicket">
+                        annuler la commande
+                    </button>
                 </div>
-                <div class="categorie">
-                    <div class="catContent">
-                        <img class="sideBarIcon" src="./assets/images/entree.svg"/>
-                        <p>
-                            Entrée
-                        </p>
-                    </div>
-                </div>
-                <!-- {{/categorie}} -->
-            </div>
-        </div>
-        <div id="productsContainer">
-            <div class="productTile subCat">
-                <img src="./assets/images/Miniatures/liquides.png"/>
-                <div class="subcategory">
-                </div>
-                <div class="name">
-                    Boissons
-                </div>
-            </div>
-            <div class="productTile product">
-                <img src="./assets/images/Miniatures/sucreries.png"/>
-                <div class="price">
-                    7,00€
-                </div>
-                <div class="name">
-                    Barre sucrée
-                </div>
-            </div>
-             <div class="productTile product">
-                <img src="./assets/images/Miniatures/sucreries.png"/>
-                <div class="price">
-                    7,00€
-                </div>
-                <div class="name">
-                    Barre sucrée
-                </div>
-            </div>
-             <div class="productTile product">
-                <img src="./assets/images/Miniatures/sucreries.png"/>
-                <div class="price">
-                    7,00€
-                </div>
-                <div class="name">
-                    Barre sucrée
-                </div>
-            </div>
-             <div class="productTile product">
-                <img src="./assets/images/Miniatures/sucreries.png"/>
-                <div class="price">
-                    7,00€
-                </div>
-                <div class="name">
-                    Barre sucrée
-                </div>
-            </div>
-             <div class="productTile product">
-                <img src="./assets/images/Miniatures/sucreries.png"/>
-                <div class="price">
-                    7,00€
-                </div>
-                <div class="name">
-                    Barre sucrée
-                </div>
-            </div>
-             <div class="productTile product">
-                <img src="./assets/images/Miniatures/sucreries.png"/>
-                <div class="price">
-                    7,00€
-                </div>
-                <div class="name">
-                    Barre sucrée
-                </div>
-            </div>
-             <div class="productTile product">
-                <img src="./assets/images/Miniatures/sucreries.png"/>
-                <div class="price">
-                    7,00€
-                </div>
-                <div class="name">
-                    Barre sucrée
-                </div>
-            </div>
-             <div class="productTile product">
-                <img src="./assets/images/Miniatures/sucreries.png"/>
-                <div class="price">
-                    7,00€
-                </div>
-                <div class="name">
-                    Barre sucrée
-                </div>
-            </div>
-             <div class="productTile product">
-                <img src="./assets/images/Miniatures/sucreries.png"/>
-                <div class="price">
-                    7,00€
-                </div>
-                <div class="name">
-                    Barre sucrée
-                </div>
-            </div>
-             <div class="productTile product">
-                <img src="./assets/images/Miniatures/sucreries.png"/>
-                <div class="price">
-                    7,00€
-                </div>
-                <div class="name">
-                    Barre sucrée
-                </div>
-            </div>
-             <div class="productTile product">
-                <img src="./assets/images/Miniatures/sucreries.png"/>
-                <div class="price">
-                    7,00€
-                </div>
-                <div class="name">
-                    Barre sucrée
-                </div>
-            </div>
-             <div class="productTile product">
-                <img src="./assets/images/Miniatures/sucreries.png"/>
-                <div class="price">
-                    7,00€
-                </div>
-                <div class="name">
-                    Barre sucrée
-                </div>
-            </div>
-            <div class="productTile product">
-                <img src="./assets/images/Miniatures/sucreries.png"/>
-                <div class="price">
-                    7,00€
-                </div>
-                <div class="name">
-                    Barre sucrée
-                </div>
-            </div>
-             <div class="productTile product">
-                <img src="./assets/images/Miniatures/sucreries.png"/>
-                <div class="price">
-                    7,00€
-                </div>
-                <div class="name">
-                    Barre sucrée
-                </div>
-            </div>
-             <div class="productTile product">
-                <img src="./assets/images/Miniatures/sucreries.png"/>
-                <div class="price">
-                    7,00€
-                </div>
-                <div class="name">
-                    Barre sucrée
-                </div>
-            </div>
-             <div class="productTile product">
-                <img src="./assets/images/Miniatures/sucreries.png"/>
-                <div class="price">
-                    7,00€
-                </div>
-                <div class="name">
-                    Barre sucrée
-                </div>
-            </div>
-             <div class="productTile product">
-                <img src="./assets/images/Miniatures/sucreries.png"/>
-                <div class="price">
-                    7,00€
-                </div>
-                <div class="name">
-                    Barre sucrée
-                </div>
-            </div>
-             <div class="productTile product">
-                <img src="./assets/images/Miniatures/sucreries.png"/>
-                <div class="price">
-                    7,00€
-                </div>
-                <div class="name">
-                    Barre sucrée
-                </div>
-            </div>
-             <div class="productTile product">
-                <img src="./assets/images/Miniatures/sucreries.png"/>
-                <div class="price">
-                    7,00€
-                </div>
-                <div class="name">
-                    Barre sucrée
-                </div>
-            </div>
-             <div class="productTile product">
-                <img src="./assets/images/Miniatures/sucreries.png"/>
-                <div class="price">
-                    7,00€
-                </div>
-                <div class="name">
-                    Barre sucrée
-                </div>
-            </div>
-             <div class="productTile product">
-                <img src="./assets/images/Miniatures/sucreries.png"/>
-                <div class="price">
-                    7,00€
-                </div>
-                <div class="name">
-                    Barre sucrée
-                </div>
-            </div>
-             <div class="productTile product">
-                <img src="./assets/images/Miniatures/sucreries.png"/>
-                <div class="price">
-                    7,00€
-                </div>
-                <div class="name">
-                    Barre sucrée
-                </div>
-            </div>
-             <div class="productTile product">
-                <img src="./assets/images/Miniatures/sucreries.png"/>
-                <div class="price">
-                    7,00€
-                </div>
-                <div class="name">
-                    Barre sucrée
-                </div>
-            </div>
-             <div class="productTile product">
-                <img src="./assets/images/Miniatures/sucreries.png"/>
-                <div class="price">
-                    7,00€
-                </div>
-                <div class="name">
-                    Barre sucrée
-                </div>
-            </div>
-            <div class="productTile product">
-                <img src="./assets/images/Miniatures/sucreries.png"/>
-                <div class="price">
-                    7,00€
-                </div>
-                <div class="name">
-                    Barre sucrée
-                </div>
-            </div>
-             <div class="productTile product">
-                <img src="./assets/images/Miniatures/sucreries.png"/>
-                <div class="price">
-                    7,00€
-                </div>
-                <div class="name">
-                    Barre sucrée
-                </div>
-            </div>
-             <div class="productTile product">
-                <img src="./assets/images/Miniatures/sucreries.png"/>
-                <div class="price">
-                    7,00€
-                </div>
-                <div class="name">
-                    Barre sucrée
-                </div>
-            </div>
-             <div class="productTile product">
-                <img src="./assets/images/Miniatures/sucreries.png"/>
-                <div class="price">
-                    7,00€
-                </div>
-                <div class="name">
-                    Barre sucrée
-                </div>
-            </div>
-             <div class="productTile product">
-                <img src="./assets/images/Miniatures/sucreries.png"/>
-                <div class="price">
-                    7,00€
-                </div>
-                <div class="name">
-                    Barre sucrée
-                </div>
-            </div>
-             <div class="productTile product">
-                <img src="./assets/images/Miniatures/sucreries.png"/>
-                <div class="price">
-                    7,00€
-                </div>
-                <div class="name">
-                    Barre sucrée
-                </div>
-            </div>
-             <div class="productTile product">
-                <img src="./assets/images/Miniatures/sucreries.png"/>
-                <div class="price">
-                    7,00€
-                </div>
-                <div class="name">
-                    Barre sucrée
-                </div>
-            </div>
-             <div class="productTile product">
-                <img src="./assets/images/Miniatures/sucreries.png"/>
-                <div class="price">
-                    7,00€
-                </div>
-                <div class="name">
-                    Barre sucrée
-                </div>
-            </div>
-             <div class="productTile product">
-                <img src="./assets/images/Miniatures/sucreries.png"/>
-                <div class="price">
-                    7,00€
-                </div>
-                <div class="name">
-                    Barre sucrée
-                </div>
-            </div>
-             <div class="productTile product">
-                <img src="./assets/images/Miniatures/sucreries.png"/>
-                <div class="price">
-                    7,00€
-                </div>
-                <div class="name">
-                    Barre sucrée
-                </div>
-            </div>
-             <div class="productTile product">
-                <img src="./assets/images/Miniatures/sucreries.png"/>
-                <div class="price">
-                    7,00€
-                </div>
-                <div class="name">
-                    Barre sucrée
-                </div>
-            </div>
-             <div class="productTile product">
-                <img src="./assets/images/Miniatures/sucreries.png"/>
-                <div class="price">
-                    7,00€
-                </div>
-                <div class="name">
-                    Barre sucrée
-                </div>
-            </div>
-            <div class="productTile product">
-                <img src="./assets/images/Miniatures/sucreries.png"/>
-                <div class="price">
-                    7,00€
-                </div>
-                <div class="name">
-                    Barre sucrée
-                </div>
-            </div>
-             <div class="productTile product">
-                <img src="./assets/images/Miniatures/sucreries.png"/>
-                <div class="price">
-                    7,00€
-                </div>
-                <div class="name">
-                    Barre sucrée
-                </div>
-            </div>
-             <div class="productTile product">
-                <img src="./assets/images/Miniatures/sucreries.png"/>
-                <div class="price">
-                    7,00€
-                </div>
-                <div class="name">
-                    Barre sucrée
-                </div>
-            </div>
-             <div class="productTile product">
-                <img src="./assets/images/Miniatures/sucreries.png"/>
-                <div class="price">
-                    7,00€
-                </div>
-                <div class="name">
-                    Barre sucrée
-                </div>
-            </div>
-             <div class="productTile product">
-                <img src="./assets/images/Miniatures/sucreries.png"/>
-                <div class="price">
-                    7,00€
-                </div>
-                <div class="name">
-                    Barre sucrée
-                </div>
-            </div>
-             <div class="productTile product">
-                <img src="./assets/images/Miniatures/sucreries.png"/>
-                <div class="price">
-                    7,00€
-                </div>
-                <div class="name">
-                    Barre sucrée
-                </div>
-            </div>
-             <div class="productTile product">
-                <img src="./assets/images/Miniatures/sucreries.png"/>
-                <div class="price">
-                    7,00€
-                </div>
-                <div class="name">
-                    Barre sucrée
-                </div>
-            </div>
-             <div class="productTile product">
-                <img src="./assets/images/Miniatures/sucreries.png"/>
-                <div class="price">
-                    7,00€
-                </div>
-                <div class="name">
-                    Barre sucrée
-                </div>
-            </div>
-             <div class="productTile product">
-                <img src="./assets/images/Miniatures/sucreries.png"/>
-                <div class="price">
-                    7,00€
-                </div>
-                <div class="name">
-                    Barre sucrée
-                </div>
-            </div>
-             <div class="productTile product">
-                <img src="./assets/images/Miniatures/sucreries.png"/>
-                <div class="price">
-                    7,00€
-                </div>
-                <div class="name">
-                    Barre sucrée
-                </div>
-            </div>
-             <div class="productTile product">
-                <img src="./assets/images/Miniatures/sucreries.png"/>
-                <div class="price">
-                    7,00€
-                </div>
-                <div class="name">
-                    Barre sucrée
-                </div>
-            </div>
-             <div class="productTile product">
-                <img src="./assets/images/Miniatures/sucreries.png"/>
-                <div class="price">
-                    7,00€
-                </div>
-                <div class="name">
-                    Barre sucrée
-                </div>
-            </div>
-            <div class="productTile product">
-                <img src="./assets/images/Miniatures/sucreries.png"/>
-                <div class="price">
-                    7,00€
-                </div>
-                <div class="name">
-                    Barre sucrée
-                </div>
-            </div>
-             <div class="productTile product">
-                <img src="./assets/images/Miniatures/sucreries.png"/>
-                <div class="price">
-                    7,00€
-                </div>
-                <div class="name">
-                    Barre sucrée
-                </div>
-            </div>
-             <div class="productTile product">
-                <img src="./assets/images/Miniatures/sucreries.png"/>
-                <div class="price">
-                    7,00€
-                </div>
-                <div class="name">
-                    Barre sucrée
-                </div>
-            </div>
-             <div class="productTile product">
-                <img src="./assets/images/Miniatures/sucreries.png"/>
-                <div class="price">
-                    7,00€
-                </div>
-                <div class="name">
-                    Barre sucrée
-                </div>
-            </div>
-             <div class="productTile product">
-                <img src="./assets/images/Miniatures/sucreries.png"/>
-                <div class="price">
-                    7,00€
-                </div>
-                <div class="name">
-                    Barre sucrée
-                </div>
-            </div>
-             <div class="productTile product">
-                <img src="./assets/images/Miniatures/sucreries.png"/>
-                <div class="price">
-                    7,00€
-                </div>
-                <div class="name">
-                    Barre sucrée
-                </div>
-            </div>
-             <div class="productTile product">
-                <img src="./assets/images/Miniatures/sucreries.png"/>
-                <div class="price">
-                    7,00€
-                </div>
-                <div class="name">
-                    Barre sucrée
-                </div>
-            </div>
-             <div class="productTile product">
-                <img src="./assets/images/Miniatures/sucreries.png"/>
-                <div class="price">
-                    7,00€
-                </div>
-                <div class="name">
-                    Barre sucrée
-                </div>
-            </div>
-             <div class="productTile product">
-                <img src="./assets/images/Miniatures/sucreries.png"/>
-                <div class="price">
-                    7,00€
-                </div>
-                <div class="name">
-                    Barre sucrée
-                </div>
-            </div>
-             <div class="productTile product">
-                <img src="./assets/images/Miniatures/sucreries.png"/>
-                <div class="price">
-                    7,00€
-                </div>
-                <div class="name">
-                    Barre sucrée
-                </div>
-            </div>
-             <div class="productTile product">
-                <img src="./assets/images/Miniatures/sucreries.png"/>
-                <div class="price">
-                    7,00€
-                </div>
-                <div class="name">
-                    Barre sucrée
-                </div>
-            </div>
-             <div class="productTile product">
-                <img src="./assets/images/Miniatures/sucreries.png"/>
-                <div class="price">
-                    7,00€
-                </div>
-                <div class="name">
-                    Barre sucrée
-                </div>
-            </div>
-
-        </div>
-        <div id="orderTicket">
-            <h1>
-            Commande
-            </h1>
-            <div id="ticketProductList">
-                <div id="tableHead">
-                    <div class="product">Produit</div>
-                    <div class="qts">Qts</div>
-                    <div class="price">Prix</div>
-                </div>
-                <div id="tableBody">
-                    <div class="tableLine">
-                        <div class="product"><img src="./assets/images/Miniatures/materiel.png">Canne à pêche</div>
-                        <div class="qts">1</div>
-                        <div class="price">60,00€</div>
-                    </div>
-                    <div class="tableLine">
-                        <div class="product"><img src="./assets/images/Miniatures/materiel.png">Canne à pêche</div>
-                        <div class="qts">1</div>
-                        <div class="price">60,00€</div>
-                    </div>
-                    <div class="tableLine">
-                        <div class="product"><img src="./assets/images/Miniatures/materiel.png">Canne à pêche</div>
-                        <div class="qts">1</div>
-                        <div class="price">60,00€</div>
-                    </div>
-                    <div class="tableLine">
-                        <div class="product"><img src="./assets/images/Miniatures/materiel.png">Canne à pêche</div>
-                        <div class="qts">1</div>
-                        <div class="price">60,00€</div>
-                    </div>
-                    <div class="tableLine">
-                        <div class="product"><img src="./assets/images/Miniatures/materiel.png">Canne à pêche</div>
-                        <div class="qts">1</div>
-                        <div class="price">60,00€</div>
-                    </div>
-                    <div class="tableLine">
-                        <div class="product"><img src="./assets/images/Miniatures/materiel.png">Canne à pêche</div>
-                        <div class="qts">1</div>
-                        <div class="price">60,00€</div>
-                    </div>
-                    <div class="tableLine">
-                        <div class="product"><img src="./assets/images/Miniatures/materiel.png">Canne à pêche</div>
-                        <div class="qts">1</div>
-                        <div class="price">60,00€</div>
-                    </div>
-                    <div class="tableLine">
-                        <div class="product"><img src="./assets/images/Miniatures/materiel.png">Canne à pêche</div>
-                        <div class="qts">1</div>
-                        <div class="price">60,00€</div>
-                    </div>
-                    <div class="tableLine">
-                        <div class="product"><img src="./assets/images/Miniatures/materiel.png">Canne à pêche</div>
-                        <div class="qts">1</div>
-                        <div class="price">60,00€</div>
-                    </div>
-                    <div class="tableLine">
-                        <div class="product"><img src="./assets/images/Miniatures/materiel.png">Canne à pêche</div>
-                        <div class="qts">1</div>
-                        <div class="price">60,00€</div>
-                    </div>
-                </div>
-                
-                
-                
-            </div>
-            <div id="ticketControler">
-                <div id="totalHT">
-                    <div class="label">Total HT</div>
-                    <div class="amount">103,00€</div>
-                </div>
-                <div id="totalTTC">
-                    <div class="label">Total TTC</div>
-                    <div class="amount">144,87€</div>
-                </div>
-                
-                <button id="validTicket">Valider la commande</button>
-                <button id="cancelTicket">annuler la commande</button>
             </div>
-        </div>
         </main>
         <div id="keyboard">
             <div id="numericPad">
@@ -893,7 +439,6 @@
                     <div class="key" value="n">
                         n
                     </div>
-                    
                     <div class="key" value="maj">
                         ↑
                     </div>

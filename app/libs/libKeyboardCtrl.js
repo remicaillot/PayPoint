@@ -1,8 +1,15 @@
-var currentFocusedElement;
-	$("input[type='text']").focus(function(event) {
-		$("#alphanumericPad").show();
-		$("#numericPad").hide();
-		$("#keyboard").css('bottom', '0');
-		currentFocusedElement = $(this);
-		currentFocusedElement.addClass('focused');
+jQuery(document).ready(function($) {
+	var currentFocusedInput;
+	/*$("input[type='text']").focus(function(event) {
+	    $("#alphanumericPad").show();
+	    $("#numericPad").hide();
+	    $("#keyboard").css('bottom', '0');
+	    currentFocusedInput = $(this);
+	    currentFocusedInput.addClass('focused');
 	});
+	$(".key").click(function(event) {
+	    var valueOfInput = currentFocusedInput.val();
+	    valueOfInput += $(this).attr('value');
+	    currentFocusedInput.val(valueOfInput);
+	});*/
+});
