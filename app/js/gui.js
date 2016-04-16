@@ -28,6 +28,8 @@ jQuery(document).ready(function($) {
         $("#leftPanel").css('width', '50px');
         $(".categorie").css('width', '50px');
         $(".categorie:active .catContent").css('-webkit-transform', 'scale3d(0.93,0.93,0.93)');
+        $("#searchForm form").removeClass('focus');
+        $("#searchForm form input[type='text']").removeClass('focus');
         try {
             currentFocusedInput.removeClass('focused');
         } catch (e) {}
@@ -38,6 +40,12 @@ jQuery(document).ready(function($) {
     $("#leftPanel").click(function(event) {
         event.stopPropagation();
     });
+    $("#searchForm form").click(function(event) {
+        event.stopPropagation();
+    });
+    $("#searchForm form").submit(function(event) {
+        event.preventDefault();
+    });
     $("#keyboard").click(function(event) {
         event.stopPropagation();
         try {
@@ -46,9 +54,9 @@ jQuery(document).ready(function($) {
     });
     var productTile = function(event) {
         //console.log($(this).data("objecttype") + "/" + $(this).data("objectid"));
-        if($(this).data("objecttype") == "subcategory" && $(this).data("objectid") != "returnBack"){
+        if ($(this).data("objecttype") == "subcategory" && $(this).data("objectid") != "returnBack") {
             productPath += "/" + $(this).data("objectid");
-        } else if($(this).data("objectid") == "returnBack"){
+        } else if ($(this).data("objectid") == "returnBack") {
             var newProductPath = productPath.split("/");
             newProductPath.splice(newProductPath.length - 1, 1);
             newProductPath.splice(0, 1);
@@ -60,18 +68,15 @@ jQuery(document).ready(function($) {
         loadData(config.dataLocation, false);
         $(document).trigger('tileReload');
     };
-
     $("#searchForm form input[type='text']").focus(function(event) {
         $("#searchForm form").addClass('focus');
-    });
-    $("#searchForm form input[type='text']").blur(function(event) {
-        $("#searchForm form").removeClass('focus');
+        $("#searchForm form input[type='text']").addClass('focus');
     });
     $(document).on('tileReload', function(event) {
         $(".productTile").click(productTile);
     });
     $(".productTile").click(productTile);
-    $("#categories .categorie").click(function(event){
+    $("#categories .categorie").click(function(event) {
         currentCategory = $(this).data("objectid");
         productPath = "";
         loadData(config.dataLocation, false);
@@ -86,13 +91,14 @@ function addItemToHome(data) {
     } else if (data.itemType == "subcategory") {
         var subcategoryTemplate = '<div class="productTile" data-objectid="' + data.itemId + '" data-objecttype="subcategory"><img src="' + data.picture + '"/><div class="subcategory"></div><div class="name">' + data.name + '</div></div>';
         $("#productsContainer").append(subcategoryTemplate)
-    } else{
+    } else {
         console.error("unknown item type", data);
     }
 }
+
 function addItemToMenu(data) {
     var activated = "";
-    if(data.defaultFocused){
+    if (data.defaultFocused) {
         var activated = "activated";
     }
     $("#categories").append('<div class="categorie ' + activated + '" data-objectid="' + data.itemId + '" data-objecttype="category"><div class="catContent"><img class="sideBarIcon" src="' + data.picture + '"/>' + data.name + '</div></div>')
