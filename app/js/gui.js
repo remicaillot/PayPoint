@@ -82,6 +82,9 @@ jQuery(document).ready(function($) {
         loadData(config.dataLocation, false);
         $(document).trigger('tileReload');
     });
+    $("#searchForm form input[type='text']").keyup(function(event) {
+        console.log($(this).val());
+    });
 });
 
 function addItemToHome(data) {

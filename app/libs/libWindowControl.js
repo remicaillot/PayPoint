@@ -1,14 +1,13 @@
 var manifest = require("./package.json");
-gui.App.setCrashDumpDir("./");
 if (!manifest.devtools) {
-    if (localStorage.getItem("isMaximized") == "true") {
+    if (localStorage.isMaximized == true) {
         win.maximize();
         jQuery(".maximize").css('background-image', 'url(assets/images/maximize.svg)');
-    } else if (localStorage.getItem("isMaximized") == "false") {
+    } else if (localStorage.isMaximized == "false") {
         win.unmaximize();
         jQuery(".maximize").css('background-image', 'url(assets/images/unmaximize.svg)');
     } else {
-        localStorage.setItem("isMaximized", false)
+        localStorage.isMaximized = false
         win.unmaximize();
     }
 }
@@ -17,20 +16,20 @@ if (!manifest.devtools) {
         if (!manifest.devtools) {
             $(".devTools").remove();
         }
-        /*if (localStorage.getItem("isMaximized") == undefined) {
-            localStorage.setItem("isMaximized", false);
+        if (localStorage.isMaximized == undefined) {
+            localStorage.isMaximized = false;
             win.unmaximize()
-        }*/
+        }
         win.on('maximize', function() {
-            localStorage.setItem("isMaximized", true);
+            localStorage.isMaximized = true;
             $(".maximize").css('background-image', 'url(assets/images/unmaximize.svg)');
         });
         win.on('unmaximize', function() {
-            localStorage.setItem("isMaximized", false);
+            localStorage.isMaximized = false;
             $(".maximize").css('background-image', 'url(assets/images/maximize.svg)');
         });
         $(".maximize").click(function() {
-            if (localStorage.getItem("isMaximized") == "true") {
+            if (localStorage.isMaximized == true) {
                 win.unmaximize();
                 $(".maximize").css('background-image', 'url(assets/images/maximize.svg)');
             } else {
@@ -48,7 +47,7 @@ if (!manifest.devtools) {
             win.showDevTools();
         });
         $(".reload").click(function() {
-            win.reloadDev()
+            win.reloadIgnoringCache()
         });
     });
 })(jQuery);

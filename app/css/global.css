@@ -100,7 +100,7 @@ header{
 	font-size: 20px;
 	outline: none;
 	-webkit-app-region: no-drag;
-	-webkit-transition: background 0.2s cubic-bezier(.07,.7,.6,.96), border-radius 0.2s cubic-bezier(.07,.7,.6,.96);	
+	-webkit-transition: background 0.2s cubic-bezier(.07,.7,.6,.96), color 0.2s cubic-bezier(.07,.7,.6,.96), border-radius 0.2s cubic-bezier(.07,.7,.6,.96);	
 }
 #searchForm form input[type="text"].focus{
 	background: white;
@@ -125,7 +125,7 @@ header{
 	height: 0px;
 	opacity: 0;
 	-webkit-transition: opacity 0.2s cubic-bezier(.07,.7,.6,.96), height 0.2s cubic-bezier(.07,.7,.6,.96);	
-	
+	overflow: hidden;
 }
 #searchForm form input[type="text"].focus + #searchAutocompletion {
 	height: calc(100vh - 450px);
@@ -138,25 +138,33 @@ header{
 .searchSection .sectionName{
 	padding: 0;
 	margin: 0;
-	font-size: 20px;
+	font-size: 18px;
 	line-height: 20px;
 	vertical-align: middle;
 	border-bottom: 1px solid #eee;
 	padding-bottom: 10px;
 	padding-top: 10px;
+	height: 20px;
 }
 .searchSection .sectionName .more{
 	display: inline-block;
 	float: right;
 	height: 20px;
-	background: #333;
-	color: white;
+	color: #333;
+	border: 1px solid #ddd;
 	font-size: 15px;
 	line-height: 20px;
 	text-align: center;
 	padding-left: 10px;
 	padding-right: 10px;
 	border-radius: 2px;
+	cursor: default;
+	-webkit-transition: background 0.2s cubic-bezier(.07,.7,.6,.96), border 0.2s cubic-bezier(.07,.7,.6,.96), color 0.2s cubic-bezier(.07,.7,.6,.96);
+}
+.searchSection .sectionName .more:active{
+	background: #333;
+	border: 1px solid #333;
+	color: white;
 }
 .searchResult .searchResultTile{
 	display: inline-block;
