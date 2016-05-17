@@ -1,86 +1,101 @@
 {
-	"products": [{
-		"itemId": "351920de1975609dedf90c4ab7ac55b8",
-		"itemType": "product",
-		"name": "Barre sucrée",
-		"picture": "assets/images/Miniatures/sucreries.png",
-		"subCat": "",
-		"category": "2b39a06be27aff570d0c1c7afec2b9e4",
-		"sellMode": "unit",
-		"price": 1.5,
-		"unit": "piece"
-	}, {
-		"itemId": "458f9c95ea75a8f90798eef2792c2fe1",
-		"itemType": "product",
-		"name": "Soda",
-		"picture": "assets/images/Miniatures/liquides.png",
-		"subCat": "6d1a13af07fe2c3ee82f4a8c987039eb",
-		"category": "2b39a06be27aff570d0c1c7afec2b9e4",
-		"sellMode": "unit",
-		"price": 2.2,
-		"unit": "piece"
-	},
-	{
-		"itemId": "g4ty5c95ea75a8f90798eef2792c2fe1",
-		"itemType": "product",
-		"name": "Vers de farine",
-		"picture": "assets/images/Miniatures/appats.png",
-		"subCat": "5d1a13af07fe2c3ee82f4a8c987039eb",
-		"category": "2b39a06be27aff570d0c1c7afec2b9e4",
-		"sellMode": "unit",
-		"price": 1.5,
-		"unit": "piece"
-	},
-	{
-		"itemId": "jf4596egdsrg75a8f90798eef2792c2f",
-		"itemType": "product",
-		"name": "Journée adulte",
-		"picture": "assets/images/Miniatures/adultday.png",
-		"subCat": "",
-		"category": "er56sdc8ujq4aff570d0c1c7afec2b9e4",
-		"sellMode": "unit",
-		"price": 26.0,
-		"unit": "piece"
-	},
-	{
-		"itemId": "hj458zecv5rg75a8f90798eef2792c2f",
-		"itemType": "product",
-		"name": "Demi-journée adulte",
-		"picture": "assets/images/Miniatures/adulthalfday.png",
-		"subCat": "",
-		"category": "er56sdc8ujq4aff570d0c1c7afec2b9e4",
-		"sellMode": "unit",
-		"price": 15.0,
-		"unit": "piece"
-	}],
-	"categories": [{
-		"itemId": "2b39a06be27aff570d0c1c7afec2b9e4",
-		"itemType": "category",
-		"name": "Emporter",
-		"picture": "assets/images/categorie.svg",
-		"defaultFocused": true
-	},
-	{
-		"itemId": "er56sdc8ujq4aff570d0c1c7afec2b9e4",
-		"itemType": "category",
-		"name": "Entrées",
-		"picture": "assets/images/entree.svg",
-		"defaultFocused": false
-	}],
-	"subcategories": [{
-		"itemId": "6d1a13af07fe2c3ee82f4a8c987039eb",
-		"itemType": "subcategory",
-		"name": "Boissons",
-		"picture": "assets/images/Miniatures/liquides.png",
-		"category": "2b39a06be27aff570d0c1c7afec2b9e4",
-		"subcategoryId": "5d1a13af07fe2c3ee82f4a8c987039eb"
-	},
-	{
-		"itemId": "5d1a13af07fe2c3ee82f4a8c987039eb",
-		"itemType": "subcategory",
-		"name": "Matériel de pêche",
-		"picture": "assets/images/Miniatures/materiel.png",
-		"category": "2b39a06be27aff570d0c1c7afec2b9e4",
-		"subcategoryId" : ""
-	}]
+    "products": [{
+        "itemId": "351920de1975609dedf90c4ab7ac55b8",
+        "itemType": "product",
+        "name": "Canne à pêche",
+        "picture": "assets/images/Miniatures/materiel.png",
+        "subCat": "",
+        "category": "5e4ff4525d24e9b5d5a1fb85b82f9913",
+        "sellMode": "unit",
+        "price": 60,
+        "unit": "piece"
+    }, {
+        "itemId": "cb31439f9d6b06ead64701220473b392",
+        "itemType": "product",
+        "name": "Soda",
+        "picture": "assets/images/Miniatures/liquides.png",
+        "subCat": "",
+        "category": "5e4ff4525d24e9b5d5a1fb85b82f9913",
+        "sellMode": "unit",
+        "price": 2.20,
+        "unit": "piece"
+    }, {
+        "itemId": "8faf1ef15aafbefd27f3be14a2d35a3c",
+        "itemType": "product",
+        "name": "Ver de farine",
+        "picture": "assets/images/Miniatures/appats.png",
+        "subCat": "",
+        "category": "5e4ff4525d24e9b5d5a1fb85b82f9913",
+        "sellMode": "unit",
+        "price": 2.20,
+        "unit": "piece"
+    }],
+    "categories": [{
+        "itemId": "5e4ff4525d24e9b5d5a1fb85b82f9913",
+        "itemType": "category",
+        "name": "Snack",
+        "picture": "assets/images/categorie.svg",
+        "defaultFocused": true
+    }, {
+        "itemId": "c785209dfb0de1ddf5ec24f965a281cc",
+        "itemType": "category",
+        "name": "Entrées",
+        "picture": "assets/images/entree.svg",
+        "defaultFocused": false
+    },{
+        "itemId": "4c8e7ef552ce518363125f1df83aa461",
+        "itemType": "category",
+        "name": "Locations",
+        "picture": "assets/images/etang.svg",
+        "defaultFocused": false
+    },{
+        "itemId": "5d34421c812b30a8cf5e3a92252e242e",
+        "itemType": "category",
+        "name": "Vente Truites",
+        "picture": "assets/images/detail.svg",
+        "defaultFocused": false
+    }],
+    "subcategories": [{
+        "itemId": "6d1a13af07fe2c3ee82f4a8c987039eb",
+        "itemType": "subcategory",
+        "name": "Boissons",
+        "picture": "assets/images/Miniatures/liquides.png",
+        "category": "5e4ff4525d24e9b5d5a1fb85b82f9913",
+        "subcategoryId": ""
+    }, {
+        "itemId": "5d1a13af07fe2c3ee82f4a8c987039eb",
+        "itemType": "subcategory",
+        "name": "Matériel de pêche",
+        "picture": "assets/images/Miniatures/materiel.png",
+        "category": "5e4ff4525d24e9b5d5a1fb85b82f9913",
+        "subcategoryId": ""
+    }, {
+        "itemId": "22899f269d5b93d531ce432a2528a632",
+        "itemType": "subcategory",
+        "name": "Snacking",
+        "picture": "assets/images/Miniatures/nourritures.png",
+        "category": "5e4ff4525d24e9b5d5a1fb85b82f9913",
+        "subcategoryId": ""
+    }, {
+        "itemId": "d24b3fc7b5bf34e1336e4cdb48f96a0e",
+        "itemType": "subcategory",
+        "name": "Appâts",
+        "picture": "assets/images/Miniatures/appats.png",
+        "category": "5e4ff4525d24e9b5d5a1fb85b82f9913",
+        "subcategoryId": ""
+    }, {
+        "itemId": "b6275819930fc04d5ed5af258387dbec",
+        "itemType": "subcategory",
+        "name": "Confiserie",
+        "picture": "assets/images/Miniatures/sucreries.png",
+        "category": "5e4ff4525d24e9b5d5a1fb85b82f9913",
+        "subcategoryId": ""
+    }, {
+        "itemId": "7fcbbb1f837f300f139b26d920261604",
+        "itemType": "subcategory",
+        "name": "Vente directe",
+        "picture": "assets/images/Miniatures/produitFini.png",
+        "category": "5d34421c812b30a8cf5e3a92252e242e",
+        "subcategoryId": ""
+    }]
 }

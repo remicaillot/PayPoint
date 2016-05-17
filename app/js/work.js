@@ -39,3 +39,10 @@ function loadData(dataLocation, firstLoad) {
     }
 
 }
+function search(keyword){
+    for(var i=0; i < database.products.length; i++){
+        if(database.products[i].name.includes(keyword)){
+            console.log(database.products[i]);
+        }
+    }
+}
