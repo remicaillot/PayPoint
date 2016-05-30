@@ -116,6 +116,7 @@ header{
     box-shadow: 0px 0px 3px rgb(125, 125, 125);
 }
 #searchForm form #searchAutocompletion{
+    display: block;
 	width: calc(100% - 60px);
 	padding: 0px 30px 10px 30px;
 	background: white;
@@ -128,7 +129,8 @@ header{
 	overflow: hidden;
 }
 #searchForm form input[type="text"].focus + #searchAutocompletion {
-	height: calc(100vh - 450px);
+	min-height: 103px;
+	max-height: calc(100vh - 246px);
 	opacity: 1;
 	overflow: auto;
 }
@@ -192,6 +194,10 @@ header{
 .searchResult .searchResultTile .content span{
 	font-weight: bold;
 
+}
+.searchResult .searchResultTile .content span.centered{
+	height: 40px;
+	line-height: 40px;
 }
 .searchResult .searchResultTile .content div{
 	font-style: italic;
