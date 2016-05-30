@@ -1,0 +1,48 @@
+{
+    "products": [{
+        "itemId": "cb31439f9d6b06ead64701220473b392",
+        "itemType": "product",
+        "name": "Soda",
+        "picture": "assets/images/Miniatures/liquides.png",
+        "subCat": "",
+        "category": "5e4ff4525d24e9b5d5a1fb85b82f9913",
+        "sellMode": "unit",
+        "price": 2.20,
+        "unit": "piece"
+    }],
+    "categories": [{
+        "itemId": "5e4ff4525d24e9b5d5a1fb85b82f9913",
+        "itemType": "category",
+        "name": "Snack",
+        "picture": "assets/images/categorie.svg",
+        "defaultFocused": true
+    }, {
+        "itemId": "c785209dfb0de1ddf5ec24f965a281cc",
+        "itemType": "category",
+        "name": "Entrées",
+        "picture": "assets/images/entree.svg",
+        "defaultFocused": false
+    }],
+    "subcategories": [{
+        "itemId": "6d1a13af07fe2c3ee82f4a8c987039eb",
+        "itemType": "subcategory",
+        "name": "Boissons",
+        "picture": "assets/images/Miniatures/liquides.png",
+        "category": "5e4ff4525d24e9b5d5a1fb85b82f9913",
+        "subcategoryId": ""
+    }, {
+        "itemId": "22899f269d5b93d531ce432a2528a632",
+        "itemType": "subcategory",
+        "name": "Snacking",
+        "picture": "assets/images/Miniatures/nourritures.png",
+        "category": "5e4ff4525d24e9b5d5a1fb85b82f9913",
+        "subcategoryId": ""
+    } {
+        "itemId": "b6275819930fc04d5ed5af258387dbec",
+        "itemType": "subcategory",
+        "name": "Confiserie",
+        "picture": "assets/images/Miniatures/sucreries.png",
+        "category": "5e4ff4525d24e9b5d5a1fb85b82f9913",
+        "subcategoryId": ""
+    }]
+}

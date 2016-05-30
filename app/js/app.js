@@ -3,4 +3,5 @@ jQuery(document).ready(function($) {
     if (database = "NLY") {
         loadData(config.dataLocation, true);
     }
+
 });

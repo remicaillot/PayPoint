@@ -1,14 +1,13 @@
 jQuery(document).ready(function($) {
+
     $("#sideBarMenu").click(function(e) {
         if ($("#leftPanel").attr("open") == "open") {
-            $("#leftPanel").attr("open", false);
-            $("#leftPanel").css('width', '50px');
+            $("#leftPanel").attr("open", false).css('width', '50px');
             $(".categorie").css('width', '50px');
             $(".categorie:active .catContent").css('-webkit-transform', 'scale3d(0.93,0.93,0.93)');
         } else {
-            $("#leftPanel").attr("open", true);
+            $("#leftPanel").attr("open", true).css('width', '200px');
             $(".categorie").css('width', '200px');
-            $("#leftPanel").css('width', '200px');
             $(".categorie:active .catContent").css('-webkit-transform', 'scale3d(0.89,0.89,0.89)');
         }
     });
@@ -82,8 +81,35 @@ jQuery(document).ready(function($) {
         loadData(config.dataLocation, false);
         $(document).trigger('tileReload');
     });
+    $("#searchForm form input[type='text']").keydown(function(e){
+       });
     $("#searchForm form input[type='text']").keyup(function(event) {
-        console.log($(this).val());
+                var searchResult = search($(this).val());
+        $("#searchAutocompletion").empty();
+        for(var res in searchResult){
+            $("#searchAutocompletion").append(' <div class="searchSection" data-objecttype="' + res + '"><div class="sectionName">' + getLabelFromObjecttype(res, true) + '<div class="more">Plus</div></div><div class="searchResult"> </div></div>');
+            for(item of searchResult[res]){
+                if(item.itemType == "product"){
+                    $(".searchSection[data-objecttype='"+res+"'] .searchResult").append('<div class="searchResultTile" data-objecttype="' + item.itemType + '" data-objectid="' + item.itemId + '"><img src="' + item.picture + '"/> <div class="content"> <span>' + item.name + '</span><div>' + money.format.numberToPrice(item.price) + '</div></div></div>');
+                }else if(item.itemType == "category"){
+                    $(".searchSection[data-objecttype='"+res+"'] .searchResult").append('<div class="searchResultTile" data-objecttype="' + item.itemType + '" data-objectid="' + item.itemId + '"><img style="background: #333; height: 30px; width: 30px; padding: 10px; " src="' + item.picture + '"/> <div class="content"> <span class="centered">' + item.name + '</span></div></div>');
+
+                }else{
+                    $(".searchSection[data-objecttype='"+res+"'] .searchResult").append('<div class="searchResultTile" data-objecttype="' + item.itemType + '" data-objectid="' + item.itemId + '"><img src="' + item.picture + '"/> <div class="content"> <span class="centered">' + item.name + '</span></div></div>');
+
+                }
+              }
+        }
+        if(Object.keys(searchResult).length == 0){
+            $("#searchAutocompletion").html("<h2>Vous pouvez rechercher ce que vous voulez</h2>");
+        }
+        var totalHeight = 0;
+        for(elem of $("#searchAutocompletion").children()){
+            totalHeight += $(elem).height() + 10;
+        }
+        $("#searchAutocompletion").css("height", totalHeight + "px");
+
+
     });
 });
 
@@ -106,3 +132,32 @@ function addItemToMenu(data) {
     }
     $("#categories").append('<div class="categorie ' + activated + '" data-objectid="' + data.itemId + '" data-objecttype="category"><div class="catContent"><img class="sideBarIcon" src="' + data.picture + '"/>' + data.name + '</div></div>')
 }
+function getLabelFromObjecttype(objectType, plurial){
+    switch (objectType){
+        case "product": case "products":
+            if(plurial){
+                return "Produits";
+            }else{
+                return "Produit";
+            }
+            break;
+        case "category": case "categories":
+            if(plurial){
+                return "Catégories";
+            }else{
+                return "Catégorie";
+            }
+            break;
+        case "subcategory": case "subcategories":
+            if(plurial){
+                return "Sous-catégories";
+            }else{
+                return "Sous-catégorie";
+            }
+            break;
+        default:
+            return "Autres";
+        break;
+    }
+}
+

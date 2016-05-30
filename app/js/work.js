@@ -40,9 +40,39 @@ function loadData(dataLocation, firstLoad) {
 
 }
 function search(keyword){
-    for(var i=0; i < database.products.length; i++){
-        if(database.products[i].name.includes(keyword)){
-            console.log(database.products[i]);
+    var searchResults = {
+        products: [],
+        categories: [],
+        subcategories: []
+    };
+    try{
+        var regex = new RegExp("(" + keyword + "+)[a-z]*", "ig");
+    }catch (err){
+        return {};
+    }
+    for(var i = 0; i < database.products.length; i++){
+        if(database.products[i].name.match(regex)){
+            searchResults.products.push(database.products[i]);
         }
     }
+    for(var i = 0; i < database.categories.length; i++){
+        if(database.categories[i].name.match(regex)){
+            searchResults.categories.push(database.categories[i]);
+        }
+    }
+    for(var i = 0; i < database.subcategories.length; i++){
+        if(database.subcategories[i].name.match(regex)){
+            searchResults.subcategories.push(database.subcategories[i]);
+        }
+    }
+    if(searchResults.products.length == 0){
+        delete searchResults.products;
+    }
+    if(searchResults.categories.length == 0){
+        delete searchResults.categories;
+    }
+    if(searchResults.subcategories.length == 0){
+        delete searchResults.subcategories;
+    }
+    return searchResults;
 }
