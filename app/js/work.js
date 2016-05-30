@@ -3,7 +3,7 @@ var currentCategory = "";
 var productPath = "";
 
 function loadData(dataLocation, firstLoad) {
-    if (dataLocation = "local") {
+    if (dataLocation == "local") {
         database = require("./database.json");
     }
     $("#productsContainer").html("");
@@ -19,7 +19,7 @@ function loadData(dataLocation, firstLoad) {
     if (manifest.devtools) {
         console.log(productPath);
     }
-    if (productPath.split("/")[productPath.split("/").length - 1] != "") {
+    if (productPath.split("/")[productPath.split("/").length - 1] !== "") {
         addItemToHome({
             itemType: "subcategory",
             itemId: "returnBack",
@@ -27,14 +27,14 @@ function loadData(dataLocation, firstLoad) {
             name: "Retour"
         });
     }
-    for (var i = 0; i < database.subcategories.length; i++) {
-        if ((productPath.split("/")[productPath.split("/").length - 1] == database.subcategories[i].subcategoryId) && (database.subcategories[i].category == currentCategory)) {
-            addItemToHome(database.subcategories[i]);
+    for (var j = 0; j < database.subcategories.length; j++) {
+        if ((productPath.split("/")[productPath.split("/").length - 1] == database.subcategories[j].subcategoryId) && (database.subcategories[j].category == currentCategory)) {
+            addItemToHome(database.subcategories[j]);
         }
     }
-    for (var i = 0; i < database.products.length; i++) {
-        if ((database.products[i].subCat == productPath.split("/")[productPath.split("/").length - 1]) && (database.products[i].category == currentCategory)) {
-            addItemToHome(database.products[i]);
+    for (var k = 0; k < database.products.length; k++) {
+        if ((database.products[k].subCat == productPath.split("/")[productPath.split("/").length - 1]) && (database.products[k].category == currentCategory)) {
+            addItemToHome(database.products[k]);
         }
     }
 
@@ -46,3 +46,4 @@ function search(keyword){
         }
     }
 }
+
