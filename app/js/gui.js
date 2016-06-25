@@ -63,6 +63,13 @@ jQuery(document).ready(function($) {
             for (var i = 0; i < newProductPath.length; i++) {
                 productPath += "/" + newProductPath[i];
             }
+        }else{
+            console.log("product " + $(this).data("objectid"));
+            for(var i = 0; i < database.products.length; i++){
+                if(database.products[i].itemId == $(this).data("objectid")){
+                    currentCommand.addProduct(database.products[i]);
+                }
+            }
         }
         loadData(config.dataLocation, false);
         $(document).trigger('tileReload');
@@ -81,38 +88,38 @@ jQuery(document).ready(function($) {
         loadData(config.dataLocation, false);
         $(document).trigger('tileReload');
     });
-    $("#searchForm form input[type='text']").keydown(function(e){
-       });
-    $("#searchForm form input[type='text']").keyup(function(event) {
-                var searchResult = search($(this).val());
-        $("#searchAutocompletion").empty();
-        for(var res in searchResult){
-            $("#searchAutocompletion").append(' <div class="searchSection" data-objecttype="' + res + '"><div class="sectionName">' + getLabelFromObjecttype(res, true) + '<div class="more">Plus</div></div><div class="searchResult"> </div></div>');
-            for(item of searchResult[res]){
-                if(item.itemType == "product"){
-                    $(".searchSection[data-objecttype='"+res+"'] .searchResult").append('<div class="searchResultTile" data-objecttype="' + item.itemType + '" data-objectid="' + item.itemId + '"><img src="' + item.picture + '"/> <div class="content"> <span>' + item.name + '</span><div>' + money.format.numberToPrice(item.price) + '</div></div></div>');
-                }else if(item.itemType == "category"){
-                    $(".searchSection[data-objecttype='"+res+"'] .searchResult").append('<div class="searchResultTile" data-objecttype="' + item.itemType + '" data-objectid="' + item.itemId + '"><img style="background: #333; height: 30px; width: 30px; padding: 10px; " src="' + item.picture + '"/> <div class="content"> <span class="centered">' + item.name + '</span></div></div>');
+    $("#searchForm form input[type='text']").keyup(searchInput);
+    $("#searchForm form input[type='text']").on("newChar",searchInput);
 
-                }else{
-                    $(".searchSection[data-objecttype='"+res+"'] .searchResult").append('<div class="searchResultTile" data-objecttype="' + item.itemType + '" data-objectid="' + item.itemId + '"><img src="' + item.picture + '"/> <div class="content"> <span class="centered">' + item.name + '</span></div></div>');
-
-                }
-              }
-        }
-        if(Object.keys(searchResult).length == 0){
-            $("#searchAutocompletion").html("<h2>Vous pouvez rechercher ce que vous voulez</h2>");
-        }
-        var totalHeight = 0;
-        for(elem of $("#searchAutocompletion").children()){
-            totalHeight += $(elem).height() + 10;
-        }
-        $("#searchAutocompletion").css("height", totalHeight + "px");
-
-
-    });
 });
+function searchInput(event){
+    var searchResult = search($(this).val());
+    $("#searchAutocompletion").empty();
+    for(var res in searchResult){
+        $("#searchAutocompletion").append(' <div class="searchSection" data-objecttype="' + res + '"><div class="sectionName">' + getLabelFromObjecttype(res, true) + '<div class="more">Plus</div></div><div class="searchResult"> </div></div>');
+        for(item of searchResult[res]){
+            if(item.itemType == "product"){
+                $(".searchSection[data-objecttype='"+res+"'] .searchResult").append('<div class="searchResultTile" data-objecttype="' + item.itemType + '" data-objectid="' + item.itemId + '"><img src="' + item.picture + '"/> <div class="content"> <span>' + item.name + '</span><div>' + money.format.numberToPrice(item.price) + '</div></div></div>');
+            }else if(item.itemType == "category"){
+                $(".searchSection[data-objecttype='"+res+"'] .searchResult").append('<div class="searchResultTile" data-objecttype="' + item.itemType + '" data-objectid="' + item.itemId + '"><img style="background: #333; height: 30px; width: 30px; padding: 10px; " src="' + item.picture + '"/> <div class="content"> <span class="centered">' + item.name + '</span></div></div>');
 
+            }else{
+                $(".searchSection[data-objecttype='"+res+"'] .searchResult").append('<div class="searchResultTile" data-objecttype="' + item.itemType + '" data-objectid="' + item.itemId + '"><img src="' + item.picture + '"/> <div class="content"> <span class="centered">' + item.name + '</span></div></div>');
+
+            }
+        }
+    }
+    if(Object.keys(searchResult).length == 0){
+        $("#searchAutocompletion").html("<h2>Vous pouvez rechercher ce que vous voulez</h2>");
+    }
+    var totalHeight = 0;
+    for(elem of $("#searchAutocompletion").children()){
+        totalHeight += $(elem).height() + 10;
+    }
+    $("#searchAutocompletion").css("height", totalHeight + "px");
+
+
+}
 function addItemToHome(data) {
     if (data.itemType == "product") {
         var productTemplate = '<div class="productTile" data-objectid="' + data.itemId + '" data-objecttype="product"><img src="' + data.picture + '"/><div class="price">' + money.format.numberToPrice(data.price) + '</div><div class="name">' + data.name + '</div></div>';
@@ -160,4 +167,3 @@ function getLabelFromObjecttype(objectType, plurial){
         break;
     }
 }
-

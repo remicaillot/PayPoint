@@ -8,7 +8,8 @@
         "category": "5e4ff4525d24e9b5d5a1fb85b82f9913",
         "sellMode": "unit",
         "price": 60,
-        "unit": "piece"
+        "unit": "piece",
+        "TVARate": 10
     }, {
         "itemId": "cb31439f9d6b06ead64701220473b392",
         "itemType": "product",
@@ -18,7 +19,8 @@
         "category": "5e4ff4525d24e9b5d5a1fb85b82f9913",
         "sellMode": "unit",
         "price": 2.20,
-        "unit": "piece"
+        "unit": "piece",
+        "TVARate": 5.5
     }, {
         "itemId": "8faf1ef15aafbefd27f3be14a2d35a3c",
         "itemType": "product",
@@ -28,7 +30,19 @@
         "category": "5e4ff4525d24e9b5d5a1fb85b82f9913",
         "sellMode": "unit",
         "price": 2.20,
-        "unit": "piece"
+        "unit": "piece",
+        "TVARate": 10
+    }, {
+        "itemId": "erg5erge54654ge6r5g46e5r4ger6gerg",
+        "itemType": "product",
+        "name": "Truites en sac",
+        "picture": "assets/images/Miniatures/poissondetail.png",
+        "subCat": "",
+        "category": "5d34421c812b30a8cf5e3a92252e242e",
+        "sellMode": "weight",
+        "price": 9,
+        "unit": "kg",
+        "TVARate": 7
     }],
     "categories": [{
         "itemId": "5e4ff4525d24e9b5d5a1fb85b82f9913",

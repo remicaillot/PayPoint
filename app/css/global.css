@@ -259,6 +259,7 @@ header{
 	overflow-y: auto;
 }
 #productsContainer .productTile{
+	cursor: default;
 	width: 150px;
 	background: #fff;
 	height: 230px;
@@ -399,6 +400,7 @@ header{
 	width: 20%;
 }
 #orderTicket .tableLine{
+	cursor: default;
 	height: 40px;
 	margin-top: 10px;
 }
