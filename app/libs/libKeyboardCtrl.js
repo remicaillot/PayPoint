@@ -36,7 +36,7 @@ jQuery(document).ready(function($) {
 	    var char = $(this).attr('value');
         switch(char){
             case "#return":
-                
+
                 break;
             default:
                 currentFocusedInput.insertAtCaret(char);
