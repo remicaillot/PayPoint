@@ -58,6 +58,10 @@ function shopingCart(modifCB){
             }
         }
         this.reloadDom();
+    };
+    this.resetCommand = function(){
+        products.clear();
+        this.reloadDom();
     }
 }
 var currentCommand = new shopingCart(function(){

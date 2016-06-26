@@ -57,7 +57,7 @@
                 </span>
             </div>
         </header>
-        <main>
+        <main id="commandStep">
             <div id="leftPanel">
                 <div class="categorie" id="sideBarMenu">
                     <div class="catContent">
@@ -70,51 +70,55 @@
             </div>
             <div id="productsContainer">
             </div>
-            <div id="orderTicket">
-                <h1>
-                    Commande
-                </h1>
-                <div id="ticketProductList">
-                    <div id="tableHead">
-                        <div class="product">
-                            Produit
-                        </div>
-                        <div class="qts">
-                            Qts
-                        </div>
-                        <div class="price">
-                            Prix
-                        </div>
-                    </div>
-                    <div id="tableBody">
 
+        </main>
+        <div id="orderTicket">
+            <h1>
+                Commande
+            </h1>
+            <div id="ticketProductList">
+                <div id="tableHead">
+                    <div class="product">
+                        Produit
+                    </div>
+                    <div class="qts">
+                        Qts
+                    </div>
+                    <div class="price">
+                        Prix
                     </div>
                 </div>
-                <div id="ticketControler">
-                    <div id="totalHT">
-                        <div class="label">
-                            Total HT
-                        </div>
-                        <div class="amount">
-                            0,00€
-                        </div>
-                    </div>
-                    <div id="totalTTC">
-                        <div class="label">
-                            Total TTC
-                        </div>
-                        <div class="amount">
-                            5,20€
-                        </div>
-                    </div>
-                    <button id="validTicket">
-                        Valider la commande
-                    </button>
-                    <button id="cancelTicket">
-                        annuler la commande
-                    </button>
+                <div id="tableBody">
+
                 </div>
             </div>
+            <div id="ticketControler">
+                <div id="totalHT">
+                    <div class="label">
+                        Total HT
+                    </div>
+                    <div class="amount">
+                        0,00€
+                    </div>
+                </div>
+                <div id="totalTTC">
+                    <div class="label">
+                        Total TTC
+                    </div>
+                    <div class="amount">
+                        0,00€
+                    </div>
+                </div>
+                <button id="validTicket">
+                    Suivant
+                </button>
+                <button id="cancelTicket">
+                    annuler la commande
+                </button>
+            </div>
+        </div>
+        <main id="paymentStep">
+
         </main>
         <div id="keyboard">
             <div id="numericPad">
@@ -128,7 +132,7 @@
                     <div class="key" value="9">
                         9
                     </div>
-                    <div class="key" value="#correction">
+                    <div class="key" value="#correction"  data-protected="true">
                         C
                     </div>
                 </div>
@@ -167,7 +171,7 @@
                     <div class="key" value="00">
                         00
                     </div>
-                    <div class="key" value="#alphanumericPad">
+                    <div class="key" value="#alphanumericPad" data-protected="true">
                         ABC
                     </div>
                 </div>
@@ -204,8 +208,8 @@
                     <div class="key" value="p">
                         p
                     </div>
-                    <div class="key" value="#return">
-                        ⤆
+                    <div class="key" value="#close">
+                        ×
                     </div>
                 </div>
                 <div class="line">
@@ -239,16 +243,13 @@
                     <div class="key" value="m">
                         m
                     </div>
-                    <div class="key" value="#close">
-                        ×
+                    <div class="key" value="#return">
+                        ⤆
                     </div>
                 </div>
                 <div class="line">
                     <div class="key" value="#maj">
                         ↑
-                    </div>
-                    <div class="key" value=".">
-                        .
                     </div>
                     <div class="key" value="w">
                         w
@@ -268,6 +269,9 @@
                     <div class="key" value="n">
                         n
                     </div>
+                    <div class="key" value=".">
+                        .
+                    </div>
                     <div class="key" value="#maj">
                         ↑
                     </div>
@@ -278,14 +282,129 @@
                 <div class="key special" value="#numericPad">
                     123
                 </div>
-                <div class="key space" value=" ">
+                <div class="key space" value=" " data-protected="true">
                     Espace
                 </div>
                 <div class="key" value=",">
                     ,
                 </div>
-                <div class="key" value="#specialChar">
+                <div class="key" value="#specialChar" data-protected="true">
                     é#?
+                </div>
+            </div>
+            <div id="specialCharPad">
+
+                <div class="line">
+
+                    <div class="key" value="ç">
+                        ç
+                    </div>
+                    <div class="key" value='ù'>
+                        ù
+                    </div>
+                    <div class="key" value="~">
+                        ~
+                    </div>
+                    <div class="key" value="_">
+                        _
+                    </div>
+                    <div class="key" value="-">
+                        -
+                    </div>
+                    <div class="key" value="&">
+                        &
+                    </div>
+                    <div class="key" value="@">
+                        @
+                    </div>
+                    <div class="key" value="p">
+                        #
+                    </div>
+                    <div class="key" value='µ'>
+                        €
+                    </div>
+                    <div class="key" value='$'>
+                        $
+                    </div>
+                    <div class="key" value='£'>
+                        £
+                    </div>
+                </div>
+                <div class="line">
+                    <div class="key" value="/">
+                        /
+                    </div>
+                    <div class="key" value=":">
+                        :
+                    </div>
+                    <div class="key" value="_">
+                    +
+                </div>
+                    <div class="key" value='"'>
+                        *
+                    </div>
+                    <div class="key" value="(">
+                       (
+                    </div>
+                    <div class="key" value=")">
+                       )
+                    </div>
+                    <div class="key" value="?">
+                        {
+                    </div>
+                    <div class="key" value="!">
+                        }
+                    </div>
+                    <div class="key" value="[">
+                        [
+                    </div>
+                    <div class="key" value="]">
+                        ]
+                    </div>
+                    <div class="key" value="#return">
+                        ⤆
+                    </div>
+                </div>
+                <div class="line">
+                    <div class="key" value="#maj">
+                        ↑
+                    </div>
+                    <div class="key" value=".">
+                        .
+                    </div>
+                    <div class="key" value="?">
+                        ?
+                    </div>
+                    <div class="key" value="!">
+                        !
+                    </div>
+                    <div class="key" value=",">
+                        ,
+                    </div>
+                    <div class="key" value=";">
+                        ;
+                    </div>
+                    <div class="key" value="'">
+                      '
+                    </div> <div class="key" value='"'>
+                        "
+                    </div>
+                    <div class="key" value="#maj">
+                        ↑
+                    </div>
+                    <div class="key special" value="#enter">
+                        →
+                    </div>
+
+                </div>
+                <div class="key special" value="#numericPad">
+                    123
+                </div>
+                <div class="key space" value=" " data-protected="true">
+                    Espace
+                </div>
+                <div class="key special" value="#alphanumericPad" data-protected="true">
+                    ABC
                 </div>
             </div>
         </div>

@@ -29,6 +29,7 @@ jQuery(document).ready(function($) {
         $(".categorie:active .catContent").css('-webkit-transform', 'scale3d(0.93,0.93,0.93)');
         $("#searchForm form").removeClass('focus');
         $("#searchForm form input[type='text']").removeClass('focus');
+        addFocusevent();
         try {
             currentFocusedInput.removeClass('focused');
         } catch (e) {}
@@ -50,6 +51,9 @@ jQuery(document).ready(function($) {
         try {
             currentFocusedInput.addClass('focused');
         } catch (e) {}
+    });
+    $("#cancelTicket").click(function(e){
+        currentCommand.resetCommand();
     });
     var productTile = function(event) {
         //console.log($(this).data("objecttype") + "/" + $(this).data("objectid"));
@@ -74,10 +78,7 @@ jQuery(document).ready(function($) {
         loadData(config.dataLocation, false);
         $(document).trigger('tileReload');
     };
-    $("#searchForm form input[type='text']").focus(function(event) {
-        $("#searchForm form").addClass('focus');
-        $("#searchForm form input[type='text']").addClass('focus');
-    });
+    addFocusevent()
     $(document).on('tileReload', function(event) {
         $(".productTile").click(productTile);
     });
@@ -92,6 +93,20 @@ jQuery(document).ready(function($) {
     $("#searchForm form input[type='text']").on("newChar",searchInput);
 
 });
+function addFocusevent(){
+    $("input[type='text']").focus(function(event) {
+        $("#alphanumericPad").show();
+        $("#numericPad").hide();
+        $("#specialCharPad").hide();
+        $("#keyboard").css('bottom', '0');
+        currentFocusedInput = $(this);
+        $(this).off("focus");
+    });
+    $("#searchForm form input[type='text']").focus(function(event) {
+        $("#searchForm form").addClass('focus');
+        $("#searchForm form input[type='text']").addClass('focus');
+    });
+}
 function searchInput(event){
     var searchResult = search($(this).val());
     $("#searchAutocompletion").empty();

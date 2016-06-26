@@ -310,7 +310,7 @@ header{
 	z-index: 1000000;
 	-webkit-transition: bottom 0.2s;
 }
-#alphanumericPad{
+#alphanumericPad, #specialCharPad{
 	width: 813px;
 	margin: auto;
 	margin-top: 29px;
@@ -347,6 +347,10 @@ header{
 	width:508px;
 }
 #keyboard .key:active{
+	background: rgba(255,255,255,0.1);
+	-webkit-transition: none;
+}
+#keyboard .key.active{
 	background: rgba(255,255,255,0.1);
 	-webkit-transition: none;
 }
@@ -474,3 +478,14 @@ header{
 	color: white;
 	outline: none;
 }
+
+#paymentStep{
+	display: none;
+	 position: absolute;
+	 left: 50px;
+	 right: 310px;
+	 top: 90px;
+	 bottom: 0;
+	 overflow-x: hidden;
+	 overflow-y: auto;
+ }
