@@ -1,5 +1,20 @@
 var config = require("./config.json");
-
+fs.readdir(
+    process.env[(process.platform == 'win32') ? 'USERPROFILE' : 'HOME'] + (((process.platform == 'win32') ? '\\' : '/') + "PayPoint"), function(err, files){
+    if(err){
+        fs.mkdir(
+            process.env[(process.platform == 'win32') ? 'USERPROFILE' : 'HOME'] + (((process.platform == 'win32') ? '\\' : '/') + "PayPoint"), function(err){
+           if(!err){
+               console.log("Folder created");
+           }else{
+               console.log("Folder not created");
+           }
+        });
+        console.log("Folder doesn't exist");
+    }else{
+        console.log("Folder already exist");
+    }
+});
 function shopingCart(modifCB){
     var products = new Map();
     this.reloadDom = function(){

@@ -1,22 +1,23 @@
-jQuery.fn.insertAtCaret = function(text, maj) {
-    if(maj){
+var keyboardStructure = fs.readFileSync("./libs/keyboard.html", "utf-8");
+jQuery.fn.insertAtCaret = function (text, maj) {
+    if (maj) {
         text = text.toUpperCase();
     }
-    return this.each(function() {
+    return this.each(function () {
 
-            startPos = this.selectionStart;
-            endPos = this.selectionEnd;
-            scrollTop = this.scrollTop;
-            this.value = this.value.substring(0, startPos) + text + this.value.substring(endPos, this.value.length);
-            this.focus();
-            this.selectionStart = startPos + text.length;
-            this.selectionEnd = startPos + text.length;
-            this.scrollTop = scrollTop;
+        startPos = this.selectionStart;
+        endPos = this.selectionEnd;
+        scrollTop = this.scrollTop;
+        this.value = this.value.substring(0, startPos) + text + this.value.substring(endPos, this.value.length);
+        this.focus();
+        this.selectionStart = startPos + text.length;
+        this.selectionEnd = startPos + text.length;
+        this.scrollTop = scrollTop;
 
     });
 };
-jQuery.fn.removeAtCaret = function() {
-      return this.each(function() {
+jQuery.fn.removeAtCaret = function () {
+    return this.each(function () {
 
         startPos = this.selectionStart - 1;
         endPos = this.selectionEnd;
@@ -30,20 +31,25 @@ jQuery.fn.removeAtCaret = function() {
     });
 
 };
-jQuery(document).ready(function($) {
-	var currentFocusedInput;
-	$("input[type='text']").focus(function(event) {
-	    $("#alphanumericPad").show();
-	    $("#numericPad").hide();
-	    $("#specialCharPad").hide();
-	    $("#keyboard").css('bottom', '0');
-	    currentFocusedInput = $(this);
+jQuery(document).ready(function ($) {
+    $("body").append(keyboardStructure);
+    var $alphanumericPad =  $("#alphanumericPad");
+    var $keyboard = $("#keyboard");
+    var $numericPad = $("#numericPad");
+    var $specialCharPad = $("#specialCharPad");
+    var currentFocusedInput;
+    $("input[type='text']").focus(function (event) {
+        $alphanumericPad.show();
+        $numericPad.hide();
+        $specialCharPad.hide();
+        $keyboard.css('bottom', '0');
+        currentFocusedInput = $(this);
         $(this).off("focus");
-	});
+    });
     var maj = false;
-	$(".key").click(function(event) {
-	    var char = $(this).attr('value');
-        switch(char){
+    $(".key").click(function (event) {
+        var char = $(this).attr('value');
+        switch (char) {
             case "#return":
 
                 currentFocusedInput.removeAtCaret();
@@ -51,50 +57,54 @@ jQuery(document).ready(function($) {
                 break;
             case "#specialChar":
 
-                $("#alphanumericPad").hide();
-                $("#numericPad").hide();
-                $("#specialCharPad").show();
+                $alphanumericPad.hide();
+                $numericPad.hide();
+                $specialCharPad.show();
                 break;
             case "#numericPad":
-                $("#alphanumericPad").hide();
-                $("#numericPad").show();
-                $("#specialCharPad").hide();
+                $numericPad.show();
+                $specialCharPad.hide();
+                $alphanumericPad.hide();
                 break;
             case "#close":
                 addFocusevent();
-                $("#keyboard").css('bottom', '-350px');
+                $keyboard.css('bottom', '-350px');
                 break;
             case "#enter":
+                currentFocusedInput.submit();
                 break;
             case "#alphanumericPad":
-                $("#alphanumericPad").show();
-                $("#numericPad").hide();
-                $("#specialCharPad").hide();
+                $alphanumericPad.show();
+                $numericPad.hide();
+                $specialCharPad.hide();
                 break;
             case "#maj":
-                if(maj){
-                    $("#keyboard .key[value='#maj']").removeClass("active");
-                    $("#keyboard .key").each(function(i){
-                       if(!$(this).data("protected")){
+
+
+                if (maj) {
+                    $keyboard.find(".key[value='#maj']").removeClass("active");
+                    $keyboard.find(".key").each(function (i) {
+                        if (!$(this).data("protected")) {
 
                             $(this).text($(this).text().toLowerCase());
                         }
                     });
                     maj = false;
-                }else {
-                    $("#keyboard .key[value='#maj']").addClass("active");
-                    $("#keyboard .key").each(function (i) {
-                       if(!$(this).data("protected")){
+                } else {
+                    $keyboard.find(".key").each(function (i) {
+                        if (!$(this).data("protected")) {
                             $(this).text($(this).text().toUpperCase());
                         }
                     });
+                    $keyboard.find(".key[value='#maj']").addClass("active");
                     maj = true;
                 }
                 break;
             default:
-                if(maj){
-                    $("#alphanumericPad .key[value='#maj']").removeClass("active");
-                    $("#alphanumericPad .key").each(function(i){
+                if (maj) {
+
+                    $alphanumericPad.find(".key[value='#maj']").removeClass("active");
+                    $alphanumericPad.find(".key").each(function (i) {
                         $(this).text($(this).text().toLowerCase());
                     });
                 }
@@ -103,5 +113,5 @@ jQuery(document).ready(function($) {
                 maj = false;
                 break;
         }
-	});
+    });
 });

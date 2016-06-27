@@ -1,4 +1,5 @@
 {
 	"dataLocation":"local",
+	"databasePath": "",
 	"TVARate": [5.5,7,10,20]
 }

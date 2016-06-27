@@ -18,6 +18,12 @@ jQuery(document).ready(function($) {
             $("#leftPanel").attr("open", false);
             $("#leftPanel").css('width', '50px');
             $(".categorie").css('width', '50px');
+            addFocusevent();
+            $("#keyboard").css('bottom', '-350px');
+            $("#searchForm form").removeClass('focus');
+            $("#searchForm form input[type='text']").removeClass('focus');
+            $("#searchAutocompletion").css("height", 0);
+
             $(".categorie:active .catContent").css('-webkit-transform', 'scale3d(0.93,0.93,0.93)');
         }
     });
@@ -29,6 +35,7 @@ jQuery(document).ready(function($) {
         $(".categorie:active .catContent").css('-webkit-transform', 'scale3d(0.93,0.93,0.93)');
         $("#searchForm form").removeClass('focus');
         $("#searchForm form input[type='text']").removeClass('focus');
+        $("#searchAutocompletion").css("height", 0);
         addFocusevent();
         try {
             currentFocusedInput.removeClass('focused');
@@ -55,6 +62,7 @@ jQuery(document).ready(function($) {
     $("#cancelTicket").click(function(e){
         currentCommand.resetCommand();
     });
+
     var productTile = function(event) {
         //console.log($(this).data("objecttype") + "/" + $(this).data("objectid"));
         if ($(this).data("objecttype") == "subcategory" && $(this).data("objectid") != "returnBack") {
@@ -105,6 +113,11 @@ function addFocusevent(){
     $("#searchForm form input[type='text']").focus(function(event) {
         $("#searchForm form").addClass('focus');
         $("#searchForm form input[type='text']").addClass('focus');
+        var totalHeight = 0;
+        for(elem of $("#searchAutocompletion").children()){
+            totalHeight += $(elem).height() + 10;
+        }
+        $("#searchAutocompletion").css("height", totalHeight + "px");
     });
 }
 function searchInput(event){
@@ -132,7 +145,27 @@ function searchInput(event){
         totalHeight += $(elem).height() + 10;
     }
     $("#searchAutocompletion").css("height", totalHeight + "px");
+    $(".searchResultTile").click(function(e){
+        if ($(this).data("objecttype") == "subcategory") {
+            productPath += "/" + $(this).data("objectid");
 
+            loadData(config.dataLocation, false);
+            $(document).trigger('tileReload');
+        }
+
+        if($(this).data("objecttype") == "product"){
+            console.log("product " + $(this).data("objectid"));
+            for(var i = 0; i < database.products.length; i++){
+                if(database.products[i].itemId == $(this).data("objectid")){
+                    currentCommand.addProduct(database.products[i]);
+                }
+            }
+        }
+
+        if($(this).data("objecttype") == "category"){
+            $(".categorie[data-objectid='" + $(this).data("objectid") + "']").click();
+        }
+    });
 
 }
 function addItemToHome(data) {
