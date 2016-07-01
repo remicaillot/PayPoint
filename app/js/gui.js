@@ -60,7 +60,11 @@ jQuery(document).ready(function($) {
         } catch (e) {}
     });
     $("#cancelTicket").click(function(e){
+        $("#commandStep").show();$("#paymentStep").hide();
         currentCommand.resetCommand();
+    });
+    $("#validTicket").click(function(){
+        $("#commandStep").hide();$("#paymentStep").show();
     });
 
     var productTile = function(event) {
