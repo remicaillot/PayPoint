@@ -43,9 +43,18 @@
         var $specialCharPad = $("#specialCharPad");
         var maj = false;
         $(window).click(function(e){
-            
+            if($(event.target).prop("tagName") != "INPUT" && $(event.target).prop("id") != "keyboard" ){
+                $keyboard.css('bottom', '-350px');
+                currentFocusedInput.removeClass("focus");
+                currentFocusedInput.blur();
+                currentFocusedInput = null;
+            }
         });
         $("input").focus(function (e) {
+            if(typeof currentFocusedInput != "undefined" || typeof currentFocusedInput != "null"){
+                currentFocusedInput.removeClass("focus");
+                currentFocusedInput.blur();
+            }
             currentFocusedInput = $(this);
             var inputType = $(this).attr("type");
             var entrymethod = $(this).data("realdatatype");
@@ -65,6 +74,7 @@
                 $keyboard.css("bottom", 0);
             }
         });
+
 
         $(".key").click(function (event) {
             event.preventDefault();
@@ -88,8 +98,10 @@
                     $alphanumericPad.hide();
                     break;
                 case "#close":
-                    addFocusevent();
                     $keyboard.css('bottom', '-350px');
+                    currentFocusedInput.removeClass("focus");
+                    currentFocusedInput.blur();
+                    currentFocusedInput = null;
                     break;
                 case "#enter":
                     currentFocusedInput.submit();
