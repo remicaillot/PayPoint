@@ -42,11 +42,11 @@ Network Trash Folder
 Temporary Items
 .apdisk
 *.rar
-nw
+*/nw
 *.bat
 *.sh
 */node_modules
 */node-modules
 */.idea
-.idea
+.idea/
 docs/
