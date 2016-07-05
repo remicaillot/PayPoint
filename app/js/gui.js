@@ -19,7 +19,6 @@ jQuery(document).ready(function($) {
             $("#leftPanel").css('width', '50px');
             $(".categorie").css('width', '50px');
             addFocusevent();
-            $("#keyboard").css('bottom', '-350px');
             $("#searchForm form").removeClass('focus');
             $("#searchForm form input[type='text']").removeClass('focus');
             $("#searchAutocompletion").css("height", 0);
@@ -28,7 +27,6 @@ jQuery(document).ready(function($) {
         }
     });
     $('html').click(function() {
-        $("#keyboard").css('bottom', '-350px');
         $("#leftPanel").attr("open", false);
         $("#leftPanel").css('width', '50px');
         $(".categorie").css('width', '50px');
@@ -41,9 +39,6 @@ jQuery(document).ready(function($) {
             currentFocusedInput.removeClass('focused');
         } catch (e) {}
     });
-    $("input[type='text']").click(function(event) {
-        event.stopPropagation();
-    });
     $("#leftPanel").click(function(event) {
         event.stopPropagation();
     });
@@ -53,12 +48,7 @@ jQuery(document).ready(function($) {
     $("#searchForm form").submit(function(event) {
         event.preventDefault();
     });
-    $("#keyboard").click(function(event) {
-        event.stopPropagation();
-        try {
-            currentFocusedInput.addClass('focused');
-        } catch (e) {}
-    });
+
     $("#cancelTicket").click(function(e){
         $("#commandStep").show();$("#paymentStep").hide();
         currentCommand.resetCommand();
@@ -106,16 +96,8 @@ jQuery(document).ready(function($) {
 
 });
 function addFocusevent(){
-    $("input[type='text']").focus(function(event) {
-        $("#alphanumericPad").show();
-        $("#numericPad").hide();
-        $("#specialCharPad").hide();
-        $("#keyboard").css('bottom', '0');
-        currentFocusedInput = $(this);
-        $(this).off("focus");
-    });
     $("#searchForm form input[type='text']").focus(function(event) {
-        $("#searchForm form").addClass('focus');
+
         $("#searchForm form input[type='text']").addClass('focus');
         var totalHeight = 0;
         for(elem of $("#searchAutocompletion").children()){
@@ -124,6 +106,7 @@ function addFocusevent(){
         $("#searchAutocompletion").css("height", totalHeight + "px");
     });
 }
+
 function searchInput(event){
     var searchResult = search($(this).val());
     $("#searchAutocompletion").empty();

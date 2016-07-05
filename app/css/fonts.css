@@ -4,3 +4,10 @@
     font-weight: normal;
     font-style: normal;
 }
+@font-face {
+    font-family: 'SourceSansPro-italic';
+    src: url('./fonts/SourceSansPro-It.otf');
+    font-weight: normal;
+    font-style: normal;
+
+}
