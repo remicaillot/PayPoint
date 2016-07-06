@@ -136,7 +136,7 @@ header {
 }
 
 #searchForm form.focus {
-    box-shadow: 0px 0px 3px rgb(125, 125, 125);
+    box-shadow: 0 0 3px rgb(125, 125, 125);
 }
 
 #searchForm form #searchAutocompletion {
@@ -563,18 +563,13 @@ header {
     position: absolute;
     left: 10px;
     right: 320px;
-    top: 100px;
+    top: 90px;
     bottom: 0;
-    overflow-x: hidden;
+    overflow-x: visible;
     overflow-y: auto;
 }
 
-.pmLabel {
-    color: #444;
-    text-align: left;
-    font-size: 10pt;
-    display: inline-block;
-}
+
 
 input[type="text"],
 input[type="date"],
@@ -635,9 +630,37 @@ input[type="password"].invalid {
 
 .paymentMethod {
     position: relative;
-    width: calc(100% - 20px);
+    width: calc(50% - 30px);
     background: white;
     border-radius: 3px;
+    margin-top: 10px;
+    margin-left: 10px;
+    padding: 10px;
+    box-shadow: 0 0 3px rgb(125, 125, 125);
+}
+.pmLabel {
+    color: #444;
+    text-align: left;
+    font-size: 10pt;
+    display: inline-block;
+}
+.rest{
+    position: relative;
+    display: inline-block;
+    float :right;
+    width: calc(50% - 40px);
+    background: white;
+    border-radius: 3px;
+    margin-top: 10px;
+    margin-right: 10px;
+    padding: 10px;
+    box-shadow: 0 0 3px rgb(125, 125, 125);
+}
+.rest .pmLabel{
+    font-size: 15pt;
+    margin-top: 10px;
+}
+.rest .pmValue{
+    font-size: 30pt;
     margin-bottom: 10px;
-    padding: 10px
 }

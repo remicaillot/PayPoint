@@ -2,87 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8457bdd2-1d54-4041-b102-904811b2e19f" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/nwjs-v0.14.5-linux-x64/chromedriver" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/nwjs-v0.14.5-linux-x64/credits.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/nwjs-v0.14.5-linux-x64/icudtl.dat" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/nwjs-v0.14.5-linux-x64/lib/libffmpeg.so" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/nwjs-v0.14.5-linux-x64/lib/libnode.so" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/nwjs-v0.14.5-linux-x64/lib/libnw.so" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/nwjs-v0.14.5-linux-x64/locales/am.pak" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/nwjs-v0.14.5-linux-x64/locales/ar.pak" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/nwjs-v0.14.5-linux-x64/locales/bg.pak" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/nwjs-v0.14.5-linux-x64/locales/bn.pak" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/nwjs-v0.14.5-linux-x64/locales/ca.pak" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/nwjs-v0.14.5-linux-x64/locales/cs.pak" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/nwjs-v0.14.5-linux-x64/locales/da.pak" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/nwjs-v0.14.5-linux-x64/locales/de.pak" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/nwjs-v0.14.5-linux-x64/locales/el.pak" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/nwjs-v0.14.5-linux-x64/locales/en-GB.pak" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/nwjs-v0.14.5-linux-x64/locales/en-US.pak" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/nwjs-v0.14.5-linux-x64/locales/es-419.pak" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/nwjs-v0.14.5-linux-x64/locales/es.pak" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/nwjs-v0.14.5-linux-x64/locales/et.pak" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/nwjs-v0.14.5-linux-x64/locales/fa.pak" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/nwjs-v0.14.5-linux-x64/locales/fi.pak" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/nwjs-v0.14.5-linux-x64/locales/fil.pak" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/nwjs-v0.14.5-linux-x64/locales/fr.pak" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/nwjs-v0.14.5-linux-x64/locales/gu.pak" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/nwjs-v0.14.5-linux-x64/locales/he.pak" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/nwjs-v0.14.5-linux-x64/locales/hi.pak" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/nwjs-v0.14.5-linux-x64/locales/hr.pak" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/nwjs-v0.14.5-linux-x64/locales/hu.pak" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/nwjs-v0.14.5-linux-x64/locales/id.pak" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/nwjs-v0.14.5-linux-x64/locales/it.pak" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/nwjs-v0.14.5-linux-x64/locales/ja.pak" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/nwjs-v0.14.5-linux-x64/locales/kn.pak" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/nwjs-v0.14.5-linux-x64/locales/ko.pak" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/nwjs-v0.14.5-linux-x64/locales/lt.pak" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/nwjs-v0.14.5-linux-x64/locales/lv.pak" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/nwjs-v0.14.5-linux-x64/locales/ml.pak" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/nwjs-v0.14.5-linux-x64/locales/mr.pak" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/nwjs-v0.14.5-linux-x64/locales/ms.pak" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/nwjs-v0.14.5-linux-x64/locales/nb.pak" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/nwjs-v0.14.5-linux-x64/locales/nl.pak" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/nwjs-v0.14.5-linux-x64/locales/pl.pak" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/nwjs-v0.14.5-linux-x64/locales/pt-BR.pak" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/nwjs-v0.14.5-linux-x64/locales/pt-PT.pak" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/nwjs-v0.14.5-linux-x64/locales/ro.pak" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/nwjs-v0.14.5-linux-x64/locales/ru.pak" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/nwjs-v0.14.5-linux-x64/locales/sk.pak" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/nwjs-v0.14.5-linux-x64/locales/sl.pak" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/nwjs-v0.14.5-linux-x64/locales/sr.pak" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/nwjs-v0.14.5-linux-x64/locales/sv.pak" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/nwjs-v0.14.5-linux-x64/locales/sw.pak" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/nwjs-v0.14.5-linux-x64/locales/ta.pak" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/nwjs-v0.14.5-linux-x64/locales/te.pak" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/nwjs-v0.14.5-linux-x64/locales/th.pak" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/nwjs-v0.14.5-linux-x64/locales/tr.pak" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/nwjs-v0.14.5-linux-x64/locales/uk.pak" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/nwjs-v0.14.5-linux-x64/locales/vi.pak" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/nwjs-v0.14.5-linux-x64/locales/zh-CN.pak" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/nwjs-v0.14.5-linux-x64/locales/zh-TW.pak" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/nwjs-v0.14.5-linux-x64/nacl_helper" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/nwjs-v0.14.5-linux-x64/nacl_helper_bootstrap" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/nwjs-v0.14.5-linux-x64/nacl_irt_x86_64.nexe" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/nwjs-v0.14.5-linux-x64/natives_blob.bin" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/nwjs-v0.14.5-linux-x64/nw_100_percent.pak" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/nwjs-v0.14.5-linux-x64/nwjc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/nwjs-v0.14.5-linux-x64/payload" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/nwjs-v0.14.5-linux-x64/pnacl/pnacl_public_pnacl_json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/nwjs-v0.14.5-linux-x64/pnacl/pnacl_public_x86_64_crtbegin_for_eh_o" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/nwjs-v0.14.5-linux-x64/pnacl/pnacl_public_x86_64_crtbegin_o" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/nwjs-v0.14.5-linux-x64/pnacl/pnacl_public_x86_64_crtend_o" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/nwjs-v0.14.5-linux-x64/pnacl/pnacl_public_x86_64_ld_nexe" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/nwjs-v0.14.5-linux-x64/pnacl/pnacl_public_x86_64_libcrt_platform_a" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/nwjs-v0.14.5-linux-x64/pnacl/pnacl_public_x86_64_libgcc_a" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/nwjs-v0.14.5-linux-x64/pnacl/pnacl_public_x86_64_libpnacl_irt_shim_a" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/nwjs-v0.14.5-linux-x64/pnacl/pnacl_public_x86_64_libpnacl_irt_shim_dummy_a" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/nwjs-v0.14.5-linux-x64/pnacl/pnacl_public_x86_64_pnacl_llc_nexe" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/nwjs-v0.14.5-linux-x64/pnacl/pnacl_public_x86_64_pnacl_sz_nexe" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/nwjs-v0.14.5-linux-x64/resources.pak" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/nwjs-v0.14.5-linux-x64/snapshot_blob.bin" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/libs/keyboard.html" afterPath="$PROJECT_DIR$/app/libs/keyboard.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/css/global.css" afterPath="$PROJECT_DIR$/app/css/global.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/index.html" afterPath="$PROJECT_DIR$/app/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/js/gui.js" afterPath="$PROJECT_DIR$/app/js/gui.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/libs/libKeyboardCtrl.js" afterPath="$PROJECT_DIR$/app/libs/libKeyboardCtrl.js" />
     </list>
     <ignored path="PayPoint.iws" />
@@ -104,21 +28,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="global.css" pinned="false" current-in-tab="false">
+      <file leaf-file-name="global.css" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/css/global.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="613" column="29" selection-start-line="613" selection-start-column="29" selection-end-line="613" selection-end-column="29" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="fonts.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/css/fonts.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="12" column="1" selection-start-line="12" selection-start-column="1" selection-end-line="12" selection-end-column="1" />
+            <state vertical-scroll-proportion="0.72619045">
+              <caret line="661" column="1" selection-start-line="661" selection-start-column="1" selection-end-line="661" selection-end-column="1" />
               <folding />
             </state>
           </provider>
@@ -127,8 +41,8 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-22.807692">
-              <caret line="142" column="56" selection-start-line="142" selection-start-column="44" selection-end-line="142" selection-end-column="56" />
+            <state vertical-scroll-proportion="-13.961538">
+              <caret line="127" column="18" selection-start-line="127" selection-start-column="18" selection-end-line="127" selection-end-column="18" />
               <folding>
                 <element signature="n#header#0;n#body#0;n#html#0;n#!!top" expanded="false" />
                 <element signature="n#main#0;n#body#0;n#html#0;n#!!top" expanded="false" />
@@ -141,18 +55,18 @@
       <file leaf-file-name="keyboard.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/libs/keyboard.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-12.384615">
+            <state vertical-scroll-proportion="-0.88461536">
               <caret line="14" column="18" selection-start-line="14" selection-start-column="18" selection-end-line="14" selection-end-column="18" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="libKeyboardCtrl.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="libKeyboardCtrl.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/libs/libKeyboardCtrl.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.66609883">
-              <caret line="53" column="95" selection-start-line="53" selection-start-column="95" selection-end-line="53" selection-end-column="95" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="112" column="59" selection-start-line="112" selection-start-column="59" selection-end-line="112" selection-end-column="59" />
               <folding />
             </state>
           </provider>
@@ -162,9 +76,9 @@
         <entry file="file://$PROJECT_DIR$/app/js/gui.js">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="99" column="0" selection-start-line="99" selection-start-column="0" selection-end-line="99" selection-end-column="0" />
+              <caret line="196" column="16" selection-start-line="196" selection-start-column="16" selection-end-line="196" selection-end-column="16" />
               <folding>
-                <marker date="1467734998514" expanded="true" signature="5494:5554" placeholder="..." />
+                <marker date="1467794612095" expanded="true" signature="5444:5504" placeholder="..." />
               </folding>
             </state>
           </provider>
@@ -194,7 +108,7 @@
         <entry file="file://$PROJECT_DIR$/app/libs/libmoney.js">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="5" column="37" selection-start-line="5" selection-start-column="37" selection-end-line="5" selection-end-column="37" />
+              <caret line="14" column="50" selection-start-line="14" selection-start-column="50" selection-end-line="14" selection-end-column="61" />
               <folding />
             </state>
           </provider>
@@ -230,12 +144,12 @@
         <option value="$PROJECT_DIR$/app/database.json" />
         <option value="$PROJECT_DIR$/app/config.json" />
         <option value="$PROJECT_DIR$/app/js/app.js" />
-        <option value="$PROJECT_DIR$/app/index.html" />
         <option value="$PROJECT_DIR$/app/css/fonts.css" />
-        <option value="$PROJECT_DIR$/app/js/gui.js" />
-        <option value="$PROJECT_DIR$/app/css/global.css" />
         <option value="$PROJECT_DIR$/app/libs/keyboard.html" />
+        <option value="$PROJECT_DIR$/app/js/gui.js" />
+        <option value="$PROJECT_DIR$/app/index.html" />
         <option value="$PROJECT_DIR$/app/libs/libKeyboardCtrl.js" />
+        <option value="$PROJECT_DIR$/app/css/global.css" />
       </list>
     </option>
   </component>
@@ -275,6 +189,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -367,7 +282,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
       <pane id="Scratches" />
     </panes>
   </component>
@@ -481,13 +395,13 @@
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.14857745" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32936078" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="TypeScript Compiler" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32936078" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33549783" sideWeight="0.50632244" order="10" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39869988" sideWeight="0.5073762" order="10" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32936078" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3336945" sideWeight="0.49367756" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32792208" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39869988" sideWeight="0.49578503" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39869988" sideWeight="0.4926238" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -502,18 +416,18 @@
       <window_info id="TypeScript Compiler" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32936078" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33874458" sideWeight="0.50421494" order="10" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39869988" sideWeight="0.5073762" order="10" side_tool="true" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39869988" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32936078" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33874458" sideWeight="0.49578503" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32936078" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.27221173" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3336945" sideWeight="0.49367756" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32792208" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.14857745" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39869988" sideWeight="0.49578503" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39869988" sideWeight="0.4926238" order="3" side_tool="false" content_ui="tabs" />
     </layout-to-restore>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -576,7 +490,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="2" column="20" selection-start-line="2" selection-start-column="20" selection-end-line="2" selection-end-column="20" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -605,7 +518,7 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="168" column="0" selection-start-line="168" selection-start-column="0" selection-end-line="168" selection-end-column="0" />
           <folding>
-            <marker date="1467734998514" expanded="true" signature="5494:5554" placeholder="..." />
+            <marker date="1467794612095" expanded="true" signature="5444:5504" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -654,7 +567,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="2" column="20" selection-start-line="2" selection-start-column="20" selection-end-line="2" selection-end-column="20" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -683,7 +595,7 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="69" column="66" selection-start-line="69" selection-start-column="66" selection-end-line="69" selection-end-column="66" />
           <folding>
-            <marker date="1467734998514" expanded="true" signature="5494:5554" placeholder="..." />
+            <marker date="1467794612095" expanded="true" signature="5444:5504" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -716,7 +628,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="2" column="20" selection-start-line="2" selection-start-column="20" selection-end-line="2" selection-end-column="20" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -745,7 +656,7 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1467734998514" expanded="true" signature="5494:5554" placeholder="..." />
+            <marker date="1467794612095" expanded="true" signature="5444:5504" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -783,7 +694,7 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1467734998514" expanded="true" signature="5494:5554" placeholder="..." />
+            <marker date="1467794612095" expanded="true" signature="5444:5504" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -900,7 +811,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="2" column="21" selection-start-line="2" selection-start-column="21" selection-end-line="2" selection-end-column="21" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -908,14 +818,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="28" column="51" selection-start-line="28" selection-start-column="51" selection-end-line="28" selection-end-column="51" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/libs/libmoney.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="5" column="37" selection-start-line="5" selection-start-column="37" selection-end-line="5" selection-end-column="37" />
           <folding />
         </state>
       </provider>
@@ -928,22 +830,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/css/fonts.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="12" column="1" selection-start-line="12" selection-start-column="1" selection-end-line="12" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/css/global.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="613" column="29" selection-start-line="613" selection-start-column="29" selection-end-line="613" selection-end-column="29" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/js/app.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -952,28 +838,26 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/js/gui.js">
+    <entry file="file://$PROJECT_DIR$/app/libs/libmoney.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="99" column="0" selection-start-line="99" selection-start-column="0" selection-end-line="99" selection-end-column="0" />
-          <folding>
-            <marker date="1467734998514" expanded="true" signature="5494:5554" placeholder="..." />
-          </folding>
+          <caret line="14" column="50" selection-start-line="14" selection-start-column="50" selection-end-line="14" selection-end-column="61" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/libs/keyboard.html">
+    <entry file="file://$PROJECT_DIR$/app/css/fonts.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-12.384615">
-          <caret line="14" column="18" selection-start-line="14" selection-start-column="18" selection-end-line="14" selection-end-column="18" />
+        <state vertical-scroll-proportion="0.31760645">
+          <caret line="12" column="1" selection-start-line="12" selection-start-column="1" selection-end-line="12" selection-end-column="1" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-22.807692">
-          <caret line="142" column="56" selection-start-line="142" selection-start-column="44" selection-end-line="142" selection-end-column="56" />
+        <state vertical-scroll-proportion="-13.961538">
+          <caret line="127" column="18" selection-start-line="127" selection-start-column="18" selection-end-line="127" selection-end-column="18" />
           <folding>
             <element signature="n#header#0;n#body#0;n#html#0;n#!!top" expanded="false" />
             <element signature="n#main#0;n#body#0;n#html#0;n#!!top" expanded="false" />
@@ -982,10 +866,36 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/libs/keyboard.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.88461536">
+          <caret line="14" column="18" selection-start-line="14" selection-start-column="18" selection-end-line="14" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/js/gui.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="196" column="16" selection-start-line="196" selection-start-column="16" selection-end-line="196" selection-end-column="16" />
+          <folding>
+            <marker date="1467794612095" expanded="true" signature="5444:5504" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/libs/libKeyboardCtrl.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.66609883">
-          <caret line="53" column="95" selection-start-line="53" selection-start-column="95" selection-end-line="53" selection-end-column="95" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="112" column="59" selection-start-line="112" selection-start-column="59" selection-end-line="112" selection-end-column="59" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/css/global.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.72619045">
+          <caret line="661" column="1" selection-start-line="661" selection-start-column="1" selection-end-line="661" selection-end-column="1" />
           <folding />
         </state>
       </provider>

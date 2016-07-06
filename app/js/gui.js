@@ -1,5 +1,14 @@
 jQuery(document).ready(function($) {
+    $("#searchForm form input[type='text']").focus(function(event) {
 
+        //$("#searchForm form input[type='text']").addClass('focus');
+        $("#searchForm form").addClass('focus');
+        var totalHeight = 0;
+        for(elem of $("#searchAutocompletion").children()){
+            totalHeight += $(elem).height() + 10;
+        }
+        $("#searchAutocompletion").css("height", totalHeight + "px");
+    });
     $("#sideBarMenu").click(function(e) {
         if ($("#leftPanel").attr("open") == "open") {
             $("#leftPanel").attr("open", false).css('width', '50px');
@@ -18,7 +27,7 @@ jQuery(document).ready(function($) {
             $("#leftPanel").attr("open", false);
             $("#leftPanel").css('width', '50px');
             $(".categorie").css('width', '50px');
-            addFocusevent();
+
             $("#searchForm form").removeClass('focus');
             $("#searchForm form input[type='text']").removeClass('focus');
             $("#searchAutocompletion").css("height", 0);
@@ -34,7 +43,7 @@ jQuery(document).ready(function($) {
         $("#searchForm form").removeClass('focus');
         $("#searchForm form input[type='text']").removeClass('focus');
         $("#searchAutocompletion").css("height", 0);
-        addFocusevent();
+
         try {
             currentFocusedInput.removeClass('focused');
         } catch (e) {}
@@ -80,7 +89,6 @@ jQuery(document).ready(function($) {
         loadData(config.dataLocation, false);
         $(document).trigger('tileReload');
     };
-    addFocusevent()
     $(document).on('tileReload', function(event) {
         $(".productTile").click(productTile);
     });
@@ -95,17 +103,6 @@ jQuery(document).ready(function($) {
     $("#searchForm form input[type='text']").on("newChar",searchInput);
 
 });
-function addFocusevent(){
-    $("#searchForm form input[type='text']").focus(function(event) {
-
-        $("#searchForm form input[type='text']").addClass('focus');
-        var totalHeight = 0;
-        for(elem of $("#searchAutocompletion").children()){
-            totalHeight += $(elem).height() + 10;
-        }
-        $("#searchAutocompletion").css("height", totalHeight + "px");
-    });
-}
 
 function searchInput(event){
     var searchResult = search($(this).val());
