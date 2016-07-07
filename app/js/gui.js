@@ -58,14 +58,47 @@ jQuery(document).ready(function($) {
         event.preventDefault();
     });
 
+    var currentStep = 0;
     $("#cancelTicket").click(function(e){
-        $("#commandStep").show();$("#paymentStep").hide();
+        $("#commandStep").show();
+        $("#paymentStep").hide();
         currentCommand.resetCommand();
+        currentStep = 0;
     });
     $("#validTicket").click(function(){
-        $("#commandStep").hide();$("#paymentStep").show();
-    });
+        if (currentStep === 0) {
+            if(currentCommand.getCommand().products.size !== 0){
+                $(".topay").text(money.format.numberToPrice(currentCommand.getCommand().total.TTC))
+                $("#commandStep").hide();
+                $("#paymentStep").show();
+                $(".paid").text("0,00€");
+                $(".paymentrest").text(money.format.numberToPrice(currentCommand.getCommand().total.TTC));
+                currentStep++;
+            }
 
+        } else if (currentStep === 1) {
+            if((currentCommand.getCommand().total.TTC - paid) <= 0){
+                //enregistrement saisie
+                $("#commandStep").show();
+                $("#paymentStep").hide();
+                currentCommand.resetCommand();
+                currentStep = 0;
+            }
+        }
+
+    });
+    $('input[data-method]').on("newChar", function(){
+        var paid = 0;
+        $('input[data-method]').each(function(i){
+            paid += money.format.priceToNumber($(this).val());
+        });
+        $(".paid").text(money.format.numberToPrice(paid));
+        $(".paymentrest").text(money.format.numberToPrice(currentCommand.getCommand().total.TTC - paid));
+    });
+    $(".printTicket").click(function(e){
+        $(this).toggleClass("checked");
+        $(this).children(".checkBoxContainer").children(".checkbox").toggleClass("checked");
+    });
     var productTile = function(event) {
         //console.log($(this).data("objecttype") + "/" + $(this).data("objectid"));
         if ($(this).data("objecttype") == "subcategory" && $(this).data("objectid") != "returnBack") {

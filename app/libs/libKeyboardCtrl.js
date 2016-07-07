@@ -59,7 +59,10 @@ var currentFocusedInput;
 jQuery(document).ready(function ($) {
     $("input[data-realDataType='price']").val("0,00€");
     $("input[data-realDataType='price']").data("numeralValue", 0.00);
-
+    $("#keyboard").click(function(e){
+        e.preventDefault();
+        e.stopPropagation();
+    });
     $("body").append(keyboardStructure);
     var $alphanumericPad = $("#alphanumericPad");
     var $keyboard = $("#keyboard");
@@ -68,6 +71,8 @@ jQuery(document).ready(function ($) {
     var maj = false;
     $(window).click(function (e) {
         if ($(event.target).prop("tagName") != "INPUT" && $(event.target).prop("id") != "keyboard" && !(typeof currentFocusedInput == "undefined" || currentFocusedInput == null)) {
+
+            $("#searchForm form").removeClass('focus');
             $keyboard.css('bottom', '-350px');
             currentFocusedInput.removeClass("focus");
             currentFocusedInput.blur();
@@ -95,7 +100,9 @@ jQuery(document).ready(function ($) {
                     $alphanumericPad.show();
                     break;
             }
-            $keyboard.css("bottom", 0);
+            if($(this).attr("type") == "text"){
+                $keyboard.css("bottom", 0);
+            }
         }
     });
 
@@ -127,6 +134,7 @@ jQuery(document).ready(function ($) {
                 break;
             case "#close":
                 $keyboard.css('bottom', '-350px');
+                $("#searchForm form").removeClass('focus');
                 currentFocusedInput.removeClass("focus");
                 currentFocusedInput.blur();
                 currentFocusedInput = null;
