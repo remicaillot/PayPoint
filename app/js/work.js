@@ -12,7 +12,6 @@ function loadData(dataLocation, firstLoad) {
             addItemToMenu(database.categories[i]);
             if (database.categories[i].defaultFocused) {
                 currentCategory = database.categories[i].itemId;
-                console.log(database.categories[i].name);
             }
         }
     }

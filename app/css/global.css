@@ -395,19 +395,18 @@ header {
     border-radius: 3px;
     cursor: pointer;
 }
-#keyboard .key.space{
-    background: #333;
-}
-#keyboard .key.space:active {
-    background: rgba(255, 255, 255, 0.1);
-    -webkit-transition: none;
-}
+
 #keyboard .key.special {
     width: 143px;
 }
 
 #keyboard .key.space {
     width: 508px;
+    background: #333;
+}
+#keyboard .key.space:active {
+    background: rgba(255, 255, 255, 0.1);
+    -webkit-transition: none;
 }
 
 #keyboard .key:active {

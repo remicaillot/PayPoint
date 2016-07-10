@@ -1,12 +1,3 @@
-var config = require("./config.json");
-console.log(config);
-fs.stat(config.databasePath, function(err, stats){
-    if(!err){
-        console.log(stats);
-    }else{
-        console.err(err);
-    }
-});
 
 function shopingCart(modifCB) {
     var command = {
@@ -20,6 +11,15 @@ function shopingCart(modifCB) {
                 10: 0,
                 20: 0
             }
+        },
+        payment: {
+            methods: {
+                check: 0,
+                cash: 0,
+                reduction: 0,
+                giftcard: 0
+            },
+            change: 0
         }
     };
     this.reloadDom = function () {
@@ -45,17 +45,39 @@ function shopingCart(modifCB) {
         }
         $("#totalHT .amount").text(money.format.numberToPrice(command.total.HT));
         $("#totalTTC .amount").text(money.format.numberToPrice(command.total.TTC));
+        $(".topay").text(money.format.numberToPrice(command.total.TTC));
+        $(".paymentrest").text(money.format.numberToPrice(command.total.TTC));
+        $(".paymentrest").data("value", command.total.TTC);
         modifCB();
 
     };
     this.getCommand = function () {
 
         return command;
-    }
+    };
+    this.setPayment = function () {
+        command.payment.methods.cash = money.format.priceToNumber($('input[data-method="cash"]').val());
+        command.payment.methods.check = money.format.priceToNumber($('input[data-method="check"]').val());
+        command.payment.methods.giftcard = money.format.priceToNumber($('input[data-method="giftcard"]').val());
+        command.payment.methods.reduction = money.format.priceToNumber($('input[data-method="reduction"]').val());
+        command.payment.change = money.format.priceToNumber($('.paymentrest').text());
+
+    };
+    this.getCommandJson = function () {
+
+        let commandCopy = $.extend(true, {}, command);
+
+        commandCopy.products = [];
+        for (product of command.products) {
+            commandCopy.products.push(product);
+        }
+
+        return  commandCopy;
+
+    };
     this.addProduct = function (productWanted) {
         if (typeof command.products.get(productWanted.itemId) !== "undefined") {
             command.products.get(productWanted.itemId).qts++;
-
         } else {
             productWanted.qts = 1;
             command.products.set(productWanted.itemId, productWanted);
@@ -87,8 +109,19 @@ function shopingCart(modifCB) {
                 }
             }
         };
-
         this.reloadDom();
+    }
+    this.saveCommand = function(){
+        let localcommand = this.getCommandJson();
+        localcommand.timestamp = Math.floor(Date.now() / 1000);
+        console.log(localcommand.timestamp);
+        storedb("commands").insert(localcommand, function(err, res){
+           if(!err){
+               console.log(res);
+           } else{
+               console.error(err);
+           }
+        });
     }
 }
 var currentCommand = new shopingCart(function () {
@@ -99,7 +132,7 @@ var currentCommand = new shopingCart(function () {
 });
 jQuery(document).ready(function ($) {
     if (database = "NLY") {
-        loadData(config.dataLocation, true);
+        loadData("local", true);
     }
 
 });

@@ -68,17 +68,23 @@ jQuery(document).ready(function($) {
     $("#validTicket").click(function(){
         if (currentStep === 0) {
             if(currentCommand.getCommand().products.size !== 0){
-                $(".topay").text(money.format.numberToPrice(currentCommand.getCommand().total.TTC))
+                $(".topay").text(money.format.numberToPrice(currentCommand.getCommand().total.TTC));
+                $(".printTicket").removeClass("checked");
+                $(".printTicket").children(".checkBoxContainer").children(".checkbox").removeClass("checked");
+                $(".paid").text("0,00€");
+
+                $(".paymentrest").text(money.format.numberToPrice(currentCommand.getCommand().total.TTC));
+                $(".paymentrest").data("value", currentCommand.getCommand().total.TTC);
                 $("#commandStep").hide();
                 $("#paymentStep").show();
-                $(".paid").text("0,00€");
-                $(".paymentrest").text(money.format.numberToPrice(currentCommand.getCommand().total.TTC));
                 currentStep++;
             }
 
         } else if (currentStep === 1) {
-            if((currentCommand.getCommand().total.TTC - paid) <= 0){
+            if($(".paymentrest").data("value") <= 0){
                 //enregistrement saisie
+                currentCommand.saveCommand();
+
                 $("#commandStep").show();
                 $("#paymentStep").hide();
                 currentCommand.resetCommand();
@@ -87,13 +93,16 @@ jQuery(document).ready(function($) {
         }
 
     });
+
     $('input[data-method]').on("newChar", function(){
         var paid = 0;
         $('input[data-method]').each(function(i){
             paid += money.format.priceToNumber($(this).val());
+            $(".paymentrest").data("value",  currentCommand.getCommand().total.TTC - paid);
         });
         $(".paid").text(money.format.numberToPrice(paid));
         $(".paymentrest").text(money.format.numberToPrice(currentCommand.getCommand().total.TTC - paid));
+        currentCommand.setPayment();
     });
     $(".printTicket").click(function(e){
         $(this).toggleClass("checked");
@@ -119,7 +128,7 @@ jQuery(document).ready(function($) {
                 }
             }
         }
-        loadData(config.dataLocation, false);
+        loadData("local", false);
         $(document).trigger('tileReload');
     };
     $(document).on('tileReload', function(event) {

@@ -17,8 +17,6 @@ jQuery.fn.insertAtCaret = function (text, maj, format) {
 
             $(this).data("numeralValue", newNumeralValue)
             $(this).val(money.format.numberToPrice(newNumeralValue));
-            console.log("NNV=" + newNumeralValue);
-            console.log("NV=" + numeralValue);
         }else{
             startPos = this.selectionStart;
             endPos = this.selectionEnd;
@@ -39,8 +37,6 @@ jQuery.fn.removeAtCaret = function (format) {
             var newNumeralValue =  parseFloat(numeralValue.substring(0, numeralValue.length - 1)).toFixed(2) / 10;
             $(this).data("numeralValue", newNumeralValue)
             $(this).val(money.format.numberToPrice(newNumeralValue));
-            console.log("NNV=" + newNumeralValue);
-            console.log("NV=" + numeralValue);
         }else {
             startPos = this.selectionStart - 1;
             endPos = this.selectionEnd;
@@ -184,7 +180,6 @@ jQuery(document).ready(function ($) {
                     currentFocusedInput.insertAtCaret(char, maj, "text");
                 }
                 currentFocusedInput.trigger("newChar");
-                console.log(currentFocusedInput.val());
 
 
                 maj = false;
