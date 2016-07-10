@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="488.57001"
+   height="488.57001"
+   id="svg2"
+   version="1.1"
+   inkscape:version="0.91 r13725"
+   inkscape:export-filename="C:\Users\Rémi\Documents\GitHub\PayPoint\PayPoint\data\images\menu.png"
+   inkscape:export-xdpi="5.5263319"
+   inkscape:export-ydpi="5.5263319"
+   sodipodi:docname="settings.svg">
+  <defs
+     id="defs4" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.69772869"
+     inkscape:cx="307.28475"
+     inkscape:cy="270.82894"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0"
+     showguides="true"
+     inkscape:guide-bbox="true"
+     inkscape:window-width="1920"
+     inkscape:window-height="1017"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:snap-bbox="true"
+     inkscape:bbox-paths="true"
+     inkscape:bbox-nodes="true"
+     inkscape:snap-bbox-edge-midpoints="true"
+     inkscape:snap-bbox-midpoints="true"
+     inkscape:object-paths="true"
+     inkscape:snap-intersection-paths="true"
+     inkscape:snap-smooth-nodes="true"
+     inkscape:snap-midpoints="true"
+     inkscape:snap-object-midpoints="true"
+     inkscape:snap-center="true"
+     inkscape:snap-text-baseline="true"
+     inkscape:snap-page="true"
+     inkscape:snap-global="false"
+     inkscape:object-nodes="true">
+    <sodipodi:guide
+       position="29.227412,691.29182"
+       orientation="0,1"
+       id="guide4155" />
+  </sodipodi:namedview>
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Calque 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-126.57143,-225.22072)">
+    <path
+       style="fill:none;fill-rule:evenodd;stroke:#ffffff;stroke-width:30;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m 321.41885,265.81331 -63.23334,28.29843 c 13.05511,22.6121 18.02532,35.47648 -6.40848,59.91027 -24.4338,24.43381 -37.29819,19.4636 -59.91028,6.4085 l -24.70278,64.72297 c 25.22052,6.75782 37.83096,12.33966 37.83096,46.89427 0,34.55462 -12.61045,40.13646 -37.83096,46.89427 l 28.29844,63.23454 c 22.6121,-13.0551 35.47647,-18.0253 59.91027,6.40848 24.4338,24.43381 19.4636,37.29819 6.40849,59.91028 l 64.72297,24.70278 c 6.75782,-25.22052 12.33967,-37.83096 46.89428,-37.83096 34.5546,0 40.13646,12.61045 46.89426,37.83096 l 63.23454,-28.29964 c -13.0551,-22.61211 -18.02531,-35.47527 6.40849,-59.90906 24.43379,-24.4338 37.29819,-19.46481 59.91028,-6.4097 l 24.70278,-64.72297 c -25.22052,-6.75782 -37.83096,-12.33968 -37.83096,-46.89429 0,-34.5546 12.61045,-40.13646 37.83096,-46.89426 l -28.29964,-63.23333 c -22.6121,13.05509 -35.47527,18.02531 -59.90907,-6.40849 -24.4338,-24.4338 -19.4636,-37.29818 -6.40849,-59.91028 l -64.72418,-24.70277 c -6.75782,25.22051 -12.33967,37.83095 -46.89428,37.83095 -34.5546,0 -40.13646,-12.61044 -46.89426,-37.83095 z m 49.43691,158.85166 a 44.840088,44.840088 0 0 1 44.84014,44.84013 44.840088,44.840088 0 0 1 -44.84014,44.84013 44.840088,44.840088 0 0 1 -44.84013,-44.84013 44.840088,44.840088 0 0 1 44.84013,-44.84013 z"
+       id="path4167"
+       inkscape:connector-curvature="0" />
+  </g>
+</svg>

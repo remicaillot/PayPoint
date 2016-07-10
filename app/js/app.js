@@ -69,6 +69,7 @@ function shopingCart(modifCB) {
 
         commandCopy.products = [];
         for (product of command.products) {
+            console.log(product);
             commandCopy.products.push(product);
         }
 
@@ -109,6 +110,14 @@ function shopingCart(modifCB) {
                 }
             }
         };
+        $('input[data-method="cash"]').val("0,00€");
+        $('input[data-method="cash"]').data("numeralValue", 0);
+        $('input[data-method="check"]').val("0,00€");
+        $('input[data-method="check"]').data("numeralValue", 0);
+        $('input[data-method="giftcard"]').val("0,00€");
+        $('input[data-method="giftcard"]').data("numeralValue", 0);
+        $('input[data-method="reduction"]').val("0,00€");
+        $('input[data-method="reduction"]').data("numeralValue", 0);
         this.reloadDom();
     }
     this.saveCommand = function(){
@@ -132,7 +141,7 @@ var currentCommand = new shopingCart(function () {
 });
 jQuery(document).ready(function ($) {
     if (database = "NLY") {
-        loadData("local", true);
+        loadData(true);
     }
 
 });

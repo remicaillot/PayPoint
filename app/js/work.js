@@ -2,10 +2,10 @@ var database = "NLY";
 var currentCategory = "";
 var productPath = "";
 
-function loadData(dataLocation, firstLoad) {
-    if (dataLocation = "local") {
+function loadData(firstLoad) {
+
         database = require("./database.json");
-    }
+
     $("#productsContainer").html("");
     if(firstLoad){
     	for (var i = 0; i < database.categories.length; i++) {

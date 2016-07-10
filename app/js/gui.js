@@ -128,7 +128,7 @@ jQuery(document).ready(function($) {
                 }
             }
         }
-        loadData("local", false);
+        loadData(false);
         $(document).trigger('tileReload');
     };
     $(document).on('tileReload', function(event) {
@@ -138,12 +138,15 @@ jQuery(document).ready(function($) {
     $("#categories .categorie").click(function(event) {
         currentCategory = $(this).data("objectid");
         productPath = "";
-        loadData(config.dataLocation, false);
+        loadData(false);
         $(document).trigger('tileReload');
     });
     $("#searchForm form input[type='text']").keyup(searchInput);
     $("#searchForm form input[type='text']").on("newChar",searchInput);
-
+    $("#keyboard").click(function(e){
+        e.preventDefault();
+        e.stopPropagation();
+    });
 });
 
 function searchInput(event){
@@ -175,7 +178,7 @@ function searchInput(event){
         if ($(this).data("objecttype") == "subcategory") {
             productPath += "/" + $(this).data("objectid");
 
-            loadData(config.dataLocation, false);
+            loadData(false);
             $(document).trigger('tileReload');
         }
 

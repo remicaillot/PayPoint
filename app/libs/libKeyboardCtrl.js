@@ -22,9 +22,11 @@ jQuery.fn.insertAtCaret = function (text, maj, format) {
             endPos = this.selectionEnd;
             scrollTop = this.scrollTop;
             this.value =  this.value.substring(0, startPos) + text + this.value.substring(endPos, this.value.length); this.focus();
+
             this.selectionStart = startPos + text.length;
             this.selectionEnd = startPos + text.length;
             this.scrollTop = scrollTop;
+            this.focus();
         }
     });
 };
