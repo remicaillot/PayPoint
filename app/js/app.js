@@ -56,10 +56,10 @@ function shopingCart(modifCB) {
         return command;
     };
     this.setPayment = function () {
-        command.payment.methods.cash = money.format.priceToNumber($('input[data-method="cash"]').val());
-        command.payment.methods.check = money.format.priceToNumber($('input[data-method="check"]').val());
-        command.payment.methods.giftcard = money.format.priceToNumber($('input[data-method="giftcard"]').val());
-        command.payment.methods.reduction = money.format.priceToNumber($('input[data-method="reduction"]').val());
+        command.payment.methods.cash =$('input[data-method="cash"]').data("numeralValue");
+        command.payment.methods.check =$('input[data-method="check"]').data("numeralValue");
+        command.payment.methods.giftcard =$('input[data-method="giftcard"]').data("numeralValue");
+        command.payment.methods.reduction =$('input[data-method="reduction"]').data("numeralValue");
         command.payment.change = money.format.priceToNumber($('.paymentrest').text());
 
     };
@@ -108,6 +108,15 @@ function shopingCart(modifCB) {
                     10: 0,
                     20: 0
                 }
+            },
+            payment: {
+                methods: {
+                    check: 0,
+                    cash: 0,
+                    reduction: 0,
+                    giftcard: 0
+                },
+                change: 0
             }
         };
         $('input[data-method="cash"]').val("0,00€");

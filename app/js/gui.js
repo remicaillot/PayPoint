@@ -83,6 +83,8 @@ jQuery(document).ready(function($) {
         } else if (currentStep === 1) {
             if($(".paymentrest").data("value") <= 0){
                 //enregistrement saisie
+
+                currentCommand.setPayment();
                 currentCommand.saveCommand();
 
                 $("#commandStep").show();
@@ -153,7 +155,7 @@ function searchInput(event){
     var searchResult = search($(this).val());
     $("#searchAutocompletion").empty();
     for(var res in searchResult){
-        $("#searchAutocompletion").append(' <div class="searchSection" data-objecttype="' + res + '"><div class="sectionName">' + getLabelFromObjecttype(res, true) + '<div class="more">Plus</div></div><div class="searchResult"> </div></div>');
+        $("#searchAutocompletion").append(' <div class="searchSection" data-objecttype="' + res + '"><div class="sectionName">' + getLabelFromObjecttype(res, true) + '<!--<div class="more">Plus</div>--></div><div class="searchResult"> </div></div>');
         for(item of searchResult[res]){
             if(item.itemType == "product"){
                 $(".searchSection[data-objecttype='"+res+"'] .searchResult").append('<div class="searchResultTile" data-objecttype="' + item.itemType + '" data-objectid="' + item.itemId + '"><img src="' + item.picture + '"/> <div class="content"> <span>' + item.name + '</span><div>' + money.format.numberToPrice(item.price) + '</div></div></div>');
