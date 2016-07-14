@@ -1,7 +1,10 @@
 var database = "NLY";
 var currentCategory = "";
 var productPath = "";
-
+var Datastore = require('nedb'),
+    commandDb = new Datastore({ filename: './commands.lead', autoload: true }),
+    configDb = new Datastore();
+configDb.insert({"productDbPath": "./products.lead"});
 function loadData(firstLoad) {
 
         database = require("./database.json");
@@ -16,7 +19,7 @@ function loadData(firstLoad) {
         }
     }
     if (manifest.devtools) {
-        console.log(productPath);
+       // console.log(productPath);
     }
     if (productPath.split("/")[productPath.split("/").length - 1] != "") {
         addItemToHome({

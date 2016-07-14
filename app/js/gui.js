@@ -86,7 +86,9 @@ jQuery(document).ready(function($) {
 
                 currentCommand.setPayment();
                 currentCommand.saveCommand();
-
+                if($(".printTicket").hasClass("checked")){
+                    printTicket();
+                }
                 $("#commandStep").show();
                 $("#paymentStep").hide();
                 currentCommand.resetCommand();
@@ -123,7 +125,7 @@ jQuery(document).ready(function($) {
                 productPath += "/" + newProductPath[i];
             }
         }else{
-            console.log("product " + $(this).data("objectid"));
+            //console.log("product " + $(this).data("objectid"));
             for(var i = 0; i < database.products.length; i++){
                 if(database.products[i].itemId == $(this).data("objectid")){
                     currentCommand.addProduct(database.products[i]);
@@ -185,7 +187,7 @@ function searchInput(event){
         }
 
         if($(this).data("objecttype") == "product"){
-            console.log("product " + $(this).data("objectid"));
+            //console.log("product " + $(this).data("objectid"));
             for(var i = 0; i < database.products.length; i++){
                 if(database.products[i].itemId == $(this).data("objectid")){
                     currentCommand.addProduct(database.products[i]);
