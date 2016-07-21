@@ -36,21 +36,17 @@ function shopingCart(modifCB) {
                 20: 0
             }
         };
-        for (product of command.products) {
-            if(product[1].qts === "#"){
-                var price = money.format.numberToPrice(product[1].price);
+        for (var product of command.products) {
+            var price = money.format.numberToPrice(product[1].price * product[1].qts);
 
-            }else{
 
-                var price = money.format.numberToPrice(product[1].price * product[1].qts);
-            }
             var productTemplate = '<div class="tableLine" data-itemId="' + product[1].itemId + '"><div class="product"><img src="' + product[1].picture + '">' + product[1].name + '</img></div><div class="qts">' + product[1].qts + '</div><div class="price">' + price + '</div></div>';
             command.total.HT += money.calculTva.TTCtoHT(money.format.priceToNumber(price), product[1].TVARate);
             command.total.TTC += money.format.priceToNumber(price);
             command.total.perTVARate[product[1].TVARate.toString().replace(".", ",")] = money.format.priceToNumber(price);
             $("#tableBody").append(productTemplate);
         }
-        $("#totalHT .amount").text(money.format.numberToPrice(command.total.HT));
+        $("#totalHT").find(".amount").text(money.format.numberToPrice(command.total.HT));
         $("#totalTTC .amount").text(money.format.numberToPrice(command.total.TTC));
         $(".topay").text(money.format.numberToPrice(command.total.TTC));
         $(".paymentrest").text(money.format.numberToPrice(command.total.TTC));
@@ -96,10 +92,9 @@ function shopingCart(modifCB) {
         if (typeof command.products.get(productWanted.itemId) !== "undefined") {
 
             if (productWanted.price == "free") {
-                command.products.get(productWanted.itemId).price = prompt("Prix", 0);
-                command.products.get(productWanted.itemId).qts = prompt("Quantité en " + command.products.get(productWanted.itemId).unit, 0);
+                command.products.get(productWanted.itemId).price = parseFloat(prompt("Prix", "0"));
+                command.products.get(productWanted.itemId).qts = parseFloat(prompt("Quantité en " + command.products.get(productWanted.itemId).unit, "0"));
                 this.reloadDom();
-                productWanted.price = "free";
             } else {
                 command.products.get(productWanted.itemId).qts++;
                 this.reloadDom();
@@ -107,11 +102,10 @@ function shopingCart(modifCB) {
 
         } else {
             if (productWanted.price == "free") {
-                productWanted.price = prompt("Prix", 0);
-                productWanted.qts = prompt("Quantité en " + productWanted.unit, 0);
+                productWanted.price = parseFloat(prompt("Prix", "0"));
+                productWanted.qts = parseFloat(prompt("Quantité en " + productWanted.unit, "0"));
                 command.products.set(productWanted.itemId, productWanted);
                 this.reloadDom();
-                productWanted.price = "free";
             } else {
                 productWanted.qts = 1;
                 command.products.set(productWanted.itemId, productWanted);

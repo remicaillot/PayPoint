@@ -737,3 +737,13 @@ input[type="password"].invalid {
     overflow-x: hidden;
     overflow-y: auto;
 }
+#sales{
+    display: none;
+    position: absolute;
+    left: 50px;
+    right: 10px;
+    top: 90px;
+    bottom: 0;
+    overflow-x: hidden;
+    overflow-y: auto;
+}

@@ -24,7 +24,15 @@ jQuery(document).ready(function($) {
         $("#commandStep").hide();
         $("#paymentStep").hide();
         $("#orderTicket").hide();
+        $("#sales").hide();
         $("#settings").show();
+    });
+    $("#salesButton").click(function(e){
+        $("#commandStep").hide();
+        $("#paymentStep").hide();
+        $("#orderTicket").hide();
+        $("#settings").hide();
+        $("#sales").show();
     });
     $(".categorie").click(function(event) {
         if ($(this).attr('id') != "sideBarMenu") {
@@ -154,6 +162,8 @@ jQuery(document).ready(function($) {
     $("#categories .categorie").click(function(event) {
         $("#commandStep").show();
         $("#settings").hide();
+
+        $("#sales").hide();
         $("#orderTicket").show();
         currentCategory = $(this).data("objectid");
         productPath = "";
