@@ -22,8 +22,9 @@
     },
     "devtools": true,
     "dependencies": {
-        "fs": "*",
         "MD5": "*",
-        "node-thermal-printer": "*"
+        "node-thermal-printer": "*",
+        "chart.js": "*",
+        "nedb": "*"
     }
 }
