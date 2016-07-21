@@ -36,7 +36,17 @@ function loadData(firstLoad) {
     }
     for (var i = 0; i < database.products.length; i++) {
         if ((database.products[i].subCat == productPath.split("/")[productPath.split("/").length - 1]) && (database.products[i].category == currentCategory)) {
-            addItemToHome(database.products[i]);
+            if(database.products[i].price == "free"){
+
+                database.products[i].price = "Prix libre";
+                addItemToHome(database.products[i]);
+                database.products[i].price = "free";
+            }else{
+
+                database.products[i].price = money.format.numberToPrice(database.products[i].price);
+                addItemToHome(database.products[i]);
+                database.products[i].price = money.format.priceToNumber(database.products[i].price);
+            }
         }
     }
 

@@ -727,3 +727,13 @@ input[type="password"].invalid {
     background-size: 75%;
     border: 3px solid #67aa00;
 }
+#settings{
+    display: none;
+    position: absolute;
+    left: 50px;
+    right: 10px;
+    top: 90px;
+    bottom: 0;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
