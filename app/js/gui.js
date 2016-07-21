@@ -20,6 +20,12 @@ jQuery(document).ready(function($) {
             $(".categorie:active .catContent").css('-webkit-transform', 'scale3d(0.89,0.89,0.89)');
         }
     });
+    $("#settingsButton").click(function(e){
+        $("#commandStep").hide();
+        $("#paymentStep").hide();
+        $("#orderTicket").hide();
+        $("#settings").show();
+    });
     $(".categorie").click(function(event) {
         if ($(this).attr('id') != "sideBarMenu") {
             $(".categorie").removeClass('activated');
@@ -62,6 +68,7 @@ jQuery(document).ready(function($) {
     $("#cancelTicket").click(function(e){
         $("#commandStep").show();
         $("#paymentStep").hide();
+        $("#leftPanel").show();
         currentCommand.resetCommand();
         currentStep = 0;
     });
@@ -77,6 +84,7 @@ jQuery(document).ready(function($) {
                 $(".paymentrest").data("value", currentCommand.getCommand().total.TTC);
                 $("#commandStep").hide();
                 $("#paymentStep").show();
+                $("#leftPanel").hide();
                 currentStep++;
             }
 
@@ -90,6 +98,7 @@ jQuery(document).ready(function($) {
                     printTicket();
                 }
                 $("#commandStep").show();
+                $("#leftPanel").show();
                 $("#paymentStep").hide();
                 currentCommand.resetCommand();
                 currentStep = 0;
@@ -128,7 +137,10 @@ jQuery(document).ready(function($) {
             //console.log("product " + $(this).data("objectid"));
             for(var i = 0; i < database.products.length; i++){
                 if(database.products[i].itemId == $(this).data("objectid")){
-                    currentCommand.addProduct(database.products[i]);
+
+                        currentCommand.addProduct(database.products[i]);
+
+
                 }
             }
         }
@@ -140,6 +152,9 @@ jQuery(document).ready(function($) {
     });
     $(".productTile").click(productTile);
     $("#categories .categorie").click(function(event) {
+        $("#commandStep").show();
+        $("#settings").hide();
+        $("#orderTicket").show();
         currentCategory = $(this).data("objectid");
         productPath = "";
         loadData(false);
@@ -203,7 +218,7 @@ function searchInput(event){
 }
 function addItemToHome(data) {
     if (data.itemType == "product") {
-        var productTemplate = '<div class="productTile" data-objectid="' + data.itemId + '" data-objecttype="product"><img src="' + data.picture + '"/><div class="price">' + money.format.numberToPrice(data.price) + '</div><div class="name">' + data.name + '</div></div>';
+        var productTemplate = '<div class="productTile" data-objectid="' + data.itemId + '" data-objecttype="product"><img src="' + data.picture + '"/><div class="price">' + data.price + '</div><div class="name">' + data.name + '</div></div>';
         $("#productsContainer").append(productTemplate)
     } else if (data.itemType == "subcategory") {
         var subcategoryTemplate = '<div class="productTile" data-objectid="' + data.itemId + '" data-objecttype="subcategory"><img src="' + data.picture + '"/><div class="subcategory"></div><div class="name">' + data.name + '</div></div>';
