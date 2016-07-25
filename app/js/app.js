@@ -88,6 +88,7 @@ function shopingCart(modifCB) {
 
     };
     this.addProduct = function (productWanted) {
+        productWanted = Object.assign({}, productWanted);
         console.log(productWanted.price);
         if (typeof command.products.get(productWanted.itemId) !== "undefined") {
 
@@ -104,8 +105,10 @@ function shopingCart(modifCB) {
             if (productWanted.price == "free") {
                 productWanted.price = parseFloat(prompt("Prix", "0"));
                 productWanted.qts = parseFloat(prompt("Quantité en " + productWanted.unit, "0"));
+
                 command.products.set(productWanted.itemId, productWanted);
                 this.reloadDom();
+                productWanted.price = "free";
             } else {
                 productWanted.qts = 1;
                 command.products.set(productWanted.itemId, productWanted);
