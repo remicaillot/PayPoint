@@ -741,9 +741,40 @@ input[type="password"].invalid {
     display: none;
     position: absolute;
     left: 50px;
-    right: 10px;
+    right: 0px;
     top: 90px;
     bottom: 0;
     overflow-x: hidden;
     overflow-y: auto;
+}
+.toolbar {
+    width: 100%;
+    background: white;
+    box-shadow: 0 0 3px rgb(125, 125, 125);
+    height: 50px;
+}
+.toolbar .toolbar-title{
+    display: inline-block;
+    line-height: 50px;
+    font-family: 'SourceSansPro-bold';
+    font-size: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+    overflow: hidden;
+}
+.toolbar .toolbar-item{
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    overflow: hidden;
+}
+.toolbar .toolbar-item:hover{
+    background: #EFEFEF;
+}
+.toolbar .toolbar-item img{
+    width: 20px;
+    height: 20px;
+    vertical-align: middle;
 }

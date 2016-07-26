@@ -80,7 +80,6 @@ function shopingCart(modifCB) {
 
         commandCopy.products = [];
         for (product of command.products) {
-            console.log(product);
             commandCopy.products.push(product[1]);
         }
 
@@ -89,7 +88,6 @@ function shopingCart(modifCB) {
     };
     this.addProduct = function (productWanted) {
         productWanted = Object.assign({}, productWanted);
-        console.log(productWanted.price);
         if (typeof command.products.get(productWanted.itemId) !== "undefined") {
 
             if (productWanted.price == "free") {
@@ -163,7 +161,7 @@ function shopingCart(modifCB) {
     }
     this.saveCommand = function () {
         let localcommand = this.getCommandJson();
-        localcommand.timestamp = Math.floor(Date.now() / 1000);
+        localcommand.timestamp = Date.now();
         console.log(localcommand);
         commandDb.insert(localcommand, function (err) {
             console.log(err);
@@ -171,6 +169,28 @@ function shopingCart(modifCB) {
 
     }
 }
+
+function SalesManager() {
+
+    this.getTotalSales = function (from, to, cb) {
+        var dateFrom = new Date(from);
+        var dateTo = new Date(to);
+        commandDb.find({}, function (err, data) {
+            let add = 0;
+            for (var command of data) {
+                let commandDate = new Date(command.timestamp);
+                if((commandDate <= dateTo) && (commandDate >= dateFrom)){
+                    add += command.total.TTC;
+
+                    console.log("added");
+                }
+            }
+            return cb(add);
+        });
+        return true;
+    }
+}
+var statistic = new SalesManager();
 var currentCommand = new shopingCart(function () {
     $(".tableLine").click(function (e) {
         var productId = $(this).data("itemid");
