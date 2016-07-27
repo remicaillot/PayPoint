@@ -40,7 +40,7 @@ function shopingCart(modifCB) {
             var price = money.format.numberToPrice(product[1].price * product[1].qts);
 
 
-            var productTemplate = '<div class="tableLine" data-itemId="' + product[1].itemId + '"><div class="product"><img src="' + product[1].picture + '">' + product[1].name + '</img></div><div class="qts">' + product[1].qts + '</div><div class="price">' + price + '</div></div>';
+            var productTemplate = '<div class="tableLine" data-itemId="' + product[1].itemId + '"><div class="product"><img src="' + product[1].picture + '">' + product[1].name + '</div><div class="qts">' + product[1].qts + '</div><div class="price">' + price + '</div></div>';
             command.total.HT += money.calculTva.TTCtoHT(money.format.priceToNumber(price), product[1].TVARate);
             command.total.TTC += money.format.priceToNumber(price);
             command.total.perTVARate[product[1].TVARate.toString().replace(".", ",")] = money.format.priceToNumber(price);
@@ -176,19 +176,52 @@ function SalesManager() {
         var dateFrom = new Date(from);
         var dateTo = new Date(to);
         commandDb.find({}, function (err, data) {
-            let add = 0;
+            let add = {
+                HT: 0,
+                TTC: 0,
+                perTVARate: {
+                    "5,5": 0,
+                    "7": 0,
+                    "10": 0,
+                    "20": 0
+                }
+            };
             for (var command of data) {
                 let commandDate = new Date(command.timestamp);
-                if((commandDate <= dateTo) && (commandDate >= dateFrom)){
-                    add += command.total.TTC;
-
-                    console.log("added");
+                if ((commandDate <= dateTo) && (commandDate >= dateFrom)) {
+                    add.HT += command.total.HT;
+                    add.TTC += command.total.TTC;
+                    add.perTVARate["5,5"] += command.total.perTVARate["5,5"];
+                    add.perTVARate["7"] += command.total.perTVARate["7"];
+                    add.perTVARate["10"] += command.total.perTVARate["10"];
+                    add.perTVARate["20"] += command.total.perTVARate["20"];
                 }
             }
             return cb(add);
         });
         return true;
-    }
+    };
+    this.getSalesPerProducts = function (from, to, cb) {
+        var dateFrom = new Date(from);
+        var dateTo = new Date(to);
+        commandDb.find({}, function (err, data) {
+            let sales = {
+                sales: [
+                    {
+                        product: "",
+                        soldQts: 0,
+                        total: 0
+                    }
+                ],
+                chartData: {
+                    labels: [],
+                    series: []
+                }
+            };
+
+        });
+    };
+
 }
 var statistic = new SalesManager();
 var currentCommand = new shopingCart(function () {
