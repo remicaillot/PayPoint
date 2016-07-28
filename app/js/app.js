@@ -38,9 +38,7 @@ function shopingCart(modifCB) {
         };
         for (var product of command.products) {
             var price = money.format.numberToPrice(product[1].price * product[1].qts);
-
-
-            var productTemplate = '<div class="tableLine" data-itemId="' + product[1].itemId + '"><div class="product"><img src="' + product[1].picture + '">' + product[1].name + '</div><div class="qts">' + product[1].qts + '</div><div class="price">' + price + '</div></div>';
+            var productTemplate = '<div class="tableLine" data-itemId="' + product[1].itemId + '"><div class="product"><img src="' + product[1].picture + '">' + product[1].name + '</img></div><div class="qts">' + product[1].qts + '</div><div class="price">' + price + '</div></div>';
             command.total.HT += money.calculTva.TTCtoHT(money.format.priceToNumber(price), product[1].TVARate);
             command.total.TTC += money.format.priceToNumber(price);
             command.total.perTVARate[product[1].TVARate.toString().replace(".", ",")] = money.format.priceToNumber(price);
@@ -106,7 +104,6 @@ function shopingCart(modifCB) {
 
                 command.products.set(productWanted.itemId, productWanted);
                 this.reloadDom();
-                productWanted.price = "free";
             } else {
                 productWanted.qts = 1;
                 command.products.set(productWanted.itemId, productWanted);
@@ -169,7 +166,12 @@ function shopingCart(modifCB) {
 
     }
 }
-
+var currentCommand = new shopingCart(function () {
+    $(".tableLine").click(function (e) {
+        var productId = $(this).data("itemid");
+        currentCommand.removeProduct(productId);
+    });
+});
 function SalesManager() {
 
     this.getTotalSales = function (from, to, cb) {
@@ -224,12 +226,7 @@ function SalesManager() {
 
 }
 var statistic = new SalesManager();
-var currentCommand = new shopingCart(function () {
-    $(".tableLine").click(function (e) {
-        var productId = $(this).data("itemid");
-        currentCommand.removeProduct(productId);
-    });
-});
+
 jQuery(document).ready(function ($) {
     if (database = "NLY") {
         loadData(true);
