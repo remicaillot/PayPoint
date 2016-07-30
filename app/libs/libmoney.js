@@ -1,11 +1,9 @@
 var money = {
     calculTva: {
         HTtoTTC: function(HT, TVA) {
-            TVA = client.tvaRate[TVA];
             return HT * (1 + TVA / 100);
         },
         TTCtoHT: function(TTC, TVA) {
-            TVA = client.tvaRate[TVA];
             return TTC / (1 + TVA / 100);
         },
         TVAfromTTC: function(TTC, HT) {
@@ -14,22 +12,17 @@ var money = {
     },
     format: {
         numberToPrice: function(number) {
-            number = number.toString();
-            number = number.split('.');
-            if (number.length == 1) {
-                number[1] = "00";
-            }else if(number.length == 2){
-                var intNumber = parseInt(number[1]);
-                if(intNumber < 10){
-                    
-                 number[1] = number[1] + "0";
-                }
+            if(typeof number == "number"){
+                number = parseFloat(number.toString()).toFixed(2);
+            }else{
+                number = parseFloat(number).toFixed(2);
             }
-            return number[0] + "," + number[1] + "€";
+            number =  number.replace(".", ",");
+            return number + "€";
         },
         priceToNumber: function(price) {
             price = price.replace('€', '');
-            number = price.replace(',', '.');
+            var number = price.replace(',', '.');
             return parseFloat(number);
         }
     },

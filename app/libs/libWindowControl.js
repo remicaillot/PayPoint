@@ -47,7 +47,7 @@ if (!manifest.devtools) {
             win.showDevTools();
         });
         $(".reload").click(function() {
-            win.reloadIgnoringCache()
+            win.reloadIgnoringCache();
         });
     });
 })(jQuery);

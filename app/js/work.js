@@ -1,23 +1,25 @@
 var database = "NLY";
 var currentCategory = "";
 var productPath = "";
+var Datastore = require('nedb'),
+    commandDb = new Datastore({ filename: './commands.lead', autoload: true }),
+    configDb = new Datastore();
+configDb.insert({"productDbPath": "./products.lead"});
+function loadData(firstLoad) {
 
-function loadData(dataLocation, firstLoad) {
-    if (dataLocation = "local") {
-        database = require("./database.json");
-    }
+        database = JSON.parse(fs.readFileSync("./database.json", "UTF-8"));
+
     $("#productsContainer").html("");
     if(firstLoad){
     	for (var i = 0; i < database.categories.length; i++) {
             addItemToMenu(database.categories[i]);
             if (database.categories[i].defaultFocused) {
                 currentCategory = database.categories[i].itemId;
-                console.log(database.categories[i].name);
             }
         }
     }
     if (manifest.devtools) {
-        console.log(productPath);
+       // console.log(productPath);
     }
     if (productPath.split("/")[productPath.split("/").length - 1] != "") {
         addItemToHome({
@@ -34,7 +36,17 @@ function loadData(dataLocation, firstLoad) {
     }
     for (var i = 0; i < database.products.length; i++) {
         if ((database.products[i].subCat == productPath.split("/")[productPath.split("/").length - 1]) && (database.products[i].category == currentCategory)) {
-            addItemToHome(database.products[i]);
+            if(database.products[i].price == "free"){
+
+                database.products[i].price = "Prix libre";
+                addItemToHome(database.products[i]);
+                database.products[i].price = "free";
+            }else{
+
+                database.products[i].price = money.format.numberToPrice(database.products[i].price);
+                addItemToHome(database.products[i]);
+                database.products[i].price = money.format.priceToNumber(database.products[i].price);
+            }
         }
     }
 

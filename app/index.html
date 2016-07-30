@@ -1,318 +1,223 @@
 <!DOCTYPE html>
 <html>
-    <head id="head">
-        <title>
-            Lead
-        </title>
-        <link href="./css/fonts.css" rel="stylesheet" type="text/css"/>
-        <link href="./css/specials.css" rel="stylesheet" type="text/css"/>
-        <link href="./css/global.css" rel="stylesheet" type="text/css"/>
-        <script src="./libs/jquery-2.2.0.min.js" type="text/javascript">
-        </script>
-        <script src="./libs/libInit.js" type="text/javascript">
-        </script>
-        <script src="./libs/libKeyboardCtrl.js" type="text/javascript">
-        </script>
-        <script src="./libs/libmoney.js" type="text/javascript">
-        </script>
-        <script src="./libs/libposPrint.js" type="text/javascript">
-        </script>
-        <script src="./libs/libWindowControl.js" type="text/javascript">
-        </script>
-        <script src="./libs/mustache.min.js" type="text/javascript">
-        </script>
-        <script src="./js/app.js" type="text/javascript">
-        </script>
-        <script src="./js/gui.js" type="text/javascript">
-        </script>
-        <script src="./js/work.js" type="text/javascript">
-        </script>
-        <meta charset="utf-8"/>
-    </head>
-    <body>
-        <header>
-            <div id="logo">
-                <img alt="logo" src="assets/images/logoWhite.png"/>
+<head id="head">
+    <title>
+        Lead
+    </title>
+    <link href="./css/fonts.css" rel="stylesheet" type="text/css"/>
+    <link href="./css/specials.css" rel="stylesheet" type="text/css"/>
+    <link href="./css/global.css" rel="stylesheet" type="text/css"/>
+    <script src="./libs/jquery-2.2.0.min.js" type="text/javascript">
+    </script>
+    <script src="./libs/libInit.js" type="text/javascript">
+    </script>
+    <script src="./libs/libKeyboardCtrl.js" type="text/javascript">
+    </script>
+    <script src="./libs/libmoney.js" type="text/javascript">
+    </script>
+    <script src="./libs/libposPrint.js" type="text/javascript">
+    </script>
+    <script src="./libs/libWindowControl.js" type="text/javascript">
+    </script>
+    <script src="./libs/mustache.min.js" type="text/javascript">
+    </script>
+    <script src="./libs/moment-with-locales.js" type="text/javascript">
+    </script>
+    <script src="./libs/jquery.daterangepicker.min.js" type="text/javascript"></script>
+
+    <script src="./js/app.js" type="text/javascript">
+    </script>
+    <script src="./js/gui.js" type="text/javascript">
+    </script>
+    <script src="./js/work.js" type="text/javascript">
+    </script>
+    <meta charset="utf-8"/>
+</head>
+<body>
+<header>
+    <div id="logo">
+        <img alt="logo" src="assets/images/logoWhite.png"/>
+    </div>
+    <div id="searchForm">
+        <form>
+            <input autocomplete="off" id="search" name="search" placeholder="Rechercher..." type="text"/>
+            <div id="searchAutocompletion">
+                <h2>Vous pouvez rechercher ce que vous voulez</h2>
             </div>
-            <div id="searchForm">
-                <form>
-                    <input autocomplete="off" id="search" name="search" placeholder="Rechercher..." type="text"/>
-                    <div id="searchAutocompletion">
-                        <h2>Vous pouvez rechercher ce que vous voulez</h2>
-                    </div>
-                </form>
-            </div>
-            <div id="windowControls">
-                <div class="window-control close">
-                </div>
-                <div class="window-control maximize">
-                </div>
-                <div class="window-control minimize">
-                </div>
+        </form>
+    </div>
+    <div id="windowControls">
+        <div class="window-control close">
+        </div>
+        <div class="window-control maximize">
+        </div>
+        <div class="window-control minimize">
+        </div>
                 <span class="devTools">
                     <div class="window-control dev">
                     </div>
                     <div class="window-control reload">
                     </div>
                 </span>
+    </div>
+</header>
+<div id="leftPanel">
+    <div class="categorie" id="sideBarMenu">
+        <div class="catContent">
+            <img class="sideBarIcon" src="./assets/images/menu.svg"/>
+            Menu
+        </div>
+    </div>
+    <div id="categories">
+    </div>
+    <div class="categorie bottom" style="bottom: 0;" id="settingsButton">
+        <div class="catContent">
+            <img class="sideBarIcon" src="./assets/images/settings.svg"/>
+            Paramètres
+        </div>
+    </div>
+    <div class="categorie bottom" style="bottom: 50px;" id="salesButton">
+        <div class="catContent">
+            <img class="sideBarIcon" src="./assets/images/sales.svg"/>
+            Ventes
+        </div>
+    </div>
+</div>
+<main id="commandStep">
+
+    <div id="productsContainer">
+
+    </div>
+
+
+</main>
+<div id="orderTicket">
+    <h1>
+        Commande
+    </h1>
+    <div id="ticketProductList">
+        <div id="tableHead">
+            <div class="product">
+                Produit
             </div>
-        </header>
-        <main>
-            <div id="leftPanel">
-                <div class="categorie" id="sideBarMenu">
-                    <div class="catContent">
-                        <img class="sideBarIcon" src="./assets/images/menu.svg"/>
-                        Menu
-                    </div>
-                </div>
-                <div id="categories">
-                </div>
+            <div class="qts">
+                Qts
             </div>
-            <div id="productsContainer">
-            </div>
-            <div id="orderTicket">
-                <h1>
-                    Commande
-                </h1>
-                <div id="ticketProductList">
-                    <div id="tableHead">
-                        <div class="product">
-                            Produit
-                        </div>
-                        <div class="qts">
-                            Qts
-                        </div>
-                        <div class="price">
-                            Prix
-                        </div>
-                    </div>
-                    <div id="tableBody">
-                        <div class="tableLine">
-                            <div class="product">
-                                <img src="./assets/images/Miniatures/liquides.png">
-                                    Soda
-                                </img>
-                            </div>
-                            <div class="qts">
-                                2
-                            </div>
-                            <div class="price">
-                                4,40€
-                            </div>
-                        </div>
-                        <div class="tableLine">
-                            <div class="product">
-                                <img src="./assets/images/Miniatures/sucreries.png">
-                                    Barre chocolaté
-                                </img>
-                            </div>
-                            <div class="qts">
-                                1
-                            </div>
-                            <div class="price">
-                                0,80€
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div id="ticketControler">
-                    <div id="totalHT">
-                        <div class="label">
-                            Total HT
-                        </div>
-                        <div class="amount">
-                            4,89€
-                        </div>
-                    </div>
-                    <div id="totalTTC">
-                        <div class="label">
-                            Total TTC
-                        </div>
-                        <div class="amount">
-                            5,20€
-                        </div>
-                    </div>
-                    <button id="validTicket">
-                        Valider la commande
-                    </button>
-                    <button id="cancelTicket">
-                        annuler la commande
-                    </button>
-                </div>
-            </div>
-        </main>
-        <div id="keyboard">
-            <div id="numericPad">
-                <div class="line">
-                    <div class="key" value="7">
-                        7
-                    </div>
-                    <div class="key" value="8">
-                        8
-                    </div>
-                    <div class="key" value="9">
-                        9
-                    </div>
-                    <div class="key" value="correction">
-                        C
-                    </div>
-                </div>
-                <div class="line">
-                    <div class="key" value="4">
-                        4
-                    </div>
-                    <div class="key" value="5">
-                        5
-                    </div>
-                    <div class="key" value="6">
-                        6
-                    </div>
-                    <div class="key" value="return">
-                        ⤆
-                    </div>
-                </div>
-                <div class="line">
-                    <div class="key" value="1">
-                        1
-                    </div>
-                    <div class="key" value="2">
-                        2
-                    </div>
-                    <div class="key" value="3">
-                        3
-                    </div>
-                    <div class="key" value=".">
-                        .
-                    </div>
-                </div>
-                <div class="line">
-                    <div class="key special" value="0">
-                        0
-                    </div>
-                    <div class="key" value="00">
-                        00
-                    </div>
-                    <div class="key" value="#alphanumericPad">
-                        ABC
-                    </div>
-                </div>
-            </div>
-            <div id="alphanumericPad">
-                <div class="line">
-                    <div class="key" value="a">
-                        a
-                    </div>
-                    <div class="key" value="z">
-                        z
-                    </div>
-                    <div class="key" value="e">
-                        e
-                    </div>
-                    <div class="key" value="r">
-                        r
-                    </div>
-                    <div class="key" value="t">
-                        t
-                    </div>
-                    <div class="key" value="y">
-                        y
-                    </div>
-                    <div class="key" value="u">
-                        u
-                    </div>
-                    <div class="key" value="i">
-                        i
-                    </div>
-                    <div class="key" value="o">
-                        o
-                    </div>
-                    <div class="key" value="p">
-                        p
-                    </div>
-                    <div class="key" value="return">
-                        ⤆
-                    </div>
-                </div>
-                <div class="line">
-                    <div class="key" value="q">
-                        q
-                    </div>
-                    <div class="key" value="s">
-                        s
-                    </div>
-                    <div class="key" value="d">
-                        d
-                    </div>
-                    <div class="key" value="f">
-                        f
-                    </div>
-                    <div class="key" value="g">
-                        g
-                    </div>
-                    <div class="key" value="h">
-                        h
-                    </div>
-                    <div class="key" value="j">
-                        j
-                    </div>
-                    <div class="key" value="k">
-                        k
-                    </div>
-                    <div class="key" value="l">
-                        l
-                    </div>
-                    <div class="key" value="m">
-                        m
-                    </div>
-                    <div class="key" value="close">
-                        ×
-                    </div>
-                </div>
-                <div class="line">
-                    <div class="key" value="maj">
-                        ↑
-                    </div>
-                    <div class="key" value=".">
-                        .
-                    </div>
-                    <div class="key" value="w">
-                        w
-                    </div>
-                    <div class="key" value="x">
-                        x
-                    </div>
-                    <div class="key" value="c">
-                        c
-                    </div>
-                    <div class="key" value="v">
-                        v
-                    </div>
-                    <div class="key" value="b">
-                        b
-                    </div>
-                    <div class="key" value="n">
-                        n
-                    </div>
-                    <div class="key" value="maj">
-                        ↑
-                    </div>
-                    <div class="key special" value="enter">
-                        →
-                    </div>
-                </div>
-                <div class="key special" value="#numericPad">
-                    123
-                </div>
-                <div class="key space" value=" ">
-                    Espace
-                </div>
-                <div class="key" value=",">
-                    ,
-                </div>
-                <div class="key" value="#numericPad">
-                    é#?
-                </div>
+            <div class="price">
+                Prix
             </div>
         </div>
-    </body>
+        <div id="tableBody">
+
+        </div>
+    </div>
+    <div id="ticketControler">
+        <div id="totalHT">
+            <div class="label">
+                Total HT
+            </div>
+            <div class="amount">
+                0,00€
+            </div>
+        </div>
+        <div id="totalTTC">
+            <div class="label">
+                Total TTC
+            </div>
+            <div class="amount">
+                0,00€
+            </div>
+        </div>
+        <button id="validTicket">
+            Suivant
+        </button>
+        <button id="cancelTicket">
+            annuler la commande
+        </button>
+    </div>
+</div>
+<main id="paymentStep">
+    <div class="rest bigLabel whiteTile">
+        <div class="pmLabel">À payer</div>
+        <div class="pmValue topay">0,00€</div>
+        <div class="pmLabel">Payé</div>
+        <div class="pmValue paid">0,00€</div>
+        <div class="pmLabel">Reste du</div>
+        <div class="pmValue paymentrest">0,00€</div>
+        <div class="printTicket">
+            <span class="title">Imprimer le ticket ?</span>
+            <span class="checkBoxContainer">
+                <div class="checkbox"></div>
+            </span>
+        </div>
+    </div>
+    <div class="paymentMethod">
+        <div class="pmLabel">Espèce</div>
+        <div class="pmInput">
+            <input type="text" data-method="cash" data-realDataType="price"></div>
+    </div>
+    </div>
+    <div class="paymentMethod">
+        <div class="pmLabel">Chèque</div>
+        <div class="pmInput">
+            <input type="text" data-method="check" data-realDataType="price">
+        </div>
+    </div>
+    </div>
+    <div class="paymentMethod">
+        <div class="pmLabel">Carte cadeau</div>
+        <div class="pmInput">
+            <input type="text" data-method="giftcard" data-realDataType="price">
+        </div>
+    </div>
+    <div class="paymentMethod">
+        <div class="pmLabel">Réduction</div>
+        <div class="pmInput">
+            <input type="text" data-method="reduction" data-realDataType="price">
+        </div>
+    </div>
+
+</main>
+<main id="settings">
+    <div class="toolbar">
+        <div class="toolbar-title">Paramètres</div>
+    </div>
+</main>
+<main id="sales">
+    <div class="toolbar">
+        <div class="toolbar-title">Rapport des Ventes</div>
+        <div class="toolbar-item">
+            <img src="./assets/images/print.svg">
+        </div>
+        <div class="toolbar-item">
+            <img src="./assets/images/export.svg">
+        </div>
+        <div class="toolbar-item">
+            <img src="./assets/images/cashout.svg">
+        </div>
+    </div>
+    <div class="ofcontainer">
+        <div class="whiteTile">
+            <div class="pmLabel">Réglage période</div>
+            <div class="pmInput">
+                <input type="daterange" name="daterange" placeholder="Choisir une periode">
+            </div>
+        </div>
+        <div class="bigLabel whiteTile">
+            <div class="pmLabel">Total TTC sur la période</div>
+            <div class="pmValue TTCTotal">0,00€</div>
+            <div class="pmLabel">Total HT sur la période</div>
+            <div class="pmValue HTTotal">0,00€</div>
+            <div class="pmLabel">Total pour TVA <strong>5,5%</strong> sur la période</div>
+            <div class="pmValue 55Total">0,00€</div>
+            <div class="pmLabel">Total pour TVA <strong>7%</strong> sur la période</div>
+            <div class="pmValue 7Total">0,00€</div>
+            <div class="pmLabel">Total pour TVA <strong>10%</strong> sur la période</div>
+            <div class="pmValue 10Total">0,00€</div>
+            <div class="pmLabel">Total pour TVA <strong>20%</strong> sur la période</div>
+            <div class="pmValue 20Total">0,00€</div>
+        </div>
+    </div>
+</main>
+</body>
 </html>

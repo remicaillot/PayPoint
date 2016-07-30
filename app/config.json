@@ -1,3 +1,5 @@
 {
-	"dataLocation":"local"
+	"dataLocation":"local",
+	"databasePath": "C:\\Users\\remic\\Google Drive\\Paypoint",
+	"TVARate": [5.5,7,10,20]
 }
