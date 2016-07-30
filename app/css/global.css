@@ -585,6 +585,7 @@ input[type="date"],
 input[type="number"],
 input[type="date"],
 input[type="email"],
+input[type="daterange"],
 input[type="password"] {
     background: none;
     border: none;
@@ -615,6 +616,8 @@ input[type="date"]:focus,
 input[type="date"].focus,
 input[type="email"]:focus,
 input[type="email"].focus,
+input[type="daterange"]:focus,
+input[type="daterange"].focus,
 input[type="password"]:focus,
 input[type="password"].focus {
     border-bottom: 5px solid #333;
@@ -625,6 +628,7 @@ input[type="email"].valid,
 input[type="number"].valid,
 input[type="date"].valid,
 input[type="date"].valid,
+input[type="daterange"].valid,
 input[type="password"].valid {
     border-color: #2ca05a;
 }
@@ -633,6 +637,7 @@ input[type="email"].invalid,
 input[type="number"].invalid,
 input[type="date"].invalid,
 input[type="date"].invalid,
+input[type="daterange"].invalid,
 input[type="password"].invalid {
     border-color: #c83737;
 }
@@ -653,23 +658,27 @@ input[type="password"].invalid {
     font-size: 10pt;
     display: inline-block;
 }
+.whiteTile{
+    background: white;
+    border-radius: 3px;
+    margin-top: 10px;
+    margin-right: 10px;
+    margin-left: 10px;
+    padding: 10px;
+    box-shadow: 0 0 3px rgb(125, 125, 125);
+}
 .rest{
     position: relative;
     display: inline-block;
     float :right;
     width: calc(50% - 40px);
-    background: white;
-    border-radius: 3px;
-    margin-top: 10px;
-    margin-right: 10px;
-    padding: 10px;
-    box-shadow: 0 0 3px rgb(125, 125, 125);
+
 }
-.rest .pmLabel{
+.bigLabel .pmLabel{
     font-size: 15pt;
     margin-top: 10px;
 }
-.rest .pmValue{
+.bigLabel .pmValue{
     font-size: 30pt;
     margin-bottom: 10px;
 }
@@ -731,7 +740,7 @@ input[type="password"].invalid {
     display: none;
     position: absolute;
     left: 50px;
-    right: 10px;
+    right: 0px;
     top: 90px;
     bottom: 0;
     overflow-x: hidden;
@@ -745,7 +754,16 @@ input[type="password"].invalid {
     top: 90px;
     bottom: 0;
     overflow-x: hidden;
+    overflow-y: hidden;
+}
+#sales .ofcontainer{
+    overflow-x: hidden;
     overflow-y: auto;
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    top: 50px;
+    bottom: 0;
 }
 .toolbar {
     width: 100%;

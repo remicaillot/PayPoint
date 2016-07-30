@@ -7,7 +7,7 @@ var Datastore = require('nedb'),
 configDb.insert({"productDbPath": "./products.lead"});
 function loadData(firstLoad) {
 
-        database = require("./database.json");
+        database = JSON.parse(fs.readFileSync("./database.json", "UTF-8"));
 
     $("#productsContainer").html("");
     if(firstLoad){
