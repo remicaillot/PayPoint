@@ -1,8 +1,7 @@
 jQuery(document).ready(function ($) {
     moment.locale('fr');
     $('input[type="daterange"]').dateRangePicker({
-
-        format: 'DD/MM/YYYY',
+        format: "dddd D MMMM YYYY",
         separator: ' au ',
         language: 'fr',
         startOfWeek: 'monday',// or monday
@@ -17,50 +16,56 @@ jQuery(document).ready(function ($) {
                     return [start, end];
                 }
             }, {
+                name: 'Hier',
+                dates: function () {
+                    var start = moment().startOf('day').subtract("day",1).toDate();
+                    var end = moment().endOf('day').subtract("day",1).toDate();
+                    return [start, end];
+                }
+            }, {
                 name: 'Cette semaine',
                 dates: function () {
-                    var start = moment().day(1).hour(0).toDate();
-                    var end = moment().day(7).hour(23).toDate();
+                    var start = moment().startOf('isoWeek').toDate();
+                    var end = moment().endOf('isoWeek').toDate();
                     return [start, end];
                 }
             },
             {
                 name: 'Ce mois-ci',
                 dates: function () {
-                    var start = moment().date(1).hour(0).toDate();
-                    var end = moment().hour(23).toDate();
+                    var start = moment().startOf('month').toDate();
+                    var end = moment().toDate();
                     return [start, end];
                 }
             },
             {
                 name: 'Le mois dernier',
                 dates: function () {
-                    var start = moment(moment().month(), "MM").date(1).hour(0).toDate();
-                    var end = moment(moment().month(), "MM").date(31).hour(23).toDate();
+                    var start = moment().startOf('month').subtract("month",1).toDate();
+                    var end = moment().endOf('month').subtract("month",1).toDate();
                     return [start, end];
                 }
             },
             {
                 name: 'Cette année',
                 dates: function () {
-                    var start = moment().dayOfYear(1).hour(0).toDate();
-                    var end = moment().dayOfYear(366).hour(23).toDate();
+                    var start = moment().startOf('year').toDate();
+                    var end = moment().endOf('year').toDate();
                     return [start, end];
                 }
             },
             {
                 name: 'L\'année dernière',
                 dates: function () {
-                    var start = moment(moment().year() - 1, "YYYY").dayOfYear(1).hour(0).toDate();
-                    var end = moment(moment().year() - 1, "YYYY").dayOfYear(365).hour(23).toDate();
+                    var start = moment().startOf('year').subtract("year",1).toDate();
+                    var end = moment().endOf('year').subtract("year",1).toDate();
                     return [start, end];
                 }
             }
         ],
         starttime: "00:00",
         endtime: "23:59",
-        duration: 0,
-        format: "dddd D MMMM YYYY"
+        duration: 0
     });
     $("#searchForm form input[type='text']").focus(function (event) {
 
@@ -207,12 +212,12 @@ jQuery(document).ready(function ($) {
             newProductPath.splice(newProductPath.length - 1, 1);
             newProductPath.splice(0, 1);
             productPath = "";
-            for (var i = 0; i < newProductPath.length; i++) {
+            for (let i = 0; i < newProductPath.length; i++) {
                 productPath += "/" + newProductPath[i];
             }
         } else {
             //console.log("product " + $(this).data("objectid"));
-            for (var i = 0; i < database.products.length; i++) {
+            for (let i = 0; i < database.products.length; i++) {
                 if (database.products[i].itemId == $(this).data("objectid")) {
 
                     currentCommand.addProduct(database.products[i]);
@@ -254,10 +259,9 @@ function searchInput(event) {
         $("#searchAutocompletion").append(' <div class="searchSection" data-objecttype="' + res + '"><div class="sectionName">' + getLabelFromObjecttype(res, true) + '<!--<div class="more">Plus</div>--></div><div class="searchResult"> </div></div>');
         for (item of searchResult[res]) {
             if (item.itemType == "product") {
+                var price = money.format.numberToPrice(item.price);
                 if(item.price === "free"){
-                    var price = "Prix libre";
-                }else{
-                    var price = money.format.numberToPrice(item.price);
+                    price = "Prix libre";
                 }
                 $(".searchSection[data-objecttype='" + res + "'] .searchResult").append('<div class="searchResultTile" data-objecttype="' + item.itemType + '" data-objectid="' + item.itemId + '"><img src="' + item.picture + '"/> <div class="content"> <span>' + item.name + '</span><div>' + price + '</div></div></div>');
             } else if (item.itemType == "category") {
@@ -315,7 +319,7 @@ function addItemToHome(data) {
 function addItemToMenu(data) {
     var activated = "";
     if (data.defaultFocused) {
-        var activated = "activated";
+        activated = "activated";
     }
     $("#categories").append('<div class="categorie ' + activated + '" data-objectid="' + data.itemId + '" data-objecttype="category"><div class="catContent"><img class="sideBarIcon" src="' + data.picture + '"/>' + data.name + '</div></div>')
 }

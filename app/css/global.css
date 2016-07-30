@@ -1,7 +1,7 @@
 body {
     padding: 0;
     margin: 0;
-    font-family: "SourceSansPro";
+    font-family: "SourceSansPro", sans-serif;
     font-weight: normal;
     font-style: normal;
     -webkit-user-select: none;
@@ -114,7 +114,7 @@ header {
     border: none;
     background: #CC5149;
     color: white;
-    font-family: "SourceSansPro";
+    font-family: "SourceSansPro", sans-serif;
     font-weight: lighter;
     height: 30px;
     padding: 10px 30px 10px 30px;
@@ -123,7 +123,7 @@ header {
     outline: none;
     -webkit-app-region: no-drag;
     -webkit-transition: background 0.2s cubic-bezier(.07, .7, .6, .96), color 0.2s cubic-bezier(.07, .7, .6, .96), border-radius 0.2s cubic-bezier(.07, .7, .6, .96);
-    margin-bottom: 0px;
+    margin-bottom: 0;
 }
 
 #searchForm form input[type="text"].focus {
@@ -145,12 +145,12 @@ header {
 #searchForm form #searchAutocompletion {
     display: block;
     width: calc(100% - 60px);
-    padding: 0px 30px 10px 30px;
+    padding: 0 30px 10px 30px;
     background: white;
     color: black;
     border-bottom-left-radius: 3px;
     border-bottom-right-radius: 3px;
-    height: 0px;
+    height: 0;
     opacity: 0;
     -webkit-transition: opacity 0.2s cubic-bezier(.07, .7, .6, .96), height 0.2s cubic-bezier(.07, .7, .6, .96);
     overflow: hidden;
@@ -168,14 +168,12 @@ header {
 }
 
 .searchSection .sectionName {
-    padding: 0;
     margin: 0;
     font-size: 18px;
     line-height: 20px;
     vertical-align: middle;
     border-bottom: 1px solid #eee;
-    padding-bottom: 10px;
-    padding-top: 10px;
+    padding: 10px 0;
     height: 20px;
 }
 
@@ -204,7 +202,7 @@ header {
 .searchResult .searchResultTile {
     display: inline-block;
     height: 50px;
-    box-shadow: 0px 0px 3px rgb(125, 125, 125);
+    box-shadow: 0 0 3px rgb(125, 125, 125);
     background: #EFEFEF;
     margin-top: 10px;
     padding-right: 10px;
@@ -284,7 +282,7 @@ header {
     position: relative;
     height: 50px;
     -webkit-transition: -webkit-transform 0.2s cubic-bezier(.07, .7, .6, .96);
-    font-family: "SourceSansPro";
+    font-family: "SourceSansPro", sans-serif;
     font-weight: bold;
     color: white;
 }
@@ -317,7 +315,7 @@ header {
     margin-left: 10px;
     margin-top: 10px;
     border-radius: 3px;
-    box-shadow: 0px 0px 3px rgb(125, 125, 125);
+    box-shadow: 0 0 3px rgb(125, 125, 125);
     overflow: hidden;
     display: inline-block;
     -webkit-transition: -webkit-transform 0.2s cubic-bezier(.07, .7, .6, .96);
@@ -371,16 +369,14 @@ header {
 
 #alphanumericPad, #specialCharPad {
     width: 813px;
-    margin: auto;
-    margin-top: 29px;
+    margin: 29px auto auto;
 
     display: none;
 }
 
 #numericPad {
     width: 292px;
-    margin: auto;
-    margin-top: 29px;
+    margin: 29px auto auto;
 }
 
 #keyboard .key {
@@ -390,7 +386,7 @@ header {
     color: white;
     text-align: center;
     line-height: 70px;
-    font-family: "SourceSansPro";
+    font-family: "SourceSansPro", sans-serif;
     font-weight: bolder;
     font-size: 25px;
     margin-bottom: 3px;
@@ -431,7 +427,7 @@ header {
     bottom: 10px;
     width: 300px;
     background: white;
-    box-shadow: 0px 0px 3px rgb(125, 125, 125);
+    box-shadow: 0 0 3px rgb(125, 125, 125);
     border-radius: 3px;
     -webkit-app-region: no-drag;
     text-align: center;
@@ -590,10 +586,9 @@ input[type="password"] {
     background: none;
     border: none;
     border-bottom: 1px solid #333;
-    margin-bottom: 1px;
     padding-top: 5px;
     padding-bottom: 5px;
-    font-family: 'SourceSansPro-italic';
+    font-family: 'SourceSansPro-italic', sans-serif;
     font-size: 15pt;
     width: 100%;
     line-height: 20pt;
@@ -694,7 +689,7 @@ input[type="password"].invalid {
     padding-top: 5px;
     padding-bottom: 5px;
     cursor: default;
-    font-family: 'SourceSansPro-bold';
+    font-family: 'SourceSansPro-bold', sans-serif;
     height: 39px;
     -webkit-transition: background 0.2s,color 0.2s;
     color: #aaa;
@@ -705,7 +700,7 @@ input[type="password"].invalid {
 }
 .printTicket .title{
     margin-left: 10px;
-    font-family: 'SourceSansPro-bold';
+    font-family: 'SourceSansPro-bold', sans-serif;
     margin-right: 5px;
 }
 .printTicket .checkBoxContainer{
@@ -715,14 +710,12 @@ input[type="password"].invalid {
 .printTicket .checkbox{
     display: inline-block;
     padding: 0;
-    background: none;
     border-radius: 50%;
     width: 24px;
     height: 24px;
     border: 3px solid #aaa;
-    background: url(../assets/images/checkWhite.svg) no-repeat;
-    background-size: 0%;
-    background-position: center;
+    background: url(../assets/images/checkWhite.svg) no-repeat center;
+    background-size: 0;
     vertical-align: middle;
     transition: background 0.2s;
     outline: none;
@@ -740,7 +733,7 @@ input[type="password"].invalid {
     display: none;
     position: absolute;
     left: 50px;
-    right: 0px;
+    right: 0;
     top: 90px;
     bottom: 0;
     overflow-x: hidden;
@@ -750,7 +743,7 @@ input[type="password"].invalid {
     display: none;
     position: absolute;
     left: 50px;
-    right: 0px;
+    right: 0;
     top: 90px;
     bottom: 0;
     overflow-x: hidden;
@@ -760,8 +753,8 @@ input[type="password"].invalid {
     overflow-x: hidden;
     overflow-y: auto;
     position: absolute;
-    left: 0px;
-    right: 0px;
+    left: 0;
+    right: 0;
     top: 50px;
     bottom: 0;
 }
@@ -774,7 +767,7 @@ input[type="password"].invalid {
 .toolbar .toolbar-title{
     display: inline-block;
     line-height: 50px;
-    font-family: 'SourceSansPro-bold';
+    font-family: 'SourceSansPro-bold', sans-serif;
     font-size: 20px;
     margin-left: 20px;
     margin-right: 20px;

@@ -1,75 +1,82 @@
 ::-webkit-scrollbar {
     /* Scrollbars */
 
-width: 14px;
+    width: 14px;
     height: 14px;
 }
+
 ::-webkit-scrollbar-track-piece {
     /* Fond */
 
-background: transparent none;
+    background: transparent none;
     border: solid 4px transparent;
     border-right-width: 8px;
     margin: 4px;
     -webkit-box-shadow: inset 1px 1px 0 0 #E2E2E2, inset -1px -1px 0 0 #E2E2E2;
 }
-::-webkit-scrollbar-track-piece: horizontal {
+
+::-webkit-scrollbar-track-piece:horizontal {
     /* Fond pour la barre du bas */
 
-border-right-width: 4px;
+    border-right-width: 4px;
     border-bottom-width: 8px;
 }
+
 ::-webkit-scrollbar-thumb {
     /* Barre */
 
-border: solid 0 transparent;
+    border: solid 0 transparent;
     border-right-width: 4px;
-    -webkit-border-radius: 5px;
-    -webkit-border-top-right-radius: 9px 5px;
-    -webkit-border-bottom-right-radius: 9px 5px;
+    -webkit-border-radius: 5px 9px 5px 9px;
     -webkit-box-shadow: inset 0 0 0 6px rgb(102, 102, 102);
 }
+
 ::-webkit-scrollbar-thumb:hover {
     /* Barre */
 
--webkit-box-shadow: inset 0 0 0 6px rgb(120, 120, 120);
+    -webkit-box-shadow: inset 0 0 0 6px rgb(120, 120, 120);
 }
-::-webkit-scrollbar-thumb: horizontal {
+
+::-webkit-scrollbar-thumb:horizontal {
     /* Barre du bas */
 
-border-right-width: 0;
+    border-right-width: 0;
     border-bottom-width: 4px;
     -webkit-border-top-right-radius: 5px;
     -webkit-border-bottom-right-radius: 5px 9px;
     -webkit-border-bottom-left-radius: 5px 9px;
 }
+
 ::-webkit-scrollbar-button {
     /* Boutons */
 
-display: none;
-    height: 0px;
+    display: none;
+    height: 0;
     background: none;
 }
-::-webkit-scrollbar-button: increment {
+
+::-webkit-scrollbar-button:increment {
     /* Bouton pour descendre */
 
-background-position: -19px 50%;
+    background-position: -19px 50%;
 }
-: : -webkit-scrollbar-button: horizontal {
+
+::-webkit-scrollbar-button:horizontal {
     display: none;
-    height: 0px;
+    height: 0;
     background: none;
 }
-}
-::-webkit-scrollbar-button: horizontal: increment {
+::-webkit-scrollbar-button:horizontal:increment {
     /* Bouton pour aller à droite */
 
-background-position: 50% -19px;
+    background-position: 50% -19px;
 }
+
 ::-webkit-input-placeholder { /* WebKit browsers */
-    color: rgba(255,255,255,0.5);
+    color: rgba(255, 255, 255, 0.5);
 }
-body{
+
+body {
     -webkit-overflow-scrolling: touch;
 }
 
@@ -194,7 +201,7 @@ body{
 }
 
 .date-picker-wrapper .month-wrapper table .day.has-tooltip {
-    cursor: help!important
+    cursor: help !important
 }
 
 .date-picker-wrapper .time label {
@@ -343,7 +350,7 @@ body{
     cursor: pointer;
     background: #67aa00;
     border: none;
-   color: #fff;
+    color: #fff;
     line-height: initial
 }
 
@@ -389,8 +396,8 @@ body{
 }
 
 .date-picker-wrapper .first-date-selected, .date-picker-wrapper .last-date-selected {
-    background-color: #49e!important;
-    color: #fff!important
+    background-color: #49e !important;
+    color: #fff !important
 }
 
 .date-picker-wrapper .date-range-length-tip {
@@ -404,11 +411,6 @@ body{
     border-radius: 2px;
     font-size: 12px;
     line-height: 16px;
-    -webkit-filter: drop-shadow(0 0 3px rgba(0, 0, 0, .3));
-    -moz-filter: drop-shadow(0 0 3px rgba(0, 0, 0, .3));
-    -ms-filter: drop-shadow(0 0 3px rgba(0, 0, 0, .3));
-    -o-filter: drop-shadow(0 0 3px rgba(0, 0, 0, .3));
-    filter: drop-shadow(0 0 3px rgba(0, 0, 0, .3))
 }
 
 .date-picker-wrapper .date-range-length-tip:after {
