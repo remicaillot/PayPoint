@@ -89,9 +89,16 @@ function shopingCart(modifCB) {
         if (typeof command.products.get(productWanted.itemId) !== "undefined") {
 
             if (productWanted.price == "free") {
-                command.products.get(productWanted.itemId).price = parseFloat(prompt("Prix", "0"));
-                command.products.get(productWanted.itemId).qts = parseFloat(prompt("Quantité en " + command.products.get(productWanted.itemId).unit, "0"));
-                this.reloadDom();
+                var price = prompt("Prix", "0");
+                var qts = prompt("Quantité en " + command.products.get(productWanted.itemId).unit, "0");
+                if((price != false) && (qts != false)){
+                    command.products.get(productWanted.itemId).price = parseFloat();
+                    command.products.get(productWanted.itemId).qts = parseFloat();
+                    this.reloadDom();
+                }else{
+                    return;
+                }
+
             } else {
                 command.products.get(productWanted.itemId).qts++;
                 this.reloadDom();
