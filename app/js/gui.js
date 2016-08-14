@@ -1,5 +1,29 @@
+function Pop(){
+    this.hide = function(){
+        $("#Pop").hide();
+    };
+    this.alert = function (txt){
+
+    };
+    this.prompt = function(query, type, cb){
+        $("#prompt h3").text(query);
+        $("#prompt input").attr("placeholder", "reponse de type " + type + " attendue");
+        $("#Pop").show();
+        $("#Pop #valid").click(function(e){
+            $("#Pop").hide();
+            return cb($("#prompt input").val());
+        });
+        $("#Pop #cancel").click(function(e){
+            $("#Pop").hide();
+            return cb(false);
+        });
+    };
+
+}
+var popupM = new Pop();
 jQuery(document).ready(function ($) {
     moment.locale('fr');
+    popupM.hide();
     $('input[type="daterange"]').dateRangePicker({
         format: "dddd D MMMM YYYY",
         separator: ' au ',
@@ -249,6 +273,12 @@ jQuery(document).ready(function ($) {
     $("#keyboard").click(function (e) {
         e.preventDefault();
         e.stopPropagation();
+    });
+    $(".toolbar-item[data-action='cashin']").click(function(e){
+
+    });
+    $(".toolbar-item[data-action='cashout']").click(function(e){
+
     });
 });
 

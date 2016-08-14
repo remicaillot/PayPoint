@@ -101,12 +101,13 @@ body {
 .date-picker-wrapper {
     position: absolute;
     z-index: 1;
-    border: 1px solid #bfbfbf;
-    background-color: #efefef;
+    border-radius: 3px;
+    background-color: #333;
     padding: 5px 12px;
     line-height: 20px;
-    color: #aaa;
-    box-shadow: 3px 3px 10px rgba(0, 0, 0, .5);
+    color: #fff;
+    border: 5px solid #333;
+    margin-top: -5px;
     box-sizing: initial
 }
 
@@ -138,7 +139,7 @@ body {
 }
 
 .date-picker-wrapper b {
-    color: #666;
+    color: #999;
     font-weight: 700
 }
 
@@ -150,11 +151,13 @@ body {
 }
 
 .date-picker-wrapper .month-name {
-    text-transform: uppercase
+    text-transform: uppercase;
+    color: #333;
 }
 
 .date-picker-wrapper .month-wrapper {
-    border: 1px solid #bfbfbf;
+
+    box-shadow: 0 0 3px rgb(125, 125, 125);
     border-radius: 3px;
     background-color: #fff;
     padding: 5px;
@@ -172,7 +175,8 @@ body {
     text-align: center;
     line-height: 14px;
     margin: 0;
-    padding: 0
+    padding: 0;
+    color: #555
 }
 
 .date-picker-wrapper .month-wrapper table .day {
@@ -231,7 +235,8 @@ body {
 
 .date-picker-wrapper table .caption .next, .date-picker-wrapper table .caption .prev {
     padding: 0 5px;
-    cursor: pointer
+    cursor: pointer;
+    color: #333
 }
 
 .date-picker-wrapper table .caption .next:hover, .date-picker-wrapper table .caption .prev:hover {
@@ -429,7 +434,6 @@ body {
     line-height: 1;
     font-size: 12px;
     margin-bottom: 1px;
-    color: #999;
     cursor: pointer
 }
 
@@ -438,3 +442,29 @@ body {
     font-weight: 700
 }
 
+#Pop{
+    position: fixed;
+    z-index: 200000;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    background: rgba(0,0,0,0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#Pop .dialog-container{
+    padding: 10px;
+    background: white;
+    border-radius: 3px;
+   flex-direction: column;
+    display: flex;
+    min-width: 100px;
+    max-height: 80%;
+}
+
+#Pop .dialog-container #prompt h3{
+    margin: 0;
+    padding: 0;
+}
