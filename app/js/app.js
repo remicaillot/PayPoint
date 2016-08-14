@@ -1,5 +1,5 @@
 var manifest = require('nw.gui').App.manifest;
-var Chart = require("Chart.js");
+var Chart = require("chart.js");
 function shopingCart(modifCB) {
     var command = {
         products: new Map(),
