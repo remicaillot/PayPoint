@@ -179,105 +179,19 @@ var currentCommand = new shopingCart(function () {
         currentCommand.removeProduct(productId);
     });
 });
-function SalesManager() {
 
-    this.getTotalSales = function (from, to, cb) {
-        var dateFrom = new Date(from);
-        var dateTo = new Date(to);
-        commandDb.find({}, function (err, data) {
-            let add = {
-                HT: 0,
-                TTC: 0,
-                perTVARate: {
-                    "5,5": 0,
-                    "7": 0,
-                    "10": 0,
-                    "20": 0
-                }
-            };
-            for (var command of data) {
-                let commandDate = new Date(command.timestamp);
-                if ((commandDate <= dateTo) && (commandDate >= dateFrom)) {
-                    add.HT += command.total.HT;
-                    add.TTC += command.total.TTC;
-                    add.perTVARate["5,5"] += command.total.perTVARate["5,5"];
-                    add.perTVARate["7"] += command.total.perTVARate["7"];
-                    add.perTVARate["10"] += command.total.perTVARate["10"];
-                    add.perTVARate["20"] += command.total.perTVARate["20"];
-                }
-            }
-            add.HT = parseFloat(parseFloat(add.HT).toFixed(2));
-            add.TTC = parseFloat(parseFloat(add.TTC).toFixed(2));
-            add.perTVARate["5,5"] = parseFloat(parseFloat(add.perTVARate["5,5"]).toFixed(2));
-            add.perTVARate["7"] = parseFloat(parseFloat(add.perTVARate["7"]).toFixed(2));
-            add.perTVARate["10"] = parseFloat(parseFloat(add.perTVARate["10"]).toFixed(2));
-            add.perTVARate["20"] = parseFloat(parseFloat(add.perTVARate["20"]).toFixed(2));
-            return cb(add);
-        });
-        return true;
-    };
-    this.getSalesPerProducts = function (from, to, cb) {
-        var dateFrom = new Date(from);
-        var dateTo = new Date(to);
-        commandDb.find({
-            $and: [
-                {timestamp: {$lte: dateTo.getTime()}},
-                {timestamp: {$gte: dateFrom.getTime()}}
-            ]
 
-        }, function (err, data) {
-            let salesResume = {
-                sales: [],
-                chartData: {
-                    perQts: {
-                        labels: [],
-                        series: []
-                    },
-                    perPrice: {
-                        labels: [],
-                        series: []
-                    }
-                }
-            };
-            for (let product of database.products) {
-                salesResume.sales.push({
-                    product: product.itemId,
-                    name: product.name,
-                    soldQts: 0,
-                    price: product.price
-                });
-                salesResume.chartData.perQts.labels.push(product.name);
-                salesResume.chartData.perQts.series.push(0);
-                salesResume.chartData.perPrice.labels.push(product.name);
-                salesResume.chartData.perPrice.series.push(0);
-            }
-            for (command of data) {
-                for (product of command.products) {
-                    var productIndex = salesResume.chartData.perQts.labels.indexOf(product.name);
-                    console.log(productIndex);
-                    if (productIndex !== -1) {
-                        salesResume.chartData.perQts.series[productIndex] += product.qts;
-                        salesResume.chartData.perPrice.series[productIndex] += (product.price * product.qts);
-                    }
-                }
-            }
-            return cb(salesResume);
-        });
-        return true;
-    };
-
-}
-var statistic = new SalesManager();
 
 jQuery(document).ready(function ($) {
     if (database = "NLY") {
         loadData(true);
     }
     $('input[type="daterange"]').bind('datepicker-change', function (event, obj) {
-        console.log(obj.date2.getTime());
-        console.log(obj.date1.getTime());
 
-       statistic.getTotalSales(obj.date1.getTime(),obj.date2.getTime(),function(data){
+        console.log(obj.date1.getTime());
+        console.log(obj.date2.getTime());
+
+       Statistics.getTotalSales(obj.date1.getTime(),obj.date2.getTime(),function(data){
            console.log(data);
            $(".TTCTotal").html(money.format.numberToPrice(data.TTC));
            $(".HTTotal").html(money.format.numberToPrice(data.HT));
