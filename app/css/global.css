@@ -455,6 +455,9 @@ header {
     padding: 3px;
     display: inline-block;
 }
+#orderTicket #tableHead .product {
+    width: 60%;
+}
 
 #orderTicket #tableBody {
     position: absolute;
@@ -466,7 +469,7 @@ header {
 }
 
 #orderTicket div.product {
-    width: 60%;
+    width: 50%;
 }
 
 #orderTicket div.qts {
@@ -482,16 +485,17 @@ header {
     height: 40px;
     margin-top: 10px;
 }
-
+#orderTicket .tableLine .img {
+    width: 10%;
+}
 #orderTicket .tableLine img {
     width: 40px;
     height: 40px;
     border-radius: 30px;
-    float: left;
+    vertical-align: middle
 }
 
 #orderTicket .tableLine div {
-    line-height: 40px;
     display: inline-block;
 }
 

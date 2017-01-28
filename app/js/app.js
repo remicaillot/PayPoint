@@ -38,7 +38,7 @@ function shopingCart(modifCB) {
         };
         for (var product of command.products) {
             var price = money.format.numberToPrice(product[1].price * product[1].qts);
-            var productTemplate = '<div class="tableLine" data-itemId="' + product[1].itemId + '"><div class="product"><img src="' + product[1].picture + '">' + product[1].name + '</img></div><div class="qts">' + product[1].qts + '</div><div class="price">' + price + '</div></div>';
+            var productTemplate = '<div class="tableLine" data-itemId="' + product[1].itemId + '"><div class="img"><img src="' + product[1].picture + '"></div><div class="product">' + product[1].name + '</div><div class="qts">' + product[1].qts + '</div><div class="price">' + price + '</div></div>';
             command.total.HT += money.calculTva.TTCtoHT(money.format.priceToNumber(price), product[1].TVARate);
             command.total.TTC += money.format.priceToNumber(price);
             command.total.perTVARate[product[1].TVARate.toString().replace(".", ",")] = money.format.priceToNumber(price);

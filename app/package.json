@@ -14,7 +14,7 @@
     "title": "PayPoint",
     "icon": "assets/images/logo.png",
     "toolbar": false,
-    "frame": true,
+    "frame": false,
     "fullscreen": false,
     "width": 860,
     "height": 630,
