@@ -158,7 +158,7 @@ header {
 
 #searchForm form input[type="text"].focus + #searchAutocompletion {
     min-height: 103px;
-    max-height: calc(100vh - 246px);
+    max-height: calc(100vh - 436px);
     opacity: 1;
     overflow: auto;
 }

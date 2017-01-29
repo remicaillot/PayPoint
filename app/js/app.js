@@ -126,6 +126,8 @@ function shopingCart(modifCB) {
             command.products.get(productIdWanted).qts--;
             if (command.products.get(productIdWanted).qts == 0) {
                 command.products.delete(productIdWanted);
+            } else if(isNaN(command.products.get(productIdWanted).qts)){
+                command.products.delete(productIdWanted);
             }
         }
         this.reloadDom();
