@@ -25,7 +25,7 @@ jQuery(document).ready(function ($) {
     moment.locale('fr');
     popupM.hide();
     $('input[type="daterange"]').dateRangePicker({
-        format: "dddd D MMMM YYYY",
+        format: "D MMMM YYYY",
         separator: ' au ',
         language: 'fr',
         startOfWeek: 'monday',// or monday
@@ -90,6 +90,10 @@ jQuery(document).ready(function ($) {
         starttime: "00:00",
         endtime: "23:59",
         duration: 0
+    }).bind('datepicker-change', function (event, obj) {
+        $('input[type="daterange"]').data('dateRangePicker').getRange = function() {
+            return obj;
+        };
     });
     $("#searchForm form input[type='text']").focus(function (event) {
 
@@ -279,6 +283,9 @@ jQuery(document).ready(function ($) {
     });
     $(".toolbar-item[data-action='cashout']").click(function(e){
 
+    });
+    $(".toolbar-item[data-action='exportPdf']").click(function(e){
+        Statistics.exportLogs();
     });
 });
 
