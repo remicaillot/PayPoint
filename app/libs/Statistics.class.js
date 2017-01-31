@@ -1,6 +1,7 @@
 class Statistics {
 
     constructor() {
+
     }
 
     static exportLogs() {

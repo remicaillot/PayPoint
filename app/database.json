@@ -97,18 +97,6 @@
       "TVARate": 20
     },
     {
-      "itemId": "07af139748fe42744ce3bbf4e2592089",
-      "itemType": "product",
-      "name": "Farine + teigne",
-      "picture": "assets/images/Miniatures/appats.png",
-      "subCat": "171203033dd2cfbfcadc0d3c40d53ef9",
-      "category": "5e4ff4525d24e9b5d5a1fb85b82f9913",
-      "sellMode": "unit",
-      "price": 5.5,
-      "unit": "piece",
-      "TVARate": 20
-    },
-    {
       "itemId": "a952c470e871688d80e331139f722233",
       "itemType": "product",
       "name": "Teignes",
@@ -117,6 +105,18 @@
       "category": "5e4ff4525d24e9b5d5a1fb85b82f9913",
       "sellMode": "unit",
       "price": 3.6,
+      "unit": "piece",
+      "TVARate": 20
+    },
+    {
+      "itemId": "07af139748fe42744ce3bbf4e2592089",
+      "itemType": "product",
+      "name": "Farine + teigne",
+      "picture": "assets/images/Miniatures/appats.png",
+      "subCat": "171203033dd2cfbfcadc0d3c40d53ef9",
+      "category": "5e4ff4525d24e9b5d5a1fb85b82f9913",
+      "sellMode": "unit",
+      "price": 5.5,
       "unit": "piece",
       "TVARate": 20
     },
@@ -137,7 +137,7 @@
       "itemType": "product",
       "name": "1 pâte Berkley",
       "picture": "assets/images/Miniatures/appats.png",
-      "subCat": "171203033dd2cfbfcadc0d3c40d53ef9",
+      "subCat": "fbfcadc0d3c171203033dd2c40d53ef9",
       "category": "5e4ff4525d24e9b5d5a1fb85b82f9913",
       "sellMode": "unit",
       "price": 6.5,
@@ -149,7 +149,7 @@
       "itemType": "product",
       "name": "2 pâte Berkley",
       "picture": "assets/images/Miniatures/appats.png",
-      "subCat": "171203033dd2cfbfcadc0d3c40d53ef9",
+      "subCat": "fbfcadc0d3c171203033dd2c40d53ef9",
       "category": "5e4ff4525d24e9b5d5a1fb85b82f9913",
       "sellMode": "unit",
       "price": 12,
@@ -161,7 +161,7 @@
       "itemType": "product",
       "name": "3 pâte Berkley",
       "picture": "assets/images/Miniatures/appats.png",
-      "subCat": "171203033dd2cfbfcadc0d3c40d53ef9",
+      "subCat": "fbfcadc0d3c171203033dd2c40d53ef9",
       "category": "5e4ff4525d24e9b5d5a1fb85b82f9913",
       "sellMode": "unit",
       "price": 15,
@@ -173,7 +173,7 @@
       "itemType": "product",
       "name": "Teignes synth.",
       "picture": "assets/images/Miniatures/appats.png",
-      "subCat": "171203033dd2cfbfcadc0d3c40d53ef9",
+      "subCat": "fbfcadc0d3c171203033dd2c40d53ef9",
       "category": "5e4ff4525d24e9b5d5a1fb85b82f9913",
       "sellMode": "unit",
       "price": 6.8,
@@ -364,7 +364,7 @@
       "itemId": "b0b534a84015276d70e9cea5f2acdfc9",
       "itemType": "product",
       "name": "Lancé 1/2j",
-      "picture": "assets/images/Miniatures/materiel.png",
+      "picture": "assets/images/Miniatures/freeAmount.png",
       "subCat": "ce7c67d37066cfc140c95019465ab476",
       "category": "5e4ff4525d24e9b5d5a1fb85b82f9913",
       "sellMode": "unit",
@@ -376,7 +376,7 @@
       "itemId": "555697740c1507719c04101a3faa8920",
       "itemType": "product",
       "name": "Lancé journée",
-      "picture": "assets/images/Miniatures/materiel.png",
+      "picture": "assets/images/Miniatures/freeAmount.png",
       "subCat": "ce7c67d37066cfc140c95019465ab476",
       "category": "5e4ff4525d24e9b5d5a1fb85b82f9913",
       "sellMode": "unit",
@@ -388,7 +388,7 @@
       "itemId": "bafbc834ba94eb9ec17964e7de5cc301",
       "itemType": "product",
       "name": "Gardonette 1/2j",
-      "picture": "assets/images/Miniatures/materiel.png",
+      "picture": "assets/images/Miniatures/freeAmount.png",
       "subCat": "ce7c67d37066cfc140c95019465ab476",
       "category": "5e4ff4525d24e9b5d5a1fb85b82f9913",
       "sellMode": "unit",
@@ -400,7 +400,7 @@
       "itemId": "b440d3ea0574afd8041582b99686672e",
       "itemType": "product",
       "name": "Gardonette journée",
-      "picture": "assets/images/Miniatures/materiel.png",
+      "picture": "assets/images/Miniatures/freeAmount.png",
       "subCat": "ce7c67d37066cfc140c95019465ab476",
       "category": "5e4ff4525d24e9b5d5a1fb85b82f9913",
       "sellMode": "unit",
@@ -751,7 +751,7 @@
     {
       "itemId": "4c8e7ef552ce518363125f1df83aa461",
       "itemType": "category",
-      "name": "Locations",
+      "name": "Reservation d'étang",
       "picture": "assets/images/etang.svg",
       "defaultFocused": false
     },
@@ -779,8 +779,14 @@
       "picture": "assets/images/Miniatures/appats.png",
       "category": "5e4ff4525d24e9b5d5a1fb85b82f9913",
       "subcategoryId": ""
-    },
-    {
+    },{
+      "itemId": "fbfcadc0d3c171203033dd2c40d53ef9",
+      "itemType": "subcategory",
+      "name": "Appâts synthétiques",
+      "picture": "assets/images/Miniatures/appats.png",
+      "category": "5e4ff4525d24e9b5d5a1fb85b82f9913",
+      "subcategoryId": "171203033dd2cfbfcadc0d3c40d53ef9"
+    }, {
       "itemId": "ff8e930863d85723ee526b8095b9c766",
       "itemType": "subcategory",
       "name": "Matériel de pêche",
@@ -791,7 +797,7 @@
     {
       "itemId": "ce7c67d37066cfc140c95019465ab476",
       "itemType": "subcategory",
-      "name": "Locations",
+      "name": "Locations de cannes",
       "picture": "assets/images/Miniatures/freeAmount.png",
       "category": "5e4ff4525d24e9b5d5a1fb85b82f9913",
       "subcategoryId": ""
