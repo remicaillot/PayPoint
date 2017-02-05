@@ -731,6 +731,30 @@
       "price": 12,
       "unit": "piece",
       "TVARate": 5.5
+    },
+    {
+      "itemId": "d67d16cfdcb3c54076dgth55yjj84b3",
+      "itemType": "product",
+      "name": "Sup. Après-midi Adulte",
+      "picture": "assets/images/Miniatures/adulthalfday.png",
+      "subCat": "",
+      "category": "c785209dfb0de1ddf5ec24f965a281cc",
+      "sellMode": "unit",
+      "price": 11,
+      "unit": "piece",
+      "TVARate": 5.5
+    },
+    {
+      "itemId": "d67d16cfdcb3c54et5gh4ez2f3b84b3",
+      "itemType": "product",
+      "name": "Sup. Après-midi -12ans",
+      "picture": "assets/images/Miniatures/childhalfday.png",
+      "subCat": "",
+      "category": "c785209dfb0de1ddf5ec24f965a281cc",
+      "sellMode": "unit",
+      "price": 10,
+      "unit": "piece",
+      "TVARate": 5.5
     }
   ],
   "categories": [
