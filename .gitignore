@@ -50,3 +50,4 @@ Temporary Items
 *node-modules/
 **/.idea/**
 docs/
+*nwjs/

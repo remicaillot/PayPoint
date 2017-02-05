@@ -13,7 +13,7 @@
    height="20"
    id="svg2"
    version="1.1"
-   inkscape:version="0.48.4 r9939"
+   inkscape:version="0.91 r13725"
    sodipodi:docname="close.svg">
   <defs
      id="defs4" />
@@ -24,16 +24,16 @@
      borderopacity="1.0"
      inkscape:pageopacity="1"
      inkscape:pageshadow="2"
-     inkscape:zoom="16"
-     inkscape:cx="23.390518"
-     inkscape:cy="4.703921"
+     inkscape:zoom="11.313709"
+     inkscape:cx="7.7838393"
+     inkscape:cy="5.0472713"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
      inkscape:window-width="1366"
-     inkscape:window-height="706"
-     inkscape:window-x="1272"
-     inkscape:window-y="403"
+     inkscape:window-height="705"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
      inkscape:window-maximized="1" />
   <metadata
      id="metadata7">
@@ -43,7 +43,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -67,6 +67,9 @@
        height="3.7749"
        x="716.48071"
        y="747.54834"
-       transform="matrix(-0.70710678,0.70710678,0.70710678,0.70710678,0,0)" />
+       transform="matrix(-0.70710678,0.70710678,0.70710678,0.70710678,0,0)"
+       inkscape:export-filename="C:\Users\remic\Desktop\close.png"
+       inkscape:export-xdpi="315.24255"
+       inkscape:export-ydpi="315.24255" />
   </g>
 </svg>

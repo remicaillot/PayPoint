@@ -359,6 +359,7 @@ function addItemToMenu(data) {
         activated = "activated";
     }
     $("#categories").append('<div class="categorie ' + activated + '" data-objectid="' + data.itemId + '" data-objecttype="category"><div class="catContent"><img class="sideBarIcon" src="' + data.picture + '"/>' + data.name + '</div></div>')
+    $("#recetteCat").append(' <div class="pmLabel">' + data.name + '</div> <div class="pmValue recettecategorie" data-objectid="' + data.itemId + '">0,00€</div>')
 }
 function getLabelFromObjecttype(objectType, plurial) {
     switch (objectType) {

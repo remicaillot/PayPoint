@@ -72,6 +72,8 @@ class Statistics {
         }
         commandDb.find(search, function (err, commands) {
             console.log(commands);
+            database = JSON.parse(fs.readFileSync("./database.json", "UTF-8"));
+
             let add = {
                 HT: 0,
                 TTC: 0,

@@ -195,12 +195,22 @@ jQuery(document).ready(function ($) {
 
        Statistics.getTotalSales(obj.date1.getTime(),obj.date2.getTime(),function(data){
            console.log(data);
+           //total sales
            $(".TTCTotal").html(money.format.numberToPrice(data.TTC));
            $(".HTTotal").html(money.format.numberToPrice(data.HT));
            $(".55Total").html(money.format.numberToPrice(data.perTVARate["5,5"]));
            $(".7Total").html(money.format.numberToPrice(data.perTVARate["7"]));
            $(".10Total").html(money.format.numberToPrice(data.perTVARate["10"]));
            $(".20Total").html(money.format.numberToPrice(data.perTVARate["20"]));
+           $(".20Total").html(money.format.numberToPrice(data.perTVARate["20"]));
+
+           //sales pe categories
+            data.perCategories.forEach(function(val, key){
+                $(".recettecategorie[data-objectid='" + key + "']").html(money.format.numberToPrice(val));
+            });
+
+
+
        });
         /* statistic.getSalesPerProducts(obj.date1.getTime(), obj.date2.getTime(), function(data){
          console.log(data);

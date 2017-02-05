@@ -651,6 +651,10 @@ input[type="password"].invalid {
     padding: 10px;
     box-shadow: 0 0 3px rgb(125, 125, 125);
 }
+.paymentMethod.inline{
+    float: left;
+    width: calc(50% - 35px);
+}
 .pmLabel {
     color: #444;
     text-align: left;
