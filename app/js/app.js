@@ -8,9 +8,8 @@ function shopingCart(modifCB) {
             TTC: 0.0,
             perTVARate: {
                 "5,5": 0,
-                7: 0,
-                10: 0,
-                20: 0
+                "10": 0,
+                "20": 0
             }
         },
         payment: {
@@ -31,9 +30,8 @@ function shopingCart(modifCB) {
             TTC: 0.0,
             perTVARate: {
                 "5,5": 0,
-                7: 0,
-                10: 0,
-                20: 0
+                "10": 0,
+                "20": 0
             }
         };
         for (var product of command.products) {
@@ -41,7 +39,7 @@ function shopingCart(modifCB) {
             var productTemplate = '<div class="tableLine" data-itemId="' + product[1].itemId + '"><div class="img"><img src="' + product[1].picture + '"></div><div class="product">' + product[1].name + '</div><div class="qts">' + product[1].qts + '</div><div class="price">' + price + '</div></div>';
             command.total.HT += money.calculTva.TTCtoHT(money.format.priceToNumber(price), product[1].TVARate);
             command.total.TTC += money.format.priceToNumber(price);
-            command.total.perTVARate[product[1].TVARate.toString().replace(".", ",")] = money.format.priceToNumber(price);
+            command.total.perTVARate[product[1].TVARate.toString().replace(".", ",")] += money.format.priceToNumber(price);
             $("#tableBody").append(productTemplate);
         }
         $("#totalHT").find(".amount").text(money.format.numberToPrice(command.total.HT));
@@ -140,9 +138,8 @@ function shopingCart(modifCB) {
                 TTC: 0.0,
                 perTVARate: {
                     "5,5": 0,
-                    7: 0,
-                    10: 0,
-                    20: 0
+                    "10": 0,
+                    "20": 0
                 }
             },
             payment: {
@@ -169,7 +166,7 @@ function shopingCart(modifCB) {
         let localcommand = this.getCommandJson();
         localcommand.timestamp = Date.now();
         console.log(localcommand);
-	printTicket(localcommand);
+	    //printTicket(localcommand);
         commandDb.insert(localcommand, function (err) {
             console.log(err);
         });
@@ -200,9 +197,7 @@ jQuery(document).ready(function ($) {
            $(".TTCTotal").html(money.format.numberToPrice(data.TTC));
            $(".HTTotal").html(money.format.numberToPrice(data.HT));
            $(".55Total").html(money.format.numberToPrice(data.perTVARate["5,5"]));
-           $(".7Total").html(money.format.numberToPrice(data.perTVARate["7"]));
            $(".10Total").html(money.format.numberToPrice(data.perTVARate["10"]));
-           $(".20Total").html(money.format.numberToPrice(data.perTVARate["20"]));
            $(".20Total").html(money.format.numberToPrice(data.perTVARate["20"]));
 
            //sales pe categories

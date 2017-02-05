@@ -79,7 +79,6 @@ class Statistics {
                 TTC: 0,
                 perTVARate: {
                     "5,5": 0,
-                    "7": 0,
                     "10": 0,
                     "20": 0
                 },
@@ -91,7 +90,6 @@ class Statistics {
                     add.HT += command.total.HT;
                     add.TTC += command.total.TTC;
                     add.perTVARate["5,5"] += command.total.perTVARate["5,5"];
-                    add.perTVARate["7"] += command.total.perTVARate["7"];
                     add.perTVARate["10"] += command.total.perTVARate["10"];
                     add.perTVARate["20"] += command.total.perTVARate["20"];
                 
@@ -108,7 +106,6 @@ class Statistics {
             add.HT = parseFloat(parseFloat(add.HT).toFixed(2));
             add.TTC = parseFloat(parseFloat(add.TTC).toFixed(2));
             add.perTVARate["5,5"] = parseFloat(parseFloat(add.perTVARate["5,5"]).toFixed(2));
-            add.perTVARate["7"] = parseFloat(parseFloat(add.perTVARate["7"]).toFixed(2));
             add.perTVARate["10"] = parseFloat(parseFloat(add.perTVARate["10"]).toFixed(2));
             add.perTVARate["20"] = parseFloat(parseFloat(add.perTVARate["20"]).toFixed(2));
             cb(add);

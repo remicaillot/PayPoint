@@ -10,7 +10,7 @@
       "sellMode": "unit",
       "price": 1.5,
       "unit": "piece",
-      "TVARate": 7
+      "TVARate": 10
     },
     {
       "itemId": "b8bd006119139228f18017b9832ddd72",
@@ -22,7 +22,7 @@
       "sellMode": "unit",
       "price": 1,
       "unit": "piece",
-      "TVARate": 7
+      "TVARate": 10
     },
     {
       "itemId": "0c23f4701638220931d00b5be62e2725",
@@ -58,7 +58,7 @@
       "sellMode": "unit",
       "price": 2.2,
       "unit": "piece",
-      "TVARate": 7
+      "TVARate": 10
     },
     {
       "itemId": "9c409f4665c669cab06640232eda70c9",
@@ -70,7 +70,7 @@
       "sellMode": "unit",
       "price": 1,
       "unit": "piece",
-      "TVARate": 7
+      "TVARate": 10
     },
     {
       "itemId": "d3d37b10dd9514d1427b5ed10113eaab",
@@ -190,7 +190,7 @@
       "sellMode": "unit",
       "price": 2.5,
       "unit": "piece",
-      "TVARate": 7
+      "TVARate": 10
     },
     {
       "itemId": "810e7ecbfc74f2c411c1008c3454ef2a",
@@ -574,7 +574,7 @@
       "sellMode": "unit",
       "price": 4,
       "unit": "piece",
-      "TVARate": 7
+      "TVARate": 10
     },
     {
       "itemId": "25e6a8ec580898399af5272fb2d9ad4a",
@@ -586,7 +586,7 @@
       "sellMode": "unit",
       "price": 3,
       "unit": "piece",
-      "TVARate": 7
+      "TVARate": 10
     },
     {
       "itemId": "26d8f527b6a48919a405d9e9c6ad9b2e",
@@ -598,7 +598,7 @@
       "sellMode": "unit",
       "price": 3.1,
       "unit": "piece",
-      "TVARate": 7
+      "TVARate": 10
     },
     {
       "itemId": "1bda9fb1c37d671cb657ecc47265e028",
@@ -610,7 +610,7 @@
       "sellMode": "unit",
       "price": 1.6,
       "unit": "piece",
-      "TVARate": 7
+      "TVARate": 10
     },
     {
       "itemId": "a10180869558f14f614ec7e728fe1a56",
@@ -622,7 +622,7 @@
       "sellMode": "unit",
       "price": 2.2,
       "unit": "piece",
-      "TVARate": 7
+      "TVARate": 10
     },
     {
       "itemId": "b2a3d64046913960ec0faa62c3ddb4fb",
@@ -634,7 +634,7 @@
       "sellMode": "unit",
       "price": 0.4,
       "unit": "piece",
-      "TVARate": 7
+      "TVARate": 10
     },
     {
       "itemId": "73d03186221c081b38ef4f517d35397a",
@@ -646,7 +646,7 @@
       "sellMode": "unit",
       "price": 2.2,
       "unit": "piece",
-      "TVARate": 7
+      "TVARate": 10
     },
     {
       "itemId": "ca5126fd115d587a8bacd397dd6a8f3b",
@@ -658,7 +658,7 @@
       "sellMode": "unit",
       "price": 3.5,
       "unit": "piece",
-      "TVARate": 7
+      "TVARate": 10
     },
     {
       "itemId": "0746abbe5f3ba20e2e866308fcbe4f20",
@@ -670,7 +670,7 @@
       "sellMode": "unit",
       "price": 1.6,
       "unit": "piece",
-      "TVARate": 7
+      "TVARate": 10
     },
     {
       "itemId": "e35e32247dac9bed2a88afefc40276cc",
@@ -682,7 +682,7 @@
       "sellMode": "unit",
       "price": 1.6,
       "unit": "piece",
-      "TVARate": 7
+      "TVARate": 10
     },
     {
       "itemId": "591ca4de8ab146abbc2d7e8b827cace8",
