@@ -8,7 +8,11 @@ var money = {
         },
         TVAfromTTC: function(TTC, HT) {
             return TTC * (HT / 100);
-        }
+        },
+	TVAValueFromTTC(TTC, TVA){
+		return TTC * TVA;
+	}
+	
     },
     format: {
         numberToPrice: function(number) {
