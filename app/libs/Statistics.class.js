@@ -94,13 +94,16 @@ class Statistics {
                     add.perTVARate["7"] += command.total.perTVARate["7"];
                     add.perTVARate["10"] += command.total.perTVARate["10"];
                     add.perTVARate["20"] += command.total.perTVARate["20"];
-                }
+                
+		console.log("commande traité");
+		console.log(command);
                 for(let product of command.products){
-                    if(typeof add.perCategories.get(product.category) === "undefined"){
-                        add.perCategories.set(product.category, 0);
-                    }
-                    add.perCategories.set(product.category, add.perCategories.get(product.category) + product.price * product.qts);
-                }
+                	    if(typeof add.perCategories.get(product.category) === "undefined"){
+                	        add.perCategories.set(product.category, 0);
+               	     }
+                	    add.perCategories.set(product.category, add.perCategories.get(product.category) + product.price * product.qts);
+                	}
+		}
             }
             add.HT = parseFloat(parseFloat(add.HT).toFixed(2));
             add.TTC = parseFloat(parseFloat(add.TTC).toFixed(2));
