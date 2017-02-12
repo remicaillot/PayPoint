@@ -95,6 +95,8 @@ jQuery(document).ready(function ($) {
             return obj;
         };
     });
+
+
     $("#searchForm form input[type='text']").focus(function (event) {
 
         $('input[type="daterange"]').data('dateRangePicker').close();
@@ -134,7 +136,12 @@ jQuery(document).ready(function ($) {
         $("#sales").show();
     });
     $(".categorie").click(function (event) {
-
+        $('input[type="daterange"]')
+            .data('dateRangePicker')
+            .setStart(moment().hour(0).toDate());
+        $('input[type="daterange"]')
+            .data('dateRangePicker')
+            .setEnd(moment().hour(23).toDate());
         $('input[type="daterange"]').data('dateRangePicker').close();
         if ($(this).attr('id') != "sideBarMenu") {
             $(".categorie").removeClass('activated');
