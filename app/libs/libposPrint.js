@@ -1,9 +1,15 @@
-var printer = require("node-thermal-printer-driver");
-printer.init({
-	type: "epson",
-	interface: "/dev/usb/lp1",
-	
-});
+var printer = require("node-thermal-printer");
+try{
+	printer.init({
+		type: "epson",
+		interface: "/dev/usb/lp1",
+		characterSet: 'FRANCE', 
+		removeSpecialCharacters: false, 
+		replaceSpecialCharacters: true   
+	});
+}catch(e){
+	console.log(e);
+}
 printer.isPrinterConnected(function(res){
 	if(res){
 		console.log("Printer connected");
@@ -14,10 +20,15 @@ printer.isPrinterConnected(function(res){
 
 function printTicket(command){
 printer.alignCenter();
-printer.bold(true);
+printer.printImage('/home/lead/Images/logomh.png', function(done){
+printer.newLine();
+	printer.bold(true);
 printer.println("SNC Les Moulin");
 printer.println("St-Martin d'Arcé");
 printer.println("49150 Baugé-en-Anjou");
+printer.newLine();
+printer.println("02 41 89 06 28");
+printer.println("www.moulinhubeau.fr");
 printer.bold(false);
 printer.newLine();
 printer.println("Société en nom collectif - SIRET 400 534 335");
@@ -36,21 +47,25 @@ for(product of command.products){
 	  { text: product.name, align:"LEFT", width:0.45, bold: false },
 	  { text: ""+product.qts, align:"CENTER", width:0.15, bold: false },
 	  { text: ""+product.TVARate, align:"CENTER", width:0.15, bold: false },
-	  { text: ""+(product.price * product.qts), align:"CENTER", width:0.25, bold: false }
+	  { text: ""+ money.format.numberToPrice(product.price * product.qts, true), align:"CENTER", width:0.25, bold: false }
 	]);
 }
 printer.drawLine()
 printer.setTextDoubleHeight();
-printer.leftRight("Total HT", ""+command.total.HT);
+printer.leftRight("Total HT", ""+ money.format.numberToPrice(command.total.HT, true));
 printer.setTextNormal();
-printer.leftRight("TVA 5,5%", ""+command.total.perTVARate["5,5"]);
-printer.leftRight("TVA 10%", ""+command.total.perTVARate["10"]);
-printer.leftRight("TVA 20%", ""+command.total.perTVARate["20"]);
+printer.leftRight("TVA 5,5%", ""+ money.format.numberToPrice(money.calculTva.TVAfromTTC(command.total.perTVARate["5,5"], 5.5), true));
+printer.leftRight("TVA 10%", ""+ money.format.numberToPrice(money.calculTva.TVAfromTTC(command.total.perTVARate["10"], 10), true));
+printer.leftRight("TVA 20%", ""+ money.format.numberToPrice(money.calculTva.TVAfromTTC(command.total.perTVARate["20"], 20), true));
 printer.newLine();
 printer.setTextDoubleHeight();
-printer.leftRight("Total TTC", ""+command.total.TTC);
+printer.leftRight("Total TTC", ""+ money.format.numberToPrice(command.total.TTC, true));
 printer.setTextNormal();
-
+printer.newLine();
+printer.setTextQuadArea();
+printer.println("Le Moulin Hubeau");
+printer.println("vous remercie de");
+printer.println("votre visite");
 printer.cut();
 printer.openCashDrawer();
 printer.execute(function(err){
@@ -60,6 +75,8 @@ printer.execute(function(err){
    console.log("Print done");
   }
 });
+});
+
 }
 function openCashDrawer(){
 	printer.openCashDrawer();

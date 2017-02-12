@@ -12,14 +12,17 @@ var money = {
 	
     },
     format: {
-        numberToPrice: function(number) {
+        numberToPrice: function(number, euro) {
             if(typeof number == "number"){
                 number = parseFloat(number.toString()).toFixed(2);
             }else{
                 number = parseFloat(number).toFixed(2);
             }
             number =  number.replace(".", ",");
-            return number + "€";
+		if(typeof euro === "undefined"){
+			number += "€";
+		}
+            return number;
         },
         priceToNumber: function(price) {
             price = price.replace('€', '');
