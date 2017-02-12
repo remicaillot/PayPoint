@@ -119,9 +119,11 @@ function openCashDrawer() {
 }
 
 function printLog(log) {
-    printer.alignCenter();
-    printer.bold(true);
     printer.newLine();
+    printer.bold(true);
+    printer.println("Rapport de vente");
+    printer.newLine();
+    printer.alignCenter();
     printer.println(moment().format("llll"));
     printer.bold(false);
     printer.newLine();
