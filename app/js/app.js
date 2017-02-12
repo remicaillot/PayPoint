@@ -166,7 +166,11 @@ function shopingCart(modifCB) {
         let localcommand = this.getCommandJson();
         localcommand.timestamp = Date.now();
         console.log(localcommand);
-	    //printTicket(localcommand);
+	try{
+		printTicket(localcommand);
+	} catch(e){
+		console.log(e);
+	}
         commandDb.insert(localcommand, function (err) {
             console.log(err);
         });
