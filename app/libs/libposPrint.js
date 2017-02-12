@@ -148,12 +148,9 @@ function printLogs(log) {
             printer.setTextNormal();
             log.perCategories.forEach(function (val, key) {
                 printer.bold(true);
-                printer.leftRight(
-                    database.categories.filter(function (value) {
+                printer.println(database.categories.filter(function (value) {
                         return value.itemId == key;
-                    })[0].name,
-                    ""
-                );
+                    })[0].name);
                 printer.bold(false);
                 printer.leftRight("5,5", money.format.numberToPrice(val["5,5"], true));
                 printer.leftRight("10", money.format.numberToPrice(val["10"], true));
@@ -175,7 +172,14 @@ function printLogs(log) {
             printer.setTextNormal();
             printer.leftRight("HT", money.format.numberToPrice(money.format.numberToPrice(log.HT), true));
             printer.leftRight("TTC", money.format.numberToPrice(money.format.numberToPrice(log.TTC), true));
-
+            printer.cut();
+            printer.execute(function (err) {
+                if (err) {
+                    console.error("Print failed", err);
+                } else {
+                    console.log("Print done");
+                }
+            })
         });
         return "printed";
     } else {
