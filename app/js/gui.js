@@ -285,6 +285,9 @@ jQuery(document).ready(function ($) {
     $(".toolbar-item[data-action='exportPdf']").click(function(e){
         Statistics.exportLogs();
     });
+    $("#openCashDrawerButton").click(function(){
+        openCashDrawer();
+    });
 });
 
 function searchInput(event) {
