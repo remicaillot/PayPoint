@@ -93,11 +93,30 @@ header {
 #windowControls .window-control.minimize:hover {
     background-color: rgba(0, 0, 0, 0.5);
 }
-
+.headerButton{
+    position: absolute;
+    right: 350px;
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    border-radius: 50px;
+    background: transparent;
+    top: 20px;
+    -webkit-app-region: no-drag;
+    -webkit-transition: background 0.2s cubic-bezier(.07, .7, .6, .96), color 0.2s cubic-bezier(.07, .7, .6, .96), border-radius 0.2s cubic-bezier(.07, .7, .6, .96);
+}
+.headerButton img{
+    width: 25px;
+    height: 25px;
+    padding: 12.5px;
+}
+.headerButton:active{
+    background: #CC5149;
+}
 #searchForm {
     position: absolute;
     left: 120px;
-    right: 400px;
+    right: 420px;
     height: 90px;
     text-align: center;
     z-index: 100000;
@@ -356,15 +375,16 @@ header {
 }
 
 #keyboard {
-    width: 100%;
     height: 350px;
     position: fixed;
     bottom: -350px;
     left: 0;
-    right: 0;
+    right: 200px;
     background: #010101;
     z-index: 1000000;
     -webkit-transition: bottom 0.2s;
+    width: 850px;
+    margin: auto;
 }
 
 #alphanumericPad, #specialCharPad {

@@ -311,7 +311,7 @@ function searchInput(event) {
         }
     }
     if (Object.keys(searchResult).length == 0) {
-        $("#searchAutocompletion").html("<h2>Vous pouvez rechercher ce que vous voulez</h2>");
+        $("#searchAutocompletion").html("<h2>Rechercher dans les produits, catégories et sous-catégories...</h2>");
     }
     var totalHeight = 0;
     for (elem of $("#searchAutocompletion").children()) {
