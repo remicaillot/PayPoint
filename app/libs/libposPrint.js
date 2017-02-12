@@ -18,8 +18,9 @@ printer.isPrinterConnected(function(res){
 	}
 });
 
-    if ($(".printTicket").hasClass("checked")) {
+ 
 function printTicket(command){
+   if ($(".printTicket").hasClass("checked")) {
 printer.alignCenter();
 printer.printImage('/home/lead/Images/logomh.png', function(done){
 printer.newLine();
@@ -68,6 +69,7 @@ printer.println("Le Moulin Hubeau");
 printer.println("vous remercie de");
 printer.println("votre visite");
 printer.cut();
+
 printer.openCashDrawer();
 printer.execute(function(err){
   if (err) {
@@ -76,8 +78,19 @@ printer.execute(function(err){
    console.log("Print done");
   }
 });
+
+});
+} else{
+printer.openCashDrawer();
+printer.execute(function(err){
+  if (err) {
+    console.error("Print failed", err);
+  } else {
+   console.log("Print done");
+  }
 });
 
+}
 }
 function openCashDrawer(){
 	printer.openCashDrawer();
