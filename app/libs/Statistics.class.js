@@ -82,7 +82,11 @@ class Statistics {
                     "10": 0,
                     "20": 0
                 },
-                perCategories: new Map()
+                perCategories: new Map(),
+                perPaymentMethods: {
+                    check: 0,
+                    cash: 0
+                }
             };
             for (let command of commands) {
                 let commandDate = new Date(command.timestamp);
@@ -92,7 +96,8 @@ class Statistics {
                     add.perTVARate["5,5"] += command.total.perTVARate["5,5"];
                     add.perTVARate["10"] += command.total.perTVARate["10"];
                     add.perTVARate["20"] += command.total.perTVARate["20"];
-                
+                    add.perPaymentMethods.check += command.payment.methods.check;
+                    add.perPaymentMethods.cash += command.payment.methods.cash;
 		console.log("commande traité");
 		console.log(command);
                 for(let product of command.products){

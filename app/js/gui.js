@@ -96,6 +96,8 @@ jQuery(document).ready(function ($) {
         };
     });
 
+    $("#recetteCat").append(' <div class="pmLabel">Chèques</div> <div class="pmValue recettecategorie" data-objectid="check">0,00€</div>')
+    $("#recetteCat").append(' <div class="pmLabel">Éspèces</div> <div class="pmValue recettecategorie" data-objectid="cash">0,00€</div>')
 
     $("#searchForm form input[type='text']").focus(function (event) {
 

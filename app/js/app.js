@@ -89,11 +89,11 @@ function shopingCart(modifCB) {
             if (productWanted.price == "free") {
                 var price = prompt("Prix", "0");
                 var qts = prompt("Quantité en " + command.products.get(productWanted.itemId).unit, "0");
-                if((price != false) && (qts != false)){
+                if ((price != false) && (qts != false)) {
                     command.products.get(productWanted.itemId).price = parseFloat();
                     command.products.get(productWanted.itemId).qts = parseFloat();
                     this.reloadDom();
-                }else{
+                } else {
                     return;
                 }
 
@@ -124,7 +124,7 @@ function shopingCart(modifCB) {
             command.products.get(productIdWanted).qts--;
             if (command.products.get(productIdWanted).qts == 0) {
                 command.products.delete(productIdWanted);
-            } else if(isNaN(command.products.get(productIdWanted).qts)){
+            } else if (isNaN(command.products.get(productIdWanted).qts)) {
                 command.products.delete(productIdWanted);
             }
         }
@@ -166,11 +166,11 @@ function shopingCart(modifCB) {
         let localcommand = this.getCommandJson();
         localcommand.timestamp = Date.now();
         console.log(localcommand);
-	try{
-		printTicket(localcommand);
-	} catch(e){
-		console.log(e);
-	}
+        try {
+            printTicket(localcommand);
+        } catch (e) {
+            console.log(e);
+        }
         commandDb.insert(localcommand, function (err) {
             console.log(err);
         });
@@ -185,7 +185,6 @@ var currentCommand = new shopingCart(function () {
 });
 
 
-
 jQuery(document).ready(function ($) {
     if (database = "NLY") {
         loadData(true);
@@ -195,26 +194,25 @@ jQuery(document).ready(function ($) {
         console.log(obj.date1.getTime());
         console.log(obj.date2.getTime());
 
-       Statistics.getTotalSales(obj.date1.getTime(),obj.date2.getTime(),function(data){
-           console.log(data);
-           //total sales
-           $(".TTCTotal").html(money.format.numberToPrice(data.TTC));
-           $(".HTTotal").html(money.format.numberToPrice(data.HT));
-           $(".55Total").html(money.format.numberToPrice(data.perTVARate["5,5"]));
-           $(".10Total").html(money.format.numberToPrice(data.perTVARate["10"]));
-           $(".20Total").html(money.format.numberToPrice(data.perTVARate["20"]));
+        Statistics.getTotalSales(obj.date1.getTime(), obj.date2.getTime(), function (data) {
+            console.log(data);
+            //total sales
+            $(".TTCTotal").html(money.format.numberToPrice(data.TTC));
+            $(".HTTotal").html(money.format.numberToPrice(data.HT));
+            $(".55Total").html(money.format.numberToPrice(data.perTVARate["5,5"]));
+            $(".10Total").html(money.format.numberToPrice(data.perTVARate["10"]));
+            $(".20Total").html(money.format.numberToPrice(data.perTVARate["20"]));
 
-           //sales pe categories
-            data.perCategories.forEach(function(val, key){
+            //sales pe categories
+            data.perCategories.forEach(function (val, key) {
                 $(".recettecategorie[data-objectid='" + key + "']").empty();
                 $(".recettecategorie[data-objectid='" + key + "']").append("<i>5,5% = </i> " + money.format.numberToPrice(val["5,5"]) + "<br>");
                 $(".recettecategorie[data-objectid='" + key + "']").append("<i>10% = </i> " + money.format.numberToPrice(val["10"]) + "<br>");
                 $(".recettecategorie[data-objectid='" + key + "']").append("<i>20% = </i> " + money.format.numberToPrice(val["20"]) + "<br>");
             });
-
-
-
-       });
+            $(".recettecategorie[data-objectid='cash']").text(money.format.numberToPrice(data.perPaymentMethods.cash));
+            $(".recettecategorie[data-objectid='check']").text(money.format.numberToPrice(data.perPaymentMethods.check));
+        });
         /* statistic.getSalesPerProducts(obj.date1.getTime(), obj.date2.getTime(), function(data){
          console.log(data);
          });*/
