@@ -378,7 +378,7 @@ header {
     height: 350px;
     position: fixed;
     bottom: -350px;
-    left: 55px;
+    left: 50px;
     right: 265px;
     background: #010101;
     z-index: 1000000;
