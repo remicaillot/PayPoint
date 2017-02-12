@@ -168,5 +168,14 @@ function printLog(log) {
     printer.setTextNormal();
     printer.leftRight("HT", money.format.numberToPrice(money.format.numberToPrice(data.HT), true));
     printer.leftRight("TTC", money.format.numberToPrice(money.format.numberToPrice(data.TTC), true));
+	printer.cut();
+ printer.execute(function (err) {
+                if (err) {
+                    console.error("Print failed", err);
+                } else {
+                    console.log("Print done");
+                }
+            });
+
 
 }
