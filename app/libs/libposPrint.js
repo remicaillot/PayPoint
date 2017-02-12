@@ -1,31 +1,33 @@
-try{
-	var printers = fs.readdirSync("/dev/usb").filter(function(val){ return val.includes("lp");})
-	console.log(printers);
-}catch(e){
-	console.error(e);
+try {
+    var printers = fs.readdirSync("/dev/usb").filter(function (val) {
+        return val.includes("lp");
+    })
+    console.log(printers);
+} catch (e) {
+    console.error(e);
 }
 
-try{
-	var printer = require("node-thermal-printer");
-	printer.init({
-		type: "epson",
-		interface: "/dev/usb/" + printers[0],
-		characterSet: 'FRANCE', 
-		removeSpecialCharacters: false, 
-		replaceSpecialCharacters: true   
-	});
-} catch(e){
-	console.log(e);
+try {
+    var printer = require("node-thermal-printer");
+    printer.init({
+        type: "epson",
+        interface: "/dev/usb/" + printers[0],
+        characterSet: 'FRANCE',
+        removeSpecialCharacters: false,
+        replaceSpecialCharacters: true
+    });
+} catch (e) {
+    console.log(e);
 }
-printer.isPrinterConnected(function(res){
-	if(res){
-		console.log("Printer connected");
-	} else {
-		console.error("Printer not found");
-	}
+printer.isPrinterConnected(function (res) {
+    if (res) {
+        console.log("Printer connected");
+    } else {
+        console.error("Printer not found");
+    }
 });
 
- 
+
 function printTicket(command) {
     if ($(".printTicket").hasClass("checked")) {
         printer.alignCenter();
@@ -114,4 +116,57 @@ function openCashDrawer() {
             console.log("Print done");
         }
     });
+}
+
+function printLog(log) {
+    printer.alignCenter();
+    printer.bold(true);
+    printer.newLine();
+    printer.println(moment().format("llll"));
+    printer.bold(false);
+    printer.newLine();
+    printer.drawLine()
+    printer.setTextDoubleHeight();
+    printer.newLine();
+    printer.println("Par taux de TVA : ");
+    printer.setTextNormal();
+    printer.leftRight("5,5", money.format.numberToPrice(log.perTVARate["5,5"], true));
+    printer.leftRight("10", money.format.numberToPrice(log.perTVARate["10"], true));
+    printer.leftRight("20", money.format.numberToPrice(log.perTVARate["20"], true));
+    printer.newLine();
+    printer.drawLine()
+    printer.newLine();
+    printer.setTextDoubleHeight();
+    printer.println("Par catégories : ");
+    printer.setTextNormal();
+    log.perCategories.forEach(function (val, key) {
+        printer.bold(true);
+        printer.leftRight(
+            database.categories.filter(function (value) {
+                return value.itemId == key;
+            })[0].name,
+            ""
+        );
+        printer.bold(false);
+        printer.leftRight("5,5", money.format.numberToPrice(val["5,5"], true));
+        printer.leftRight("10", money.format.numberToPrice(val["10"], true));
+        printer.leftRight("20", money.format.numberToPrice(val["20"], true));
+    });
+    printer.newLine();
+    printer.drawLine()
+    printer.newLine();
+    printer.setTextDoubleHeight();
+    printer.println("Par moyen de paiment : ");
+    printer.setTextNormal();
+    printer.leftRight("Éspèces", money.format.numberToPrice(data.perPaymentMethods.cash, true));
+    printer.leftRight("Chèques", money.format.numberToPrice(data.perPaymentMethods.check, true));
+    printer.newLine();
+    printer.drawLine()
+    printer.newLine();
+    printer.setTextQuadArea();
+    printer.println("TOTAL");
+    printer.setTextNormal();
+    printer.leftRight("HT", money.format.numberToPrice(money.format.numberToPrice(data.HT), true));
+    printer.leftRight("TTC", money.format.numberToPrice(money.format.numberToPrice(data.TTC), true));
+
 }

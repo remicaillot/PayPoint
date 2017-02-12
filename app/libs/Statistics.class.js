@@ -3,7 +3,14 @@ class Statistics {
     constructor() {
 
     }
-
+    static printLogs(){
+        if (typeof $('input[type="daterange"]').data('dateRangePicker').getRange !== "undefined") {
+            var selectedRange = $('input[type="daterange"]').data('dateRangePicker').getRange();
+            Statistics.getTotalSales(selectedRange.date1, selectedRange.date2, function(log){
+                printLog(log);
+            });
+        }
+    }
     static exportLogs() {
         if (typeof $('input[type="daterange"]').data('dateRangePicker').getRange !== "undefined") {
             var doc = new jsPDF("p", "pt");
