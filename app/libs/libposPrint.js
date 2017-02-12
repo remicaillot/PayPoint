@@ -129,7 +129,8 @@ function printLogs(log) {
             printer.setTextNormal();
             printer.newLine();
             printer.alignCenter();
-            printer.println(moment().format("llll"));
+            printer.println("Sur la période");
+            printer.println(moment(range.date1).format("llll") + " au " + moment(range.date2).format("llll"));
             printer.bold(false);
             printer.newLine();
             printer.drawLine();
