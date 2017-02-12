@@ -1,13 +1,20 @@
-var printer = require("node-thermal-printer");
 try{
+	var printers = fs.readdirSync("/dev/usb").filter(function(val){ return val.includes("lp");})
+	console.log(printers);
+}catch(e){
+	console.error(e);
+}
+
+try{
+	var printer = require("node-thermal-printer");
 	printer.init({
 		type: "epson",
-		interface: "/dev/usb/lp1",
+		interface: "/dev/usb/" + printers[0],
 		characterSet: 'FRANCE', 
 		removeSpecialCharacters: false, 
 		replaceSpecialCharacters: true   
 	});
-}catch(e){
+} catch(e){
 	console.log(e);
 }
 printer.isPrinterConnected(function(res){
