@@ -206,7 +206,10 @@ jQuery(document).ready(function ($) {
 
            //sales pe categories
             data.perCategories.forEach(function(val, key){
-                $(".recettecategorie[data-objectid='" + key + "']").html(money.format.numberToPrice(val));
+                $(".recettecategorie[data-objectid='" + key + "']").empty();
+                $(".recettecategorie[data-objectid='" + key + "']").append("<i>5,5% = </i> " + money.format.numberToPrice(val["5,5"]) + "<br>");
+                $(".recettecategorie[data-objectid='" + key + "']").append("<i>10% = </i> " + money.format.numberToPrice(val["10"]) + "<br>");
+                $(".recettecategorie[data-objectid='" + key + "']").append("<i>20% = </i> " + money.format.numberToPrice(val["20"]) + "<br>");
             });
 
 

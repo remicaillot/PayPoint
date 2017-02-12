@@ -97,9 +97,13 @@ class Statistics {
 		console.log(command);
                 for(let product of command.products){
                 	    if(typeof add.perCategories.get(product.category) === "undefined"){
-                	        add.perCategories.set(product.category, 0);
+                	        add.perCategories.set(product.category, {
+                                "5,5": 0,
+                                "10": 0,
+                                "20": 0
+                            });
                	     }
-                	    add.perCategories.set(product.category, add.perCategories.get(product.category) + product.price * product.qts);
+                	    add.perCategories.get(product.category)[product.TVARate.toString().replace(".", ",")] += product.price * product.qts;
                 	}
 		}
             }
