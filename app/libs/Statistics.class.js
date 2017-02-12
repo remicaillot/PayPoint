@@ -5,10 +5,12 @@ class Statistics {
     }
     static printLogs(){
         if (typeof $('input[type="daterange"]').data('dateRangePicker').getRange !== "undefined") {
-            var selectedRange = $('input[type="daterange"]').data('dateRangePicker').getRange();
-            Statistics.getTotalSales(selectedRange.date1, selectedRange.date2, function(log){
+            Statistics.getTotalSales($('input[type="daterange"]').data('dateRangePicker').getRange().date1, $('input[type="daterange"]').data('dateRangePicker').getRange().date2, function(log){
                 printLog(log);
             });
+            return "printed";
+        }else{
+            return "error l14";
         }
     }
     static exportLogs() {
