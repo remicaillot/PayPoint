@@ -125,12 +125,15 @@ function printLogs(log) {
             printer.newLine();
             printer.bold(true);
             printer.setTextQuadArea();
+            printer.alignCenter();
             printer.println("Rapport de vente");
             printer.setTextNormal();
             printer.newLine();
-            printer.alignCenter();
+            printer.alignLeft();
             printer.println("Sur la période");
-            printer.println(moment(range.date1).format("llll") + " au " + moment(range.date2).format("llll"));
+            printer.println(moment(range.date1).format("llll"));
+            printer.println("au");
+            printer.println(moment(range.date2).format("llll"));
             printer.bold(false);
             printer.newLine();
             printer.drawLine();
@@ -138,6 +141,7 @@ function printLogs(log) {
             printer.setTextDoubleHeight();
             printer.newLine();
             printer.println("Par taux de TVA : ");
+            printer.newLine();
             printer.setTextNormal();
             printer.leftRight("5,5", money.format.numberToPrice(log.perTVARate["5,5"], true));
             printer.leftRight("10", money.format.numberToPrice(log.perTVARate["10"], true));
