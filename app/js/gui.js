@@ -204,9 +204,7 @@ jQuery(document).ready(function ($) {
 
                 currentCommand.setPayment();
                 currentCommand.saveCommand();
-                if ($(".printTicket").hasClass("checked")) {
-                    printTicket();
-                }
+
                 $("#commandStep").show();
                 $("#leftPanel").show();
                 $("#paymentStep").hide();

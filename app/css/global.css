@@ -379,7 +379,7 @@ header {
     position: fixed;
     bottom: -350px;
     left: 0;
-    right: 200px;
+    right: 265px;
     background: #010101;
     z-index: 1000000;
     -webkit-transition: bottom 0.2s;
