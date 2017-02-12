@@ -118,66 +118,68 @@ function openCashDrawer() {
     });
 }
 
-function printLog(log) {
-    printer.newLine();
-    printer.bold(true);
-    printer.println("Rapport de vente");
-    printer.newLine();
-    printer.alignCenter();
-    printer.println(moment().format("llll"));
-    printer.bold(false);
-    printer.newLine();
-    printer.drawLine()
-    printer.setTextDoubleHeight();
-    printer.newLine();
-    printer.println("Par taux de TVA : ");
-    printer.setTextNormal();
-    printer.leftRight("5,5", money.format.numberToPrice(log.perTVARate["5,5"], true));
-    printer.leftRight("10", money.format.numberToPrice(log.perTVARate["10"], true));
-    printer.leftRight("20", money.format.numberToPrice(log.perTVARate["20"], true));
-    printer.newLine();
-    printer.drawLine()
-    printer.newLine();
-    printer.setTextDoubleHeight();
-    printer.println("Par catégories : ");
-    printer.setTextNormal();
-    log.perCategories.forEach(function (val, key) {
-        printer.bold(true);
-        printer.leftRight(
-            database.categories.filter(function (value) {
-                return value.itemId == key;
-            })[0].name,
-            ""
-        );
-        printer.bold(false);
-        printer.leftRight("5,5", money.format.numberToPrice(val["5,5"], true));
-        printer.leftRight("10", money.format.numberToPrice(val["10"], true));
-        printer.leftRight("20", money.format.numberToPrice(val["20"], true));
-    });
-    printer.newLine();
-    printer.drawLine()
-    printer.newLine();
-    printer.setTextDoubleHeight();
-    printer.println("Par moyen de paiment : ");
-    printer.setTextNormal();
-    printer.leftRight("Éspèces", money.format.numberToPrice(data.perPaymentMethods.cash, true));
-    printer.leftRight("Chèques", money.format.numberToPrice(data.perPaymentMethods.check, true));
-    printer.newLine();
-    printer.drawLine()
-    printer.newLine();
-    printer.setTextQuadArea();
-    printer.println("TOTAL");
-    printer.setTextNormal();
-    printer.leftRight("HT", money.format.numberToPrice(money.format.numberToPrice(data.HT), true));
-    printer.leftRight("TTC", money.format.numberToPrice(money.format.numberToPrice(data.TTC), true));
-	printer.cut();
- printer.execute(function (err) {
-                if (err) {
-                    console.error("Print failed", err);
-                } else {
-                    console.log("Print done");
-                }
+function printLogs(log) {
+    if (typeof $('input[type="daterange"]').data('dateRangePicker').getRange !== "undefined") {
+        let range = $('input[type="daterange"]').data('dateRangePicker').getRange();
+        Statistics.getTotalSales(range.date1.getTime(), range.date2.getTime(), function (log, cmds) {
+            printer.newLine();
+            printer.bold(true);
+            printer.setTextQuadArea();
+            printer.println("Rapport de vente");
+            printer.setTextNormal();
+            printer.newLine();
+            printer.alignCenter();
+            printer.println(moment().format("llll"));
+            printer.bold(false);
+            printer.newLine();
+            printer.drawLine()
+            printer.setTextDoubleHeight();
+            printer.newLine();
+            printer.println("Par taux de TVA : ");
+            printer.setTextNormal();
+            printer.leftRight("5,5", money.format.numberToPrice(log.perTVARate["5,5"], true));
+            printer.leftRight("10", money.format.numberToPrice(log.perTVARate["10"], true));
+            printer.leftRight("20", money.format.numberToPrice(log.perTVARate["20"], true));
+            printer.newLine();
+            printer.drawLine()
+            printer.newLine();
+            printer.setTextDoubleHeight();
+            printer.println("Par catégories : ");
+            printer.setTextNormal();
+            log.perCategories.forEach(function (val, key) {
+                printer.bold(true);
+                printer.leftRight(
+                    database.categories.filter(function (value) {
+                        return value.itemId == key;
+                    })[0].name,
+                    ""
+                );
+                printer.bold(false);
+                printer.leftRight("5,5", money.format.numberToPrice(val["5,5"], true));
+                printer.leftRight("10", money.format.numberToPrice(val["10"], true));
+                printer.leftRight("20", money.format.numberToPrice(val["20"], true));
             });
+            printer.newLine();
+            printer.drawLine()
+            printer.newLine();
+            printer.setTextDoubleHeight();
+            printer.println("Par moyen de paiment : ");
+            printer.setTextNormal();
+            printer.leftRight("Éspèces", money.format.numberToPrice(log.perPaymentMethods.cash, true));
+            printer.leftRight("Chèques", money.format.numberToPrice(log.perPaymentMethods.check, true));
+            printer.newLine();
+            printer.drawLine()
+            printer.newLine();
+            printer.setTextQuadArea();
+            printer.println("TOTAL");
+            printer.setTextNormal();
+            printer.leftRight("HT", money.format.numberToPrice(money.format.numberToPrice(log.HT), true));
+            printer.leftRight("TTC", money.format.numberToPrice(money.format.numberToPrice(log.TTC), true));
 
+        });
+        return "printed";
+    } else {
+        return "error l14";
+    }
 
 }

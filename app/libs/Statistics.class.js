@@ -3,17 +3,6 @@ class Statistics {
     constructor() {
 
     }
-    static printLogs(){
-        if (typeof $('input[type="daterange"]').data('dateRangePicker').getRange !== "undefined") {
-            let range = $('input[type="daterange"]').data('dateRangePicker').getRange();
-            Statistics.getTotalSales(moment(range.date1).unix(), moment(range.date2).unix(), function(log){
-                printLog(log);
-            });
-            return "printed";
-        }else{
-            return "error l14";
-        }
-    }
     static exportLogs() {
         if (typeof $('input[type="daterange"]').data('dateRangePicker').getRange !== "undefined") {
             var doc = new jsPDF("p", "pt");
@@ -69,6 +58,8 @@ class Statistics {
     }
 
     static getTotalSales(from, to, cb) {
+        console.log("log beetween", from, "and", to);
+
         var dateFrom = new Date(parseInt(from));
         var dateTo = new Date(parseInt(to));
         var search = {};
@@ -81,7 +72,6 @@ class Statistics {
             }
         }
         commandDb.find(search, function (err, commands) {
-            console.log(commands);
             database = JSON.parse(fs.readFileSync("./database.json", "UTF-8"));
 
             let add = {
@@ -127,7 +117,8 @@ class Statistics {
             add.perTVARate["5,5"] = parseFloat(parseFloat(add.perTVARate["5,5"]).toFixed(2));
             add.perTVARate["10"] = parseFloat(parseFloat(add.perTVARate["10"]).toFixed(2));
             add.perTVARate["20"] = parseFloat(parseFloat(add.perTVARate["20"]).toFixed(2));
-            cb(add);
+            console.log("the real Add var", add);
+            cb(add, commands);
         });
     }
 

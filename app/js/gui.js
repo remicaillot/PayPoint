@@ -297,6 +297,9 @@ jQuery(document).ready(function ($) {
     $("#openCashDrawerButton").click(function(){
         openCashDrawer();
     });
+    $('.toolbar-item[data-action="printlog"]').click(function(){
+        printLogs();
+    })
 });
 
 function searchInput(event) {
