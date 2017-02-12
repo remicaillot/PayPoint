@@ -5,7 +5,8 @@ class Statistics {
     }
     static printLogs(){
         if (typeof $('input[type="daterange"]').data('dateRangePicker').getRange !== "undefined") {
-            Statistics.getTotalSales($('input[type="daterange"]').data('dateRangePicker').getRange().date1, $('input[type="daterange"]').data('dateRangePicker').getRange().date2, function(log){
+            let range = $('input[type="daterange"]').data('dateRangePicker').getRange();
+            Statistics.getTotalSales(moment(range.date1).unix(), moment(range.date2).unix(), function(log){
                 printLog(log);
             });
             return "printed";
