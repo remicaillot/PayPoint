@@ -132,7 +132,8 @@ function printLogs(log) {
             printer.println(moment().format("llll"));
             printer.bold(false);
             printer.newLine();
-            printer.drawLine()
+            printer.drawLine();
+            printer.alignLeft();
             printer.setTextDoubleHeight();
             printer.newLine();
             printer.println("Par taux de TVA : ");
@@ -147,6 +148,7 @@ function printLogs(log) {
             printer.println("Par catégories : ");
             printer.setTextNormal();
             log.perCategories.forEach(function (val, key) {
+                printer.newLine();
                 printer.bold(true);
                 printer.println(database.categories.filter(function (value) {
                         return value.itemId == key;
@@ -161,14 +163,16 @@ function printLogs(log) {
             printer.newLine();
             printer.setTextDoubleHeight();
             printer.println("Par moyen de paiment : ");
+            printer.newLine();
             printer.setTextNormal();
-            printer.leftRight("Éspèces", money.format.numberToPrice(log.perPaymentMethods.cash, true));
-            printer.leftRight("Chèques", money.format.numberToPrice(log.perPaymentMethods.check, true));
+            printer.leftRight("Especes", money.format.numberToPrice(log.perPaymentMethods.cash, true));
+            printer.leftRight("Cheques", money.format.numberToPrice(log.perPaymentMethods.check, true));
             printer.newLine();
             printer.drawLine()
             printer.newLine();
             printer.setTextQuadArea();
             printer.println("TOTAL");
+            printer.newLine();
             printer.setTextNormal();
             printer.leftRight("HT", money.format.numberToPrice(money.format.numberToPrice(log.HT), true));
             printer.leftRight("TTC", money.format.numberToPrice(money.format.numberToPrice(log.TTC), true));
