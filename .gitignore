@@ -51,3 +51,4 @@ docs/
 *nwjs/
 /.idea/workspace.xml
 /.idea/libraries
+/app/commands.lead.locker
