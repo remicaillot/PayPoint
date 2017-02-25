@@ -817,3 +817,31 @@ input[type="password"].invalid {
     height: 20px;
     vertical-align: middle;
 }
+
+.screenContentBox{
+
+}
+.screenContentBox .tile{
+    background: white;
+    border-radius: 3px;
+    margin-top: 10px;
+    margin-right: 10px;
+    margin-left: 10px;
+    padding: 10px;
+    box-shadow: 0 0 3px rgb(125, 125, 125);
+
+}
+.screenContentBox .tile.button{
+    background: #fff url(../assets/images/next.svg) no-repeat center right 15px;
+    background-size: 30px;
+    border-radius: 3px;
+    padding: 30px;
+    cursor: default;
+    font-family: 'SourceSansPro-bold', sans-serif;
+    -webkit-transition: background-color 0.2s,color 0.2s;
+    color: #727272;
+}
+.screenContentBox .tile.button:active{
+    background-color: #303030;
+    color: white;
+}
