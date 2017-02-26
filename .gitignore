@@ -54,3 +54,5 @@ docs/
 /app/commands.lead.locker
 /tasks/
 /cache/
+/build/
+Supprimerait .idea/inspectionProfiles/
