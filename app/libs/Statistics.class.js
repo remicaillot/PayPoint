@@ -122,7 +122,7 @@ class Statistics {
         });
     }
 
-    static getSalesPerProducts(from, to, cb) {
+    static getSalesPerProducts(from, to) {
         var dateFrom = new Date(from);
         var dateTo = new Date(to);
         commandDb.find({
@@ -132,44 +132,54 @@ class Statistics {
             ]
 
         }, function (err, data) {
-            let salesResume = {
-                sales: [],
-                chartData: {
-                    perQts: {
-                        labels: [],
-                        series: []
-                    },
-                    perPrice: {
-                        labels: [],
-                        series: []
-                    }
-                }
-            };
+            let sales = {
+                labels: [],
+                values: []
+            }
             for (let product of database.products) {
-                salesResume.sales.push({
+                sales.values.push({
                     product: product.itemId,
                     name: product.name,
                     soldQts: 0,
                     price: product.price
                 });
-                salesResume.chartData.perQts.labels.push(product.name);
-                salesResume.chartData.perQts.series.push(0);
-                salesResume.chartData.perPrice.labels.push(product.name);
-                salesResume.chartData.perPrice.series.push(0);
+                sales.labels.push(product.name);
             }
             for (command of data) {
                 for (product of command.products) {
-                    var productIndex = salesResume.chartData.perQts.labels.indexOf(product.name);
-                    console.log(productIndex);
+                    let productIndex = sales.labels.indexOf(product.name);
+                    console.log("index", productIndex);
                     if (productIndex !== -1) {
-                        salesResume.chartData.perQts.series[productIndex] += product.qts;
-                        salesResume.chartData.perPrice.series[productIndex] += (product.price * product.qts);
+                        sales.values[productIndex].soldQts += product.qts;
                     }
                 }
             }
-            return cb(salesResume);
+            console.log(sales);
         });
         return true;
+    }
+
+    static getAccountingDetails(cb){
+        cashDrawerDb.find({}, function (err, data) {
+            let accountDetails = {
+                balance: 0,
+                perMonth: [],
+                lastDeposit: null
+            }
+            if(!err){
+                for (let operation of data) {
+                    if(operation.operationType == "deposit"){
+                        accountDetails.balance -= operation.amount;
+                        accountDetails.lastDeposit = operation;
+                    }else{
+                        accountDetails.balance += operation.amount;
+                    }
+                }
+                cb(accountDetails);
+            }else{
+                console.error(err);
+            }
+        });
     }
 
 }
