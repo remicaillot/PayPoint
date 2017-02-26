@@ -135,6 +135,7 @@ jQuery(document).ready(function ($) {
         $("#settings").hide();
         $("#sales").show();
         ScreenManager.resetScreen();
+        Accounting.reloadDom();
     });
     $(".categorie").click(function (event) {
         $('input[type="daterange"]')
@@ -371,7 +372,7 @@ function addItemToMenu(data) {
         activated = "activated";
     }
     $("#categories").append('<div class="categorie ' + activated + '" data-objectid="' + data.itemId + '" data-objecttype="category"><div class="catContent"><img class="sideBarIcon" src="' + data.picture + '"/>' + data.name + '</div></div>')
-    $("#recetteCat").append(' <div class="pmLabel">' + data.name + '</div> <div class="pmValue recettecategorie" data-objectid="' + data.itemId + '">0,00€</div>')
+    $('.screen[screenId="saleReport"]').append('<div class="tile leftRight"><div class="tileLabel">' + data.name + '</div><div class="tileValue recettecategorie" data-objectid="' + data.itemId + '">0,00€</div>');
 }
 function getLabelFromObjecttype(objectType, plurial) {
     switch (objectType) {

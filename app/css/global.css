@@ -131,7 +131,7 @@ header {
 #searchForm form input[type="text"] {
     width: calc(100% - 60px);
     border: none;
-    background: #CC5149;
+    background: rgba(0,0,0,0.05);
     color: white;
     font-family: "SourceSansPro", sans-serif;
     font-weight: lighter;
@@ -890,6 +890,12 @@ input[type="password"].invalid {
     font-family: 'SourceSansPro-italic', sans-serif;
     color: #434343;
     font-size: 18pt;
+}
+.screenContentBox .tile .tileSubValue{
+    font-family: 'SourceSansPro-lightItalic', sans-serif;
+    color: #434343;
+    font-size: 18pt;
+    flex-grow: 0.5;
 }
 .screenContentBox .title{
     font-family: 'SourceSansPro-italic', sans-serif;

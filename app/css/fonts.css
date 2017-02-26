@@ -16,5 +16,11 @@
     src: url('./fonts/SourceSansPro-Bold.otf');
     font-weight: normal;
     font-style: normal;
+}
+@font-face {
+    font-family: 'SourceSansPro-lightItalic';
+    src: url('./fonts/SourceSansPro-LightIt.otf');
+    font-weight: normal;
+    font-style: normal;
 
 }
