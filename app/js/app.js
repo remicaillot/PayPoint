@@ -165,15 +165,22 @@ function shopingCart(modifCB) {
     this.saveCommand = function () {
         let localcommand = this.getCommandJson();
         localcommand.timestamp = Date.now();
-        console.log(localcommand);
-        try {
-            printTicket(localcommand);
-        } catch (e) {
-            console.log(e);
-        }
-        commandDb.insert(localcommand, function (err) {
-            console.log(err);
+        Accounting.moneyEntry(localcommand.payment.methods.cash,  localcommand.timestamp, function(success){
+            if(success){
+                try {
+                    printTicket(localcommand);
+                } catch (e) {
+                    console.log(e);
+                }
+                commandDb.insert(localcommand, function (err) {
+                    console.log(err);
+                });
+            } else {
+                console.error("Accounting insertion error");
+            }
+
         });
+
 
     }
 }
