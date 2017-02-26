@@ -26,7 +26,6 @@ class Statistics {
                         Object.defineProperty(rows[i], database.categories[y].name, {
                             value: database.categories[y].name
                         });
-                        console.log(products)
                     });
 
                 }
@@ -58,7 +57,6 @@ class Statistics {
     }
 
     static getTotalSales(from, to, cb) {
-        console.log("log beetween", from, "and", to);
 
         var dateFrom = new Date(parseInt(from));
         var dateTo = new Date(parseInt(to));
@@ -98,8 +96,7 @@ class Statistics {
                     add.perTVARate["20"] += command.total.perTVARate["20"];
                     add.perPaymentMethods.check += command.payment.methods.check;
                     add.perPaymentMethods.cash += command.payment.methods.cash;
-		console.log("commande traité");
-		console.log(command);
+
                 for(let product of command.products){
                 	    if(typeof add.perCategories.get(product.category) === "undefined"){
                 	        add.perCategories.set(product.category, {
@@ -117,7 +114,7 @@ class Statistics {
             add.perTVARate["5,5"] = parseFloat(parseFloat(add.perTVARate["5,5"]).toFixed(2));
             add.perTVARate["10"] = parseFloat(parseFloat(add.perTVARate["10"]).toFixed(2));
             add.perTVARate["20"] = parseFloat(parseFloat(add.perTVARate["20"]).toFixed(2));
-            console.log("the real Add var", add);
+
             cb(add, commands);
         });
     }
@@ -148,13 +145,12 @@ class Statistics {
             for (command of data) {
                 for (product of command.products) {
                     let productIndex = sales.labels.indexOf(product.name);
-                    console.log("index", productIndex);
+
                     if (productIndex !== -1) {
                         sales.values[productIndex].soldQts += product.qts;
                     }
                 }
             }
-            console.log(sales);
         });
         return true;
     }
@@ -162,17 +158,20 @@ class Statistics {
     static getAccountingDetails(cb){
         cashDrawerDb.find({}, function (err, data) {
             let accountDetails = {
-                balance: 0
+                balance: 0,
+                lastDeposit: []
             }
             if(!err){
                 for (let operation of data) {
                     if(operation.operationType == "deposit"){
                         accountDetails.balance -= operation.amount;
-                        accountDetails.lastDeposit = operation;
+                        accountDetails.lastDeposit.push(operation);
                     }else{
                         accountDetails.balance += operation.amount;
                     }
                 }
+                accountDetails.lastDeposit = accountDetails.lastDeposit[0];
+                console.info("Details", accountDetails);
                 cb(accountDetails);
             }else{
                 console.error(err);

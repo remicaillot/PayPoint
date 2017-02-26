@@ -170,10 +170,10 @@ function shopingCart(modifCB) {
                 try {
                     printTicket(localcommand);
                 } catch (e) {
-                    console.log(e);
+                    console.error(e);
                 }
                 commandDb.insert(localcommand, function (err) {
-                    console.log(err);
+                    console.error(err);
                 });
             } else {
                 console.error("Accounting insertion error");
@@ -198,11 +198,9 @@ jQuery(document).ready(function ($) {
     }
     $('input[type="daterange"]').bind('datepicker-change', function (event, obj) {
 
-        console.log(obj.date1.getTime());
-        console.log(obj.date2.getTime());
 
         Statistics.getTotalSales(obj.date1.getTime(), obj.date2.getTime(), function (data) {
-            console.log(data);
+
             //total sales
             $(".TTCTotal").html(money.format.numberToPrice(data.TTC));
             $(".HTTotal").html(money.format.numberToPrice(data.HT));

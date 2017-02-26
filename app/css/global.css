@@ -911,3 +911,7 @@ input[type="password"].invalid {
     padding: 10px;
     padding-bottom: 5px;
 }
+.screenContentBox .title:first-child{
+    font-family: 'SourceSansPro-bold', sans-serif;
+    font-size: 23pt;
+}

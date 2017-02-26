@@ -51,3 +51,10 @@ class Accounting{
         })
     }
 }
+$(document).ready(function(){
+    $("#newDeposit").click(function(e){
+        Accounting.bankDeposit(parseFloat(prompt("Valeur du dépot en euros")), Date.now(), function(){
+            Accounting.reloadDom();
+        })
+    });
+});
