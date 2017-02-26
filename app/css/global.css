@@ -848,11 +848,13 @@ input[type="password"].invalid {
     background: white;
     border-radius: 3px;
     margin-top: 10px;
+    margin-bottom: 10px;
     margin-right: 10px;
     margin-left: 10px;
     padding: 10px;
     box-shadow: 0 0 3px rgb(125, 125, 125);
-
+    display: flex;
+    justify-items: center;
 }
 .screenContentBox .tile.button{
     background: #fff url(../assets/images/next.svg) no-repeat center right 15px;
@@ -867,4 +869,35 @@ input[type="password"].invalid {
 .screenContentBox .tile.button:active{
     background-color: #303030;
     color: white;
+}
+.screenContentBox .tile.inputValue{
+    flex-direction: column;
+}
+
+.screenContentBox .tile.leftRight{
+    flex-direction: row;
+    align-items: center;
+    align-content: space-between;
+}
+.screenContentBox .tile .tileLabel{
+    font-family: 'SourceSansPro-bold', sans-serif;
+    color: #434343;
+    font-size: 12pt;
+    padding: 10px;
+    flex-grow: 1;
+}
+.screenContentBox .tile .tileValue{
+    font-family: 'SourceSansPro-italic', sans-serif;
+    color: #434343;
+    font-size: 18pt;
+}
+.screenContentBox .title{
+    font-family: 'SourceSansPro-italic', sans-serif;
+    color: #434343;
+    font-size: 20pt;
+    margin-top: 10px;
+    margin-right: 10px;
+    margin-left: 10px;
+    padding: 10px;
+    padding-bottom: 5px;
 }
