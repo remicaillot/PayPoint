@@ -162,9 +162,7 @@ class Statistics {
     static getAccountingDetails(cb){
         cashDrawerDb.find({}, function (err, data) {
             let accountDetails = {
-                balance: 0,
-                perMonth: [],
-                lastDeposit: null
+                balance: 0
             }
             if(!err){
                 for (let operation of data) {

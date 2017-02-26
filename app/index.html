@@ -112,18 +112,14 @@
     <div class="categorie bottom" style="bottom: 50px;" id="salesButton">
         <div class="catContent">
             <img class="sideBarIcon" src="./assets/images/sales.svg"/>
-            Ventes
+            Gestion du commerce
         </div>
     </div>
 
 </div>
 <main id="commandStep">
-
     <div id="productsContainer">
-
     </div>
-
-
 </main>
 <div id="orderTicket">
     <h1>
@@ -227,7 +223,7 @@
 </main>
 <main id="sales">
     <div class="toolbar">
-        <div class="toolbar-title">Rapport des Ventes</div>
+        <div class="toolbar-title">Gestion du commerce</div>
         <div class="toolbar-item" data-action="printlog">
             <img src="./assets/images/print.svg">
         </div>
@@ -244,7 +240,7 @@
     <div class="screenContentBox">
         <div class="screenPane">
             <div class="screen" id="main">
-                <div class="tile">
+                <div class="tile inputValue">
                     <div class="pmLabel">Réglage période</div>
                     <div class="pmInput">
                         <input type="daterange" name="daterange" placeholder="Choisir une periode">
@@ -264,25 +260,51 @@
                 </div>
             </div>
             <div class="screen" screenId="saleReport">
-                <div class="bigLabel paymentMethod inline">
-                    <h1>Recettes sur la période</h1>
-                    <div class="pmLabel">Total TTC sur la période</div>
-                    <div class="pmValue TTCTotal">0,00€</div>
-                    <div class="pmLabel">Total HT sur la période</div>
-                    <div class="pmValue HTTotal">0,00€</div>
-                    <div class="pmLabel">Total pour TVA <strong>5,5%</strong> sur la période</div>
-                    <div class="pmValue 55Total">0,00€</div>
-                    <div class="pmLabel">Total pour TVA <strong>10%</strong> sur la période</div>
-                    <div class="pmValue 10Total">0,00€</div>
-                    <div class="pmLabel">Total pour TVA <strong>20%</strong> sur la période</div>
-                    <div class="pmValue 20Total">0,00€</div>
+                <div class="title">Totaux généraux</div>
+                <div class="tile leftRight">
+                    <div class="tileLabel">Total TTC sur la période</div>
+                    <div class="tileValue TTCTotal">0,00€</div>
                 </div>
-                <div id="recetteCat" class="bigLabel paymentMethod inline">
-                    <h1>Recettes par catégories</h1>
+                <div class="tile leftRight">
+                    <div class="tileLabel">Total HT sur la période</div>
+                    <div class="tileValue HTTotal">0,00€</div>
                 </div>
+                <div class="title">Totaux par taux de TVA</div>
+                <div class="tile leftRight">
+                    <div class="tileLabel">Total pour TVA <strong>5,5%</strong> sur la période</div>
+                    <div class="tileValue 55Total">0,00€</div>
+                </div>
+                <div class="tile leftRight">
+                    <div class="tileLabel">Total pour TVA <strong>10%</strong> sur la période</div>
+                    <div class="tileValue 10Total">0,00€</div>
+                </div>
+                <div class="tile leftRight">
+                    <div class="tileLabel">Total pour TVA <strong>20%</strong> sur la période</div>
+                    <div class="tileValue 20Total">0,00€</div>
+                </div>
+                <div class="title">Totaux par moyens de paiements</div>
+                <div class="tile leftRight">
+                    <div class="tileLabel">Chèques</div>
+                    <div class="tileValue recettecategorie" data-objectid="check">0,00€</div>
+                </div>
+                <div class="tile leftRight">
+                    <div class="tileLabel">Espèces</div>
+                    <div class="tileValue recettecategorie" data-objectid="cash">0,00€</div>
+                </div>
+                <div class="title">Totaux par catégories</div>
             </div>
             <div class="screen" screenId="productStats"></div>
-            <div class="screen" screenId="accountDetails"></div>
+            <div class="screen" screenId="accountDetails">
+                <div class="tile leftRight">
+                    <div class="tileLabel">Balance du compte caisse</div>
+                    <div class="tileValue accountingBalance">0,00€</div>
+                </div>
+                <div class="tile leftRight">
+                    <div class="tileLabel">Dernier Dépot à la banque</div>
+                    <div class="tileSubValue lastDepositDate">00/00/0000</div>
+                    <div class="tileValue lastDepositAmount">0,00€</div>
+                </div>
+            </div>
             <div class="screen" screenId="commands"></div>
         </div>
     </div>

@@ -37,4 +37,17 @@ class Accounting{
             }
         });
     }
+    static reloadDom(){
+        Statistics.getAccountingDetails(function(details){
+            $(".accountingBalance").text(money.format.numberToPrice(details.balance));
+            if(typeof details.lastDeposit === "undefined"){
+                $(".lastDepositDate").text("Jamais");
+                $(".lastDepositAmount").text("0,00€");
+            } else {
+                $(".lastDepositDate").text(moment(details.lastDeposit.timestamp).calendar());
+                $(".lastDepositAmount").text(money.format.numberToPrice(details.lastDeposit.amount));
+            }
+
+        })
+    }
 }
