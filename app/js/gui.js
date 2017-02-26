@@ -136,6 +136,7 @@ jQuery(document).ready(function ($) {
         $("#orderTicket").hide();
         $("#settings").hide();
         $("#sales").show();
+        ScreenManager.resetScreen();
     });
     $(".categorie").click(function (event) {
         $('input[type="daterange"]')
