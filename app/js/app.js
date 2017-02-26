@@ -212,11 +212,20 @@ jQuery(document).ready(function ($) {
 
             //sales pe categories
             data.perCategories.forEach(function (val, key) {
-                $(".recettecategorie[data-objectid='" + key + "']").empty();
-                $(".recettecategorie[data-objectid='" + key + "']").append("<i>5,5% = </i> " + money.format.numberToPrice(val["5,5"]) + "<br>");
-                $(".recettecategorie[data-objectid='" + key + "']").append("<i>10% = </i> " + money.format.numberToPrice(val["10"]) + "<br>");
-                $(".recettecategorie[data-objectid='" + key + "']").append("<i>20% = </i> " + money.format.numberToPrice(val["20"]) + "<br>");
-            });
+
+                $(".recettecategorie[data-objectid='" + key + "']").children(".tileSubValue").empty();
+                $(".recettecategorie[data-objectid='" + key + "']").children(".tileValue").empty();
+
+                $(".recettecategorie[data-objectid='" + key + "']").children(".tileSubValue").append("<span>5,5%</span>");
+                $(".recettecategorie[data-objectid='" + key + "']").children(".tileValue").append("<span>" + money.format.numberToPrice(val["5,5"]) + "</span>");
+
+                $(".recettecategorie[data-objectid='" + key + "']").children(".tileSubValue").append("<span>10%</span>");
+                $(".recettecategorie[data-objectid='" + key + "']").children(".tileValue").append("<span>" + money.format.numberToPrice(val["10"]) + "</span>");
+
+                $(".recettecategorie[data-objectid='" + key + "']").children(".tileSubValue").append("<span>20%</span>");
+                $(".recettecategorie[data-objectid='" + key + "']").children(".tileValue").append("<span>" + money.format.numberToPrice(val["20"]) + "</span>");
+
+                 });
             $(".recettecategorie[data-objectid='cash']").text(money.format.numberToPrice(data.perPaymentMethods.cash));
             $(".recettecategorie[data-objectid='check']").text(money.format.numberToPrice(data.perPaymentMethods.check));
         });

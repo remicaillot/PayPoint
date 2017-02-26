@@ -372,7 +372,7 @@ function addItemToMenu(data) {
         activated = "activated";
     }
     $("#categories").append('<div class="categorie ' + activated + '" data-objectid="' + data.itemId + '" data-objecttype="category"><div class="catContent"><img class="sideBarIcon" src="' + data.picture + '"/>' + data.name + '</div></div>')
-    $('.screen[screenId="saleReport"]').append('<div class="tile leftRight"><div class="tileLabel">' + data.name + '</div><div class="tileValue recettecategorie" data-objectid="' + data.itemId + '">0,00€</div>');
+    $('.screen[screenId="saleReport"]').append('<div class="tile leftRight recettecategorie" data-objectid="' + data.itemId + '"><div class="tileLabel">' + data.name + '</div> <div class="tileSubValue column"></div><div class="tileValue column">0,00€</div></div>');
 }
 function getLabelFromObjecttype(objectType, plurial) {
     switch (objectType) {

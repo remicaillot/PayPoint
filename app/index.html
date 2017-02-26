@@ -224,17 +224,8 @@
 <main id="sales">
     <div class="toolbar">
         <div class="toolbar-title">Gestion du commerce</div>
-        <div class="toolbar-item" data-action="printlog">
-            <img src="./assets/images/print.svg">
-        </div>
         <div class="toolbar-item" data-action="exportPdf">
             <img src="./assets/images/export.svg">
-        </div>
-        <div class="toolbar-item" data-action="cashout">
-            <img src="./assets/images/cashout.svg">
-        </div>
-        <div class="toolbar-item" data-action="cashin">
-            <img src="./assets/images/cashin.svg">
         </div>
     </div>
     <div class="screenContentBox">
@@ -260,6 +251,9 @@
                 </div>
             </div>
             <div class="screen" screenId="saleReport">
+                <div class="tile button toolbar-item" data-action="printlog">
+                    Imprimer le rapport des ventes
+                </div>
                 <div class="title">Totaux généraux</div>
                 <div class="tile leftRight">
                     <div class="tileLabel">Total TTC sur la période</div>
@@ -295,6 +289,9 @@
             </div>
             <div class="screen" screenId="productStats"></div>
             <div class="screen" screenId="accountDetails">
+                <div class="tile button">
+                    Nouveau dépot à la banque
+                </div>
                 <div class="tile leftRight">
                     <div class="tileLabel">Balance du compte caisse</div>
                     <div class="tileValue accountingBalance">0,00€</div>
@@ -305,7 +302,9 @@
                     <div class="tileValue lastDepositAmount">0,00€</div>
                 </div>
             </div>
-            <div class="screen" screenId="commands"></div>
+            <div class="screen" screenId="commands">
+
+            </div>
         </div>
     </div>
 </main>

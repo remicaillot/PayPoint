@@ -891,6 +891,10 @@ input[type="password"].invalid {
     color: #434343;
     font-size: 18pt;
 }
+.screenContentBox .tile .column{
+    display: flex;
+    flex-direction: column;
+}
 .screenContentBox .tile .tileSubValue{
     font-family: 'SourceSansPro-lightItalic', sans-serif;
     color: #434343;
