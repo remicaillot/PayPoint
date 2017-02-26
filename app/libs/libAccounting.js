@@ -53,8 +53,19 @@ class Accounting{
 }
 $(document).ready(function(){
     $("#newDeposit").click(function(e){
-        Accounting.bankDeposit(parseFloat(prompt("Valeur du dépot en euros")), Date.now(), function(){
-            Accounting.reloadDom();
-        })
+        var depotVal = prompt("Valeur du dépot en euros");
+        if(depotVal){
+            Accounting.bankDeposit(parseFloat(depotVal), Date.now(), function(){
+                Accounting.reloadDom();
+            });
+        }
+    });
+    $("#newEntry").click(function(e){
+        var entryVal = prompt("Valeur du retrait en euros");
+        if(entryVal){
+            Accounting.moneyEntry(parseFloat(entryVal), Date.now(), function(){
+                Accounting.reloadDom();
+            });
+        }
     });
 });
