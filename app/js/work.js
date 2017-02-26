@@ -3,9 +3,7 @@ var currentCategory = "";
 var productPath = "";
 var Datastore = require('nedb'),
     commandDb = new Datastore({ filename: './commands.lead', autoload: true }),
-    cashDrawerDb = new Datastore({ filename: './cashDrawer.lead', autoload: true }),
-    configDb = new Datastore();
-configDb.insert({"productDbPath": "./products.lead"});
+    cashDrawerDb = new Datastore({ filename: './cashDrawer.lead', autoload: true });
 function loadData(firstLoad) {
 
         database = JSON.parse(fs.readFileSync("./database.json", "UTF-8"));
