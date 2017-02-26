@@ -584,6 +584,30 @@
       "subCat": "66827f17f769f3f43742d2505a554836",
       "category": "5e4ff4525d24e9b5d5a1fb85b82f9913",
       "sellMode": "unit",
+      "price": 3.5,
+      "unit": "piece",
+      "TVARate": 10
+    },
+    {
+      "itemId": "a8z7ef4gz15htr3yj1ku3i2i32m1uly6r46",
+      "itemType": "product",
+      "name": "Glace",
+      "picture": "assets/images/Miniatures/nourritures.png",
+      "subCat": "66827f17f769f3f43742d2505a554836",
+      "category": "5e4ff4525d24e9b5d5a1fb85b82f9913",
+      "sellMode": "unit",
+      "price": 2,
+      "unit": "piece",
+      "TVARate": 10
+    },
+    {
+      "itemId": "c6a4evrhte8jyk4jrytevf13f21gth4y6r8j",
+      "itemType": "product",
+      "name": "Glace",
+      "picture": "assets/images/Miniatures/nourritures.png",
+      "subCat": "66827f17f769f3f43742d2505a554836",
+      "category": "5e4ff4525d24e9b5d5a1fb85b82f9913",
+      "sellMode": "unit",
       "price": 3,
       "unit": "piece",
       "TVARate": 10
