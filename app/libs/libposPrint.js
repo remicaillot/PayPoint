@@ -180,8 +180,8 @@ function printLogs(log) {
             printer.println("TOTAL");
             printer.newLine();
             printer.setTextNormal();
-            printer.leftRight("HT", money.format.numberToPrice(money.format.numberToPrice(log.HT), true));
-            printer.leftRight("TTC", money.format.numberToPrice(money.format.numberToPrice(log.TTC), true));
+            printer.leftRight("HT", money.format.numberToPrice(log.HT, true));
+            printer.leftRight("TTC", money.format.numberToPrice(log.TTC, true));
             printer.cut();
             printer.execute(function (err) {
                 if (err) {
