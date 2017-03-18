@@ -240,9 +240,9 @@
                 <div class="tile button" targetScreen="saleReport">
                     Rapport des ventes
                 </div>
-                <!--<div class="tile button" targetScreen="productStats">
-                    Ventes par produits
-                </div>-->
+                <div class="tile button" targetScreen="productStats">
+                    Statistiques par produits
+                </div>
                 <div class="tile button" targetScreen="accountDetails">
                     Compte caisse
                 </div>
@@ -288,7 +288,12 @@
                 </div>
                 <div class="title">Totaux par catégories</div>
             </div>
-            <div class="screen" screenId="productStats"></div>
+            <div class="screen" screenId="productStats">
+                <div class="title">Statistiques par produits</div>
+                <div class="tile button toolbar-item" data-action="selectProduct">
+                    Sélectionner des produits
+                </div>
+            </div>
             <div class="screen" screenId="accountDetails">
                 <div class="title">Compte caisse</div>
                 <div class="tile button" id="newDeposit">
