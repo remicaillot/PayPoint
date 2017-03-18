@@ -171,12 +171,11 @@ class Statistics {
                 for (let operation of data) {
                     if(operation.operationType == "deposit"){
                         accountDetails.balance -= operation.amount;
-                        accountDetails.lastDeposit.push(operation);
+                        accountDetails.lastDeposit = operation;
                     }else{
                         accountDetails.balance += operation.amount;
                     }
                 }
-                accountDetails.lastDeposit = accountDetails.lastDeposit[0];
                 console.info("Details", accountDetails);
                 cb(accountDetails);
             }else{
