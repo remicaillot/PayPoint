@@ -4,7 +4,7 @@ var money = {
             return HT * (1 + TVA / 100);
         },
         TTCtoHT: function(TTC, TVA) {
-            return TTC * (1 - (TVA / 100));
+            return TTC - (TTC  - ((TTC * 100)/(100 + TVA)));
         },
         TVAfromTTC: function(TTC, TVA) {
             return TTC  - ((TTC * 100)/(100 + TVA));
