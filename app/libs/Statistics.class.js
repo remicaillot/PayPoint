@@ -119,16 +119,21 @@ class Statistics {
         });
     }
 
-    static getSalesPerProducts(from, to) {
-        var dateFrom = new Date(from);
-        var dateTo = new Date(to);
-        commandDb.find({
-            $and: [
-                {timestamp: {$lte: dateTo.getTime()}},
-                {timestamp: {$gte: dateFrom.getTime()}}
-            ]
+    static getSalesPerProducts(from, to, cb) {
+       
+        var dateFrom = new Date(parseInt(from));
+        var dateTo = new Date(parseInt(to));
+        var search = {};
+        if(typeof from === "object"){
+            search = {
+                $and: [
+                    {timestamp: {$lte: dateFrom.getTime()}},
+                    {timestamp: {$gte: dateTo.getTime()}}
+                ]
+            }
+        }
+        commandDb.find(search, function (err, data) {
 
-        }, function (err, data) {
             let sales = {
                 labels: [],
                 values: []
@@ -142,15 +147,16 @@ class Statistics {
                 });
                 sales.labels.push(product.name);
             }
-            for (command of data) {
-                for (product of command.products) {
+            for (let command of data) {
+                for (let product of command.products) {
                     let productIndex = sales.labels.indexOf(product.name);
-
+			console.log(productIndex);
                     if (productIndex !== -1) {
                         sales.values[productIndex].soldQts += product.qts;
                     }
                 }
             }
+	    cb(sales);
         });
         return true;
     }
