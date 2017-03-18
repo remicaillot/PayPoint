@@ -26,7 +26,6 @@ class Statistics {
                         Object.defineProperty(rows[i], database.categories[y].name, {
                             value: database.categories[y].name
                         });
-                        console.log(products)
                     });
 
                 }
@@ -58,7 +57,6 @@ class Statistics {
     }
 
     static getTotalSales(from, to, cb) {
-        console.log("log beetween", from, "and", to);
 
         var dateFrom = new Date(parseInt(from));
         var dateTo = new Date(parseInt(to));
@@ -98,8 +96,7 @@ class Statistics {
                     add.perTVARate["20"] += command.total.perTVARate["20"];
                     add.perPaymentMethods.check += command.payment.methods.check;
                     add.perPaymentMethods.cash += command.payment.methods.cash;
-		console.log("commande traité");
-		console.log(command);
+
                 for(let product of command.products){
                 	    if(typeof add.perCategories.get(product.category) === "undefined"){
                 	        add.perCategories.set(product.category, {
@@ -117,59 +114,75 @@ class Statistics {
             add.perTVARate["5,5"] = parseFloat(parseFloat(add.perTVARate["5,5"]).toFixed(2));
             add.perTVARate["10"] = parseFloat(parseFloat(add.perTVARate["10"]).toFixed(2));
             add.perTVARate["20"] = parseFloat(parseFloat(add.perTVARate["20"]).toFixed(2));
-            console.log("the real Add var", add);
+
             cb(add, commands);
         });
     }
 
     static getSalesPerProducts(from, to, cb) {
-        var dateFrom = new Date(from);
-        var dateTo = new Date(to);
-        commandDb.find({
-            $and: [
-                {timestamp: {$lte: dateTo.getTime()}},
-                {timestamp: {$gte: dateFrom.getTime()}}
-            ]
+       
+        var dateFrom = new Date(parseInt(from));
+        var dateTo = new Date(parseInt(to));
+        var search = {};
+        if(typeof from === "object"){
+            search = {
+                $and: [
+                    {timestamp: {$lte: dateFrom.getTime()}},
+                    {timestamp: {$gte: dateTo.getTime()}}
+                ]
+            }
+        }
+        commandDb.find(search, function (err, data) {
 
-        }, function (err, data) {
-            let salesResume = {
-                sales: [],
-                chartData: {
-                    perQts: {
-                        labels: [],
-                        series: []
-                    },
-                    perPrice: {
-                        labels: [],
-                        series: []
-                    }
-                }
-            };
+            let sales = {
+                labels: [],
+                values: []
+            }
             for (let product of database.products) {
-                salesResume.sales.push({
+                sales.values.push({
                     product: product.itemId,
                     name: product.name,
                     soldQts: 0,
                     price: product.price
                 });
-                salesResume.chartData.perQts.labels.push(product.name);
-                salesResume.chartData.perQts.series.push(0);
-                salesResume.chartData.perPrice.labels.push(product.name);
-                salesResume.chartData.perPrice.series.push(0);
+                sales.labels.push(product.name);
             }
-            for (command of data) {
-                for (product of command.products) {
-                    var productIndex = salesResume.chartData.perQts.labels.indexOf(product.name);
-                    console.log(productIndex);
+            for (let command of data) {
+                for (let product of command.products) {
+                    let productIndex = sales.labels.indexOf(product.name);
+			console.log(productIndex);
                     if (productIndex !== -1) {
-                        salesResume.chartData.perQts.series[productIndex] += product.qts;
-                        salesResume.chartData.perPrice.series[productIndex] += (product.price * product.qts);
+                        sales.values[productIndex].soldQts += product.qts;
                     }
                 }
             }
-            return cb(salesResume);
+	    cb(sales);
         });
         return true;
+    }
+
+    static getAccountingDetails(cb){
+        cashDrawerDb.find({}, function (err, data) {
+            let accountDetails = {
+                balance: 0,
+                lastDeposit: []
+            }
+            if(!err){
+                for (let operation of data) {
+                    if(operation.operationType == "deposit"){
+                        accountDetails.balance -= operation.amount;
+                        accountDetails.lastDeposit.push(operation);
+                    }else{
+                        accountDetails.balance += operation.amount;
+                    }
+                }
+                accountDetails.lastDeposit = accountDetails.lastDeposit[0];
+                console.info("Details", accountDetails);
+                cb(accountDetails);
+            }else{
+                console.error(err);
+            }
+        });
     }
 
 }

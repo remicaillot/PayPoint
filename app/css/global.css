@@ -131,7 +131,7 @@ header {
 #searchForm form input[type="text"] {
     width: calc(100% - 60px);
     border: none;
-    background: #CC5149;
+    background: rgba(0,0,0,0.05);
     color: white;
     font-family: "SourceSansPro", sans-serif;
     font-weight: lighter;
@@ -667,6 +667,7 @@ input[type="password"].invalid {
     background: white;
     border-radius: 3px;
     margin-top: 10px;
+    margin-bottom: 10px;
     margin-left: 10px;
     padding: 10px;
     box-shadow: 0 0 3px rgb(125, 125, 125);
@@ -816,4 +817,101 @@ input[type="password"].invalid {
     width: 20px;
     height: 20px;
     vertical-align: middle;
+}
+
+.screenContentBox{
+    position: absolute;
+    width: 100%;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 50px;
+}
+.screenContentBox .screenPane{
+    position: absolute;
+    width: 200%;
+    -webkit-transition: margin-left 0.2s;
+    height: 100%;
+}
+.screen {
+    display: none;
+    float: left;
+    width: 50%;
+    height: 100%;
+    overflow: auto;
+}
+.screen#main{
+    display: block;
+}
+
+.screenContentBox .tile{
+    background: white;
+    border-radius: 3px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-right: 10px;
+    margin-left: 10px;
+    padding: 10px;
+    box-shadow: 0 0 3px rgb(125, 125, 125);
+    display: flex;
+    justify-items: center;
+}
+.screenContentBox .tile.button{
+    background: #fff url(../assets/images/next.svg) no-repeat center right 15px;
+    background-size: 30px;
+    border-radius: 3px;
+    padding: 30px;
+    cursor: default;
+    font-family: 'SourceSansPro-bold', sans-serif;
+    -webkit-transition: background-color 0.2s,color 0.2s;
+    color: #727272;
+}
+.screenContentBox .tile.button:active{
+    background-color: #303030;
+    color: white;
+}
+.screenContentBox .tile.inputValue{
+    flex-direction: column;
+}
+
+.screenContentBox .tile.leftRight{
+    flex-direction: row;
+    align-items: center;
+    align-content: space-between;
+}
+.screenContentBox .tile .tileLabel{
+    font-family: 'SourceSansPro-bold', sans-serif;
+    color: #434343;
+    font-size: 12pt;
+    padding: 10px;
+    flex-grow: 1;
+}
+.screenContentBox .tile .tileValue{
+    font-family: 'SourceSansPro-italic', sans-serif;
+    color: #434343;
+    font-size: 18pt;
+}
+.screenContentBox .tile .column{
+    display: flex;
+    flex-direction: column;
+}
+.screenContentBox .tile .tileSubValue{
+    font-family: 'SourceSansPro-lightItalic', sans-serif;
+    color: #434343;
+    font-size: 18pt;
+    flex-grow: 0.5;
+}
+.screenContentBox .title{
+    font-family: 'SourceSansPro-italic', sans-serif;
+    color: #434343;
+    font-size: 20pt;
+    margin-top: 10px;
+    margin-right: 10px;
+    margin-left: 10px;
+    padding: 10px;
+    padding-bottom: 5px;
+}
+.screenContentBox .title:first-child{
+    font-family: 'SourceSansPro-bold', sans-serif;
+    font-size: 23pt;
 }

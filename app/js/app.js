@@ -165,15 +165,22 @@ function shopingCart(modifCB) {
     this.saveCommand = function () {
         let localcommand = this.getCommandJson();
         localcommand.timestamp = Date.now();
-        console.log(localcommand);
-        try {
-            printTicket(localcommand);
-        } catch (e) {
-            console.log(e);
-        }
-        commandDb.insert(localcommand, function (err) {
-            console.log(err);
+        Accounting.moneyEntry(localcommand.payment.methods.cash,  localcommand.timestamp, function(success){
+            if(success){
+                try {
+                    printTicket(localcommand);
+                } catch (e) {
+                    console.error(e);
+                }
+                commandDb.insert(localcommand, function (err) {
+                    console.error(err);
+                });
+            } else {
+                console.error("Accounting insertion error");
+            }
+
         });
+
 
     }
 }
@@ -191,11 +198,9 @@ jQuery(document).ready(function ($) {
     }
     $('input[type="daterange"]').bind('datepicker-change', function (event, obj) {
 
-        console.log(obj.date1.getTime());
-        console.log(obj.date2.getTime());
 
         Statistics.getTotalSales(obj.date1.getTime(), obj.date2.getTime(), function (data) {
-            console.log(data);
+
             //total sales
             $(".TTCTotal").html(money.format.numberToPrice(data.TTC));
             $(".HTTotal").html(money.format.numberToPrice(data.HT));
@@ -205,11 +210,20 @@ jQuery(document).ready(function ($) {
 
             //sales pe categories
             data.perCategories.forEach(function (val, key) {
-                $(".recettecategorie[data-objectid='" + key + "']").empty();
-                $(".recettecategorie[data-objectid='" + key + "']").append("<i>5,5% = </i> " + money.format.numberToPrice(val["5,5"]) + "<br>");
-                $(".recettecategorie[data-objectid='" + key + "']").append("<i>10% = </i> " + money.format.numberToPrice(val["10"]) + "<br>");
-                $(".recettecategorie[data-objectid='" + key + "']").append("<i>20% = </i> " + money.format.numberToPrice(val["20"]) + "<br>");
-            });
+
+                $(".recettecategorie[data-objectid='" + key + "']").children(".tileSubValue").empty();
+                $(".recettecategorie[data-objectid='" + key + "']").children(".tileValue").empty();
+
+                $(".recettecategorie[data-objectid='" + key + "']").children(".tileSubValue").append("<span>5,5%</span>");
+                $(".recettecategorie[data-objectid='" + key + "']").children(".tileValue").append("<span>" + money.format.numberToPrice(val["5,5"]) + "</span>");
+
+                $(".recettecategorie[data-objectid='" + key + "']").children(".tileSubValue").append("<span>10%</span>");
+                $(".recettecategorie[data-objectid='" + key + "']").children(".tileValue").append("<span>" + money.format.numberToPrice(val["10"]) + "</span>");
+
+                $(".recettecategorie[data-objectid='" + key + "']").children(".tileSubValue").append("<span>20%</span>");
+                $(".recettecategorie[data-objectid='" + key + "']").children(".tileValue").append("<span>" + money.format.numberToPrice(val["20"]) + "</span>");
+
+                 });
             $(".recettecategorie[data-objectid='cash']").text(money.format.numberToPrice(data.perPaymentMethods.cash));
             $(".recettecategorie[data-objectid='check']").text(money.format.numberToPrice(data.perPaymentMethods.check));
         });
