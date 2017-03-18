@@ -28,6 +28,7 @@ class Accounting{
                 for(let command of commands){
                     cashDrawerDb.insert({
                         operationType: "entry",
+                        operationCategory: "command",
                         amount: command.payment.methods.cash,
                         timestamp: new Date(parseInt(command.timestamp)).getTime()
                     }, function (err) {

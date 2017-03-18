@@ -116,8 +116,8 @@ jQuery(document).ready(function ($) {
             $(".categorie").css('width', '50px');
             $(".categorie:active .catContent").css('-webkit-transform', 'scale3d(0.93,0.93,0.93)');
         } else {
-            $("#leftPanel").attr("open", true).css('width', '200px');
-            $(".categorie").css('width', '200px');
+            $("#leftPanel").attr("open", true).css('width', '230px');
+            $(".categorie").css('width', '230px');
             $(".categorie:active .catContent").css('-webkit-transform', 'scale3d(0.89,0.89,0.89)');
         }
     });
