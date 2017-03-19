@@ -143,12 +143,15 @@ jQuery(document).ready(function ($) {
 
     });
     $(".categorie").click(function (event) {
-        $('input[type="daterange"]')
-            .data('dateRangePicker')
-            .setStart(moment().hour(0).toDate());
-        $('input[type="daterange"]')
-            .data('dateRangePicker')
-            .setEnd(moment().hour(23).toDate());
+        if($('input[type="daterange"]').data('dateRangePicker').getRange() == false){
+            $('input[type="daterange"]')
+                .data('dateRangePicker')
+                .setStart(moment().hour(0).toDate());
+            $('input[type="daterange"]')
+                .data('dateRangePicker')
+                .setEnd(moment().hour(23).toDate());
+        }
+
         $('input[type="daterange"]').data('dateRangePicker').close();
         if ($(this).attr('id') != "sideBarMenu") {
             $(".categorie").removeClass('activated');

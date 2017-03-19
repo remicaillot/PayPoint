@@ -120,15 +120,14 @@ class Statistics {
     }
 
     static getSalesPerProducts(from, to, cb) {
-       
         var dateFrom = new Date(parseInt(from));
         var dateTo = new Date(parseInt(to));
         var search = {};
-        if(typeof from === "object"){
+        if(typeof from === "number"){
             search = {
                 $and: [
-                    {timestamp: {$lte: dateFrom.getTime()}},
-                    {timestamp: {$gte: dateTo.getTime()}}
+                    {timestamp: {$lte: to}},
+                    {timestamp: {$gte: from}}
                 ]
             }
         }
