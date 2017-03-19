@@ -166,8 +166,8 @@ function shopingCart(modifCB) {
     this.saveCommand = function () {
         let localcommand = this.getCommandJson();
         localcommand.timestamp = Date.now();
-        Accounting.moneyEntry(localcommand.payment.methods.cash,  localcommand.timestamp, function(success){
-            if(success){
+        Accounting.moneyEntry(localcommand.payment.methods.cash, localcommand.timestamp, function (success) {
+            if (success) {
                 try {
                     printTicket(localcommand);
                 } catch (e) {
@@ -176,7 +176,7 @@ function shopingCart(modifCB) {
                 commandDb.insert(localcommand, function (err) {
                     console.error(err);
                 });
-            } else {
+            } else {
                 console.error("Accounting insertion error");
             }
 
@@ -199,6 +199,17 @@ jQuery(document).ready(function ($) {
     }
     $('input[type="daterange"]').bind('datepicker-change', function (event, obj) {
 
+
+        Statistics.getSalesPerProducts(obj.date1.getTime(), obj.date2.getTime(), function (data) {
+            console.log("statsProduct", data);
+            $("#productStatsContainer").empty();
+            for (product of data.values) {
+                if(product.soldQts != 0){
+                    $("#productStatsContainer").append('<div class="tile leftRight"><div class="tileLabel">' + product.name + '</div><div class="tileSubValue">' + money.format.numberToPrice(product.price) + '</div><div class="tileValue">' + product.soldQts + '</div></div>');
+
+                }
+                }
+        });
 
         Statistics.getTotalSales(obj.date1.getTime(), obj.date2.getTime(), function (data) {
 
@@ -224,7 +235,7 @@ jQuery(document).ready(function ($) {
                 $(".recettecategorie[data-objectid='" + key + "']").children(".tileSubValue").append("<span>20%</span>");
                 $(".recettecategorie[data-objectid='" + key + "']").children(".tileValue").append("<span>" + money.format.numberToPrice(val["20"]) + "</span>");
 
-                 });
+            });
             $(".recettecategorie[data-objectid='cash']").text(money.format.numberToPrice(data.perPaymentMethods.cash));
             $(".recettecategorie[data-objectid='check']").text(money.format.numberToPrice(data.perPaymentMethods.check));
         });

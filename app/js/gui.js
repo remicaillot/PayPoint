@@ -95,6 +95,9 @@ jQuery(document).ready(function ($) {
             return obj;
         };
     });
+    $('input[type="daterange"]').data('dateRangePicker').getRange = function() {
+        return false;
+    };
 
 
     $("#searchForm form input[type='text']").focus(function (event) {
@@ -136,6 +139,8 @@ jQuery(document).ready(function ($) {
         $("#sales").show();
         ScreenManager.resetScreen();
         Accounting.reloadDom();
+
+
     });
     $(".categorie").click(function (event) {
         $('input[type="daterange"]')
