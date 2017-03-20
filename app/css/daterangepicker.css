@@ -1,4 +1,5 @@
 .daterangepicker {
+  display: none;
   position: absolute;
   color: inherit;
   background-color: #fff;

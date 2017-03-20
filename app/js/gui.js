@@ -26,61 +26,84 @@ jQuery(document).ready(function ($) {
     popupM.hide();
 
     $('.inputTypeDate').daterangepicker({
-        singleDatePicker: true,
-        format: "D MMMM YYYY",
-        language: 'fr',
-        startOfWeek: 'monday',// or monday
-        showShortcuts: true,
-        customShortcuts: [
-            //if return an array of two dates, it will select the date range between the two dates
-            {
-                name: 'Aujourd\'hui',
-                dates: function () {
-                    var start = moment().hour(0).toDate();
-                    var end = moment().hour(23).toDate();
-                    return [start, end];
-                }
-            }, {
-                name: 'Hier',
-                dates: function () {
-                    var start = moment().startOf('day').subtract("day",1).toDate();
-                    var end = moment().endOf('day').subtract("day",1).toDate();
-                    return [start, end];
-                }
-            }
-        ],
-        duration: 0
-    }).bind('datepicker-change', function (event, obj) {
-        $('input[type="daterange"]').data('dateRangePicker').getRange = function() {
+        "singleDatePicker": true,
+        "autoApply": true,
+        "locale": {
+            "format": "D MMMM YYYY",
+            "separator": " au ",
+            "applyLabel": "Valider",
+            "cancelLabel": "Annuler",
+            "fromLabel": "De",
+            "toLabel": "à",
+            "customRangeLabel": "Custom",
+            "weekLabel": "Sem.",
+            "daysOfWeek": [
+                "Lun",
+                "Mar",
+                "Mer",
+                "Jeu",
+                "Ven",
+                "Sam",
+                "Dim"
+            ],
+            "monthNames": [
+                "Janvier",
+                "Février",
+                "Mars",
+                "Avril",
+                "Mai",
+                "Juin",
+                "Juillet",
+                "Août",
+                "Septembre",
+                "Octobre",
+                "Novembre",
+                "Décembre"
+            ],
+            "firstDay": 0
+        },
+        "linkedCalendars": false,
+        "showCustomRangeLabel": false,
+        "alwaysShowCalendars": true,
+        "startDate": moment().format("dd/mm/yyy"),
+        "endDate": moment().add(1, "day").format("dd/mm/yyy")
+    }, function(start, end, label) {
+        console.log("New date range selected: ' + start.format('YYYY-MM-DD') + ' to ' + end.format('YYYY-MM-DD') + ' (predefined range: ' + label + ')");
+    }).bind('apply.daterangepicker', function (event, obj) {
+        $('input[type="daterange"]').data('daterangepicker').getRange = function() {
             return obj;
         };
     });
     $('input[type="daterange"]').daterangepicker({
         "autoApply": true,
         "ranges": {
-            "Today": [
-                "2017-03-20T14:40:28.214Z",
-                "2017-03-20T14:40:28.214Z"
+            "Aujourd'hui": [
+                moment().hour(0).toDate(),
+                moment().hour(23).toDate()
             ],
-            "Yesterday": [
-                "2017-03-19T14:40:28.214Z",
-                "2017-03-19T14:40:28.214Z"
+            "Hier": [
+                moment().startOf('day').subtract("day",1).toDate(),
+                moment().endOf('day').subtract("day",1).toDate()
             ],
-            "Last 7 Days": [
-                "2017-03-14T14:40:28.215Z",
-                "2017-03-20T14:40:28.215Z"
+            "Cette semaine": [
+                moment().startOf('isoWeek').toDate(),
+                moment().endOf('isoWeek').toDate()
             ],
-            "Last 30 Days": [
-                "2017-02-19T14:40:28.215Z",
-                "2017-03-20T14:40:28.215Z"
+            "Ce mois ci": [
+                moment().startOf('month').toDate(),
+                moment().toDate()
             ],
-            "This Month": [
-                "2017-02-28T23:00:00.000Z",
-                "2017-03-31T21:59:59.999Z"
+            "Le mois dernier": [
+                moment().startOf('month').subtract("month",1).toDate(),
+                moment().endOf('month').subtract("month",1).toDate()
             ],
-            "Last Month": [
-                "2017-01-31T23:00:00.000Z",
-                "2017-02-28T22:59:59.999Z"
+            "Cette année": [
+                moment().startOf('year').toDate(),
+                moment().endOf('year').toDate()
+            ],
+            "L'année dernière": [
+                moment().startOf('year').subtract("year",1).toDate(),
+                moment().endOf('year').subtract("year",1).toDate()
             ]
         },
         "locale": {
@@ -135,7 +158,6 @@ jQuery(document).ready(function ($) {
 
     $("#searchForm form input[type='text']").focus(function (event) {
 
-        $('input[type="daterange"]').data('daterangepicker').close();
         //$("#searchForm form input[type='text']").addClass('focus');
         $("#searchForm form").addClass('focus');
         var totalHeight = 0;
@@ -146,7 +168,6 @@ jQuery(document).ready(function ($) {
     });
     $("#sideBarMenu").click(function (e) {
 
-        $('input[type="daterange"]').data('daterangepicker').close();
         if ($("#leftPanel").attr("open") == "open") {
             $("#leftPanel").attr("open", false).css('width', '50px');
             $(".categorie").css('width', '50px');
@@ -170,6 +191,7 @@ jQuery(document).ready(function ($) {
         $("#orderTicket").hide();
         $("#settings").hide();
         $("#sales").show();
+        previousScreen = [];
         ScreenManager.resetScreen();
         Accounting.reloadDom();
 
@@ -185,7 +207,6 @@ jQuery(document).ready(function ($) {
                 .setEndDate(moment().hour(23).toDate());
         }
 
-        $('input[type="daterange"]').data('daterangepicker').close();
         if ($(this).attr('id') != "sideBarMenu") {
             $(".categorie").removeClass('activated');
             $(this).addClass('activated');

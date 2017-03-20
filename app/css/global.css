@@ -606,6 +606,7 @@ input[type="number"],
 input[type="date"],
 input[type="email"],
 input[type="daterange"],
+input[type="datePicker"],
 input[type="password"] {
     background: none;
     border: none;
@@ -637,6 +638,8 @@ input[type="email"]:focus,
 input[type="email"].focus,
 input[type="daterange"]:focus,
 input[type="daterange"].focus,
+input[type="datePicker"]:focus,
+input[type="datePicker"].focus,
 input[type="password"]:focus,
 input[type="password"].focus {
     border-bottom: 5px solid #333;
@@ -648,6 +651,7 @@ input[type="number"].valid,
 input[type="date"].valid,
 input[type="date"].valid,
 input[type="daterange"].valid,
+input[type="datePicker"].valid,
 input[type="password"].valid {
     border-color: #2ca05a;
 }
@@ -657,6 +661,7 @@ input[type="number"].invalid,
 input[type="date"].invalid,
 input[type="date"].invalid,
 input[type="daterange"].invalid,
+input[type="datePicker"].invalid,
 input[type="password"].invalid {
     border-color: #c83737;
 }
