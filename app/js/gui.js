@@ -213,6 +213,10 @@ jQuery(document).ready(function ($) {
                 $("#paymentStep").show();
                 $("#leftPanel").hide();
                 currentStep++;
+
+                $("#validTicket").text("Enregistrer la commande");
+
+
             }
 
         } else if (currentStep === 1) {
@@ -221,13 +225,19 @@ jQuery(document).ready(function ($) {
 
                 currentCommand.setPayment();
                 currentCommand.saveCommand();
-
-                $("#commandStep").show();
-                $("#leftPanel").show();
-                $("#paymentStep").hide();
-                currentCommand.resetCommand();
-                currentStep = 0;
+                $("#cancelTicket").hide();
+                $("#validTicket").text("Nouvelle commande");
+                currentStep++;
             }
+        } else if(currentStep === 2){
+
+            $("#commandStep").show();
+            $("#leftPanel").show();
+            $("#paymentStep").hide();
+            currentCommand.resetCommand();
+            currentStep = 0;
+            $("#cancelTicket").show();
+            $("#validTicket").text("Suivant");
         }
 
     });
