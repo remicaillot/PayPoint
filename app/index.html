@@ -248,6 +248,7 @@
             </div>
             <div class="screen" screenId="saleReport">
                 <div class="title">Rapport des ventes</div>
+                <div class="backButton"></div>
                 <div class="tile button toolbar-item" data-action="printlog">
                     Imprimer le rapport des ventes
                 </div>
@@ -286,6 +287,7 @@
             </div>
             <div class="screen" screenId="productStats">
                 <div class="title">Statistiques par produits</div>
+                <div class="backButton"></div>
                 <!--
                 <div class="tile button toolbar-item" data-action="selectProduct">
                     Sélectionner des produits
@@ -296,10 +298,10 @@
             <div class="screen" screenId="accountDetails">
                 <div class="title">Compte caisse</div>
                 <div class="backButton"></div>
-                <div class="tile button" targetScreen="newEntry">
+                <div class="tile button" targetScreen="newDeposit">
                     Nouveau dépot à la banque
                 </div>
-                <div class="tile button" id="newEntry">
+                <div class="tile button" targetScreen="newEntry">
                     Retrait de monaie à la banque
                 </div>
                 <div class="title">Informations générales</div>
@@ -316,7 +318,7 @@
             <div class="screen" screenId="commands">
 
             </div>
-            <div class="screen" screenId="newEntry">
+            <div class="screen" screenId="newDeposit">
                 <div class="title">Nouveau dépot à la banque</div>
                 <div class="backButton"></div>
                 <div class="tile inputValue">
@@ -327,6 +329,23 @@
                     <div class="pmLabel">Numéro d'identification</div>
                     <div class="pmInput">
                         <input type="text" data-realDataType="number">
+                    </div>
+                    <div class="pmLabel">Montant en euros</div>
+                    <div class="pmInput">
+                        <input type="text" data-realDataType="price">
+                    </div>
+
+                    <input type="submit" value="Enregistrer">
+                </div>
+
+            </div>
+            <div class="screen" screenId="newEntry">
+                <div class="title">Nouveau retrait à la banque</div>
+                <div class="backButton"></div>
+                <div class="tile inputValue">
+                    <div class="pmLabel">Date</div>
+                    <div class="pmInput">
+                        <input type="datePicker" class="inputTypeDate">
                     </div>
                     <div class="pmLabel">Montant en euros</div>
                     <div class="pmInput">

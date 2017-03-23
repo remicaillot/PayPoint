@@ -140,7 +140,8 @@ body {
 .daterangepicker.dropdown-menu {
     display: none;
     max-width: none;
-    z-index: 3001; }
+    z-index: 3001;
+    box-shadow: 0 0 10px black;}
 .daterangepicker.single .ranges, .daterangepicker.single .calendar {
     float: none; }
 .daterangepicker.show-calendar .calendar {
@@ -175,6 +176,14 @@ body {
     background-color: #eee;
     border-color: transparent;
     color: inherit; }
+.daterangepicker td.available.prev, .daterangepicker th.available.prev{
+    background: url(../assets/images/back.svg) no-repeat center center;
+    background-size: 20px 20px;
+}
+.daterangepicker td.available.next, .daterangepicker th.available.next{
+    background: url(../assets/images/nextblack.svg) no-repeat center center;
+    background-size: 20px 20px;
+}
 .daterangepicker td.week, .daterangepicker th.week {
     font-size: 80%;
     color: #ccc; }
@@ -225,9 +234,9 @@ body {
     line-height: 30px;
     display: block;
     vertical-align: middle;
-    margin: 0 0 5px 0;
+    margin: 0 0 5px 10px;
     padding: 0 6px 0 28px;
-    width: 100%; }
+    width: 85%; }
 .daterangepicker .input-mini.active {
     border: 1px solid #08c;
     border-radius: 4px; }

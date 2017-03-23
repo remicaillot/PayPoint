@@ -82,8 +82,8 @@ jQuery(document).ready(function ($) {
                 moment().hour(23).toDate()
             ],
             "Hier": [
-                moment().startOf('day').subtract("day",1).toDate(),
-                moment().endOf('day').subtract("day",1).toDate()
+                moment().startOf('day').subtract(1, "day").toDate(),
+                moment().endOf('day').subtract(1, "day").toDate()
             ],
             "Cette semaine": [
                 moment().startOf('isoWeek').toDate(),
@@ -94,16 +94,16 @@ jQuery(document).ready(function ($) {
                 moment().toDate()
             ],
             "Le mois dernier": [
-                moment().startOf('month').subtract("month",1).toDate(),
-                moment().endOf('month').subtract("month",1).toDate()
+                moment().startOf('month').subtract(1, "month").toDate(),
+                moment().endOf('month').subtract(1, "month").toDate()
             ],
             "Cette année": [
                 moment().startOf('year').toDate(),
                 moment().endOf('year').toDate()
             ],
             "L'année dernière": [
-                moment().startOf('year').subtract("year",1).toDate(),
-                moment().endOf('year').subtract("year",1).toDate()
+                moment().startOf('year').subtract(1, "year").toDate(),
+                moment().endOf('year').subtract(1, "year").toDate()
             ]
         },
         "locale": {
@@ -161,7 +161,7 @@ jQuery(document).ready(function ($) {
         //$("#searchForm form input[type='text']").addClass('focus');
         $("#searchForm form").addClass('focus');
         var totalHeight = 0;
-        for (elem of $("#searchAutocompletion").children()) {
+        for (let elem of $("#searchAutocompletion").children()) {
             totalHeight += $(elem).height() + 10;
         }
         $("#searchAutocompletion").css("height", totalHeight + "px");
@@ -383,7 +383,7 @@ function searchInput(event) {
     $("#searchAutocompletion").empty();
     for (var res in searchResult) {
         $("#searchAutocompletion").append(' <div class="searchSection" data-objecttype="' + res + '"><div class="sectionName">' + getLabelFromObjecttype(res, true) + '<!--<div class="more">Plus</div>--></div><div class="searchResult"> </div></div>');
-        for (item of searchResult[res]) {
+        for (let item of searchResult[res]) {
             if (item.itemType == "product") {
                 var price = money.format.numberToPrice(item.price);
                 if(item.price === "free"){
@@ -403,7 +403,7 @@ function searchInput(event) {
         $("#searchAutocompletion").html("<h2>Rechercher dans les produits, catégories et sous-catégories...</h2>");
     }
     var totalHeight = 0;
-    for (elem of $("#searchAutocompletion").children()) {
+    for (let elem of $("#searchAutocompletion").children()) {
         totalHeight += $(elem).height() + 10;
     }
     $("#searchAutocompletion").css("height", totalHeight + "px");

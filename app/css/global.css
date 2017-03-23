@@ -933,3 +933,21 @@ input[type="password"].invalid {
     background: url(../assets/images/back.svg) no-repeat center center;
     background-size: 30px 30px;
 }
+input[type="submit"]{
+    width: 200px;
+    align-self: flex-start;
+    margin-bottom: 5px;
+    margin-top: 5px;
+    border: none;
+    border-radius: 5px;
+
+    height: 50px;
+    background: #67aa00;
+    font-weight: bolder;
+    font-size: 15px;
+    color: white;
+    outline: none;
+}
+input[type="submit"]:active{
+    background: #8de200;
+}
