@@ -4,55 +4,6 @@ class Statistics {
 
     }
     static exportLogs() {
-        if (typeof $('input[type="daterange"]').data('dateRangePicker').getRange !== "undefined") {
-            var doc = new jsPDF("p", "pt");
-            doc.setProperties({
-                title: 'Example: ',
-                subject: 'A jspdf-autotable example pdf'
-            });
-            var selectedRange = $('input[type="daterange"]').data('dateRangePicker').getRange();
-            var columns = [];
-            var rows = [];
-            for(let i = 0; i < database.categories.length; i++){
-                columns.push({
-                    title: database.categories[i].name,
-                    dataKey: database.categories[i].itemid
-                });
-            }
-            for(let i = 0; i < 1; i++){
-                rows.push({})
-                for(let y = 0; y < database.categories.length; y++){
-                    Statistics.getSalesPerProducts(selectedRange.date1, selectedRange.date2, function(products){
-                        Object.defineProperty(rows[i], database.categories[y].name, {
-                            value: database.categories[y].name
-                        });
-                    });
-
-                }
-            }
-
-            doc.autoTable(columns, rows, {
-                styles: {
-                    fillColor: [100, 255, 255]
-                },
-                columnStyles: {
-                    id: {
-                        fillColor: 255
-                    }
-                },
-                margin: {
-                    top: 60
-                },
-                addPageContent: function (data) {
-                    doc.text("Compte caisse " + moment().year(), data.settings.margin.left +data.table.width / 2, 40, null, null, "center");
-                }
-            });
-
-            doc.save("test.pdf");
-
-        } else {
-            alert("Veuillez sélectionner une période");
-        }
 
     }
 

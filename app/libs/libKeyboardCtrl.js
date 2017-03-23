@@ -94,6 +94,9 @@ jQuery(document).ready(function ($) {
                 case "price":
                     $numericPad.show();
                     break;
+                case "number":
+                    $numericPad.show();
+                    break;
                 default:
                     $alphanumericPad.show();
                     break;
@@ -112,7 +115,7 @@ jQuery(document).ready(function ($) {
         var char = $(this).attr('value');
         switch (char) {
             case "#return":
-                if(currentFocusedInput.data("realdatatype")){
+                if(currentFocusedInput.data("realdatatype") == "price"){
                     currentFocusedInput.removeAtCaret("money");
                 }else{
                     currentFocusedInput.removeAtCaret("text");
@@ -176,7 +179,7 @@ jQuery(document).ready(function ($) {
                         $(this).text($(this).text().toLowerCase());
                     });
                 }
-                if(currentFocusedInput.data("realdatatype")){
+                if(currentFocusedInput.data("realdatatype") == "price"){
                     currentFocusedInput.insertAtCaret(char, maj, "money");
                 }else{
                     currentFocusedInput.insertAtCaret(char, maj, "text");
