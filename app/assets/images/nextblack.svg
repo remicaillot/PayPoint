@@ -17,7 +17,7 @@
    inkscape:export-filename="C:\Users\Rémi\Documents\GitHub\PayPoint\PayPoint\data\images\menu.png"
    inkscape:export-xdpi="5.5263319"
    inkscape:export-ydpi="5.5263319"
-   sodipodi:docname="back.svg">
+   sodipodi:docname="nextblack.svg">
   <defs
      id="defs4" />
   <sodipodi:namedview
@@ -27,9 +27,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0"
      inkscape:pageshadow="2"
-     inkscape:zoom="32.859837"
-     inkscape:cx="18.443301"
-     inkscape:cy="6.907666"
+     inkscape:zoom="19.28125"
+     inkscape:cx="4.1591271"
+     inkscape:cy="7.2202282"
      inkscape:document-units="px"
      inkscape:current-layer="g4155"
      showgrid="true"
@@ -86,7 +86,7 @@
       <path
          inkscape:connector-curvature="0"
          id="path4141"
-         d="m 141.74686,690.42784 -9,9.5 9,9.5"
+         d="m 132.39599,690.42784 9,9.5 -9,9.5"
          style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1.0770483;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
          sodipodi:nodetypes="ccc" />
     </g>
