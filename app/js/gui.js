@@ -38,13 +38,13 @@ jQuery(document).ready(function ($) {
             "customRangeLabel": "Custom",
             "weekLabel": "Sem.",
             "daysOfWeek": [
+                "Dim",
                 "Lun",
                 "Mar",
                 "Mer",
                 "Jeu",
                 "Ven",
-                "Sam",
-                "Dim"
+                "Sam"
             ],
             "monthNames": [
                 "Janvier",
@@ -60,7 +60,7 @@ jQuery(document).ready(function ($) {
                 "Novembre",
                 "Décembre"
             ],
-            "firstDay": 0
+            "firstDay": 1
         },
         "linkedCalendars": false,
         "showCustomRangeLabel": false,
@@ -116,13 +116,13 @@ jQuery(document).ready(function ($) {
             "customRangeLabel": "Custom",
             "weekLabel": "Sem.",
             "daysOfWeek": [
+                "Dim",
                 "Lun",
                 "Mar",
                 "Mer",
                 "Jeu",
                 "Ven",
-                "Sam",
-                "Dim"
+                "Sam"
             ],
             "monthNames": [
                 "Janvier",
@@ -138,7 +138,7 @@ jQuery(document).ready(function ($) {
                 "Novembre",
                 "Décembre"
             ],
-            "firstDay": 0
+            "firstDay": 1
         },
         "linkedCalendars": false,
         "alwaysShowCalendars": true,
