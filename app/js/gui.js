@@ -24,96 +24,150 @@ var popupM = new Pop();
 jQuery(document).ready(function ($) {
     moment.locale('fr');
     popupM.hide();
-    $('input[type="daterange"]').dateRangePicker({
-        format: "D MMMM YYYY",
-        separator: ' au ',
-        language: 'fr',
-        startOfWeek: 'monday',// or monday
-        showShortcuts: true,
-        customShortcuts: [
-            //if return an array of two dates, it will select the date range between the two dates
-            {
-                name: 'Aujourd\'hui',
-                dates: function () {
-                    var start = moment().hour(0).toDate();
-                    var end = moment().hour(23).toDate();
-                    return [start, end];
-                }
-            }, {
-                name: 'Hier',
-                dates: function () {
-                    var start = moment().startOf('day').subtract("day",1).toDate();
-                    var end = moment().endOf('day').subtract("day",1).toDate();
-                    return [start, end];
-                }
-            }, {
-                name: 'Cette semaine',
-                dates: function () {
-                    var start = moment().startOf('isoWeek').toDate();
-                    var end = moment().endOf('isoWeek').toDate();
-                    return [start, end];
-                }
-            },
-            {
-                name: 'Ce mois-ci',
-                dates: function () {
-                    var start = moment().startOf('month').toDate();
-                    var end = moment().toDate();
-                    return [start, end];
-                }
-            },
-            {
-                name: 'Le mois dernier',
-                dates: function () {
-                    var start = moment().startOf('month').subtract("month",1).toDate();
-                    var end = moment().endOf('month').subtract("month",1).toDate();
-                    return [start, end];
-                }
-            },
-            {
-                name: 'Cette année',
-                dates: function () {
-                    var start = moment().startOf('year').toDate();
-                    var end = moment().endOf('year').toDate();
-                    return [start, end];
-                }
-            },
-            {
-                name: 'L\'année dernière',
-                dates: function () {
-                    var start = moment().startOf('year').subtract("year",1).toDate();
-                    var end = moment().endOf('year').subtract("year",1).toDate();
-                    return [start, end];
-                }
-            }
-        ],
-        starttime: "00:00",
-        endtime: "23:59",
-        duration: 0
-    }).bind('datepicker-change', function (event, obj) {
-        $('input[type="daterange"]').data('dateRangePicker').getRange = function() {
+
+    $('.inputTypeDate').daterangepicker({
+        "singleDatePicker": true,
+        "autoApply": true,
+        "locale": {
+            "format": "D MMMM YYYY",
+            "separator": " au ",
+            "applyLabel": "Valider",
+            "cancelLabel": "Annuler",
+            "fromLabel": "De",
+            "toLabel": "à",
+            "customRangeLabel": "Custom",
+            "weekLabel": "Sem.",
+            "daysOfWeek": [
+                "Dim",
+                "Lun",
+                "Mar",
+                "Mer",
+                "Jeu",
+                "Ven",
+                "Sam"
+            ],
+            "monthNames": [
+                "Janvier",
+                "Février",
+                "Mars",
+                "Avril",
+                "Mai",
+                "Juin",
+                "Juillet",
+                "Août",
+                "Septembre",
+                "Octobre",
+                "Novembre",
+                "Décembre"
+            ],
+            "firstDay": 1
+        },
+        "linkedCalendars": false,
+        "showCustomRangeLabel": false,
+        "alwaysShowCalendars": true,
+        "startDate": moment().format("dd/mm/yyy"),
+        "endDate": moment().add(1, "day").format("dd/mm/yyy")
+    }, function(start, end, label) {
+        console.log("New date range selected: ' + start.format('YYYY-MM-DD') + ' to ' + end.format('YYYY-MM-DD') + ' (predefined range: ' + label + ')");
+    }).bind('apply.daterangepicker', function (event, obj) {
+        $('input[type="daterange"]').data('daterangepicker').getRange = function() {
             return obj;
         };
     });
-    $('input[type="daterange"]').data('dateRangePicker').getRange = function() {
+    $('input[type="daterange"]').daterangepicker({
+        "autoApply": true,
+        "ranges": {
+            "Aujourd'hui": [
+                moment().hour(0).toDate(),
+                moment().hour(23).toDate()
+            ],
+            "Hier": [
+                moment().startOf('day').subtract(1, "day").toDate(),
+                moment().endOf('day').subtract(1, "day").toDate()
+            ],
+            "Cette semaine": [
+                moment().startOf('isoWeek').toDate(),
+                moment().endOf('isoWeek').toDate()
+            ],
+            "Ce mois ci": [
+                moment().startOf('month').toDate(),
+                moment().toDate()
+            ],
+            "Le mois dernier": [
+                moment().startOf('month').subtract(1, "month").toDate(),
+                moment().endOf('month').subtract(1, "month").toDate()
+            ],
+            "Cette année": [
+                moment().startOf('year').toDate(),
+                moment().endOf('year').toDate()
+            ],
+            "L'année dernière": [
+                moment().startOf('year').subtract(1, "year").toDate(),
+                moment().endOf('year').subtract(1, "year").toDate()
+            ]
+        },
+        "locale": {
+            "format": "D MMMM YYYY",
+            "separator": " au ",
+            "applyLabel": "Valider",
+            "cancelLabel": "Annuler",
+            "fromLabel": "De",
+            "toLabel": "à",
+            "customRangeLabel": "Custom",
+            "weekLabel": "Sem.",
+            "daysOfWeek": [
+                "Dim",
+                "Lun",
+                "Mar",
+                "Mer",
+                "Jeu",
+                "Ven",
+                "Sam"
+            ],
+            "monthNames": [
+                "Janvier",
+                "Février",
+                "Mars",
+                "Avril",
+                "Mai",
+                "Juin",
+                "Juillet",
+                "Août",
+                "Septembre",
+                "Octobre",
+                "Novembre",
+                "Décembre"
+            ],
+            "firstDay": 1
+        },
+        "linkedCalendars": false,
+        "alwaysShowCalendars": true,
+        "startDate": moment().format("dd/mm/yyy"),
+        "endDate": moment().add(1, "day").format("dd/mm/yyy")
+    }, function(start, end, label) {
+        console.log("New date range selected: ' + start.format('YYYY-MM-DD') + ' to ' + end.format('YYYY-MM-DD') + ' (predefined range: ' + label + ')");
+    }).bind('apply.daterangepicker', function (event, obj) {
+        $('input[type="daterange"]').data('daterangepicker').getRange = function() {
+            return obj;
+        };
+    });
+    $('input[type="daterange"]').data('daterangepicker').getRange = function() {
         return false;
     };
 
 
     $("#searchForm form input[type='text']").focus(function (event) {
 
-        $('input[type="daterange"]').data('dateRangePicker').close();
         //$("#searchForm form input[type='text']").addClass('focus');
         $("#searchForm form").addClass('focus');
         var totalHeight = 0;
-        for (elem of $("#searchAutocompletion").children()) {
+        for (let elem of $("#searchAutocompletion").children()) {
             totalHeight += $(elem).height() + 10;
         }
         $("#searchAutocompletion").css("height", totalHeight + "px");
     });
     $("#sideBarMenu").click(function (e) {
 
-        $('input[type="daterange"]').data('dateRangePicker').close();
         if ($("#leftPanel").attr("open") == "open") {
             $("#leftPanel").attr("open", false).css('width', '50px');
             $(".categorie").css('width', '50px');
@@ -137,22 +191,22 @@ jQuery(document).ready(function ($) {
         $("#orderTicket").hide();
         $("#settings").hide();
         $("#sales").show();
+        previousScreen = [];
         ScreenManager.resetScreen();
         Accounting.reloadDom();
 
 
     });
     $(".categorie").click(function (event) {
-        if($('input[type="daterange"]').data('dateRangePicker').getRange() == false){
+        if($('input[type="daterange"]').data('daterangepicker').getRange() == false){
             $('input[type="daterange"]')
-                .data('dateRangePicker')
-                .setStart(moment().hour(0).toDate());
+                .data('daterangepicker')
+                .setStartDate(moment().hour(0).toDate());
             $('input[type="daterange"]')
-                .data('dateRangePicker')
-                .setEnd(moment().hour(23).toDate());
+                .data('daterangepicker')
+                .setEndDate(moment().hour(23).toDate());
         }
 
-        $('input[type="daterange"]').data('dateRangePicker').close();
         if ($(this).attr('id') != "sideBarMenu") {
             $(".categorie").removeClass('activated');
             $(this).addClass('activated');
@@ -213,6 +267,10 @@ jQuery(document).ready(function ($) {
                 $("#paymentStep").show();
                 $("#leftPanel").hide();
                 currentStep++;
+
+                $("#validTicket").text("Enregistrer la commande");
+
+
             }
 
         } else if (currentStep === 1) {
@@ -221,13 +279,19 @@ jQuery(document).ready(function ($) {
 
                 currentCommand.setPayment();
                 currentCommand.saveCommand();
-
-                $("#commandStep").show();
-                $("#leftPanel").show();
-                $("#paymentStep").hide();
-                currentCommand.resetCommand();
-                currentStep = 0;
+                $("#cancelTicket").hide();
+                $("#validTicket").text("Nouvelle commande");
+                currentStep++;
             }
+        } else if(currentStep === 2){
+
+            $("#commandStep").show();
+            $("#leftPanel").show();
+            $("#paymentStep").hide();
+            currentCommand.resetCommand();
+            currentStep = 0;
+            $("#cancelTicket").show();
+            $("#validTicket").text("Suivant");
         }
 
     });
@@ -286,6 +350,10 @@ jQuery(document).ready(function ($) {
         productPath = "";
         loadData(false);
         $(document).trigger('tileReload');
+        $("input").each(function () {
+            $(this).removeClass('focused');
+            $(this).blur();
+        });
     });
     $("#searchForm form input[type='text']").keyup(searchInput);
     $("#searchForm form input[type='text']").on("newChar", searchInput);
@@ -315,7 +383,7 @@ function searchInput(event) {
     $("#searchAutocompletion").empty();
     for (var res in searchResult) {
         $("#searchAutocompletion").append(' <div class="searchSection" data-objecttype="' + res + '"><div class="sectionName">' + getLabelFromObjecttype(res, true) + '<!--<div class="more">Plus</div>--></div><div class="searchResult"> </div></div>');
-        for (item of searchResult[res]) {
+        for (let item of searchResult[res]) {
             if (item.itemType == "product") {
                 var price = money.format.numberToPrice(item.price);
                 if(item.price === "free"){
@@ -335,7 +403,7 @@ function searchInput(event) {
         $("#searchAutocompletion").html("<h2>Rechercher dans les produits, catégories et sous-catégories...</h2>");
     }
     var totalHeight = 0;
-    for (elem of $("#searchAutocompletion").children()) {
+    for (let elem of $("#searchAutocompletion").children()) {
         totalHeight += $(elem).height() + 10;
     }
     $("#searchAutocompletion").css("height", totalHeight + "px");

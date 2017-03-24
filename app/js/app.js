@@ -197,10 +197,10 @@ jQuery(document).ready(function ($) {
     if (database = "NLY") {
         loadData(true);
     }
-    $('input[type="daterange"]').bind('datepicker-change', function (event, obj) {
+    $('input[type="daterange"]').bind('apply.daterangepicker', function (event, obj) {
 
 
-        Statistics.getSalesPerProducts(obj.date1.getTime(), obj.date2.getTime(), function (data) {
+        Statistics.getSalesPerProducts(obj.startDate.toDate().getTime(), obj.endDate.toDate().getTime(), function (data) {
             console.log("statsProduct", data);
             $("#productStatsContainer").empty();
             for (product of data.values) {
@@ -208,10 +208,10 @@ jQuery(document).ready(function ($) {
                     $("#productStatsContainer").append('<div class="tile leftRight"><div class="tileLabel">' + product.name + '</div><div class="tileSubValue">' + money.format.numberToPrice(product.price) + '</div><div class="tileValue">' + product.soldQts + '</div></div>');
 
                 }
-                }
+            }
         });
 
-        Statistics.getTotalSales(obj.date1.getTime(), obj.date2.getTime(), function (data) {
+        Statistics.getTotalSales(obj.startDate.toDate().getTime(), obj.endDate.toDate().getTime(), function (data) {
 
             //total sales
             $(".TTCTotal").html(money.format.numberToPrice(data.TTC));

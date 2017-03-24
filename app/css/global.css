@@ -606,6 +606,7 @@ input[type="number"],
 input[type="date"],
 input[type="email"],
 input[type="daterange"],
+input[type="datePicker"],
 input[type="password"] {
     background: none;
     border: none;
@@ -637,6 +638,8 @@ input[type="email"]:focus,
 input[type="email"].focus,
 input[type="daterange"]:focus,
 input[type="daterange"].focus,
+input[type="datePicker"]:focus,
+input[type="datePicker"].focus,
 input[type="password"]:focus,
 input[type="password"].focus {
     border-bottom: 5px solid #333;
@@ -648,6 +651,7 @@ input[type="number"].valid,
 input[type="date"].valid,
 input[type="date"].valid,
 input[type="daterange"].valid,
+input[type="datePicker"].valid,
 input[type="password"].valid {
     border-color: #2ca05a;
 }
@@ -657,6 +661,7 @@ input[type="number"].invalid,
 input[type="date"].invalid,
 input[type="date"].invalid,
 input[type="daterange"].invalid,
+input[type="datePicker"].invalid,
 input[type="password"].invalid {
     border-color: #c83737;
 }
@@ -856,6 +861,9 @@ input[type="password"].invalid {
     display: flex;
     justify-items: center;
 }
+.screenContentBox .tile.column{
+    flex-direction: column;
+}
 .screenContentBox .tile.button{
     background: #fff url(../assets/images/next.svg) no-repeat center right 15px;
     background-size: 30px;
@@ -914,4 +922,32 @@ input[type="password"].invalid {
 .screenContentBox .title:first-child{
     font-family: 'SourceSansPro-bold', sans-serif;
     font-size: 23pt;
+    display: inline-block;
+}
+.screenContentBox .backButton{
+    float: left;
+    margin-top: 20px;
+    margin-left: 15px;
+    width: 40px;
+    height: 40px;
+    background: url(../assets/images/back.svg) no-repeat center center;
+    background-size: 30px 30px;
+}
+input[type="submit"]{
+    width: 200px;
+    align-self: flex-start;
+    margin-bottom: 5px;
+    margin-top: 5px;
+    border: none;
+    border-radius: 5px;
+
+    height: 50px;
+    background: #67aa00;
+    font-weight: bolder;
+    font-size: 15px;
+    color: white;
+    outline: none;
+}
+input[type="submit"]:active{
+    background: #8de200;
 }
