@@ -119,9 +119,9 @@ function openCashDrawer() {
 }
 
 function printLogs(log) {
-    if (typeof $('input[type="daterange"]').data('dateRangePicker').getRange !== "undefined") {
-        let range = $('input[type="daterange"]').data('dateRangePicker').getRange();
-        Statistics.getTotalSales(range.date1.getTime(), range.date2.getTime(), function (log, cmds) {
+    if (typeof $('input[type="daterange"]').data('daterangepicker').getRange !== "undefined") {
+        let range = $('input[type="daterange"]').data('daterangepicker').getRange();
+        Statistics.getTotalSales(range.startDate.toDate().getTime(), range.endDate.toDate().getTime(), function (log, cmds) {
             printer.newLine();
             printer.bold(true);
             printer.setTextQuadArea();
