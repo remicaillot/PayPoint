@@ -151,6 +151,7 @@ jQuery(document).ready(function ($) {
             return obj;
         };
     });
+    
     $('input[type="daterange"]').data('daterangepicker').getRange = function() {
         return false;
     };
