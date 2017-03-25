@@ -115,16 +115,17 @@ class Statistics {
         cashDrawerDb.find({}, function (err, data) {
             let accountDetails = {
                 balance: 0,
-                lastDeposit: []
+                lastDeposit: [],
+                operations: []
             }
             if(!err){
                 for (let operation of data) {
                     if(operation.operationType == "deposit"){
                         accountDetails.balance -= operation.amount;
-                        accountDetails.lastDeposit = operation;
                     }else{
                         accountDetails.balance += operation.amount;
                     }
+                    accountDetails.operations.push(operation);
                 }
                 console.info("Details", accountDetails);
                 cb(accountDetails);
