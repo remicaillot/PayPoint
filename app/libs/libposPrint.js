@@ -130,9 +130,9 @@ function printLogs(log) {
             printer.newLine();
             printer.alignLeft();
             printer.println("Sur la période");
-            printer.println(moment(range.date1).format("llll"));
+            printer.println(moment(range.startDate).format("llll"));
             printer.println("au");
-            printer.println(moment(range.date2).format("llll"));
+            printer.println(moment(range.endDate).format("llll"));
             printer.bold(false);
             printer.newLine();
             printer.drawLine();
