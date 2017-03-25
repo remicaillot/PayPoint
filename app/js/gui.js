@@ -70,7 +70,7 @@ jQuery(document).ready(function ($) {
     }, function(start, end, label) {
         console.log("New date range selected: ' + start.format('YYYY-MM-DD') + ' to ' + end.format('YYYY-MM-DD') + ' (predefined range: ' + label + ')");
     }).bind('apply.daterangepicker', function (event, obj) {
-        $('input[type="daterange"]').data('daterangepicker').getRange = function() {
+        $('.inputTypeDate').data('daterangepicker').getRange = function() {
             return obj;
         };
     });
@@ -155,6 +155,8 @@ jQuery(document).ready(function ($) {
         return false;
     };
 
+    $('input[type="daterange"]').data('daterangepicker').setStartDate(moment().hour(0).toDate());
+    $('input[type="daterange"]').data('daterangepicker').setEndDate(moment().hour(23).toDate());
 
     $("#searchForm form input[type='text']").focus(function (event) {
 
