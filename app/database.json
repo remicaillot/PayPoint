@@ -169,6 +169,18 @@
       "TVARate": 20
     },
     {
+      "itemId": "z9e8g4r5h4ej5yrj1r6yj4h5er4gzr4z4g6z5r",
+      "itemType": "product",
+      "name": "Pâte Berkley supp.",
+      "picture": "assets/images/Miniatures/appats.png",
+      "subCat": "fbfcadc0d3c171203033dd2c40d53ef9",
+      "category": "5e4ff4525d24e9b5d5a1fb85b82f9913",
+      "sellMode": "unit",
+      "price": 5,
+      "unit": "piece",
+      "TVARate": 20
+    },
+    {
       "itemId": "ebb6279c171cb1d72663311275152b84",
       "itemType": "product",
       "name": "Teignes synth.",
@@ -224,7 +236,7 @@
       "subCat": "ff8prehkzpethjztj599et8095b9c766",
       "category": "5e4ff4525d24e9b5d5a1fb85b82f9913",
       "sellMode": "unit",
-      "price": 3.5,
+      "price": 2.5,
       "unit": "piece",
       "TVARate": 20
     },

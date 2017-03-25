@@ -1,19 +1,19 @@
-function Pop(){
-    this.hide = function(){
+function Pop() {
+    this.hide = function () {
         $("#Pop").hide();
     };
-    this.alert = function (txt){
+    this.alert = function (txt) {
 
     };
-    this.prompt = function(query, type, cb){
+    this.prompt = function (query, type, cb) {
         $("#prompt h3").text(query);
         $("#prompt input").attr("placeholder", "reponse de type " + type + " attendue");
         $("#Pop").show();
-        $("#Pop #valid").click(function(e){
+        $("#Pop #valid").click(function (e) {
             $("#Pop").hide();
             return cb($("#prompt input").val());
         });
-        $("#Pop #cancel").click(function(e){
+        $("#Pop #cancel").click(function (e) {
             $("#Pop").hide();
             return cb(false);
         });
@@ -65,15 +65,8 @@ jQuery(document).ready(function ($) {
         "linkedCalendars": false,
         "showCustomRangeLabel": false,
         "alwaysShowCalendars": true,
-        "startDate": moment().format("dd/mm/yyy"),
-        "endDate": moment().add(1, "day").format("dd/mm/yyy")
-    }, function(start, end, label) {
-        console.log("New date range selected: ' + start.format('YYYY-MM-DD') + ' to ' + end.format('YYYY-MM-DD') + ' (predefined range: ' + label + ')");
-    }).bind('apply.daterangepicker', function (event, obj) {
-        $('input[type="daterange"]').data('daterangepicker').getRange = function() {
-            return obj;
-        };
-    });
+        "startDate": moment()
+    }, function (start, end, label) {});
     $('input[type="daterange"]').daterangepicker({
         "autoApply": true,
         "ranges": {
@@ -142,18 +135,11 @@ jQuery(document).ready(function ($) {
         },
         "linkedCalendars": false,
         "alwaysShowCalendars": true,
-        "startDate": moment().format("dd/mm/yyy"),
-        "endDate": moment().add(1, "day").format("dd/mm/yyy")
-    }, function(start, end, label) {
-        console.log("New date range selected: ' + start.format('YYYY-MM-DD') + ' to ' + end.format('YYYY-MM-DD') + ' (predefined range: ' + label + ')");
-    }).bind('apply.daterangepicker', function (event, obj) {
-        $('input[type="daterange"]').data('daterangepicker').getRange = function() {
-            return obj;
-        };
+        "startDate": moment().hour(0).minute(0),
+        "endDate": moment().hour(23).minute(59)
+    }, function (start, end, label) {
     });
-    $('input[type="daterange"]').data('daterangepicker').getRange = function() {
-        return false;
-    };
+
 
 
     $("#searchForm form input[type='text']").focus(function (event) {
@@ -198,15 +184,6 @@ jQuery(document).ready(function ($) {
 
     });
     $(".categorie").click(function (event) {
-        if($('input[type="daterange"]').data('daterangepicker').getRange() == false){
-            $('input[type="daterange"]')
-                .data('daterangepicker')
-                .setStartDate(moment().hour(0).toDate());
-            $('input[type="daterange"]')
-                .data('daterangepicker')
-                .setEndDate(moment().hour(23).toDate());
-        }
-
         if ($(this).attr('id') != "sideBarMenu") {
             $(".categorie").removeClass('activated');
             $(this).addClass('activated');
@@ -283,7 +260,7 @@ jQuery(document).ready(function ($) {
                 $("#validTicket").text("Nouvelle commande");
                 currentStep++;
             }
-        } else if(currentStep === 2){
+        } else if (currentStep === 2) {
 
             $("#commandStep").show();
             $("#leftPanel").show();
@@ -361,19 +338,19 @@ jQuery(document).ready(function ($) {
         e.preventDefault();
         e.stopPropagation();
     });
-    $(".toolbar-item[data-action='cashin']").click(function(e){
+    $(".toolbar-item[data-action='cashin']").click(function (e) {
 
     });
-    $(".toolbar-item[data-action='cashout']").click(function(e){
+    $(".toolbar-item[data-action='cashout']").click(function (e) {
 
     });
-    $(".toolbar-item[data-action='exportPdf']").click(function(e){
+    $(".toolbar-item[data-action='exportPdf']").click(function (e) {
         Statistics.exportLogs();
     });
-    $("#openCashDrawerButton").click(function(){
+    $("#openCashDrawerButton").click(function () {
         openCashDrawer();
     });
-    $('.toolbar-item[data-action="printlog"]').click(function(){
+    $('.toolbar-item[data-action="printlog"]').click(function () {
         printLogs();
     })
 });
@@ -386,7 +363,7 @@ function searchInput(event) {
         for (let item of searchResult[res]) {
             if (item.itemType == "product") {
                 var price = money.format.numberToPrice(item.price);
-                if(item.price === "free"){
+                if (item.price === "free") {
                     price = "Prix libre";
                 }
                 $(".searchSection[data-objecttype='" + res + "'] .searchResult").append('<div class="searchResultTile" data-objecttype="' + item.itemType + '" data-objectid="' + item.itemId + '"><img src="' + item.picture + '"/> <div class="content"> <span>' + item.name + '</span><div>' + price + '</div></div></div>');
