@@ -140,7 +140,16 @@ jQuery(document).ready(function ($) {
     }, function (start, end, label) {
     });
 
+    Statistics.getSalesPerProducts($('input[type="daterange"]').data("daterangepicker").startDate.toDate().getTime(), $('input[type="daterange"]').data("daterangepicker").endDate.toDate().getTime(), function (data) {
+        console.log("statsProduct", data);
+        $("#productStatsContainer").empty();
+        for (product of data.values) {
+            if(product.soldQts != 0){
+                $("#productStatsContainer").append('<div class="tile leftRight"><div class="tileLabel">' + product.name + '</div><div class="tileSubValue">' + money.format.numberToPrice(product.price) + '</div><div class="tileValue">' + product.soldQts + '</div></div>');
 
+            }
+        }
+    });
 
     $("#searchForm form input[type='text']").focus(function (event) {
 

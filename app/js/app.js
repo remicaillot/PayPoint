@@ -166,7 +166,7 @@ function shopingCart(modifCB) {
     this.saveCommand = function () {
         let localcommand = this.getCommandJson();
         localcommand.timestamp = Date.now();
-        Accounting.moneyEntry(localcommand.payment.methods.cash, localcommand.timestamp, function (success) {
+        Accounting.saveCommand(localcommand.payment.methods.cash, localcommand.timestamp, function (success) {
             if (success) {
                 try {
                     printTicket(localcommand);
@@ -197,7 +197,8 @@ jQuery(document).ready(function ($) {
     if (database = "NLY") {
         loadData(true);
     }
-    $('input[type="daterange"]').bind('apply.daterangepicker', function (event, obj) {
+
+    $('input[type="daterange"]').on('apply.daterangepicker', function (event, obj) {
 
 
         Statistics.getSalesPerProducts(obj.startDate.toDate().getTime(), obj.endDate.toDate().getTime(), function (data) {
