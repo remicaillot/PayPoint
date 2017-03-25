@@ -184,15 +184,6 @@ jQuery(document).ready(function ($) {
 
     });
     $(".categorie").click(function (event) {
-        if ($('input[type="daterange"]').data('daterangepicker').getRange() == false) {
-            $('input[type="daterange"]')
-                .data('daterangepicker')
-                .setStartDate(moment().hour(0).toDate());
-            $('input[type="daterange"]')
-                .data('daterangepicker')
-                .setEndDate(moment().hour(23).toDate());
-        }
-
         if ($(this).attr('id') != "sideBarMenu") {
             $(".categorie").removeClass('activated');
             $(this).addClass('activated');

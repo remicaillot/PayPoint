@@ -120,7 +120,7 @@ function openCashDrawer() {
 
 function printLogs(log) {
     if (typeof $('input[type="daterange"]').data('daterangepicker').getRange !== "undefined") {
-        let range = $('input[type="daterange"]').data('daterangepicker').getRange();
+        let range = $('input[type="daterange"]').data('daterangepicker');
         Statistics.getTotalSales(range.startDate.toDate().getTime(), range.endDate.toDate().getTime(), function (log, cmds) {
             printer.newLine();
             printer.bold(true);
