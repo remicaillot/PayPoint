@@ -152,11 +152,12 @@ jQuery(document).ready(function ($) {
         };
     });
     $('input[type="daterange"]').data('daterangepicker').getRange = function() {
-        return false;
+        return {
+            startDate: moment().hour(0),
+            endDate: moment().hour(23)
+        };
     };
 
-    $('input[type="daterange"]').data('daterangepicker').setStartDate(moment().hour(0));
-    $('input[type="daterange"]').data('daterangepicker').setEndDate(moment().hour(23));
 
     $("#searchForm form input[type='text']").focus(function (event) {
 
