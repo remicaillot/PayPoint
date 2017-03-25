@@ -11,15 +11,7 @@ $(document).ready(function(){
         });
     });
     $(".screenContentBox .backButton").click(function (e) {
-        previousScreen.pop();
-        if(previousScreen.length == 0){
-            ScreenManager.resetScreen();
-        }else{
-            ScreenManager.resetScreen(function () {
-                $($(".screen[screenId='" + previousScreen[previousScreen.length - 1] + "']")[0]).css("display", "block");
-                $(".screenPane").css("marginLeft", "-100%");
-            });
-        }
+        ScreenManager.back();
 
     });
 });
