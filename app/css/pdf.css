@@ -1,0 +1,8 @@
+body {
+    font-size: 0.625em;
+}
+table tr td, table tr th{
+    padding: 5px;
+    border: 1px solid black;
+    border-collapse: collapse;
+}
