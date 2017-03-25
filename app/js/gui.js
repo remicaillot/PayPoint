@@ -155,8 +155,8 @@ jQuery(document).ready(function ($) {
         return false;
     };
 
-    $('input[type="daterange"]').data('daterangepicker').setStartDate(moment().hour(0).toDate());
-    $('input[type="daterange"]').data('daterangepicker').setEndDate(moment().hour(23).toDate());
+    $('input[type="daterange"]').data('daterangepicker').setStartDate(moment().hour(0));
+    $('input[type="daterange"]').data('daterangepicker').setEndDate(moment().hour(23));
 
     $("#searchForm form input[type='text']").focus(function (event) {
 
