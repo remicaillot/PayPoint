@@ -1,31 +1,33 @@
-class Accounting{
+class Accounting {
 
-    static bankDeposit(amount, date, cb){
-        date = new Date(parseInt(date));
+    static bankDeposit(amount, date, id, cb) {
         cashDrawerDb.insert({
             operationType: "deposit",
             amount: amount,
-            timestamp: date.getTime()
+            timestamp: date.getTime(),
+            depositID: id
         }, function (err) {
             console.error(err);
             cb(true);
         });
     }
-    static moneyEntry(amount, date, cb){
-        date = new Date(parseInt(date));
+
+    static moneyEntry(amount, date, id, cb) {
         cashDrawerDb.insert({
             operationType: "entry",
             amount: amount,
-            timestamp: date.getTime()
+            timestamp: date.getTime(),
+            entryID: id
         }, function (err) {
             console.error(err);
             cb(true);
         });
     }
-    static importOldCommandOperation(){
-        commandDb.find({}, function(err, commands){
-            if(!err){
-                for(let command of commands){
+
+    static importOldCommandOperation() {
+        commandDb.find({}, function (err, commands) {
+            if (!err) {
+                for (let command of commands) {
                     cashDrawerDb.insert({
                         operationType: "entry",
                         operationCategory: "command",
@@ -38,34 +40,56 @@ class Accounting{
             }
         });
     }
-    static reloadDom(){
-        Statistics.getAccountingDetails(function(details){
-            $(".accountingBalance").text(money.format.numberToPrice(details.balance));
-            if(typeof details.lastDeposit === "undefined"){
-                $(".lastDepositDate").text("Jamais");
-                $(".lastDepositAmount").text("0,00€");
-            } else {
-                $(".lastDepositDate").text(moment(details.lastDeposit.timestamp).calendar());
-                $(".lastDepositAmount").text(money.format.numberToPrice(details.lastDeposit.amount));
-            }
 
+    static reloadDom() {
+        Statistics.getAccountingDetails(function (details) {
+            $(".accountingBalance").text(money.format.numberToPrice(details.balance));
+            $("#accountingOperationsList").empty();
+            for (let operation of details.operations) {
+
+                var operationType = "Retrait à la banque";
+                if(operation.operationType == "deposit"){
+                    var operationType = "Dépot à la banque";
+                }
+                var number = "";
+                if(operation.depositID){
+                    number = "N°" + operation.depositID;
+                }else if(operation.entryID != ""){
+                    number ="N°" + operation.entryID;
+                }
+
+                $("#accountingOperationsList").prepend('<div class="tile leftRight">' +
+                    '<div class="tileLabel">' + operationType + '</div>' +
+                    '<div class="tileSubValue lastDepositNumber">' + number +'</div>' +
+                    '<div class="tileSubValue lastDepositDate">Le ' + moment(operation.timestamp).format("ll") + '</div>' +
+                    '<div class="tileValue lastDepositAmount">' + money.format.numberToPrice(operation.amount) + '</div>' +
+                    '</div>');
+            }
         })
     }
 }
-$(document).ready(function(){
-    $("#newDeposit").click(function(e){
-        var depotVal = prompt("Valeur du dépot en euros");
-        if(depotVal){
-            Accounting.bankDeposit(parseFloat(depotVal), Date.now(), function(){
+$(document).ready(function () {
+    $("#depositForm").submit(function (e) {
+        e.preventDefault();
+        var date = $(".inputTypeDate").data("daterangepicker").startDate;
+        var amount = money.format.priceToNumber($("#depositAmount").val());
+        var id = $("#depositID").val();
+        if (amount != 0) {
+            Accounting.bankDeposit(amount, date.toDate(), id, function () {
                 Accounting.reloadDom();
+                ScreenManager.back();
             });
         }
     });
-    $("#newEntry").click(function(e){
-        var entryVal = prompt("Valeur du retrait en euros");
-        if(entryVal){
-            Accounting.moneyEntry(parseFloat(entryVal), Date.now(), function(){
+    $("#entryForm").submit(function (e) {
+        e.preventDefault();
+        var date = $(".inputTypeDate").data("daterangepicker").startDate;
+        var amount = money.format.priceToNumber($("#entryAmount").val());
+        var id = $("#entryID").val();
+        if (amount != 0) {
+            Accounting.moneyEntry(amount, date.toDate(), id, function () {
                 Accounting.reloadDom();
+                ScreenManager.back();
             });
         }
     });
