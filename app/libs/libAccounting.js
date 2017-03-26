@@ -24,6 +24,18 @@ class Accounting {
         });
     }
 
+    static saveCommand(amount, date, cb){
+        date = new Date(date);
+        cashDrawerDb.insert({
+            operationType: "command",
+            amount: amount,
+            timestamp: date.getTime(),
+        }, function (err) {
+            console.error(err);
+            cb(true);
+        });
+    }
+
     static importOldCommandOperation() {
         commandDb.find({}, function (err, commands) {
             if (!err) {
@@ -50,11 +62,14 @@ class Accounting {
                 var operationType = "Retrait à la banque";
                 if(operation.operationType == "deposit"){
                     var operationType = "Dépot à la banque";
+                } else if(operation.operationType == "command"){
+
+                    var operationType = "Commande";
                 }
                 var number = "";
-                if(operation.depositID){
+                if(typeof operation.depositID !== "undefined"){
                     number = "N°" + operation.depositID;
-                }else if(operation.entryID != ""){
+                }else if((typeof operation.entryID  !== "undefined") && (operation.entryID != "")){
                     number ="N°" + operation.entryID;
                 }
 
