@@ -483,8 +483,16 @@ header {
     display: inline-block;
 }
 #orderTicket #tableHead .product {
-    width: 60%;
+    width: 170px;
 }
+#orderTicket #tableHead .qts {
+    width: 35px;
+}
+#orderTicket #tableHead .price {
+    width: 50px;
+}
+
+
 
 #orderTicket #tableBody {
     position: absolute;
@@ -495,25 +503,31 @@ header {
     width: 100%;
 }
 
-#orderTicket div.product {
-    width: 50%;
+#orderTicket .tableLine div.product {
+    width: 125px;
+    margin-left: 10px;
+    text-align: left;
+}
+#orderTicket .tableLine div.qts {
+    width: 35px;
+    padding: 3px;
 }
 
-#orderTicket div.qts {
-    width: 10%;
-}
-
-#orderTicket div.price {
-    width: 20%;
+#orderTicket .tableLine div.price {
+    width: 50px;
+    padding: 3px;
 }
 
 #orderTicket .tableLine {
     cursor: default;
     height: 40px;
     margin-top: 10px;
+    align-items: center;
+    display: flex;
+    padding-left: 10px;
 }
 #orderTicket .tableLine .img {
-    width: 10%;
+    width: 40px;
 }
 #orderTicket .tableLine img {
     width: 40px;
