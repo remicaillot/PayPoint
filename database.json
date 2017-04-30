@@ -779,6 +779,18 @@
       "price": 10,
       "unit": "piece",
       "TVARate": 5.5
+    },
+    {
+      "itemId": "sf6g4r6eg4e6rg9er984jkul65zsg564zr64g",
+      "itemType": "product",
+      "name": "Petit filet fumé à chaud",
+      "picture": "assets/images/Miniatures/poissondetail.png",
+      "subCat": "et68h4et6j4e6ykut65k1r3jh1r65he4tj",
+      "category": "5d34421c812b30a8cf5e3a92252e242e",
+      "sellMode": "weight",
+      "price": 48,
+      "unit": "piece",
+      "TVARate": 10
     }
   ],
   "categories": [
@@ -895,6 +907,14 @@
       "picture": "assets/images/Miniatures/liquides.png",
       "category": "5e4ff4525d24e9b5d5a1fb85b82f9913",
       "subcategoryId": "6d1a13af07fe2c3ee82f4a8c987039eb"
+    },
+    {
+      "itemId": "et68h4et6j4e6ykut65k1r3jh1r65he4tj",
+      "itemType": "subcategory",
+      "name": "Produits de l'atelier",
+      "picture": "assets/images/Miniatures/poissondetail.png",
+      "category": "5d34421c812b30a8cf5e3a92252e242e",
+      "subcategoryId": ""
     }
   ]
 }

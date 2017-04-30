@@ -17,7 +17,7 @@ function shopingCart(modifCB) {
             methods: {
                 check: 0,
                 cash: 0,
-                reduction: 0,
+                transfer: 0,
                 giftcard: 0
             },
             change: 0
@@ -67,7 +67,7 @@ function shopingCart(modifCB) {
         command.payment.methods.cash = $('input[data-method="cash"]').data("numeralValue");
         command.payment.methods.check = $('input[data-method="check"]').data("numeralValue");
         command.payment.methods.giftcard = $('input[data-method="giftcard"]').data("numeralValue");
-        command.payment.methods.reduction = $('input[data-method="reduction"]').data("numeralValue");
+        command.payment.methods.transfer = $('input[data-method="transfer"]').data("numeralValue");
         command.payment.change = money.format.priceToNumber($('.paymentrest').text());
 
     };
@@ -87,34 +87,41 @@ function shopingCart(modifCB) {
         productWanted = Object.assign({}, productWanted);
         if (typeof command.products.get(productWanted.itemId) !== "undefined") {
 
-            if (productWanted.price == "free") {
-                var price = prompt("Prix", "0");
+            if (productWanted.sellMode == "weight") {
                 var qts = prompt("Quantité en " + command.products.get(productWanted.itemId).unit, "0");
-                if ((price != false) && (qts != false)) {
-                    command.products.get(productWanted.itemId).price = parseFloat();
-                    command.products.get(productWanted.itemId).qts = parseFloat();
+                if (qts != false) {
+                    command.products.get(productWanted.itemId).qts += parseFloat(qts);
                     this.reloadDom();
                 } else {
                     return;
                 }
 
-            } else {
+            } else{
                 command.products.get(productWanted.itemId).qts++;
                 this.reloadDom();
             }
 
         } else {
             if (productWanted.price == "free") {
-                productWanted.price = parseFloat(prompt("Prix", "0"));
-                productWanted.qts = parseFloat(prompt("Quantité en " + productWanted.unit, "0"));
+                var price = prompt("Prix", "0");
+                if (price != false) {
+                    productWanted.price = parseFloat(price);
+                }
 
-                command.products.set(productWanted.itemId, productWanted);
-                this.reloadDom();
-            } else {
-                productWanted.qts = 1;
-                command.products.set(productWanted.itemId, productWanted);
-                this.reloadDom();
             }
+
+            if (productWanted.sellMode == "weight") {
+                var qts = prompt("Quantité en " + productWanted.unit, "0");
+                if (qts != false) {
+                    productWanted.qts = parseFloat(qts);
+                }
+
+            } else{
+                productWanted.qts = 1;
+
+            }
+            command.products.set(productWanted.itemId, productWanted);
+            this.reloadDom();
 
         }
 
@@ -147,7 +154,7 @@ function shopingCart(modifCB) {
                 methods: {
                     check: 0,
                     cash: 0,
-                    reduction: 0,
+                    transfer: 0,
                     giftcard: 0
                 },
                 change: 0
@@ -159,14 +166,14 @@ function shopingCart(modifCB) {
         $('input[data-method="check"]').data("numeralValue", 0);
         $('input[data-method="giftcard"]').val("0,00€");
         $('input[data-method="giftcard"]').data("numeralValue", 0);
-        $('input[data-method="reduction"]').val("0,00€");
-        $('input[data-method="reduction"]').data("numeralValue", 0);
+        $('input[data-method="transfer"]').val("0,00€");
+        $('input[data-method="transfer"]').data("numeralValue", 0);
         this.reloadDom();
     }
     this.saveCommand = function () {
         let localcommand = this.getCommandJson();
         localcommand.timestamp = Date.now();
-        Accounting.moneyEntry(localcommand.payment.methods.cash, localcommand.timestamp, function (success) {
+        Accounting.saveCommand(localcommand.payment.methods.cash, localcommand.timestamp, function (success) {
             if (success) {
                 try {
                     printTicket(localcommand);
@@ -197,7 +204,8 @@ jQuery(document).ready(function ($) {
     if (database = "NLY") {
         loadData(true);
     }
-    $('input[type="daterange"]').bind('apply.daterangepicker', function (event, obj) {
+
+    $('input[type="daterange"]').on('apply.daterangepicker', function (event, obj) {
 
 
         Statistics.getSalesPerProducts(obj.startDate.toDate().getTime(), obj.endDate.toDate().getTime(), function (data) {

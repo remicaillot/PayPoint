@@ -140,7 +140,16 @@ jQuery(document).ready(function ($) {
     }, function (start, end, label) {
     });
 
+    Statistics.getSalesPerProducts($('input[type="daterange"]').data("daterangepicker").startDate.toDate().getTime(), $('input[type="daterange"]').data("daterangepicker").endDate.toDate().getTime(), function (data) {
+        console.log("statsProduct", data);
+        $("#productStatsContainer").empty();
+        for (product of data.values) {
+            if(product.soldQts != 0){
+                $("#productStatsContainer").append('<div class="tile leftRight"><div class="tileLabel">' + product.name + '</div><div class="tileSubValue">' + money.format.numberToPrice(product.price) + '</div><div class="tileValue">' + product.soldQts + '</div></div>');
 
+            }
+        }
+    });
 
     $("#searchForm form input[type='text']").focus(function (event) {
 
@@ -409,6 +418,9 @@ function searchInput(event) {
 }
 function addItemToHome(data) {
     if (data.itemType == "product") {
+        if(data.sellMode == "weight"){
+            data.price += '<span> / ' + data.unit + '</span>';
+        }
         var productTemplate = '<div class="productTile" data-objectid="' + data.itemId + '" data-objecttype="product"><img src="' + data.picture + '"/><div class="price">' + data.price + '</div><div class="name">' + data.name + '</div></div>';
         $("#productsContainer").append(productTemplate)
     } else if (data.itemType == "subcategory") {

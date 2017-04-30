@@ -21,6 +21,8 @@
     </script>
     <script src="./libs/mustache.min.js" type="text/javascript">
     </script>
+    <script src="./libs/jspdf.debug.js"></script>
+    <script src="./libs/jspdf.plugin.autotable.js"></script>
     <script src="./libs/moment-with-locales.js" type="text/javascript">
     </script>
     <script src="./libs/libAccounting.js" type="text/javascript">
@@ -197,9 +199,9 @@
         </div>
     </div>
     <div class="paymentMethod">
-        <div class="pmLabel">Réduction</div>
+        <div class="pmLabel">Virement banquaire</div>
         <div class="pmInput">
-            <input type="text" data-method="reduction" data-realDataType="price">
+            <input type="text" data-method="transfer" data-realDataType="price">
         </div>
     </div>
 

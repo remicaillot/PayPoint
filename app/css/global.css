@@ -351,6 +351,10 @@ header {
     font-weight: bold;
 }
 
+.productTile .price span{
+    color: #999999;
+    font-size: 0.9em;
+}
 .productTile .price {
     background: #333;
     color: white;
