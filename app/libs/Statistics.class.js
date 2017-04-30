@@ -38,8 +38,8 @@ class Statistics {
                 doc.text("Caisse Moulin Hubeau " + moment().format("MMM YYYY"), 40, 20);
             }
         });
-        doc.save(pathToSave);
-        
+        console.log(doc.save(pathToSave));
+        //nw.Shell.showItemInFolder();
 
     }
 

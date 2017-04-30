@@ -418,6 +418,9 @@ function searchInput(event) {
 }
 function addItemToHome(data) {
     if (data.itemType == "product") {
+        if(data.sellMode == "weight"){
+            data.price += '<span> / ' + data.unit + '</span>';
+        }
         var productTemplate = '<div class="productTile" data-objectid="' + data.itemId + '" data-objecttype="product"><img src="' + data.picture + '"/><div class="price">' + data.price + '</div><div class="name">' + data.name + '</div></div>';
         $("#productsContainer").append(productTemplate)
     } else if (data.itemType == "subcategory") {
