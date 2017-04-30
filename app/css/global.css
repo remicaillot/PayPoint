@@ -340,8 +340,11 @@ header {
     -webkit-transition: -webkit-transform 0.2s cubic-bezier(.07, .7, .6, .96);
 }
 
-#productsContainer .productTile img {
+#productsContainer .productTile .coverImage {
     width: 150px;
+    height: 155px;
+    background-size: cover;
+    background-position: center;
 }
 
 .productTile .price, .productTile .name, .productTile .subcategory {
