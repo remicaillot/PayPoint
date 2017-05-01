@@ -146,6 +146,7 @@ jQuery(document).ready(function ($) {
         for (product of data.values) {
             console.log(product);
             if(product.soldQts != 0){
+                console.log(product.sellMode);
                 if(product.sellMode == "weight"){
                     product.soldQts = product.soldQts + " " + product.unit;
                     product.soldQts = product.soldQts.replace('.', ',');
