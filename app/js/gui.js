@@ -144,8 +144,13 @@ jQuery(document).ready(function ($) {
         console.log("statsProduct", data);
         $("#productStatsContainer").empty();
         for (product of data.values) {
+            console.log(product);
             if(product.soldQts != 0){
-                $("#productStatsContainer").append('<div class="tile leftRight"><div class="tileLabel">' + product.name + '</div><div class="tileSubValue">' + money.format.numberToPrice(product.price) + '</div><div class="tileValue">' + product.soldQts + '</div></div>');
+                if(product.sellMode == "weight"){
+                    product.soldQts = product.soldQts + " kg";
+                    product.soldQts = product.soldQts.replace('.', ',');
+                }
+                $("#productStatsContainer").append('<div class="tile leftRight"><div class="tileLabel">' + product.name + '</div><div class="tileSubValue">' + money.format.numberToPrice(product.price) + '</div><div class="tileValue">' + product.soldQts +'</div></div>');
 
             }
         }
@@ -417,14 +422,19 @@ function searchInput(event) {
 
 }
 function addItemToHome(data) {
+    if(!fs.existsSync(data.picture)){
+            data.picture = "assets/images/Miniatures/notFound.png";
+
+    }
     if (data.itemType == "product") {
         if(data.sellMode == "weight"){
             data.price += '<span> / ' + data.unit + '</span>';
         }
-        var productTemplate = '<div class="productTile" data-objectid="' + data.itemId + '" data-objecttype="product"><img src="' + data.picture + '"/><div class="price">' + data.price + '</div><div class="name">' + data.name + '</div></div>';
+
+        var productTemplate = '<div class="productTile" data-objectid="' + data.itemId + '" data-objecttype="product"><div class="coverImage" style="background-image: url(' + data.picture + ')"></div><div class="price">' + data.price + '</div><div class="name">' + data.name + '</div></div>';
         $("#productsContainer").append(productTemplate)
     } else if (data.itemType == "subcategory") {
-        var subcategoryTemplate = '<div class="productTile" data-objectid="' + data.itemId + '" data-objecttype="subcategory"><img src="' + data.picture + '"/><div class="subcategory"></div><div class="name">' + data.name + '</div></div>';
+        var subcategoryTemplate = '<div class="productTile" data-objectid="' + data.itemId + '" data-objecttype="subcategory"><div class="coverImage" style="background-image: url(' + data.picture + ')"></div><div class="subcategory"></div><div class="name">' + data.name + '</div></div>';
         $("#productsContainer").append(subcategoryTemplate)
     } else {
         console.error("unknown item type", data);
