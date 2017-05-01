@@ -120,11 +120,11 @@ function shopingCart(modifCB) {
                 productWanted.qts = 1;
 
             }
-            if (!(isNaN(productWanted.qts)) && !(isNaN(productWanted.price))){
-                command.products.set(productWanted.itemId, productWanted);
-                this.reloadDom();
-            }
+            command.products.set(productWanted.itemId, productWanted);
+            this.reloadDom();
+
         }
+
     }
     this.removeProduct = function (productIdWanted) {
         //console.log(productIdWanted);
