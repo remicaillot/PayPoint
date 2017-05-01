@@ -83,8 +83,9 @@ function printTicket(command) {
             printer.println("vous remercie de");
             printer.println("votre visite");
             printer.cut();
-
-            printer.openCashDrawer();
+            if(command.payment.methods.cash > 0){
+                printer.openCashDrawer();
+            }
             printer.execute(function (err) {
                 if (err) {
                     console.error("Print failed", err);
