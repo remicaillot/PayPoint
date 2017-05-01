@@ -757,9 +757,21 @@
       "TVARate": 5.5
     },
     {
+      "itemId": "p8mol4ik56stervet6h3yr4je8uy6ikety4qe",
+      "itemType": "product",
+      "name": "Portion fumée à chaud",
+      "picture": "assets/images/Miniatures/poissondetail.png",
+      "subCat": "et68h4et6j4e6ykut65k1r3jh1r65he4tj",
+      "category": "5d34421c812b30a8cf5e3a92252e242e",
+      "sellMode": "weight",
+      "price": 18.9,
+      "unit": "kg",
+      "TVARate": 5.5
+    },
+    {
       "itemId": "d6tu5ks1t45nq4et6jsu6ksry3jq16etj7k9",
       "itemType": "product",
-      "name": "Truite fraiche vidée",
+      "name": "Portion fraiche vidée",
       "picture": "assets/images/Miniatures/poissondetail.png",
       "subCat": "et68h4et6j4e6ykut65k1r3jh1r65he4tj",
       "category": "5d34421c812b30a8cf5e3a92252e242e",
@@ -767,30 +779,6 @@
       "price": 12.6,
       "unit": "kg",
       "TVARate": 5.5
-    },
-    {
-      "itemId": "p8mol4ik56stervet6h3yr4je8uy6ikety4qe",
-      "itemType": "product",
-      "name": "Truite fumée à chaud",
-      "picture": "assets/images/Miniatures/poissondetail.png",
-      "subCat": "et68h4et6j4e6ykut65k1r3jh1r65he4tj",
-      "category": "5d34421c812b30a8cf5e3a92252e242e",
-      "sellMode": "weight",
-      "price": 18.9,
-      "unit": "kg",
-      "TVARate": 5.5
-    },
-    {
-      "itemId": "p8mol4ik56stervet6h3yr4je8uy6ikety4qe",
-      "itemType": "product",
-      "name": "Truite fumée à chaud",
-      "picture": "assets/images/Miniatures/poissondetail.png",
-      "subCat": "et68h4et6j4e6ykut65k1r3jh1r65he4tj",
-      "category": "5d34421c812b30a8cf5e3a92252e242e",
-      "sellMode": "weight",
-      "price": 18.9,
-      "unit": "kg",
-      "TVARate": 10
     },
     {
       "itemId": "74b0e41bc1d368005347e4881f2c1f8a",
