@@ -130,7 +130,8 @@ class Statistics {
                     name: product.name,
                     soldQts: 0,
                     price: product.price,
-                    sellMode: product.sellMode
+                    sellMode: product.sellMode,
+                    unit: product.unit
                 });
                 sales.labels.push(product.name);
             }

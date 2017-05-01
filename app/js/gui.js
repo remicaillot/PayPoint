@@ -146,8 +146,9 @@ jQuery(document).ready(function ($) {
         for (product of data.values) {
             console.log(product);
             if(product.soldQts != 0){
+                console.log(product.sellMode);
                 if(product.sellMode == "weight"){
-                    product.soldQts = product.soldQts + " kg";
+                    product.soldQts = product.soldQts + " " + product.unit;
                     product.soldQts = product.soldQts.replace('.', ',');
                 }
                 $("#productStatsContainer").append('<div class="tile leftRight"><div class="tileLabel">' + product.name + '</div><div class="tileSubValue">' + money.format.numberToPrice(product.price) + '</div><div class="tileValue">' + product.soldQts +'</div></div>');
@@ -385,7 +386,7 @@ function searchInput(event) {
                 $(".searchSection[data-objecttype='" + res + "'] .searchResult").append('<div class="searchResultTile" data-objecttype="' + item.itemType + '" data-objectid="' + item.itemId + '"><img style="background: #333; height: 30px; width: 30px; padding: 10px; " src="' + item.picture + '"/> <div class="content"> <span class="centered">' + item.name + '</span></div></div>');
 
             } else {
-                $(".searchSection[data-objecttype='" + res + "'] .searchResult").append('<div class="searchResultTile" data-objecttype="' + item.itemType + '" data-objectid="' + item.itemId + '"><img src="' + item.picture + '"/> <div class="content"> <span class="centered">' + item.name + '</span></div></div>');
+                $(".searchSection[data-objecttype='" + res + "'] .searchResult").append('<div class="searchResultTile" data-objecttype="' + item.itemType + '" data-objectid="' + item.itemId + '" data-catId="' + item.category + '"><img src="' + item.picture + '"/> <div class="content"> <span class="centered">' + item.name + '</span></div></div>');
 
             }
         }
@@ -400,8 +401,10 @@ function searchInput(event) {
     $("#searchAutocompletion").css("height", totalHeight + "px");
     $(".searchResultTile").click(function (e) {
         if ($(this).data("objecttype") == "subcategory") {
-            productPath += "/" + $(this).data("objectid");
-
+            var catID = $(this).attr("data-catId");
+            var subCatID = $(this).data("objectid");
+            $(".categorie[data-objectid='" + catID + "']").click();
+            productPath = "/" + subCatID;
             loadData(false);
             $(document).trigger('tileReload');
         }

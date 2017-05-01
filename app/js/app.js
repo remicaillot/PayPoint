@@ -124,7 +124,9 @@ function shopingCart(modifCB) {
                 command.products.set(productWanted.itemId, productWanted);
                 this.reloadDom();
             }
+
         }
+
     }
     this.removeProduct = function (productIdWanted) {
         //console.log(productIdWanted);
@@ -208,12 +210,19 @@ jQuery(document).ready(function ($) {
     $('input[type="daterange"]').on('apply.daterangepicker', function (event, obj) {
 
 
-        Statistics.getSalesPerProducts(obj.startDate.toDate().getTime(), obj.endDate.toDate().getTime(), function (data) {
+        Statistics.getSalesPerProducts($('input[type="daterange"]').data("daterangepicker").startDate.toDate().getTime(), $('input[type="daterange"]').data("daterangepicker").endDate.toDate().getTime(), function (data) {
             console.log("statsProduct", data);
             $("#productStatsContainer").empty();
             for (product of data.values) {
+                console.log(product);
                 if(product.soldQts != 0){
-                    $("#productStatsContainer").append('<div class="tile leftRight"><div class="tileLabel">' + product.name + '</div><div class="tileSubValue">' + money.format.numberToPrice(product.price) + '</div><div class="tileValue">' + product.soldQts + '</div></div>');
+                    var price = price = money.format.numberToPrice(product.price);
+                    if(product.sellMode == "weight"){
+                        product.soldQts = product.soldQts + " " + product.unit;
+                        product.soldQts = product.soldQts.replace('.', ',');
+                        price = money.format.numberToPrice(product.price) + " / Kg";
+                    }
+                    $("#productStatsContainer").append('<div class="tile leftRight"><div class="tileLabel">' + product.name + '</div><div class="tileSubValue">' + price + '</div><div class="tileValue">' + product.soldQts +'</div></div>');
 
                 }
             }
