@@ -24,6 +24,7 @@
   },
   "devtools": true,
   "dependencies": {
+    "chart.js": "^2.5.0",
     "fs-finder": "^1.8.1",
     "html-boilerplate-pdf": "^5.0.0",
     "jspdf": "^1.3.3",

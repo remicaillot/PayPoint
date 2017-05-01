@@ -224,7 +224,7 @@
       "subCat": "ff8prehkzpethjztj599et8095b9c766",
       "category": "5e4ff4525d24e9b5d5a1fb85b82f9913",
       "sellMode": "unit",
-      "price": 3.5,
+      "price": 2.5,
       "unit": "piece",
       "TVARate": 20
     },
@@ -248,7 +248,7 @@
       "subCat": "ff8prehkzpethjztj599et8095b9c766",
       "category": "5e4ff4525d24e9b5d5a1fb85b82f9913",
       "sellMode": "unit",
-      "price": 21,
+      "price": 20,
       "unit": "piece",
       "TVARate": 20
     },
@@ -260,7 +260,7 @@
       "subCat": "ff8e930863d85723ee526b8095b9c766",
       "category": "5e4ff4525d24e9b5d5a1fb85b82f9913",
       "sellMode": "unit",
-      "price": 40,
+      "price": 45,
       "unit": "piece",
       "TVARate": 20
     },
@@ -285,18 +285,6 @@
       "category": "5e4ff4525d24e9b5d5a1fb85b82f9913",
       "sellMode": "unit",
       "price": 6,
-      "unit": "piece",
-      "TVARate": 20
-    },
-    {
-      "itemId": "2260cc8384e0d7d19c3e104334264bd6",
-      "itemType": "product",
-      "name": "Tebos",
-      "picture": "assets/images/Miniatures/appats.png",
-      "subCat": "171203033dd2cfbfcadc0d3c40d53ef9",
-      "category": "5e4ff4525d24e9b5d5a1fb85b82f9913",
-      "sellMode": "unit",
-      "price": 5,
       "unit": "piece",
       "TVARate": 20
     },
@@ -536,7 +524,7 @@
       "subCat": "66827f17f769f3f43742d2505a554836",
       "category": "5e4ff4525d24e9b5d5a1fb85b82f9913",
       "sellMode": "unit",
-      "price": 3,
+      "price": 4,
       "unit": "piece",
       "TVARate": 10
     },
@@ -548,7 +536,7 @@
       "subCat": "66827f17f769f3f43742d2505a554836",
       "category": "5e4ff4525d24e9b5d5a1fb85b82f9913",
       "sellMode": "unit",
-      "price": 2,
+      "price": 3.5,
       "unit": "piece",
       "TVARate": 10
     },
@@ -653,18 +641,6 @@
       "itemType": "product",
       "name": "Twix / Snickers",
       "picture": "assets/images/Miniatures/barrechocolat.jpg",
-      "subCat": "244958ae74c378e4a55aeffb4c642a18",
-      "category": "5e4ff4525d24e9b5d5a1fb85b82f9913",
-      "sellMode": "unit",
-      "price": 1.6,
-      "unit": "piece",
-      "TVARate": 10
-    },
-    {
-      "itemId": "e35e32247dac9bed2a88afefc40276cc",
-      "itemType": "product",
-      "name": "Lion",
-      "picture": "assets/images/Miniatures/sucreries.png",
       "subCat": "244958ae74c378e4a55aeffb4c642a18",
       "category": "5e4ff4525d24e9b5d5a1fb85b82f9913",
       "sellMode": "unit",
