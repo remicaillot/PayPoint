@@ -83,8 +83,9 @@ function printTicket(command) {
             printer.println("vous remercie de");
             printer.println("votre visite");
             printer.cut();
-
-            printer.openCashDrawer();
+            if(command.payment.methods.cash > 0){
+                printer.openCashDrawer();
+            }
             printer.execute(function (err) {
                 if (err) {
                     console.error("Print failed", err);
@@ -159,9 +160,9 @@ function printLogs(log) {
                     })[0].name);
                 printer.bold(false);
                 printer.leftRight("5,5", money.format.numberToPrice(val["5,5"], true));
-                printer.leftRight("10", money.format.numberToPrice(val["10"], true));
                 printer.leftRight("20", money.format.numberToPrice(val["20"], true));
-                printer.leftRight("TOTAL", money.format.numberToPrice(val["5,5"] + val["10"] + val["20"], true))
+                printer.leftRight("10", money.format.numberToPrice(val["10"], true));
+               printer.leftRight("TOTAL", money.format.numberToPrice(val["5,5"] + val["10"] + val["20"], true))
             });
             printer.newLine();
             printer.drawLine()
