@@ -505,6 +505,18 @@
       "TVARate": 5.5
     },
     {
+      "itemId": "ijqskfhdgoiqsfg5srjysryj476s5j4y6sr54yj6sr5",
+      "itemType": "product",
+      "name": "Portion non vidée",
+      "picture": "assets/images/Miniatures/poissondetail.png",
+      "subCat": "",
+      "category": "5d34421c812b30a8cf5e3a92252e242e",
+      "sellMode": "weight",
+      "price": 9,
+      "unit": "kg",
+      "TVARate": 5.5
+    },
+    {
       "itemId": "5a2e81dea4a194ec28de86a97146e6a7",
       "itemType": "product",
       "name": "Truites détail",
