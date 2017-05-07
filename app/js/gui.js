@@ -138,8 +138,8 @@ jQuery(document).ready(function ($) {
         "startDate": moment().hour(0).minute(0),
         "endDate": moment().hour(23).minute(59)
     }, function (start, end, label) {
-    });
 
+    });
     Statistics.getSalesPerProducts($('input[type="daterange"]').data("daterangepicker").startDate.toDate().getTime(), $('input[type="daterange"]').data("daterangepicker").endDate.toDate().getTime(), function (data) {
         console.log("statsProduct", data);
         $("#productStatsContainer").empty();
@@ -155,6 +155,35 @@ jQuery(document).ready(function ($) {
 
             }
         }
+    });
+
+    Statistics.getTotalSales($('input[type="daterange"]').data("daterangepicker").startDate.toDate().getTime(), $('input[type="daterange"]').data("daterangepicker").endDate.toDate().getTime(), function (data) {
+
+        //total sales
+        $(".TTCTotal").html(money.format.numberToPrice(data.TTC));
+        $(".HTTotal").html(money.format.numberToPrice(data.HT));
+        $(".55Total").html(money.format.numberToPrice(data.perTVARate["5,5"]));
+        $(".10Total").html(money.format.numberToPrice(data.perTVARate["10"]));
+        $(".20Total").html(money.format.numberToPrice(data.perTVARate["20"]));
+
+        //sales pe categories
+        data.perCategories.forEach(function (val, key) {
+
+            $(".recettecategorie[data-objectid='" + key + "']").children(".tileSubValue").empty();
+            $(".recettecategorie[data-objectid='" + key + "']").children(".tileValue").empty();
+
+            $(".recettecategorie[data-objectid='" + key + "']").children(".tileSubValue").append("<span>5,5%</span>");
+            $(".recettecategorie[data-objectid='" + key + "']").children(".tileValue").append("<span>" + money.format.numberToPrice(val["5,5"]) + "</span>");
+
+            $(".recettecategorie[data-objectid='" + key + "']").children(".tileSubValue").append("<span>10%</span>");
+            $(".recettecategorie[data-objectid='" + key + "']").children(".tileValue").append("<span>" + money.format.numberToPrice(val["10"]) + "</span>");
+
+            $(".recettecategorie[data-objectid='" + key + "']").children(".tileSubValue").append("<span>20%</span>");
+            $(".recettecategorie[data-objectid='" + key + "']").children(".tileValue").append("<span>" + money.format.numberToPrice(val["20"]) + "</span>");
+
+        });
+        $(".recettecategorie[data-objectid='cash']").text(money.format.numberToPrice(data.perPaymentMethods.cash));
+        $(".recettecategorie[data-objectid='check']").text(money.format.numberToPrice(data.perPaymentMethods.check));
     });
 
     $("#searchForm form input[type='text']").focus(function (event) {
@@ -258,7 +287,7 @@ jQuery(document).ready(function ($) {
                 $("#commandStep").hide();
                 $("#paymentStep").show();
                 $("#leftPanel").hide();
-                currentStep++;
+                currentStep = 1;
 
                 $("#validTicket").text("Enregistrer la commande");
 
@@ -273,7 +302,7 @@ jQuery(document).ready(function ($) {
                 currentCommand.saveCommand();
                 $("#cancelTicket").hide();
                 $("#validTicket").text("Nouvelle commande");
-                currentStep++;
+                currentStep = 2;
             }
         } else if (currentStep === 2) {
 
@@ -367,7 +396,7 @@ jQuery(document).ready(function ($) {
     });
     $('.toolbar-item[data-action="printlog"]').click(function () {
         printLogs();
-    })
+    });
 });
 
 function searchInput(event) {
