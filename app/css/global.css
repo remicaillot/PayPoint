@@ -330,7 +330,7 @@ header {
     cursor: default;
     width: 150px;
     background: #fff;
-    height: 230px;
+    height: 200px;
     margin-left: 10px;
     margin-top: 10px;
     border-radius: 3px;
@@ -342,7 +342,7 @@ header {
 
 #productsContainer .productTile .coverImage {
     width: 150px;
-    height: 155px;
+    height: 125px;
     background-size: cover;
     background-position: center;
 }
