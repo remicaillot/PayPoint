@@ -28,8 +28,8 @@ printer.isPrinterConnected(function (res) {
 });
 
 
-function printTicket(command) {
-    if ($(".printTicket").hasClass("checked")) {
+function printTicket(command, force) {
+    if ($(".printTicket").hasClass("checked") || force) {
         printer.alignCenter();
         printer.printImage('/home/lead/Images/logomh.png', function (done) {
             printer.newLine();
@@ -106,6 +106,7 @@ function printTicket(command) {
         });
 
     }
+
 }
 
 function openCashDrawer() {

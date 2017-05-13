@@ -178,6 +178,12 @@ function shopingCart(modifCB) {
         Accounting.saveCommand(localcommand.payment.methods.cash, localcommand.timestamp, function (success) {
             if (success) {
                 try {
+		     for (product of localcommand.products) {
+			
+			/*if(database.categories[].printTicket){
+
+			}*/
+		    }
                     printTicket(localcommand);
                 } catch (e) {
                     console.error(e);
