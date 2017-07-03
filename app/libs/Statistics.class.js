@@ -23,7 +23,7 @@ class Statistics {
         var rows = [];
         for(let category of database.categories){
             rows.push({
-                cat: category.name
+                cat: category.name + "\r\n 5,5% \r\n 10% \r\n 20%"
             });
         }
         for(var i = 1; i <= 12; i++){
@@ -35,13 +35,13 @@ class Statistics {
                 for(let category of database.categories){
                     var catVal = results.perCategories.get(category.itemId);
                     if(typeof catVal !== "undefined"){
-                        let text = "5,5% : " + money.format.numberToPrice(catVal["5,5"]) + "\r\n" + "10% : " + money.format.numberToPrice(catVal["10"]) + "\r\n" + "20% : " + money.format.numberToPrice(catVal["20"]);
+                        let text = "\r\n" +money.format.numberToPrice(catVal["5,5"]) + "\r\n" + money.format.numberToPrice(catVal["10"]) + "\r\n" + money.format.numberToPrice(catVal["20"]);
                         Object.defineProperty(rows[y], month, {
                             value: text
                         });
                     } else {
                         Object.defineProperty(rows[y], month, {
-                            value: money.format.numberToPrice(0)
+                            value: "\r\n" +money.format.numberToPrice(0)+ "\r\n" + money.format.numberToPrice(0)+ "\r\n" + money.format.numberToPrice(0)+ "\r\n"
                         });
                     }
                     y++;
