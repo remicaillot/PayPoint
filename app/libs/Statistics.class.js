@@ -8,38 +8,69 @@ class Statistics {
         var pathToSave = "Caisse Moulin Hubeau - " + moment().format("MMM YYYY") + ".pdf";
         var columns = [
             {title: "", dataKey: "cat"},
-            {title: "Janvier", dataKey: "janv"},
-            {title: "Février", dataKey: "fev"},
-            {title: "Mars", dataKey: "mar"},
-            {title: "Avril", dataKey: "avr"},
-            {title: "Mai", dataKey: "mai"},
-            {title: "Juin", dataKey: "jun"},
-            {title: "Juillet", dataKey: "jui"},
-            {title: "Août", dataKey: "aou"},
-            {title: "Septembre", dataKey: "sept"},
-            {title: "Octobre", dataKey: "oct"},
-            {title: "Novembre", dataKey: "nov"},
-            {title: "Décembre", dataKey: "dec"}
+
 
         ];
-        var rows = [
-            {"cat": "LOCATION", "janv": "1200€", "fev": "5000€", "mar": "5682€", "avr": "5686€", "mai": "65435€", "jun": "565565€", "jui": "6532€",  "aou": "94632€", "sept": "655621€", "oct": "6458422€",  "nov": "6532€",  "dec": "6532€"},
-            {"cat": "EMPORTER", "janv": "1200€", "fev": "5000€", "mar": "5682€", "avr": "5686€", "mai": "65435€", "jun": "565565€", "jui": "6532€",  "aou": "94632€", "sept": "655621€", "oct": "6458422€",  "nov": "6532€",  "dec": "6532€"}
-        ];
-        var doc = new jsPDF({
-            orientation: 'landscape'
-        });
-        doc.autoTable(columns, rows, {
-            theme: "striped",
-            margin: {
-                top: 30
-            },
-            addPageContent: function (data) {
-                doc.text("Caisse Moulin Hubeau " + moment().format("MMM YYYY"), 40, 20);
-            }
-        });
-        console.log(doc.save(pathToSave));
-        //nw.Shell.showItemInFolder();
+        for(let i = 0; i < 12; i++){
+            let month = moment().startOf('year').add(i, "month").format("MMMM");
+            let key = "mois" + moment().startOf('year').add(i, "month").format("MM");
+            columns.push({
+                title: month.charAt(0).toUpperCase() + month.slice(1),
+                dataKey: key
+            })
+
+        }
+        var rows = [];
+        for(let category of database.categories){
+            rows.push({
+                cat: category.name
+            });
+        }
+        for(var i = 1; i <= 12; i++){
+            var start = moment().startOf('year').add(i - 1, "month").toDate().getTime();
+            var end = moment().startOf('year').add(i, "month").toDate().getTime();
+            Statistics.getTotalSales(start, end, function(results){
+                let y = 0;
+                let month = "mois" + moment.unix(results.period.from / 1000).format("MM");
+                for(let category of database.categories){
+                    var catVal = results.perCategories.get(category.itemId);
+                    if(typeof catVal !== "undefined"){
+                        let text = "5,5% : " + money.format.numberToPrice(catVal["5,5"]) + "\r\n" + "10% : " + money.format.numberToPrice(catVal["10"]) + "\r\n" + "20% : " + money.format.numberToPrice(catVal["20"]);
+                        Object.defineProperty(rows[y], month, {
+                            value: text
+                        });
+                    } else {
+                        Object.defineProperty(rows[y], month, {
+                            value: money.format.numberToPrice(0)
+                        });
+                    }
+                    y++;
+                }
+
+                if(month === "mois12"){
+                    console.log(columns, rows);
+
+                    var doc = new jsPDF({
+                        orientation: 'landscape'
+                    });
+                    doc.autoTable(columns, rows, {
+                        theme: "striped",
+                        margin: {
+                            top: 30
+                        },
+                        addPageContent: function (data) {
+                            doc.text("Caisse Moulin Hubeau " + moment().format("YYYY"), 40, 20);
+                        }
+                    });
+                    console.log(doc.save(pathToSave));
+                    //nw.Shell.showItemInFolder();
+                }
+
+            });
+
+        }
+
+
 
     }
 
@@ -60,6 +91,10 @@ class Statistics {
             database = JSON.parse(fs.readFileSync("./database.json", "UTF-8"));
 
             let add = {
+                period: {
+                    from: dateFrom.getTime(),
+                    to: dateTo.getTime()
+                },
                 HT: 0,
                 TTC: 0,
                 perTVARate: {

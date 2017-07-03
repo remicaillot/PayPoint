@@ -36,22 +36,6 @@ class Accounting {
         });
     }
 
-    static importOldCommandOperation() {
-        commandDb.find({}, function (err, commands) {
-            if (!err) {
-                for (let command of commands) {
-                    cashDrawerDb.insert({
-                        operationType: "entry",
-                        operationCategory: "command",
-                        amount: command.payment.methods.cash,
-                        timestamp: new Date(parseInt(command.timestamp)).getTime()
-                    }, function (err) {
-                        console.error(err);
-                    });
-                }
-            }
-        });
-    }
 
     static reloadDom() {
         Statistics.getAccountingDetails(function (details) {

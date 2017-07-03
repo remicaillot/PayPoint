@@ -7,7 +7,7 @@ function Pop() {
     };
     this.prompt = function (query, type, cb) {
         $("#prompt h3").text(query);
-        $("#prompt input").attr("placeholder", "reponse de type " + type + " attendue");
+        $("#prompt input").attr("placeholder", "réponse de type " + type + " attendue");
         $("#Pop").show();
         $("#Pop #valid").click(function (e) {
             $("#Pop").hide();

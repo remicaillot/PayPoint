@@ -24,13 +24,13 @@
   },
   "devtools": true,
   "dependencies": {
-    "chart.js": "^2.5.0",
     "fs-finder": "^1.8.1",
-    "html-boilerplate-pdf": "^5.0.0",
     "jspdf": "^1.3.3",
     "md5": "*",
-    "nedb": "*",
+    "nedb": "^1.8.0",
     "node-thermal-printer": "*",
-    "showdown": "^1.6.4"
+    "nw": "^0.23.2",
+    "showdown": "^1.6.4",
+    "uuid": "^3.1.0"
   }
 }
