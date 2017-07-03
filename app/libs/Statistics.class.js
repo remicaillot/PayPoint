@@ -5,7 +5,7 @@ class Statistics {
     }
 
     static exportLogs() {
-        var pathToSave = "Caisse Moulin Hubeau - " + moment().format("MMM YYYY") + ".pdf";
+        var pathToSave = "Caisse Moulin Hubeau - " + moment().format("YYYY") + ".pdf";
         var columns = [
             {title: "", dataKey: "cat"},
 
@@ -63,7 +63,7 @@ class Statistics {
                         }
                     });
                     console.log(doc.save(pathToSave));
-                    //nw.Shell.showItemInFolder();
+                    nw.Shell.showItemInFolder(pathToSave);
                 }
 
             });
