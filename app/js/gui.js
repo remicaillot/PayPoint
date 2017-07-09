@@ -267,12 +267,26 @@ jQuery(document).ready(function ($) {
     });
 
     var currentStep = 0;
+    var isCanceling = false;
     $("#cancelTicket").click(function (e) {
-        $("#commandStep").show();
-        $("#paymentStep").hide();
-        $("#leftPanel").show();
-        currentCommand.resetCommand();
-        currentStep = 0;
+        if(isCanceling) {
+            $(this).css("background", "#b3b3b3");
+            $(this).text("Annuler la commande");
+            $("#commandStep").show();
+            $("#paymentStep").hide();
+            $("#leftPanel").show();
+            currentCommand.resetCommand();
+            currentStep = 0;
+            return;
+        }
+        $(this).css("background", "#c1261c");
+        $(this).text("Confirmer");
+       isCanceling = true;
+    });
+    $("#cancelTicket").blur(function () {
+        $(this).css("background", "#b3b3b3");
+        $(this).text("Annuler la commande");
+        isCanceling = false;
     });
     $("#validTicket").click(function () {
         if (currentStep === 0) {
