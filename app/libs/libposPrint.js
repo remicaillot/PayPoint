@@ -76,6 +76,8 @@ function printTicket(command, force) {
             printer.newLine();
             printer.setTextDoubleHeight();
             printer.leftRight("Total TTC", "" + money.format.numberToPrice(command.total.TTC, true));
+            printer.leftRight("Payé ", "" + money.format.numberToPrice(command.total.TTC, true));
+            printer.leftRight("Total TTC", "" + money.format.numberToPrice(command.total.TTC, true));
             printer.setTextNormal();
             printer.newLine();
             printer.setTextQuadArea();

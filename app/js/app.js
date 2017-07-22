@@ -63,7 +63,7 @@ function shopingCart(modifCB) {
         return command;
     };
     this.setPayment = function () {
-        command.payment.methods.cash = $('input[data-method="cash"]').data("numeralValue");
+        command.payment.methods.cash = parseFloat($('input[data-method="cash"]').data("numeralValue")) + money.format.priceToNumber($('.paymentrest').text());
         command.payment.methods.check = $('input[data-method="check"]').data("numeralValue");
         command.payment.methods.giftcard = $('input[data-method="giftcard"]').data("numeralValue");
         command.payment.methods.transfer = $('input[data-method="transfer"]').data("numeralValue");
