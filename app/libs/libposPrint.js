@@ -76,7 +76,13 @@ function printTicket(command, force) {
             printer.newLine();
             printer.setTextDoubleHeight();
             printer.leftRight("Total TTC", "" + money.format.numberToPrice(command.total.TTC, true));
-            printer.leftRight("Payé ", "" + money.format.numberToPrice(command.total.TTC, true));
+	    printer.setTextNormal();
+            printer.leftRight("Espece ", "" + money.format.numberToPrice(command.payment.methods.cash, true));
+            printer.leftRight("Cheque ", "" + money.format.numberToPrice(command.payment.methods.check, true));
+            printer.leftRight("Virement ", "" + money.format.numberToPrice(command.payment.methods.tranfer, true));
+            printer.leftRight("Carte cadeau ", "" + money.format.numberToPrice(command.payment.methods.giftcard, true));
+	    printer.leftRight("Rendu ", "" + money.format.numberToPrice(command.payment.change, true));
+	    printer.setTextDoubleHeight();
             printer.leftRight("Total TTC", "" + money.format.numberToPrice(command.total.TTC, true));
             printer.setTextNormal();
             printer.newLine();
