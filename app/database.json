@@ -791,6 +791,18 @@
       "price": 15.75,
       "unit": "kg",
       "TVARate": 5.5
+    }, 
+	{
+      "itemId": "se89srj4h7u895ol4i65jk4q6zerg16q3d2fh41d",
+      "itemType": "product",
+      "name": "Brochettes",
+      "picture": "assets/images/Miniatures/poissondetail.png",
+      "subCat": "et68h4et6j4e6ykut65k1r3jh1r65he4tj",
+      "category": "5d34421c812b30a8cf5e3a92252e242e",
+      "sellMode": "weight",
+      "price": 19.8,
+      "unit": "kg",
+      "TVARate": 5.5
     },
     {
       "itemId": "74b0e41bc1d368005347e4881f2c1f8a",
