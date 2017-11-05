@@ -184,6 +184,7 @@ jQuery(document).ready(function ($) {
         });
         $(".recettecategorie[data-objectid='cash']").text(money.format.numberToPrice(data.perPaymentMethods.cash));
         $(".recettecategorie[data-objectid='check']").text(money.format.numberToPrice(data.perPaymentMethods.check));
+        $(".recettecategorie[data-objectid='transfer']").text(money.format.numberToPrice(data.perPaymentMethods.transfer));
     });
 
     $("#searchForm form input[type='text']").focus(function (event) {
@@ -332,6 +333,21 @@ jQuery(document).ready(function ($) {
     });
 
     $('input[data-method]').on("newChar", function () {
+        var paid = 0;
+        $('input[data-method]').each(function (i) {
+            paid += money.format.priceToNumber($(this).val());
+            $(".paymentrest").data("value", currentCommand.getCommand().total.TTC - paid);
+        });
+        $(".paid").text(money.format.numberToPrice(paid));
+        $(".paymentrest").text(money.format.numberToPrice(currentCommand.getCommand().total.TTC - paid));
+        currentCommand.setPayment();
+    });
+    $('input[data-method]').dblclick(function (e) {
+        //this.val($(".paymentrest").data("value"));
+
+        $(this).val(money.format.numberToPrice($(".paymentrest").data("value")));
+        $(this).data("numeralValue", $(".paymentrest").data("value"));
+
         var paid = 0;
         $('input[data-method]').each(function (i) {
             paid += money.format.priceToNumber($(this).val());

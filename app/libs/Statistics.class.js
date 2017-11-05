@@ -119,7 +119,7 @@ class Statistics {
                     add.perTVARate["20"] += command.total.perTVARate["20"];
                     add.perPaymentMethods.check += command.payment.methods.check;
                     add.perPaymentMethods.cash += command.payment.methods.cash;
-                    add.perPaymentMethods.cash += command.payment.methods.transfer;
+                    add.perPaymentMethods.tranfer += command.payment.methods.transfer;
 
                     for (let product of command.products) {
                         if (typeof add.perCategories.get(product.category) === "undefined") {

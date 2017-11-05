@@ -24,7 +24,7 @@ class Accounting {
         });
     }
 
-    static saveCommand(amount, date, cb){
+    static saveCommand(amount, date, cb) {
         date = new Date(date);
         cashDrawerDb.insert({
             operationType: "command",
@@ -41,30 +41,92 @@ class Accounting {
         Statistics.getAccountingDetails(function (details) {
             $(".accountingBalance").text(money.format.numberToPrice(details.balance));
             $("#accountingOperationsList").empty();
+            let commandQueue = [];
             for (let operation of details.operations) {
+                if ((operation.operationType === "deposit")) {
+                    if (commandQueue.length > 0) {
+                        let commands = {
+                            amount: 0,
+                            timestamp: 0
+                        };
+                        for (let command of commandQueue) {
+                            commands.amount += command.amount;
+                            commands.timestamp = command.timestamp;
+                        }
+                        $("#accountingOperationsList").prepend('<div class="tile leftRight">' +
+                            '<div class="tileLabel">Commande</div>' +
+                            '<div class="tileSubValue lastDepositNumber"></div>' +
+                            '<div class="tileSubValue lastDepositDate">Du ' + moment(commands.timestamp).format("ll") + '</div>' +
+                            '<div class="tileValue lastDepositAmount">' + money.format.numberToPrice(commands.amount) + '</div>' +
+                            '</div>');
+                        commandQueue = [];
+                    }
 
-                var operationType = "Retrait à la banque";
-                if(operation.operationType == "deposit"){
-                    var operationType = "Dépot à la banque";
-                } else if(operation.operationType == "command"){
+                    let operationType = "Dépot à la banque";
+                    let number = "N°" + operation.depositID;
 
-                    var operationType = "Commande";
+                    $("#accountingOperationsList").prepend('<div class="tile leftRight">' +
+                        '<div class="tileLabel">' + operationType + '</div>' +
+                        '<div class="tileSubValue lastDepositNumber">' + number + '</div>' +
+                        '<div class="tileSubValue lastDepositDate">Le ' + moment(operation.timestamp).format("ll") + '</div>' +
+                        '<div class="tileValue lastDepositAmount">' + money.format.numberToPrice(operation.amount) + '</div>' +
+                        '</div>');
+
+                } else if (operation.operationType === "entry") {
+                    if (commandQueue.length > 0) {
+                        let commands = {
+                            amount: 0,
+                            timestamp: 0
+                        };
+                        for (let command of commandQueue) {
+                            commands.amount += command.amount;
+                            commands.timestamp = command.timestamp;
+                        }
+                        $("#accountingOperationsList").prepend('<div class="tile leftRight">' +
+                            '<div class="tileLabel">Commande</div>' +
+                            '<div class="tileSubValue lastDepositNumber"></div>' +
+                            '<div class="tileSubValue lastDepositDate">Du ' + moment(commands.timestamp).format("ll") + '</div>' +
+                            '<div class="tileValue lastDepositAmount">' + money.format.numberToPrice(commands.amount) + '</div>' +
+                            '</div>');
+                        commandQueue = [];
+                    }
+
+                    let operationType = "Retrait à la banque";
+
+                    let number = "N°" + operation.entryID;
+
+                    $("#accountingOperationsList").prepend('<div class="tile leftRight">' +
+                        '<div class="tileLabel">' + operationType + '</div>' +
+                        '<div class="tileSubValue lastDepositNumber">' + number + '</div>' +
+                        '<div class="tileSubValue lastDepositDate">Le ' + moment(operation.timestamp).format("ll") + '</div>' +
+                        '<div class="tileValue lastDepositAmount">' + money.format.numberToPrice(operation.amount) + '</div>' +
+                        '</div>');
+                } else {
+                    if(commandQueue.length === 0){
+                        commandQueue.push(operation);
+                    }else if(moment(operation.timestamp).format('l') === moment(commandQueue[commandQueue.length - 1]).format('l')){
+                            commandQueue.push(operation);
+
+                    } else{
+                        let commands = {
+                            amount: 0,
+                            timestamp: 0
+                        };
+                        for (let command of commandQueue) {
+                            commands.amount += command.amount;
+                            commands.timestamp = command.timestamp;
+                        }
+                        $("#accountingOperationsList").prepend('<div class="tile leftRight">' +
+                            '<div class="tileLabel">Commande</div>' +
+                            '<div class="tileSubValue lastDepositNumber"></div>' +
+                            '<div class="tileSubValue lastDepositDate">Du ' + moment(commands.timestamp).format("ll") + '</div>' +
+                            '<div class="tileValue lastDepositAmount">' + money.format.numberToPrice(commands.amount) + '</div>' +
+                            '</div>');
+                        commandQueue = [];
+                    }
                 }
-                var number = "";
-                if(typeof operation.depositID !== "undefined"){
-                    number = "N°" + operation.depositID;
-                }else if((typeof operation.entryID  !== "undefined") && (operation.entryID != "")){
-                    number ="N°" + operation.entryID;
-                }
-
-                $("#accountingOperationsList").prepend('<div class="tile leftRight">' +
-                    '<div class="tileLabel">' + operationType + '</div>' +
-                    '<div class="tileSubValue lastDepositNumber">' + number +'</div>' +
-                    '<div class="tileSubValue lastDepositDate">Le ' + moment(operation.timestamp).format("ll") + '</div>' +
-                    '<div class="tileValue lastDepositAmount">' + money.format.numberToPrice(operation.amount) + '</div>' +
-                    '</div>');
             }
-        })
+        });
     }
 }
 $(document).ready(function () {
