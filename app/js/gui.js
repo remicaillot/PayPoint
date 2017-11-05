@@ -20,6 +20,23 @@ function Pop() {
     };
 
 }
+
+
+jQuery.fn.longClick = function (cb) {
+    console.log("evaluated");
+    var timer;
+    jQuery(this).on("mousedown",function(e){
+        var that = this;
+        console.log("timeout started");
+        timer = setTimeout(function(){
+            console.log("bang");
+            cb.bind(that)(e);
+        }, 500);
+    }).on("mouseup mouseleave",function(){
+        console.log("timeout cleared");
+        clearTimeout(timer);
+    });
+};
 var popupM = new Pop();
 jQuery(document).ready(function ($) {
     moment.locale('fr');
@@ -342,7 +359,7 @@ jQuery(document).ready(function ($) {
         $(".paymentrest").text(money.format.numberToPrice(currentCommand.getCommand().total.TTC - paid));
         currentCommand.setPayment();
     });
-    $('input[data-method]').dblclick(function (e) {
+    $('input[data-method]').longClick(function (e) {
         //this.val($(".paymentrest").data("value"));
 
         $(this).val(money.format.numberToPrice($(".paymentrest").data("value")));
